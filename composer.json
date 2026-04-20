@@ -1,0 +1,27 @@
+{
+    "name": "charlesrothdotnet/miv4",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "CharlesRothDotNet\\MIV4\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Charles Roth",
+            "email": "wchasroth@thedance.net"
+        }
+    ],
+    "require": {
+        "smarty/smarty": "^5.4",
+        "charlesrothdotnet/alfred": "dev-main"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.4"
+    },
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
+    }
+}

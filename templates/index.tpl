@@ -97,7 +97,7 @@
          </a>
     </div>
 
-<div class="waveHeaderText" style="margin-left: 7px; margin-right: 7px; line-height: 130%;">
+<div class="waveHeaderText" style="margin-left: 7px; margin-right: 7px; line-height: 130%; color: white;" >
     <i><u>Your</u></i>&nbsp; 2026 Michigan Voter Guide
 </div>
     <div style="height: 10px;">&nbsp;</div>

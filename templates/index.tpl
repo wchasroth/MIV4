@@ -1,5 +1,5 @@
-{nocache}
 <!DOCTYPE html>
+{nocache}
 <html lang="en">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -13,37 +13,33 @@
 <head>
     <style>
         @media screen and (min-width: 600px) {
-
             body {
                 max-width: 750px!important;
                 margin: 0 auto!important;
                 background-position: center top;
                 background-size: 750px;
             }
-
+            .bottom {
+                max-width: 750px!important;
+            }
             /*
                body > div:nth-child(3) > img:nth-child(5) {
                    top: 300px!important;
                }
-
                .welcomeMessageStyle {
                    max-width: 550px!important;
                    margin: 0 100px!important;
                    margin-top: 200px !important;
                }
-
-               .footer .bottom {
+               .footer {
                    max-width: 750px!important;
                }
-
                .spacer {
                    height: 70px!important;
                }
-
                .bottomSpacer {
                    height: 1em;
                }
-
                .bottomFill {
                    padding-bottom: 1em;
                }

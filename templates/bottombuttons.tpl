@@ -44,7 +44,7 @@
                </div>
             {else}
                <div class="button inactive">
-                  <img src="IMG/waveButtonOfficials-deactivated4.png" width="24" class="buttonImage" /><br/>
+                  <img src="IMG/waveButtonOfficials-deactivated5.png" width="24" class="buttonImage" /><br/>
                   Current<br/>Officials
                </div>
             {/if}

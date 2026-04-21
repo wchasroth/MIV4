@@ -1,0 +1,420 @@
+body, td, li, div {
+    font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    max-width: 25em;
+    margin-top: 1px;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex-shrink: 0;
+    z-index: 10;
+}
+
+.blueText {
+   color: #4581b8;
+}
+
+ol {
+   margin-left: 20px; padding-left: 5px;
+}
+
+ul {
+   margin-left: 20px; padding-left: 5px;
+}
+
+.lfloat {
+   float: left;
+   margin-right: 15px;
+}
+
+table.office {
+    border-spacing: 0;
+    width: 100%;
+    border: 0
+}
+
+th, td {
+    padding: 3px;
+}
+
+td.label {
+    vertical-align: top;
+}
+
+td.office {
+    font-family: arial, sans-serif;
+    font-size: 14px;
+    text-align: left;
+}
+
+td.person {
+    text-align: right;
+    cursor: pointer;
+}
+
+td.hide {
+    width: 0.1em;
+}
+
+td.show {
+    width: 100%;
+}
+
+td.arrow {
+    text-align: right;
+    width: 10px;
+}
+
+div.person {
+    font-family: arial, sans-serif;
+    font-size: 14px;
+	color: blue;
+}
+
+.curtain {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  text-align: left;
+
+  width: 0;
+  position: fixed;
+  z-index: 3;
+  right: 0;
+  top: 0;
+  background-color: rgba(255, 255, 255, 1.0);
+  overflow-x: hidden;
+  transition: 0.7s;
+}
+
+.row0 {
+    background-color: #E8E8E8;
+    vertical-align: top;
+    text-align: right;
+    width: 100%
+}
+
+.row1 {
+    background-color: #FFFFFF;
+    vertical-align: top;
+    text-align: right;
+    width: 100%
+}
+
+.curtain-top {
+   /*height: 2em; */
+   font-size: 120%;
+   margin-bottom: 0.8em;
+}
+
+.curtain-bottom {
+   flex-grow: 1;
+   overflow-y: auto;
+   margin-left: 1em;
+   margin-right: 1em;
+   max-width: 25em;
+   overflow-wrap: break-word;
+}
+
+.contact_data {
+   overflow-wrap: break-word;
+}
+
+.closeButton {
+   font-size: 120%;
+}
+
+noUnderscore:link {
+   color: inherit;
+   text-decoration: none;
+}
+
+.noUnderscore {
+   color: inherit;
+   text-decoration: none;
+}
+
+.screen {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  text-align: left;
+
+  position: fixed;
+  top: 0;
+  background-color: rgba(255, 255, 255, 1.0);
+  overflow-x: hidden;
+}
+
+.screen-bottom {
+   height: 40px;
+}
+
+.screen-top {
+   flex-grow: 1;
+   overflow-y: auto;
+}
+
+li { margin-top: .4em; }
+
+.candidate {
+   float: left;
+   width: 150px;
+}
+
+h6 {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.active {
+    background-color: #5EAD5E !important;
+}
+
+.badge {
+    background-color: red;
+    color: white;
+    padding: 4px 8px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.btn.btn-primary:hover,
+.btn.btn-primary:focus,
+.btn.btn-primary:active,
+.btn.btn-primary.active,
+.btn.btn-primary {
+  color: #ffffff;
+  background-color: #5CACE6;
+  border-color: #5CACE6;
+}
+
+/* --- The "delete" icon in the google address bar.  Yes, it's a hack, but it works! */
+div.deleteicon {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+div.deleteicon span {
+    position: absolute;
+    display: block;
+    right: 3px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #ccc;
+    font: 13px monospace;
+    text-align: center;
+    line-height: 1em;
+    cursor: pointer;
+}
+div.deleteicon input {
+    padding-right: 18px;
+    box-sizing: border-box;
+}
+
+/* --- The nailed-to-the-bottom webapp nav buttons ------- */
+.bottom {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin-left: 0;
+    background-color: #ffffff;
+    z-index: 3;
+}
+
+.bottomLink {
+   text-decoration: none;
+}
+
+.button {
+   text-align: center;
+   font-size: 80%;
+   background-color: #003052;
+}
+
+.buttonText {
+   color: white;
+   line-height: 100%;
+   font-size:   90%;
+   margin-top:   5px;
+}
+
+
+#autocomplete_search::placeholder {
+   font-weight: bold;
+   opacity: 1;
+   color: #003052;
+}
+
+#autocomplete_search {
+   border-radius: 0px;
+}
+
+.waveHeaderSubText {
+   color: white;
+   font-size: 100%;
+   margin-top: 0.5em;
+}
+
+.newAddressPopupStyle {
+   border-style: ridge;
+   border-width: 2px;
+   border-color: #62abdd;
+   border-radius: 5px;
+   width: 85%;
+   max-width: 25em;
+   padding: 8px 8px 0px 8px;
+   background-color: white;
+   color: #003052;
+   line-height: 120%;
+}
+
+.warningMessage {
+   border-style: ridge;
+   border-width: 2px;
+   border-color: #82cd5e;
+   border-radius: 5px;
+   max-width: 95%;
+   padding: 1px 1px 1px 1px;
+   background-color: #e8fede;
+   color: black;
+}
+
+.table { 
+   display: table; 
+   margin-bottom:  0px;
+   padding-bottom: 0px;
+}
+.tr    { display: table-row; }
+.td    { display: table-cell; }
+
+.warningIcon {
+   padding-top:    2px !important;
+   padding-right:  4px !important;
+   padding-bottom: 1px !important;
+   padding-left:   2px !important;
+}
+
+.darkBlueText {
+   color: #003052;
+}
+
+.lightBlueText {
+   color: #5cace6;
+   font-size: 120%;
+}
+
+.howToVoteSubText {
+    font-size: 80%; 
+    margin-top: 0.5em;"
+}
+
+.pagePanel {
+   margin-left: 10px;
+   margin-right: 10px;
+}
+
+.howToVoteBox {
+   border-style: solid; 
+   border-width: 2px; 
+   border-color: #d9d9d8; 
+   padding: 10px 10px 10px 10px; 
+   border-radius: 5px;"
+}
+
+.howToVoteMenu {
+   line-height: 120%;
+   border-left-style: solid;
+   border-right-style: none;
+   border-top-style: none;
+   border-bottom-style: none;
+   border-color: #c6c6c6;
+   border-width: 4px; 
+   padding-left: 0.5em;
+/* color: #094163; */
+   color: #003052;
+   font-weight: bold;
+   font-size: 90%;
+}
+
+.greenText {
+   color: #99cf67;
+}
+
+.howToVoteSpacer {
+   padding-top: 15px;
+}
+
+.followInput {
+   width: 100%;
+   margin-bottom: 1em;
+}
+
+.followInput::placeholder {
+   font-weight: bold;
+   opacity: 1;
+/* color: #094163; */
+   color: #003052;
+}
+
+.followSubmit {
+   color: white;
+   background-color: #5cace6;
+   border-color:     #5cace6;
+   border-style:     solid;
+   border-radius: 5px;
+   font-size: 120%;
+}
+
+.centerPanel {
+   max-width: 30em;
+   margin: auto;
+}
+
+.spacer {
+   height: 1px;
+}
+
+.bottomSpacer {
+   width: 100%;
+   height: 0px;
+   background-color: #003052;
+}
+
+.welcomeMessageStyle {
+   position: absolute;  
+   top: 203px;  /* 93 + 100, yes, it's a hack, based on height & position of welcome page images */
+}
+
+.pill {
+   border: none;
+   background-color: #5cace6;
+   color:  white;
+   padding-top 8px;
+   padding-right: 20px;
+   padding-bottom: 4px;
+   padding-left: 4px;
+   display: inline-block;
+   margin:  4px 2px;
+   border-radius: 20px;
+   font-size: 100%;
+   letter-spacing: .1rem;
+   text-align: left;
+   width: 8em;
+}
+

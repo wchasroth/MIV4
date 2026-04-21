@@ -36,7 +36,7 @@
                    max-width: 750px!important;
                }
 
-               .spacer {  /* extra vertical space below logo/background and start of content */
+               .spacer {
                    height: 70px!important;
                }
 
@@ -78,12 +78,28 @@
         p + ul { margin-top: -0.8em; }
         ul + p { margin-top: -0.8em; }
 
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            max-width: 25em;
+            margin-top: 1px;
+            margin: 0;
+        }
+
         .topBar {
             margin-left:  10px;
             margin-right: 10px;
         }
         .darkBlueText {
             color: #003052;
+        }
+        .pageText {
+            margin-left: 10px;
+            margin-right: 10px;
         }
         .button {
             padding-top:    10px;
@@ -139,7 +155,7 @@
 </div>
 
 <p style="font-size: 10%;">&nbsp;</p>
-<div class="darkBlueText pagePanel unindentList" display: none;">
+<div class="darkBlueText pageText unindentList">
     <b>To get started,</b> enter your address in the box above.
     <div style="height: 10px;">&nbsp;</div>
 

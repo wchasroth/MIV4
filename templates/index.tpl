@@ -101,8 +101,22 @@
    <div style="height: 10px;">&nbsp;</div>
 </div>
 
+<p style="font-size: 10%;">&nbsp;</p>
+<div class="darkBlueText pagePanel unindentList" display: none;">
+    <b>To get started,</b> enter your address in the box above.
+    <div style="height: 10px;">&nbsp;</div>
 
-Hello, Jupiter!
+    MIvoter.org is the <b>one stop shop</b> for all Michigan Democratic voters:
+    <ul>
+        <li>See <b>your</b> elected officials
+        <li>Register to vote
+        <li>See endorsed candidates
+        <li>Find protests &amp; events
+        <li>And much, much more
+    </ul>
+
+    <i style="font-size: 90%;">(We <b>never</b> track your address.&nbsp; Only your browser remembers it.)</i>
+</div>
 
 
 </body>

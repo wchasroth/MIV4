@@ -82,7 +82,9 @@
             margin-left: 10px;
             margin-right: 10px;
         }
-
+        .darkBlueText {
+            color: #003052;
+        }
     </style>
 </head>
 

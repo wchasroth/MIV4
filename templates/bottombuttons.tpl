@@ -1,6 +1,6 @@
 
 <div class="bottom" style='max-width: 25em; background-color: #003052; padding-bottom: 0px;'>
-   <table width="93%" border='0' cellspacing=0 cellpadding=0 style='margin: auto;'>
+   <table width="100%" border='0' cellspacing=0 cellpadding=0 style='margin: auto;'>
       <tr>
          <td width="20%" id="candidates_td">
             {if $hasAddress}
@@ -44,7 +44,7 @@
                </div>
             {else}
                <div class="button inactive">
-                  <img src="IMG/waveButtonOfficials-deactivated5.png" width="24" class="buttonImage" /><br/>
+                  <img src="IMG/waveButtonOfficials-deactivated4.png" width="24" class="buttonImage" /><br/>
                   Current<br/>Officials
                </div>
             {/if}

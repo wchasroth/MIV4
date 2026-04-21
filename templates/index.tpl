@@ -1,3 +1,4 @@
+{nocache}
 <!DOCTYPE html>
 <html lang="en">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -53,8 +54,7 @@
         @media screen and (max-width: 330px) {
             .waveHeaderText {
                 font-size: 108%;
-
-                color: white;
+                color: white!important;
                 font-weight: bold;
                 margin-top: 0.5em;
             }
@@ -62,8 +62,7 @@
         @media screen and (min-width: 331px) {
             .waveHeaderText {
                 font-size: 140%;
-
-                color: white;
+                color: white!important;
                 font-weight: bold;
                 margin-top: 0.5em;
             }
@@ -105,8 +104,9 @@
 </div>
 
 
-Hello, Moon!
+Hello, Jupiter!
 
 
 </body>
 </html>
+{/nocache}

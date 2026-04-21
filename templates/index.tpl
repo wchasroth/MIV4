@@ -79,11 +79,46 @@
         ul + p { margin-top: -0.8em; }
 
         .topBar {
-            margin-left: 10px;
+            margin-left:  10px;
             margin-right: 10px;
         }
         .darkBlueText {
             color: #003052;
+        }
+        .button {
+            padding-top:    10px;
+            padding-bottom: 10px;
+            margin-top:     10px;
+            margin-bottom:  10px;
+            color: white;
+            line-height: 100%;
+            font-size:   90%;
+            text-align: center;
+            text-decoration: none;
+        }
+        .inactive {
+            background-color: rgb(151,151,151);
+        }
+        .buttonLink {
+            text-decoration: none;
+            color: inherit;
+        }
+        .buttonImage {
+            margin-bottom: 5px;
+        }
+        /* --- The nailed-to-the-bottom webapp nav buttons ------- */
+        .bottom {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            margin-left: 0;
+            background-color: #ffffff;
+            z-index: 3;
+        }
+        .bottomSpacer {
+            width: 100%;
+            height: 0px;
+            background-color: #003052;
         }
     </style>
 </head>
@@ -120,6 +155,12 @@
     <i style="font-size: 90%;">(We <b>never</b> track your address.&nbsp; Only your browser remembers it.)</i>
 </div>
 
+<div class="bottom" style='max-width: 25em; background-color: #003052; padding-bottom: 0px;'>
+   {include file="bottombuttons.tpl" hasAddress=false}
+</div>
+
+<!-- 'Float' the bottom buttons up a little, depending on @media detection, see base.css and head.html -->
+<div class="bottomSpacer">&nbsp;</div>
 
 </body>
 </html>

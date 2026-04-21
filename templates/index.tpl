@@ -50,6 +50,10 @@
             */
         }
 
+        .waveHeaderText {
+            color: white;
+        }
+
         /* For narrow phones, like the iPhone 5 -- shrink the font-size of the initial description under the logo */
         @media screen and (max-width: 330px) {
             .waveHeaderText {
@@ -97,7 +101,7 @@
          </a>
     </div>
 
-<div class="waveHeaderText" style="margin-left: 7px; margin-right: 7px; line-height: 130%; color: white;" >
+<div class="waveHeaderText" style="margin-left: 7px; margin-right: 7px; line-height: 130%;" >
     <i><u>Your</u></i>&nbsp; 2026 Michigan Voter Guide
 </div>
     <div style="height: 10px;">&nbsp;</div>

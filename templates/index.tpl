@@ -58,7 +58,6 @@
         @media screen and (max-width: 330px) {
             .waveHeaderText {
                 font-size: 108%;
-                color: white!important;
                 font-weight: bold;
                 margin-top: 0.5em;
             }
@@ -66,7 +65,6 @@
         @media screen and (min-width: 331px) {
             .waveHeaderText {
                 font-size: 140%;
-                color: white!important;
                 font-weight: bold;
                 margin-top: 0.5em;
             }

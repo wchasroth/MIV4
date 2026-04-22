@@ -1,0 +1,15 @@
+Random things from the old interface, that we're keeping notes about, just in case!
+
+Float for bottom buttons?
+   <!-- 'Float' the bottom buttons up a little, depending on @media detection, see base.css and head.html -->
+   <!-- <div class="bottomSpacer">&nbsp;</div> -->
+
+
+Event dispatcher in address bar js?   Don't seem to need it now, since
+we just do refresh or go to /index.php.
+
+        this.dispatchEvent(new CustomEvent('address-selected', {
+            detail: selected,
+            bubbles: true,
+            composed: true
+        }));

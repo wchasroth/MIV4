@@ -6,10 +6,10 @@ use CharlesRothDotNet\Alfred\SmartyPage;
 
 require_once("../vendor/autoload.php");
 
-$address = $_COOKIE['address'] ?? "";
+$address = $_COOKIE['miAddress'] ?? "";
 
 $smarty = new SmartyPage();
-$smarty->assign ('address', $address);
+$smarty->assign ('address',    $address);
 
 if ($address === "")  $smarty->display('indexNoAddress.tpl');
 else                  $smarty->display('indexWithAddress.tpl');

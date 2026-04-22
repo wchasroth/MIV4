@@ -22,8 +22,6 @@
 
 <p style="font-size: 10%;">&nbsp;</p>
 <div class="darkBlueText pageText unindentList">
-    address={$address}<br/>
-
     <b>Congratulations!  You have entered an address!</b>
 
     <p/>
@@ -37,7 +35,7 @@
 
 {include file="inc-trailer.tpl"}
 
-{include file="inc-bottombuttons.tpl" hasAddress=false}
+{include file="inc-bottombuttons.tpl" hasAddress=true}
 
 </body>
 </html>

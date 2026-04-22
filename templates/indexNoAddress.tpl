@@ -22,8 +22,6 @@
 
 <p style="font-size: 10%;">&nbsp;</p>
 <div class="darkBlueText pageText unindentList">
-    address={$address}<br/>
-
     <b>To get started,</b> enter your address in the box above.
     <div style="height: 10px;">&nbsp;</div>
 

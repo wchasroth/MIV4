@@ -109,9 +109,10 @@ class AddressSearch extends HTMLElement {
     }
 
     connectedCallback() {
-        let address = this.getAttribute('address');
         this.input = this.shadowRoot.querySelector('input');
+        let address = this.getAttribute('address');  /* i.e. <address-search address='whatever'></address-search> */
         if (! (address == null  ||  address==''))  this.input.value = address;
+
         this.list = this.shadowRoot.querySelector('ul');
         this.actionButton = this.shadowRoot.querySelector('button.action');
 
@@ -128,7 +129,8 @@ class AddressSearch extends HTMLElement {
         this.actionButton.addEventListener('click', () => {
             this.input.value = '';
             this.clearList();
-            this.input.focus();
+            this.deleteCookie('miAddress');
+            location.href = "/index.php";
         });
     }
 
@@ -267,23 +269,19 @@ class AddressSearch extends HTMLElement {
         this.input.value = value;
         this.clearList();
 
-        writeCookie('miAddress', e.detail.label);
-        writeCookie('miCodes',   JSON.stringify(e.detail.raw));
+        this.writeCookie('miAddress', selected.label);
+        this.writeCookie('miCodes',   JSON.stringify(selected.raw));
 
-        console.log('Selected address:', JSON.stringify(e.detail.raw));
+        console.log('Selected address:', JSON.stringify(selected.raw));
         location.reload();
-
-/*
-        this.dispatchEvent(new CustomEvent('address-selected', {
-            detail: selected,
-            bubbles: true,
-            composed: true
-        }));
-*/
     }
 
     writeCookie(name, value) {
        document.cookie = name + "=" + encodeURIComponent(value) + "; path=/; max-age=31536000";
+    }
+
+    deleteCookie(name) {
+       document.cookie = name + "=; max-age=0; path=/";
     }
 }
 

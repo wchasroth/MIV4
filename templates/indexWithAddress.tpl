@@ -18,37 +18,15 @@
 
 <body style="font-family: Roboto;">
 
-<div class="fullWidth" style="background-image: url('IMG/waveTopBackground5.png'); background-size: cover;">
-   <div class="topBar">
-      <a class="navbar-brand" href="/">
-         <img src="IMG/waveLogo5.png" width="200" style="margin-top: 10px;"/>
-      </a>
-   </div>
-
-   <div class="waveHeaderText" style="margin-left: 7px; margin-right: 7px; line-height: 130%; color: white;" >
-      &nbsp;<i><u>Your</u></i>&nbsp; 2026 Michigan Voter Guide
-   </div>
-   <div style="height: 10px;">&nbsp;</div>
-
-   <address-search address='{$address}'></address-search>
-</div>
+{include file="inc-topbar.tpl"}
 
 <p style="font-size: 10%;">&nbsp;</p>
 <div class="darkBlueText pageText unindentList">
     address={$address}<br/>
 
-    <b>To get started,</b> enter your address in the box above.
-    <div style="height: 10px;">&nbsp;</div>
+    <b>Congratulations!  You have entered an address!</b>
 
-    MIvoter.org is the <b>one stop shop</b> for all Michigan Democratic voters:
-    <ul>
-        <li>See <b>your</b> elected officials
-        <li>Register to vote
-        <li>See endorsed candidates
-        <li>Find protests &amp; events
-        <li>And much, much more
-    </ul>
-
+    <p/>
     <i style="font-size: 90%;">(We <b>never</b> track your address.&nbsp; Only your browser remembers it.)</i>
 </div>
 
@@ -60,9 +38,6 @@
 {include file="inc-trailer.tpl"}
 
 {include file="inc-bottombuttons.tpl" hasAddress=false}
-
-<!-- 'Float' the bottom buttons up a little, depending on @media detection, see base.css and head.html -->
-<!-- <div class="bottomSpacer">&nbsp;</div> -->
 
 </body>
 </html>

@@ -1,5 +1,5 @@
 
-<div class="bottom" style='max-width: 25em; background-color: #003052; padding-bottom: 0px;'>
+<div class="bottom fullWidth" style="background-color: #003052; padding-bottom: 0px;">
    <table width="100%" border='0' cellspacing=0 cellpadding=0 style='margin: auto;'>
       <tr>
          <td width="20%" id="candidates_td">

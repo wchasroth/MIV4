@@ -11,6 +11,9 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto">
 
 <head>
+    <script               src="parseHouseStreet.js"></script>
+    <script type="module" src="address-search02.js"></script>
+
     <style>
         @media screen and (min-width: 600px) {
             body {
@@ -30,9 +33,6 @@
                    max-width: 550px!important;
                    margin: 0 100px!important;
                    margin-top: 200px !important;
-               }
-               .footer {
-                   max-width: 750px!important;
                }
                .spacer {
                    height: 70px!important;
@@ -149,12 +149,26 @@
             width: 7em;
         }
 
+        .fullWidth {
+           width: 100vw; 
+           max-width: 750px;
+        }
+
+        address-search {
+            font-family: 'Roboto';
+            display: block;
+            width: 93vw;
+            max-width: 725px;
+            margin: 0 10px 10px 10px;
+            /* margin: 50px auto; */
+        }
+
     </style>
 </head>
 
 <body style="font-family: Roboto;">
 
-<div style="background-image: url('IMG/waveTopBackground5.png'); background-size: cover;">
+<div class="fullWidth" style="background-image: url('IMG/waveTopBackground5.png'); background-size: cover;">
    <div class="topBar">
       <a class="navbar-brand" href="/">
          <img src="IMG/waveLogo5.png" width="200" style="margin-top: 10px;"/>
@@ -165,6 +179,21 @@
       <i><u>Your</u></i>&nbsp; 2026 Michigan Voter Guide
    </div>
    <div style="height: 10px;">&nbsp;</div>
+
+   <address-search></address-search>
+
+   <script>
+       // Block input while fetch is in progress
+       AddressSearch.WAIT_FOR_FETCH = true;
+   
+       // Cancel request if it takes longer than 1500ms
+       AddressSearch.FETCH_TIMEOUT_MS = 1500;
+   
+       document.querySelector('address-search').addEventListener('address-selected', (e) => {
+           console.log('Selected address:', e.detail);
+       });
+   </script>
+
 </div>
 
 <p style="font-size: 10%;">&nbsp;</p>
@@ -190,7 +219,7 @@
 
 <p>&nbsp;</p>
 <div style="position: relative;">
-   <img src="IMG/footer-clean5d.png" style="width: 100%;" /><br/>
+   <img src="IMG/footer-clean5d.png" class="fullWidth" /><br/>
    <div style="position: absolute; top: 20px; z-index: 2; width: 100%;">
       <center>
          <div class="pill" onClick="share();" >

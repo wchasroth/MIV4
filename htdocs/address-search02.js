@@ -109,7 +109,9 @@ class AddressSearch extends HTMLElement {
     }
 
     connectedCallback() {
+        let address = this.getAttribute('address');
         this.input = this.shadowRoot.querySelector('input');
+        if (! (address == null  ||  address==''))  this.input.value = address;
         this.list = this.shadowRoot.querySelector('ul');
         this.actionButton = this.shadowRoot.querySelector('button.action');
 
@@ -257,6 +259,7 @@ class AddressSearch extends HTMLElement {
         const selected = this.results[index];
         if (!selected) return;
 
+        /* A lot of this may not be necessary */
         let value = selected.label || selected.address || selected;
         if (/^[0-9]+-[0-9]+/.test(value)) {
             value = value.replace(/-[0-9]+/, "");
@@ -264,12 +267,25 @@ class AddressSearch extends HTMLElement {
         this.input.value = value;
         this.clearList();
 
+        writeCookie('miAddress', e.detail.label);
+        writeCookie('miCodes',   JSON.stringify(e.detail.raw));
+
+        console.log('Selected address:', JSON.stringify(e.detail.raw));
+        location.reload();
+
+/*
         this.dispatchEvent(new CustomEvent('address-selected', {
             detail: selected,
             bubbles: true,
             composed: true
         }));
+*/
+    }
+
+    writeCookie(name, value) {
+       document.cookie = name + "=" + encodeURIComponent(value) + "; path=/; max-age=31536000";
     }
 }
 
 customElements.define('address-search', AddressSearch);
+

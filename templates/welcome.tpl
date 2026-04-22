@@ -186,38 +186,15 @@
    </div>
    <div style="height: 10px;">&nbsp;</div>
 
-   <address-search address=''></address-search>
-
-   <script>
-       // Block input while fetch is in progress
-       // AddressSearch.WAIT_FOR_FETCH = true;
-   
-       // Cancel request if it takes longer than 1500ms
-       // AddressSearch.FETCH_TIMEOUT_MS = 1500;
-   
-       document.querySelector('address-search').addEventListener('address-selected', (e) => {
-           e.detail.raw.address = e.detail.label;
-           console.log('Selected address:', JSON.stringify(e.detail.raw));
-       });
-   </script>
+   <address-search></address-search>
 
 </div>
 
 <p style="font-size: 10%;">&nbsp;</p>
 <div class="darkBlueText pageText unindentList">
+    <b>WELCOME!</b>
 
-    <b>To get started,</b> enter your address in the box above.
-    <div style="height: 10px;">&nbsp;</div>
-
-    MIvoter.org is the <b>one stop shop</b> for all Michigan Democratic voters:
-    <ul>
-        <li>See <b>your</b> elected officials
-        <li>Register to vote
-        <li>See endorsed candidates
-        <li>Find protests &amp; events
-        <li>And much, much more
-    </ul>
-
+    <p/>
     <i style="font-size: 90%;">(We <b>never</b> track your address.&nbsp; Only your browser remembers it.)</i>
 </div>
 

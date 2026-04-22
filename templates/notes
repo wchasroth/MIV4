@@ -1,0 +1,4 @@
+Random things from the old interface, that we're keeping notes about, just in case!
+
+   <!-- 'Float' the bottom buttons up a little, depending on @media detection, see base.css and head.html -->
+   <!-- <div class="bottomSpacer">&nbsp;</div> -->

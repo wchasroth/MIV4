@@ -61,9 +61,6 @@
 
 {include file="inc-bottombuttons.tpl" hasAddress=false}
 
-<!-- 'Float' the bottom buttons up a little, depending on @media detection, see base.css and head.html -->
-<!-- <div class="bottomSpacer">&nbsp;</div> -->
-
 </body>
 </html>
 {/nocache}

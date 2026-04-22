@@ -2,3 +2,4 @@ vendor
 composer.lock
 templates_c
 cache
+.idea

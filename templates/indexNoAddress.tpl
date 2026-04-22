@@ -56,15 +56,13 @@
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-{include file="trailer.tpl"}
 
+{include file="inc-trailer.tpl"}
 
-<div class="bottom" style='max-width: 25em; background-color: #003052; padding-bottom: 0px;'>
-   {include file="bottombuttons.tpl" hasAddress=false}
-</div>
+{include file="inc-bottombuttons.tpl" hasAddress=false}
 
 <!-- 'Float' the bottom buttons up a little, depending on @media detection, see base.css and head.html -->
-<div class="bottomSpacer">&nbsp;</div>
+<!-- <div class="bottomSpacer">&nbsp;</div> -->
 
 </body>
 </html>

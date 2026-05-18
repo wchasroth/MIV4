@@ -130,7 +130,9 @@ class AddressSearch extends HTMLElement {
             this.input.value = '';
             this.clearList();
             this.deleteCookie('miAddress');
-            location.href = "/index.php";
+            location.href = window.location.href.includes('localhost')
+               ? 'http://localhost/MIV4/htdocs/'
+               : '/index.php';
         });
     }
 
@@ -157,9 +159,12 @@ class AddressSearch extends HTMLElement {
         }
 
         const hostname = window.location.hostname || "";
+        const apiEndPoint = "https://address.mivoter.org";
+/*
         const apiEndPoint = hostname.includes("mivoter.org")
             ? "https://address.mivoter.org"
             : "/api/address-suggest";
+*/
         const fetchUrl = `${apiEndPoint}?street=${encodeURIComponent(street)}&num=${house}&max=5`;
 
         const useAbort = !this.constructor.WAIT_FOR_FETCH;

@@ -37,7 +37,7 @@
             <td width="20%" id="officials_td">
                {if $hasAddress}
                   <div class="button" id="officials_on">
-                     <a class="buttonLink" id='btn_officials' href="/officials/" onClick="return buttonSelect('officials');">
+                     <a class="buttonLink" id='btn_officials' href="officials.php" onClick="return buttonSelect('officials');">
                         <img src="IMG/waveButtonOfficials5.png" width="24" class="buttonImage" /><br/>
                         Current<br/>Officials
                      </a>

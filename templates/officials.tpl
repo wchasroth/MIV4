@@ -20,24 +20,29 @@
 
 {include file="inc-topbar.tpl"}
 
-<img src="IMG/ourFutureOurVote.png" style="width: 100%;"><br/>
-
 <p style="font-size: 10%;">&nbsp;</p>
+
 <div class="darkBlueText pageText unindentList">
-    <b>To get started,</b> enter your address in the box above.
-    <div style="height: 10px;">&nbsp;</div>
 
-    MIvoter.org is the <b>one stop shop</b> for all Michigan Democratic voters:
-    <ul>
-        <li>See <b>your</b> elected officials
-        <li>Register to vote
-        <li>See endorsed candidates
-        <li>Find protests &amp; events
-        <li>And much, much more
-    </ul>
+<b>Showing officials...</b>
 
-    <i style="font-size: 90%;">(We <b>never</b> track your address.&nbsp; Only your browser remembers it.)</i>
-</div>
+<p> address={$address} </p>
+<p> miCodes={$miCodes} </p>
+<p> show={$show} </p>
+<p> query={$query} </p>
+
+<p>
+<table>
+   {foreach from=$rows item=row}
+      <tr>
+         <td>{$row['miv_title']} {$row['dist']}</td>
+         <td>{$row['name']}</td>
+      </tr>
+   {/foreach}
+</table>
+
+</p>
+
 
 
 <p>&nbsp;</p>
@@ -46,7 +51,7 @@
 
 {include file="inc-trailer.tpl"}
 
-{include file="inc-bottombuttons.tpl" hasAddress=false}
+{include file="inc-bottombuttons.tpl" hasAddress=true}
 
 </body>
 </html>

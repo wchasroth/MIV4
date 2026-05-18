@@ -53,9 +53,7 @@
       <li><a href="/share">Share MIvoter</a> on social media
       <li>Share this <a href="https://mivoter.org/static/html/video_frame.html">fun video</a> about MIvoter
    </ul>
-
-    <p/>
-    <i style="font-size: 90%;">(We <b>never</b> track your address.&nbsp; Only your browser remembers it.)</i>
+   <i style="font-size: 90%;">(We <b>never</b> track your address.&nbsp; Only your browser remembers it.)</i>
 </div>
 
 

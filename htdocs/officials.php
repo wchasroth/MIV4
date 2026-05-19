@@ -44,11 +44,19 @@ $sql[] = select('6schl',  'subdist')  . from() . whereOrgIn('schl-cou') . " AND 
 $sql[] = select('7court', 'subdist')  . from() . whereOrgIn('crt-sup');
 $sql[] = select('7court', 'district') . from()
        .  " LEFT JOIN v4courts AS c  ON (c.shortname = s.district AND c.type = s.org) "
-       .  whereOrgIn('crt-a', 'crt-c', 'crt-p', 'crt-m') . " AND c.county_id = {$codes['county_code']} ";
+       .  whereOrgIn('crt-a', 'crt-c', 'crt-m') . " AND c.county_id = {$codes['county_code']} ";
+$sql[] = select('7court', 'subdist') . from()
+       .  " LEFT JOIN v4courts AS c  ON (c.shortname = s.district AND c.type = s.org) "
+       .  whereOrgIn('crt-p') . " AND c.county_id = {$codes['county_code']} ";
 $sql[] = select('7court', 's.district')  . from()
-       .  " LEFT JOIN district2court26 AS d  ON (d.org = s.org AND d.district = s.district) "
+       .  " LEFT JOIN s4district_courts AS d  ON (d.org = s.org AND d.district = s.district) "
        .  whereOrgIn('crt-d') . " AND d.county_id = {$codes['county_code']} AND d.juris_id = {$codes['juris_code']} ";
 $sql[] = select('8univ', 'district') . from() . whereOrgIn('mi-msu', 'mi-wsu', 'mi-um');
+
+$sql[] = select('9coll', 'district') . from()
+       .   "LEFT  comm_college2county26 AS y  ON (y."
+       .   "LEFT JOIN comm_college2county26 AS y  ON (y."
+   . whereOrgIn('comcol-cou');
 
 $query = Str::join($sql, " UNION ALL ") . " ORDER BY block, ballot_order, name";
 
@@ -57,14 +65,19 @@ $rows = $result->getRows();
 $rowCount = $result->getRowCount();
 
 $blocks = ['0natl' => [], '0natl' => [], '1state' => [], '2cnty' => [], '4juris' => [], '5vill' => [],
-   '6schl' => [], '7court' => [], '8univ' => []];
+   '6schl' => [], '7court' => [], '8univ' => [], '9coll' => []];
 
+$collegeQuery = "SELECT c.name "
+              . "  FROM      s4commcolleges        AS c "
+              . "  LEFT JOIN comm_college2county26 AS y ON (c.id = y.comm_college_id) "
+              . " WHERE y.county_id = {$codes['county_code']} LIMIT 1";
 $titles = [
    '2cnty'  => getName($pdo, "SELECT name FROM s4counties      WHERE id={$codes['county_code']}") . " County",
    '4juris' => getName($pdo, "SELECT name FROM s4jurisdictions WHERE id={$codes['juris_code']}"),
    '5vill'  => "Village of "
              . getName($pdo, "SELECT name FROM s4villages      WHERE id={$codes['village_code']}"),
    '6schl'  => getName($pdo, "SELECT name FROM s4schools       WHERE id={$codes['sd_code']} LIMIT 1"),
+   '9coll'  => getName($pdo, $collegeQuery)
 ];
 
 for ($i=0;   $i<$rowCount;  $i++) {

@@ -27,17 +27,29 @@ $show = print_r($codes, true);
 $ward = getWard($codes['wardpct']);
 
 $sql = [];
-$sql[] = select('0natl',  'district') . whereOrgIn('us', 'us-sen') . " OR (s.org='us-hou' AND s.district='{$codes['congress']}') ";
-$sql[] = select('1state', 'district') . whereOrgIn('mi', 'mi-ag', 'mi-boe', 'mi-sos')
+$sql[] = select('0natl',  'district') . from() . whereOrgIn('us', 'us-sen') . " OR (s.org='us-hou' AND s.district='{$codes['congress']}') ";
+$sql[] = select('1state', 'district') . from() . whereOrgIn('mi', 'mi-ag', 'mi-boe', 'mi-sos')
        . "  OR (s.org='mi-sen' AND s.district='{$codes['senate']}') "
        . "  OR (s.org='mi-hou' AND s.district='{$codes['house']}') ";
-$sql[] = select('2cnty',  'subdist')  . whereOrgIn('cnty')     . "AND district={$codes['county_code']} ";
-$sql[] = select('3cnty',  'subdist')  . whereOrgIn('cnty-com') . "AND district={$codes['county_code']} AND subdist={$codes['commissioner']} ";
+$sql[] = select('2cnty',  'subdist')  . from() . whereOrgIn('cnty')     . "AND district={$codes['county_code']} ";
+$sql[] = select('3cnty',  'subdist')  . from() . whereOrgIn('cnty-com') . "AND district={$codes['county_code']} AND subdist={$codes['commissioner']} ";
 
-$sql[] = select('4juris', 'subdist')  . whereOrgIn('city',    'town')     . " AND district='{$codes['juris_code']}' ";
-$sql[] = select('4juris', 'subdist')  . whereOrgIn('city-cou','town-cou') . " AND district='{$codes['juris_code']}' AND subdist=$ward ";
+$sql[] = select('4juris', 'subdist')  . from() . whereOrgIn('city',    'town')     . " AND district='{$codes['juris_code']}' ";
+$sql[] = select('4juris', 'subdist')  . from() . whereOrgIn('city-cou','town-cou') . " AND district='{$codes['juris_code']}' AND subdist=$ward ";
+$sql[] = select('5vill',  'subdist')  . from() . whereOrgIn('vil','vil-cou') . " AND district='{$codes['village_code']}' ";
 
-$query = Str::join($sql, " UNION ALL ") . " ORDER BY block, ballot_order";
+$sql[] = select('6schl',  'subdist')  . from() . whereOrgIn('schl-cou') . " AND district='{$codes['sd_code']}' ";
+
+$sql[] = select('7court', 'subdist')  . from() . whereOrgIn('crt-sup');
+$sql[] = select('7court', 'district') . from()
+       .  " LEFT JOIN v4courts AS c  ON (c.shortname = s.district AND c.type = s.org) "
+       .  whereOrgIn('crt-a', 'crt-c', 'crt-p', 'crt-m') . " AND c.county_id = {$codes['county_code']} ";
+$sql[] = select('7court', 's.district')  . from()
+       .  " LEFT JOIN district2court26 AS d  ON (d.org = s.org AND d.district = s.district) "
+       .  whereOrgIn('crt-d') . " AND d.county_id = {$codes['county_code']} AND d.juris_id = {$codes['juris_code']} ";
+$sql[] = select('8univ', 'district') . from() . whereOrgIn('mi-msu', 'mi-wsu', 'mi-um');
+
+$query = Str::join($sql, " UNION ALL ") . " ORDER BY block, ballot_order, name";
 
 $result = $pdo->run($query);
 $rows = $result->getRows();
@@ -64,15 +76,17 @@ function select(string $block, string $dist): string {
       . "       t.ballot_order, t.miv_title, '$block' AS block ";
 }
 
-function whereOrgIn (... $orgs): string {
+function from (): string {
    return  "  FROM      v4seats      AS s "
          . "  LEFT JOIN v4incumbents AS i ON (i.seat_id = s.id) "
-         . "  LEFT JOIN s4titles     AS t ON (t.org = s.org AND t.office = s.office) "
-         . " WHERE "
-         . ( count($orgs) === 1
-               ? " s.org='$orgs[0]'"
-               : " s.org IN ('" . Str::join($orgs, "','") . "') ")
-   ;
+         . "  LEFT JOIN s4titles     AS t ON (t.org = s.org AND t.office = s.office) ";
+}
+
+function whereOrgIn (... $orgs): string {
+   return " WHERE "
+          . ( count($orgs) === 1
+             ? " s.org='$orgs[0]'"
+             : " s.org IN ('" . Str::join($orgs, "','") . "') ");
 }
 
 // NOT sure if this is right for small numbers, i.e. check jurisdictions where wardpct='11' !!

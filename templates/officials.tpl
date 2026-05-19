@@ -14,6 +14,52 @@
 <head>
     <script               src="parseHouseStreet.js"></script>
     <script type="module" src="address-search02.js"></script>
+    <script>
+        function flip(id, obj) {
+           panel = document.getElementById(id);
+           panel.style.display =  (panel.style.display === "block") ? "none" : "block";
+           obj.classList.toggle("active");
+        }
+   </script>
+    <style>
+       .accordion {
+          background-color: #eee;
+          color: #444;
+          cursor: pointer;
+          padding: 18px;
+          width: 100%;
+          text-align: left;
+          border: none;
+          outline: none;
+          transition: 0.4s;
+          font-size: 120%;
+       }
+       .accordion:after {
+           /* content: '\02795';*/ /* Unicode character for "plus" sign (+) */
+           content: '\02228';   /* &#8964 */
+           font-size: 23px;
+           color: #777;
+           float: right;
+           margin-left: 5px;
+       }
+
+       .active:after {
+           content: '\02227'
+       }
+
+       /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+       .active, .accordion:hover {
+          background-color: #ccc;
+       }
+
+       /* Style the accordion panel. Note: hidden by default */
+       .panel {
+          padding: 0 18px;
+          background-color: white;
+          display: none;
+          overflow: hidden;
+       }
+   </style>
 </head>
 
 <body style="font-family: Roboto;">
@@ -24,22 +70,17 @@
 
 <div class="darkBlueText pageText unindentList">
 
-<b>Showing officials...</b>
-
-<p> address={$address} </p>
-<p> miCodes={$miCodes} </p>
-<p> show={$show} </p>
-<p> query={$query} </p>
-
-<p>
-<table>
-   {foreach from=$rows item=row}
-      <tr>
-         <td>{$row['miv_title']} {$row['dist']}</td>
-         <td>{$row['name']}</td>
-      </tr>
-   {/foreach}
-</table>
+<p/>
+{include file="inc-official-block.tpl" block="0natl"  title="National" rows=$blocks['0natl']}
+{include file="inc-official-block.tpl" block="1state" title="State"    rows=$blocks['1state']}
+{include file="inc-official-block.tpl" block="2cnty"  title=$titles['2cnty']   rows=$blocks['2cnty']}
+{include file="inc-official-block.tpl" block="4juris" title=$titles['4juris']   rows=$blocks['4juris']}
+{if $hasVillage}
+   {include file="inc-official-block.tpl" block="5vill"  title=$titles['5vill']    rows=$blocks['5vill']}
+{/if}
+{include file="inc-official-block.tpl" block="6schl" title=$titles['6schl']     rows=$blocks['6schl']}
+{include file="inc-official-block.tpl" block="7court" title="Courts"   rows=$blocks['7court']}
+{include file="inc-official-block.tpl" block="8univ" title="Universities"   rows=$blocks['8univ']}
 
 </p>
 

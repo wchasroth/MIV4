@@ -4,6 +4,7 @@ declare(strict_types=1);
 use CharlesRothDotNet\Alfred\DumbFileLogger;
 use CharlesRothDotNet\Alfred\EnvFile;
 use CharlesRothDotNet\Alfred\PdoHelper;
+use CharlesRothDotNet\Alfred\AlfredPDO;
 use CharlesRothDotNet\Alfred\Str;
 use CharlesRothDotNet\EditorV4\EnvHelper;
 use Smarty\Smarty;
@@ -32,7 +33,7 @@ $sql[] = select('1state', 'district') . from() . whereOrgIn('mi', 'mi-ag', 'mi-b
        . "  OR (s.org='mi-sen' AND s.district='{$codes['senate']}') "
        . "  OR (s.org='mi-hou' AND s.district='{$codes['house']}') ";
 $sql[] = select('2cnty',  'subdist')  . from() . whereOrgIn('cnty')     . "AND district={$codes['county_code']} ";
-$sql[] = select('3cnty',  'subdist')  . from() . whereOrgIn('cnty-com') . "AND district={$codes['county_code']} AND subdist={$codes['commissioner']} ";
+$sql[] = select('2cnty',  'subdist')  . from() . whereOrgIn('cnty-com') . "AND district={$codes['county_code']} AND subdist={$codes['commissioner']} ";
 
 $sql[] = select('4juris', 'subdist')  . from() . whereOrgIn('city',    'town')     . " AND district='{$codes['juris_code']}' ";
 $sql[] = select('4juris', 'subdist')  . from() . whereOrgIn('city-cou','town-cou') . " AND district='{$codes['juris_code']}' AND subdist=$ward ";
@@ -54,21 +55,44 @@ $query = Str::join($sql, " UNION ALL ") . " ORDER BY block, ballot_order, name";
 $result = $pdo->run($query);
 $rows = $result->getRows();
 $rowCount = $result->getRowCount();
+
+$blocks = ['0natl' => [], '0natl' => [], '1state' => [], '2cnty' => [], '4juris' => [], '5vill' => [],
+   '6schl' => [], '7court' => [], '8univ' => []];
+
+$titles = [
+   '2cnty'  => getName($pdo, "SELECT name FROM s4counties      WHERE id={$codes['county_code']}") . " County",
+   '4juris' => getName($pdo, "SELECT name FROM s4jurisdictions WHERE id={$codes['juris_code']}"),
+   '5vill'  => "Village of "
+             . getName($pdo, "SELECT name FROM s4villages      WHERE id={$codes['village_code']}"),
+   '6schl'  => getName($pdo, "SELECT name FROM s4schools       WHERE id={$codes['sd_code']} LIMIT 1"),
+];
+
 for ($i=0;   $i<$rowCount;  $i++) {
    $name = $rows[$i]['name'];
    if ($name === strtoupper($name))   $rows[$i]['name'] = ucwords(strtolower($name));
 
    $dist = $rows[$i]['dist'];
    $rows[$i]['dist'] = (intval($dist) === 0 ? '' : "($dist)");
+   $blocks[$rows[$i]['block']][] = $rows[$i];
 }
+
 
 $smarty = new SmartyPage();
 $smarty->assign('address', $address);
 $smarty->assign('miCodes', $miCodes);
 $smarty->assign('show', $show);
 $smarty->assign('query', $query);
-$smarty->assign('rows', $rows);
+$smarty->assign('blocks', $blocks);
+$smarty->assign('titles', $titles);
+$smarty->assign('hasVillage', intval($codes['village_code']) > 0);
 $smarty->display('officials.tpl');
+
+function getName (AlfredPDO $pdo, string $sql): string {
+   $result = $pdo->run($sql);
+   $name = $result->getSingleValue('name');
+   if ($name === strtoupper($name))  $name = ucwords(strtolower($name));
+   return $name;
+}
 
 function select(string $block, string $dist): string {
    return  "SELECT s.id, s.org, s.office, s.district, s.subdist, s.termcycle, $dist AS dist, "
@@ -95,11 +119,3 @@ function getWard(string $wardpct): int {
    if ($ward < 1000)  return 0;
    return intdiv($ward, 1000);
 }
-
-//[juris_code] => 3000
-//[county_code] => 81
-//[sd_code] => 2820
-//[wardpct] => 3029
-//[village_code] => 0
-//[senate] => 15
-//[commissioner] => 7

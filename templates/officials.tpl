@@ -81,6 +81,7 @@
 {include file="inc-official-block.tpl" block="6schl" title=$titles['6schl']     rows=$blocks['6schl']}
 {include file="inc-official-block.tpl" block="7court" title="Courts"   rows=$blocks['7court']}
 {include file="inc-official-block.tpl" block="8univ" title="Universities"   rows=$blocks['8univ']}
+{include file="inc-official-block.tpl" block="9coll" title=$titles['9coll']   rows=$blocks['9coll']}
 
 </p>
 

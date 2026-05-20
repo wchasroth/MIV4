@@ -53,10 +53,9 @@ $sql[] = select('7court', 's.district')  . from()
        .  whereOrgIn('crt-d') . " AND d.county_id = {$codes['county_code']} AND d.juris_id = {$codes['juris_code']} ";
 $sql[] = select('8univ', 'district') . from() . whereOrgIn('mi-msu', 'mi-wsu', 'mi-um');
 
-$sql[] = select('9coll', 'district') . from()
-       .   "LEFT  comm_college2county26 AS y  ON (y."
-       .   "LEFT JOIN comm_college2county26 AS y  ON (y."
-   . whereOrgIn('comcol-cou');
+$sql[] = select('9coll', 'subdist') . from()
+       .  " LEFT JOIN comm_college2county26 AS y ON (y.comm_college_id = s.district) "
+       .  whereOrgIn('comcol-cou') . " AND y.county_id = {$codes['county_code']} ";
 
 $query = Str::join($sql, " UNION ALL ") . " ORDER BY block, ballot_order, name";
 
@@ -108,9 +107,8 @@ function getName (AlfredPDO $pdo, string $sql): string {
 }
 
 function select(string $block, string $dist): string {
-   return  "SELECT s.id, s.org, s.office, s.district, s.subdist, s.termcycle, $dist AS dist, "
-      . "       i.name, i.party, i.address, i.phone, i.email, i.web, "
-      . "       t.ballot_order, t.miv_title, '$block' AS block ";
+   return  "SELECT s.id, s.org, s.office, s.district, s.subdist, $dist AS dist, "
+      . "       i.name, t.ballot_order, t.miv_title, '$block' AS block ";
 }
 
 function from (): string {

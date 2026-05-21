@@ -29,9 +29,11 @@
 
 <table width="100%" style="font-size: 120%;">
     <tr valign="top">
-        <td>{$name}<br>{$title} {$party}</td>
-        <td><img src="IMG/ourFutureOurVote.png" width="150"/></td>
-        <td align="right"><button onClick="window.history.back();">Back</button></td>
+        <td>{$name}<br>{$title} {$party}<br/>
+            <button onClick="window.history.back();">Back</button>
+        </td>
+        <td align="right"><img src="IMG/ourFutureOurVote.png" width="180"/></td>
+    </tr>
     </tr>
 </table>
 

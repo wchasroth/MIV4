@@ -1,6 +1,6 @@
 
 {$backclass=0}
-<button class="accordion" onClick="flip('{$block}', this);">{$title}</button>
+<button class="accordion" onClick="flipPanel('{$block}', this);">{$title}</button>
 <div class="panel" id='{$block}'>
    {foreach from=$rows item=row}
       <table width="100%" cellspacing="0" cellpadding="8">

@@ -29,7 +29,7 @@
             <td width="20%" id="howVote_td">
                {if $hasAddress}
                   <div class="button" id="howVote_on">
-                     <a class="buttonLink" href="/info/" onClick="return buttonSelect('howVote');">
+                     <a class="buttonLink" href="info.php" onClick="return buttonSelect('howVote_td');">
                         <img src="IMG/waveButtonVote5.png" width="24" class="buttonImage"/><br/>
                         How to<br/>Vote
                      </a>

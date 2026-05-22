@@ -60,7 +60,7 @@
    
             <td width="20%" id="faq_td">
                <div class="button">
-                  <a id='btn_faq' class="buttonLink" href="/faq/" onClick="return buttonSelect('faq');">
+                  <a id='btn_faq' class="buttonLink" href="faq.php" onClick="return buttonSelect('faq');">
                      <img src="IMG/waveButtonFAQ5.png" width="24" class="buttonImage" /><br/>
                      Frequent<br/>Questions
                   </a>

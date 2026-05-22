@@ -64,6 +64,7 @@
           overflow: hidden;
        }
        .noUnderline { text-decoration: none; }
+       a, a:visited { color: blue; }
    </style>
 </head>
 
@@ -75,7 +76,6 @@
 
 <div class="darkBlueText pageText unindentList">
 
-<p/>
 {include file="inc-official-block.tpl" block="0natl"  title="National" rows=$blocks['0natl']}
 {include file="inc-official-block.tpl" block="1state" title="State"    rows=$blocks['1state']}
 {include file="inc-official-block.tpl" block="2cnty"  title=$titles['2cnty']   rows=$blocks['2cnty']}
@@ -90,8 +90,7 @@
 {foreach from=$colleges item=college}
    {include file="inc-official-block.tpl" block=$college['id'] title=$college['name']   rows=$college['rows']}
 {/foreach}
-
-</p>
+</div>
 
 
 

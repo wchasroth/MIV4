@@ -60,13 +60,16 @@ $blocks = ['0natl' => [], '0natl' => [], '1state' => [], '2cnty' => [], '4juris'
 
 $result = $pdo->run($query);
 $rows = $result->getRows();
+removeDuplicateTitles($rows);
 $rowCount = $result->getRowCount();
 for ($i=0;   $i<$rowCount;  $i++) {
    $name = $rows[$i]['name'];
    if ($name === strtoupper($name))   $rows[$i]['name'] = ucwords(strtolower($name));
 
    $dist = $rows[$i]['dist'];
-   $rows[$i]['dist'] = (intval($dist) === 0 ? '' : "($dist)");
+   $dist = (intval($dist) === 0 ? '' : "($dist)");
+// $rows[$i]['dist'] = (intval($dist) === 0 ? '' : "($dist)");
+   if ($rows[$i]['miv_title'] !== "") $rows[$i]['miv_title'] .= " $dist";
    $blocks[$rows[$i]['block']][] = $rows[$i];
 }
 
@@ -74,10 +77,11 @@ $titles = [
    '2cnty'  => getName($pdo, "SELECT name FROM s4counties      WHERE id={$codes['county_code']}") . " County",
    '4juris' => getName($pdo, "SELECT name FROM s4jurisdictions WHERE id={$codes['juris_code']}"),
    '5vill'  => "Village of "
-      . getName($pdo, "SELECT name FROM s4villages      WHERE id={$codes['village_code']}"),
+             . getName($pdo, "SELECT name FROM s4villages      WHERE id={$codes['village_code']}"),
    '6schl'  => getName($pdo, "SELECT name FROM s4schools       WHERE id={$codes['sd_code']} LIMIT 1"),
 ];
 
+// Because we can have multiple colleges in the county, we need a separate query & loop for them.
 $colleges = [];
 $collegeQuery = "SELECT c.name, c.id "
    . "  FROM      s4commcolleges        AS c "
@@ -89,6 +93,7 @@ foreach ($result->getRows() as $college) {
    $sql = select('9coll-$collegeId', 'subdist') . from() .  whereOrgIn('comcol-cou') . " AND s.district = $collegeId ";
    $result = $pdo->run($sql);
    $trustees = $result->getRows();
+   removeDuplicateTitles($trustees);
    for ($i=0;   $i<$result->getRowCount();   $i++)  $trustees[$i]['dist'] = '';
    $colleges[] = ['id' => $collegeId, 'name' => $college['name'], 'rows' => $trustees];
 }
@@ -134,4 +139,13 @@ function getWard(string $wardpct): int {
    $ward = intval($wardpct);
    if ($ward < 1000)  return 0;
    return intdiv($ward, 1000);
+}
+
+function removeDuplicateTitles (array &$rows): void {
+   $previousTitle = "";
+   foreach ($rows as &$row) {
+      $title = $row['miv_title'];
+      if ($title === $previousTitle) $row['miv_title'] = "";
+      $previousTitle = $title;
+   }
 }

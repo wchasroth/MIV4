@@ -25,14 +25,14 @@
 
 <body style="font-family: Roboto;">
 
-<div class="darkBlueText pageText unindentList" style="max-width: 23em;">
+<div class="darkBlueText pageText unindentList" style="max-width: 30em;">
 
 <table width="100%" style="font-size: 120%;">
     <tr valign="top">
         <td>{$name}<br>{$title} {$party}<br/>
             <button onClick="window.history.back();">Back</button>
         </td>
-        <td align="right"><img src="IMG/ourFutureOurVote.png" width="180"/></td>
+        <td align="right"><img src="IMG/noPerson.png" width="180"/></td>
     </tr>
     </tr>
 </table>

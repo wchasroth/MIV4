@@ -49,8 +49,9 @@ if ($result->failed()) {
 $row    = $result->getRows()[0];
 $name = $row['name'];
 if ($name === strtoupper($name))   $name = ucwords(strtolower($name));
-$party = $row['party'];
-if (trim($party) !== "")  $party = "($party)";
+$party = trim($row['party']);
+if ($party === "N")  $party = "";
+if ($party !== "" )  $party = "($party)";
 $web = $row['web'];
 if (Str::startsWith($web, "http")) $web = Str::substringAfter($web, "//");
 $url = $row['web'];

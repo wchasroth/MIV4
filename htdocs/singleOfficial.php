@@ -32,7 +32,7 @@ $miCodes = trim($_COOKIE['miCodes'] ?? "");
 $codes = json_decode($miCodes, true);
 
 $sql = "SELECT s.id, s.org, s.office, s.district, s.subdist, s.termcycle, "
-     . "       i.name, i.party, i.address, i.phone, i.email, i.web, "
+     . "       i.name, i.party, i.address, i.phone, i.email, i.web, i.headshot, "
      . "       t.miv_title "
      . "  FROM      v4seats      AS s "
      . "  LEFT JOIN v4incumbents AS i ON (i.seat_id = s.id) "
@@ -47,15 +47,21 @@ if ($result->failed()) {
 }
 
 $row    = $result->getRows()[0];
+
 $name = $row['name'];
 if ($name === strtoupper($name))   $name = ucwords(strtolower($name));
+
 $party = trim($row['party']);
 if ($party === "N")  $party = "";
 if ($party !== "" )  $party = "($party)";
+
 $web = $row['web'];
 if (Str::startsWith($web, "http")) $web = Str::substringAfter($web, "//");
 $url = $row['web'];
 if (! Str::startsWith($url, "http"))  $url = "https://" . $url;
+
+$headshot = trim($row['headshot']);
+if ($headshot === "")  $headshot = "IMG/noPerson.png";
 
 $smarty = new SmartyPage();
 $smarty->assign('name', $name);
@@ -66,4 +72,5 @@ $smarty->assign('phone',   $row['phone']);
 $smarty->assign('email',   $row['email']);
 $smarty->assign('web',     $web);
 $smarty->assign('url',     $url);
+$smarty->assign('headshot', $headshot);
 $smarty->display('singleOfficial.tpl');

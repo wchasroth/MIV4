@@ -102,7 +102,7 @@
 
 {include file="inc-trailer.tpl"}
 
-{include file="inc-bottombuttons.tpl" hasAddress=true}
+{include file="inc-bottombuttons.tpl" hasAddress=true button="officials_td"}
 
 </body>
 </html>

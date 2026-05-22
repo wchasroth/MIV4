@@ -1,3 +1,11 @@
+<script>
+   function buttonSelect(id) {
+       buttonClicked = document.getElementById(id);
+       if (buttonClicked) buttonClicked.style.backgroundColor = "#2d6887";
+       return true;
+   }
+</script>
+
 <div class="bottom" style='max-width: 25em; background-color: #003052; padding-bottom: 0px;'>
    <div class="bottom fullWidth" style="background-color: #003052; padding-bottom: 0px;">
       <table width="100%" border='0' cellspacing=0 cellpadding=0 style='margin: auto;'>
@@ -5,7 +13,7 @@
             <td width="20%" id="candidates_td">
                {if $hasAddress}
                   <div class="button" id="candidates">
-                     <a class="buttonLink" href="/ballot/" onClick="return buttonSelect('candidates');">
+                     <a class="buttonLink" href="/ballot/" onClick="return buttonSelect('candidates_td');">
                         <img src="IMG/waveButtonCandidates5.png" width="24" class="buttonImage"/><br/>
                         Endorsed<br/>Candidates
                      </a>
@@ -63,3 +71,6 @@
    
    </div>
 </div>
+<script>
+   buttonSelect('{$button}')
+</script>

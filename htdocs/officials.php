@@ -53,32 +53,14 @@ $sql[] = select('7court', 's.district')  . from()
        .  whereOrgIn('crt-d') . " AND d.county_id = {$codes['county_code']} AND d.juris_id = {$codes['juris_code']} ";
 $sql[] = select('8univ', 'district') . from() . whereOrgIn('mi-msu', 'mi-wsu', 'mi-um');
 
-$sql[] = select('9coll', 'subdist') . from()
-       .  " LEFT JOIN comm_college2county26 AS y ON (y.comm_college_id = s.district) "
-       .  whereOrgIn('comcol-cou') . " AND y.county_id = {$codes['county_code']} ";
-
 $query = Str::join($sql, " UNION ALL ") . " ORDER BY block, ballot_order, name";
+
+$blocks = ['0natl' => [], '0natl' => [], '1state' => [], '2cnty' => [], '4juris' => [], '5vill' => [],
+   '6schl' => [], '7court' => [], '8univ' => []];
 
 $result = $pdo->run($query);
 $rows = $result->getRows();
 $rowCount = $result->getRowCount();
-
-$blocks = ['0natl' => [], '0natl' => [], '1state' => [], '2cnty' => [], '4juris' => [], '5vill' => [],
-   '6schl' => [], '7court' => [], '8univ' => [], '9coll' => []];
-
-$collegeQuery = "SELECT c.name "
-              . "  FROM      s4commcolleges        AS c "
-              . "  LEFT JOIN comm_college2county26 AS y ON (c.id = y.comm_college_id) "
-              . " WHERE y.county_id = {$codes['county_code']} LIMIT 1";
-$titles = [
-   '2cnty'  => getName($pdo, "SELECT name FROM s4counties      WHERE id={$codes['county_code']}") . " County",
-   '4juris' => getName($pdo, "SELECT name FROM s4jurisdictions WHERE id={$codes['juris_code']}"),
-   '5vill'  => "Village of "
-             . getName($pdo, "SELECT name FROM s4villages      WHERE id={$codes['village_code']}"),
-   '6schl'  => getName($pdo, "SELECT name FROM s4schools       WHERE id={$codes['sd_code']} LIMIT 1"),
-   '9coll'  => getName($pdo, $collegeQuery)
-];
-
 for ($i=0;   $i<$rowCount;  $i++) {
    $name = $rows[$i]['name'];
    if ($name === strtoupper($name))   $rows[$i]['name'] = ucwords(strtolower($name));
@@ -88,6 +70,28 @@ for ($i=0;   $i<$rowCount;  $i++) {
    $blocks[$rows[$i]['block']][] = $rows[$i];
 }
 
+$titles = [
+   '2cnty'  => getName($pdo, "SELECT name FROM s4counties      WHERE id={$codes['county_code']}") . " County",
+   '4juris' => getName($pdo, "SELECT name FROM s4jurisdictions WHERE id={$codes['juris_code']}"),
+   '5vill'  => "Village of "
+      . getName($pdo, "SELECT name FROM s4villages      WHERE id={$codes['village_code']}"),
+   '6schl'  => getName($pdo, "SELECT name FROM s4schools       WHERE id={$codes['sd_code']} LIMIT 1"),
+];
+
+$colleges = [];
+$collegeQuery = "SELECT c.name, c.id "
+   . "  FROM      s4commcolleges        AS c "
+   . "  LEFT JOIN v4commcolleges_county AS y ON (c.id = y.id) "
+   . " WHERE y.county_id = {$codes['county_code']} ORDER BY c.name ";
+$result = $pdo->run($collegeQuery);
+foreach ($result->getRows() as $college) {
+   $collegeId = $college['id'];
+   $sql = select('9coll-$collegeId', 'subdist') . from() .  whereOrgIn('comcol-cou') . " AND s.district = $collegeId ";
+   $result = $pdo->run($sql);
+   $trustees = $result->getRows();
+   for ($i=0;   $i<$result->getRowCount();   $i++)  $trustees[$i]['dist'] = '';
+   $colleges[] = ['id' => $collegeId, 'name' => $college['name'], 'rows' => $trustees];
+}
 
 $smarty = new SmartyPage();
 $smarty->assign('address', $address);
@@ -97,6 +101,7 @@ $smarty->assign('query', $query);
 $smarty->assign('blocks', $blocks);
 $smarty->assign('titles', $titles);
 $smarty->assign('hasVillage', intval($codes['village_code']) > 0);
+$smarty->assign('colleges', $colleges);
 $smarty->display('officials.tpl');
 
 function getName (AlfredPDO $pdo, string $sql): string {

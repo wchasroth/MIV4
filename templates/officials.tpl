@@ -17,8 +17,12 @@
     <script>
         function flip(id, obj) {
            panel = document.getElementById(id);
-           panel.style.display =  (panel.style.display === "block") ? "none" : "block";
-           obj.classList.toggle("active");
+           if (panel.style.display === "block")  panel.style.display = "none";
+           else {
+               allPanels = document.getElementsByClassName('panel');
+               for (const eachPanel of allPanels)  eachPanel.style.display = "none";
+               panel.style.display = "block";
+           }
         }
    </script>
     <style>
@@ -81,7 +85,10 @@
 {include file="inc-official-block.tpl" block="6schl" title=$titles['6schl']     rows=$blocks['6schl']}
 {include file="inc-official-block.tpl" block="7court" title="Courts"   rows=$blocks['7court']}
 {include file="inc-official-block.tpl" block="8univ" title="Universities"   rows=$blocks['8univ']}
-{include file="inc-official-block.tpl" block="9coll" title=$titles['9coll']   rows=$blocks['9coll']}
+
+{foreach from=$colleges item=college}
+   {include file="inc-official-block.tpl" block=$college['id'] title=$college['name']   rows=$college['rows']}
+{/foreach}
 
 </p>
 

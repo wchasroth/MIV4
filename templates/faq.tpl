@@ -36,9 +36,9 @@ Frequently Asked Questions
 
    <button class="accordion" onClick="flipPanel('endorsed', this);">Endorsed by whom?</button>
    <div class="panel" id='endorsed'>
-      <ul style="padding-left: 0.5em;">
+      <ul>
          <li>Michigan Democratic Party endorses the following:</li>
-         <ul style="padding-left: 0.5em;">
+         <ul>
             <li>US candidates</li>
             <li>Statewide candidates</li>
             <li>Michigan State Senators/Representatives</li>
@@ -73,7 +73,7 @@ Frequently Asked Questions
    <div class="panel" id='votingDenied'>
       Please contact the non-partisan organization
       <a href="https://866ourvote.org/">Election Protection</a><sup>*</sup>.
-      <ul style="padding-inline-start: 0;">
+      <ul>
          <li>English: 866-OUR-VOTE -- <a href="https://www.lawyerscommittee.org/"
          >Lawyers' Committee for Civil Rights Under Law</a>
          <li>Spanish/English: 888-VE-Y-VOTA-- <a href="https://naleo.org/"

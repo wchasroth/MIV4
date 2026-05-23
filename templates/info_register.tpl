@@ -23,7 +23,7 @@
 
 <p style="font-size: 10%;">&nbsp;</p>
 
-<div class="darkBlueText">
+<div class="darkBlueText pageText unindentList">
 
          <b>Are you registered?</b>&nbsp;
          <br>Check on-line with the

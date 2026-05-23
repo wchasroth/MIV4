@@ -28,6 +28,7 @@
       <b>Early Voting</b><br/>
   Early in-person voting for the August 2026 primary election starts
         July 25, and runs through election day, August 4th.
+       <p/>
        Early voting for the November 2026 general election starts October 24th,
         and runs through election day, Tuesday November 3rd.&nbsp;
        Check the
@@ -37,7 +38,7 @@
 <p></p>
       <b>Voting in Person on Election Day (Nov 3)</b>
       <br>Your polling place is
-      <ul  style="padding-left: 0.5em;">
+      <ul>
         <li>{{ jwp }}</li>
         <li>{{ polling_place['name'] }}</li>
         <li>{{ polling_place['address'] }}</li>
@@ -46,9 +47,9 @@
              >Map</a>
         </li>
       </ul>
-      <p></p>
+
       <b>Bring Your ID.</b>&nbsp;  You can use:
-      <ul  style="padding-left: 0.5em;">
+      <ul>
         <li>Michigan driver's license or state ID</li>
         <li>Driver's license or state ID from another state</li>
         <li>Federal or state-government issued ID with photo</li>
@@ -57,7 +58,7 @@
         <li>Student ID with photo</li>
         <li>Tribal ID with photo</li>
       </ul>
-      <b>Note:</b> You can still vote without ID. You just have to sign an
+      <b>Note:</b> You can still vote without ID.&nbsp; You just have to sign an
       affidavit affirming your identity.</b>
 
 <p></p>
@@ -70,8 +71,6 @@
   
 </div>
 
-<p>&nbsp;</p>
-<p>&nbsp;</p>
 <p>&nbsp;</p>
 
 {include file="inc-trailer.tpl"}

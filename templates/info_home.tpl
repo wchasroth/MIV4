@@ -35,7 +35,7 @@
       <p></p>
       <b>Request a ballot from your clerk</b><br>
       Your options include:
-      <ul  style="padding-left: 0.5em;">
+      <ul>
         <li>Call your clerk, and they'll mail you an application that you return by mail</li>
         <li><a
             href="https://mvic.sos.state.mi.us/Home/VoteAtHome#apply">
@@ -58,9 +58,8 @@
            </ul>
       </ul>
 
-<p></p>
       <b>Deadlines for Requesting a Ballot</b>
-      <ul  style="padding-left: 0.5em;">
+      <ul>
         <li>Requests for an absent voter ballot must be <i><u>received</u></i>
           by your city or township clerk no later than 5 PM on the Friday
           before the election.
@@ -75,7 +74,6 @@
         </li>
       </ul>
 
-<p></p>
       <b>Return Your Ballot</b><br>
       You can return your ballot by mail (but allow 2 weeks),
       or at your clerk's office,
@@ -95,10 +93,6 @@
 </div>
 
   
-</div>
-
-<p>&nbsp;</p>
-<p>&nbsp;</p>
 <p>&nbsp;</p>
 
 {include file="inc-trailer.tpl"}

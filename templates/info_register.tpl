@@ -23,7 +23,7 @@
 
 <p style="font-size: 10%;">&nbsp;</p>
 
-<div class="darkBlueText pageText unindentList">
+<div class="darkBlueText">
 
          <b>Are you registered?</b>&nbsp;
          <br>Check on-line with the
@@ -36,13 +36,12 @@
         <a href="https://mvic.sos.state.mi.us/RegisterVoter/Index">
            on-line</a>
         if:
-        <ul  style="padding-left: 0.5em;">
+        <ul>
           <li>You have a valid Michigan driver’s license or state ID</li>
           <li>Your Michigan license or state ID has the correct address on it</li>
           <li>You haven’t applied for a duplicate license or state ID</li>
         </ul>
   
-   <p></p>
          <b>Register in person</b>&nbsp;
          <br>Go to any Secretary of State branch office or the
          <a href="#" onClick="if (do_juris_clerk_map() == 'OK') openCurtain('juris_clerk'); return false;">

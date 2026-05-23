@@ -12,13 +12,12 @@ use CharlesRothDotNet\Alfred\SmartyPage;
 
 require_once("../vendor/autoload.php");
 
-//$env              = new EnvFile("_env");
-//$logger           = new DumbFileLogger($env->get('logFile'));
-//$pdo              = PdoHelper::makePdo($env);
-
 $address = trim($_COOKIE['miAddress'] ?? "");
+if ($address === "") {
+   header("Location: index.php");
+   exit();
+}
 
 $smarty = new SmartyPage();
-$smarty->assign('hasAddress', $address !== "");
 $smarty->assign('address', $address);
-$smarty->display('faq.tpl');
+$smarty->display('info_register.tpl');

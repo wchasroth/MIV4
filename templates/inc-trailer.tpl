@@ -30,7 +30,7 @@
          </div>
 
          <b>
-            <div style="color: white;   font-size: 120%; margin-top: 0px;" ignore='feedback'>
+            <div style="color: white;   font-size: 120%; margin-top: 0px; padding-left: 0.2em;" ignore='feedback'>
                <a href="/feedback" class="buttonLink"
                ><span style="font-size: 12px;">Anything missing or incorrect?&nbsp; Other comments?&nbsp;</span>
                   <span style="font-size: 12px;">Send&nbsp;</span><u><span style="font-size: 12px;">Feedback</span></u></a>

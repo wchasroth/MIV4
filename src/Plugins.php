@@ -26,4 +26,32 @@ class Plugins {
       if (! Str::contains($url, "://"))                 return $url;
       return Str::substringAfter($url, "://");
    }
+
+   public static function shortDate(string $date): string {
+      return $date;
+   }
+
+   public static function safe(string $text): string {
+      return $text;
+   }
+
+   public static function showCounty(string $county): string {
+      return $county;
+   }
+
+   public static function emailLinks(string $emails): string {
+      return $emails;
+   }
+
+   public static function hyperLinks(string $links): string {
+      return $links;
+   }
+
+   public static function splitComma(string $words): string {
+      return $words;
+   }
+
+   public static function showWithPrefix(string $text, string $prefix): string {
+      return $prefix . ":" . $text;
+   }
 }

@@ -39,7 +39,7 @@
    <ul>
       <li><a href="county.php">County Parties</a>: Find your county's Democratic parties &amp; clubs,
            get their newsletters, and learn about events and opportunities to volunteer.
-      <li><a href="/protests">Protests</a>: See or add to a list of protests and other events in  your county.
+      <li><a href="protests.php">Protests</a>: See or add to a list of protests and other events in  your county.
       <li><a href="/display?key=petitions">Ballot petitions</a>: Learn which to sign and which to avoid.
       <li><a href="/display?key=whatcanido">More political actions</a> you can take.
 <!--

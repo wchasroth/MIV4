@@ -63,9 +63,7 @@ $smarty->registerPlugin(Smarty::PLUGIN_MODIFIER, "showCounty",  [Plugins::class,
 $smarty->registerPlugin(Smarty::PLUGIN_MODIFIER, "emailLinks",  [Plugins::class, "emailLinks"]);
 $smarty->registerPlugin(Smarty::PLUGIN_MODIFIER, "hyperLinks",  [Plugins::class, "hyperLinks"]);
 $smarty->registerPlugin(Smarty::PLUGIN_MODIFIER, "splitComma",  [Plugins::class, "splitComma"]);
-
-//      {$protest['signup']| showWithPrefix("<b>Signup:</b> ")      | safe}}<br/>
-//      {$protest['descr']|showWithPrefix("<b>Description:</b> ") | safe}}<br/>
+$smarty->registerPlugin(Smarty::PLUGIN_MODIFIER, "showWithPrefix",  [Plugins::class, "showWithPrefix"]);
 
 $smarty->assign('address', $address);
 $smarty->assign('county', $county);

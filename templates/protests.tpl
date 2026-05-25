@@ -12,6 +12,14 @@
 <link rel="stylesheet" href="mivoter.css">
 
 <head>
+   <style>
+       .protestPanel      { display: none; }
+       .protestPanel.show { display: block; }
+
+       .outdented   { padding-left: 1.5em;  text-indent: -1.5em; }
+       .indented    { padding-left: 1.5em;}
+   </style>
+
     <script               src="parseHouseStreet.js"></script>
     <script type="module" src="address-search02.js"></script>
    <script>
@@ -22,7 +30,7 @@
 
       function newCounty() {
          countySelector = document.getElementById("countySelector");
-         location.href  = "/protests?county=" + countySelector.selectedIndex;
+         location.href  = "protests.php?county=" + countySelector.selectedIndex;
       }
 
       function flipVisibility (id) {
@@ -33,7 +41,7 @@
    </script>
 </head>
 
-<body style="font-family: Roboto;">
+<body style="font-family: Roboto;" onLoad="setCounty({$county});">
 
 {include file="inc-topbar.tpl"}
 
@@ -155,20 +163,20 @@
 
    {foreach from=$protests item=protest}
    <p class="outdented">
-      <b>{$protest['day']|shortDate|safe}</b>&nbsp;&nbsp;
+      <b>{$protest['day']|shortDate}</b>&nbsp;&nbsp;
       {$protest['time']}&nbsp;&nbsp;
-      <a href='#' onClick="return flipVisibility('ploop.index');">{$protest['name']}</a>&nbsp;
+      <a href='#' onClick="return flipVisibility('ploop{$protest@index}');">{$protest['name']}</a>&nbsp;
       {$protest['ctyname']|showCounty}
       <br/>
       {$protest['location']}
 
-   <div id="ploop.index" class="panel indented">
+   <div id="ploop{$protest@index}" class="protestPanel indented">
       <b>Contacts:</b> {$protest['organizer']}
-      {$protest['emails']|emailLinks|safe}}&nbsp;
-      {$protest['urls']|hyperLinks|safe}&nbsp;
+      {$protest['emails']|emailLinks}&nbsp;
+      {$protest['urls']|hyperLinks}&nbsp;
       {$protest['phones']|splitComma}<br/>
-      {$protest['signup']|showWithPrefix:"<b>Signup:</b>"|safe}<br/>
-      {$protest['descr']|showWithPrefix:"<b>Description:</b>")|safe}<br/>
+      {$protest['signup']|showWithPrefix:"<b>Signup:</b> "}<br/>
+      {$protest['descr']|showWithPrefix:"<b>Description</b>: "}<br/>
       <b>Source/corrections:</b>
       <a href="{$protest['srcurl']}" target="_blank">{$protest['srcname']}</a>
       &nbsp;&nbsp;&nbsp;
@@ -208,8 +216,6 @@
       <li><a href="https://events.mivoter.org" target="_blank">MIvoter events</a>
          &nbsp;&nbsp;&nbsp;(especially for County Democratic Parties and clubs)
    </ul>
-   <p/>
-   <p>
       <b>Correcting events.</b>&nbsp;
       If an event listing needs correction, first try to contact the "source" organization
       listed under the event.&nbsp; (Or you may be able to submit a 'new' event to them, and

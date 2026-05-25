@@ -28,7 +28,8 @@ class Plugins {
    }
 
    public static function shortDate(string $date): string {
-      return $date;
+      $time = strtotime($date);
+      return date("D m/j/y", $time);
    }
 
    public static function safe(string $text): string {
@@ -44,7 +45,14 @@ class Plugins {
    }
 
    public static function hyperLinks(string $links): string {
-      return $links;
+      $links = trim($links);
+      if ($links === "")  return "";
+      $result = [];
+      foreach (Str::splitIntoTokens($links, ",") as $url) {
+         $linkText = self::stripProtocol($url);
+         $result[] = "<a href='$url'>$linkText</a>";
+      }
+      return Str::join($result, ", ");
    }
 
    public static function splitComma(string $words): string {
@@ -52,6 +60,7 @@ class Plugins {
    }
 
    public static function showWithPrefix(string $text, string $prefix): string {
-      return $prefix . ":" . $text;
+      if (trim($text) === "")  return "";
+      return $prefix . $text;
    }
 }

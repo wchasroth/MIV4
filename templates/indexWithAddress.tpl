@@ -40,8 +40,8 @@
       <li><a href="county.php">County Parties</a>: Find your county's Democratic parties &amp; clubs,
            get their newsletters, and learn about events and opportunities to volunteer.
       <li><a href="protests.php">Protests</a>: See or add to a list of protests and other events in  your county.
-      <li><a href="/display?key=petitions">Ballot petitions</a>: Learn which to sign and which to avoid.
-      <li><a href="/display?key=whatcanido">More political actions</a> you can take.
+      <li><a href="display.php?key=petitions">Ballot petitions</a>: Learn which to sign and which to avoid.
+      <li><a href="display.php?key=whatcanido">More political actions</a> you can take.
 <!--
       <li>Read how Trump's "big beautiful bill" <a href="https://docs.mivoter.org/BBB/slotkin.html" target="_blank">hurts Michiganders</a> -- and tell your friends and neighbors!
 -->
@@ -51,7 +51,7 @@
    <ul>
       <li><a href="/follow">Follow MIvoter</a> to receive a monthly email about other actions
       <li><a href="/share">Share MIvoter</a> on social media
-      <li>Share this <a href="https://mivoter.org/static/html/video_frame.html">fun video</a> about MIvoter
+      <li>Share this <a href="video_frame.html">fun video</a> about MIvoter
    </ul>
    <i style="font-size: 90%;">(We <b>never</b> track your address.&nbsp; Only your browser remembers it.)</i>
 </div>

@@ -1,0 +1,14 @@
+
+Implement the fancy {/welcome|text} operator
+
+CSS the accordion buttons to look reasonable!
+
+Endorsed candidates page should say SOMETHING.
+
+Think about pages that (do or will) grab text from uitext.  Find a better way (than grabbing all of them!)
+
+Follow page.
+
+Share page.
+
+Fun video!

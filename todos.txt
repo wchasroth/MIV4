@@ -15,3 +15,5 @@ Follow:
     change table name
     make sure NO fields allow NULL
 
+
+Pull down CSS for Roboto, make it locally served.

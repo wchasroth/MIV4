@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 {nocache}
 <html lang="en">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-<meta        name="description" content="Find your Michigan Democratically-endorsed candidates" />
-<meta property="og:description" content="Find your Michigan Democratically-endorsed candidates" />
-
-<title>MIVoter</title>
-
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto">
-<link rel="stylesheet" href="mivoter.css">
-
 <head>
-    <script               src="parseHouseStreet.js"></script>
-    <script type="module" src="address-search02.js"></script>
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+   
+   <meta        name="description" content="Find your Michigan Democratically-endorsed candidates" />
+   <meta property="og:description" content="Find your Michigan Democratically-endorsed candidates" />
+   
+   <title>MIVoter</title>
+   
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto">
+   <link rel="stylesheet" href="mivoter.css">
+
+   <script               src="share.js"></script>
+   <script               src="parseHouseStreet.js"></script>
+   <script type="module" src="address-search02.js"></script>
 
     <style>
       .followInput {

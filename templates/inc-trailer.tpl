@@ -8,7 +8,7 @@
          </div>
          <br/>
 
-         <div class="pill" onClick="location.href = '/follow/';" style="position: relative;">
+         <div class="pill" onClick="location.href = 'follow.php';" style="position: relative;">
             <img src="IMG/waveIconFollow5.png"/>
             <span style="position: absolute; top:  8px;">Follow</span>
          </div>

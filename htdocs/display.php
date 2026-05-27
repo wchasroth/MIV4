@@ -44,4 +44,5 @@ $smarty = new SmartyPage();
 //$smarty->registerPlugin(Smarty::PLUGIN_MODIFIER, "showWithPrefix",  [Plugins::class, "showWithPrefix"]);
 
 $smarty->assign('text', $text);
+$smarty->assign('address', $address);
 $smarty->display('display.tpl');

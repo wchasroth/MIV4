@@ -9,6 +9,12 @@ use CharlesRothDotNet\Alfred\SmartyPage;
 
 require_once("../vendor/autoload.php");
 
+$address = trim($_COOKIE['miAddress'] ?? "");
+if ($address === "") {
+   header("Location: index.php");
+   exit();
+}
+
 $env              = new EnvFile("_env");
 $logger           = new DumbFileLogger($env->get('logFile'));
 $pdo              = PdoHelper::makePdo($env);
@@ -20,4 +26,5 @@ $sqlFields = new SqlFields(['name' => $name, 'email' => $email]);
 $pdo->runSF("INSERT INTO follow", "", $sqlFields);
 
 $smarty = new SmartyPage();
+$smarty->assign('address', $address);
 $smarty->display('followsubmit.tpl');

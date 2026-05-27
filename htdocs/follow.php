@@ -20,4 +20,5 @@ if ($address === "") {
 }
 
 $smarty = new SmartyPage();
+$smarty->assign('address', $address);
 $smarty->display('follow.tpl');

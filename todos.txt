@@ -7,8 +7,11 @@ Endorsed candidates page should say SOMETHING.
 
 Think about pages that (do or will) grab text from uitext.  Find a better way (than grabbing all of them!)
 
-Follow page.
-
 Share page.
 
-Fun video!
+Feedback page.
+
+Follow:
+    change table name
+    make sure NO fields allow NULL
+

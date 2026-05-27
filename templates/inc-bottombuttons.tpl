@@ -13,7 +13,7 @@
             <td width="20%" id="candidates_td">
                {if $hasAddress}
                   <div class="button" id="candidates">
-                     <a class="buttonLink" href="/ballot/" onClick="return buttonSelect('candidates_td');">
+                     <a class="buttonLink" href="endorsed.php" onClick="return buttonSelect('candidates_td');">
                         <img src="IMG/waveButtonCandidates5.png" width="24" class="buttonImage"/><br/>
                         Endorsed<br/>Candidates
                      </a>

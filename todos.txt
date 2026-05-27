@@ -3,17 +3,15 @@ Implement the fancy {/welcome|text} operator
 
 CSS the accordion buttons to look reasonable!
 
-Endorsed candidates page should say SOMETHING.
-
 Think about pages that (do or will) grab text from uitext.  Find a better way (than grabbing all of them!)
-
-Feedback page.
-
-Share button (top right, for phones?)
 
 Follow:
     change table name
     make sure NO fields allow NULL
 
+Feedback:
+    change table name
+    make sure NO fields allow NULL
+    
 
 Pull down CSS for Roboto, make it locally served.

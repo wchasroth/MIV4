@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+{nocache}
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<meta        name="description" content="Find your Michigan Democratically-endorsed candidates" />
+<meta property="og:description" content="Find your Michigan Democratically-endorsed candidates" />
+
+<title>MIVoter</title>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto">
+<link rel="stylesheet" href="mivoter.css">
+
+<head>
+    <script               src="parseHouseStreet.js"></script>
+    <script type="module" src="address-search02.js"></script>
+    <script>
+      function sendEmail() {
+         let subject = "Personalized Michigan Democratic voter guide";
+         let body    = "See this site for all of your Democratically-endorsed candidates:%0A%0Ahttps://mivoter.org";
+
+         window.open("mailto:?subject=" + subject + "&body=" + body, "_blank"); 
+         return false;
+      }
+
+      function shareToFacebook() {
+         var url = "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmivoter.org%2F"
+                 + "&t=Personalized%20Michigan%Democratic%20Voter%20Guide";
+         window.open(url, "_blank");
+         return false;
+      }
+
+      function shareToTwitter() {
+         var url = 'http://twitter.com/share?'
+                 + 'text=' + encodeURIComponent("Personalized Michigan Democratic Voter Guide")
+                 + '&url=' + encodeURIComponent("https://mivoter.org");
+         window.open(url, "_blank");
+         return false;
+      }
+    </script>
+
+
+</head>
+
+<body style="font-family: Roboto;">
+
+{include file="inc-topbar.tpl"}
+
+<p style="font-size: 10%;">&nbsp;</p>
+
+<div class="darkBlueText pageText unindentList">
+
+               There are several ways you can share MIvoter.org with
+               your friends:
+               <ul>
+               <li><a href='#' onClick="return sendEmail();">Email</a>
+               <li><a href='#' onClick="return shareToFacebook();">Facebook</a>
+               <li><a href='qr.html' target="_blank">QR code</a>
+               <li><a href='#' onClick="return shareToTwitter();">X / Twitter</a>
+               </ul>
+
+         For other platforms (e.g. Instagram, TikTok, etc.) try using 
+         this site on your phone -- the 'Share' button at the top right (box with up arrow) 
+         will let you use any of your installed social media apps. <br/>
+         <br/>
+         (Each of links above will open a new tab; close it when you're finished.)
+</div>
+<br/>
+
+<center>
+<i><a href="index.php">(Return to home page)</a></i>
+</center>
+
+
+<p>&nbsp;</p>
+
+{include file="inc-trailer.tpl"}
+
+{include file="inc-bottombuttons.tpl" hasAddress=true}
+
+</body>
+</html>
+{/nocache}

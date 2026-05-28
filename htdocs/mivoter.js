@@ -1,4 +1,9 @@
-  function flipPanel(id, obj) {
+function flipPanel(id, obj) {
+   panel = document.getElementById(id);
+   panel.classList.toggle('show');
+}
+
+/*
            panel = document.getElementById(id);
            if (panel.style.display === "block")  panel.style.display = "none";
            else {
@@ -7,3 +12,4 @@
                panel.style.display = "block";
            }
         }
+*/

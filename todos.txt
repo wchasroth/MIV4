@@ -1,8 +1,6 @@
 
 Implement the fancy {/welcome|text} operator
 
-CSS the accordion buttons to look reasonable!
-
 Think about pages that (do or will) grab text from uitext.  Find a better way (than grabbing all of them!)
 
 Follow:
@@ -19,3 +17,5 @@ Pull down CSS for Roboto, make it locally served.
 How-to-vote
    info-general
        fix the bullet point indents
+
+accordion panel: transitions!

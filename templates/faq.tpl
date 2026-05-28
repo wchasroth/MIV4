@@ -25,9 +25,10 @@
 <p style="font-size: 10%;">&nbsp;</p>
 
 <div class="darkBlueText pageText unindentList">
-Frequently Asked Questions
+<b>Frequently Asked Questions</b>
+<p/>
 
-   <button class="accordion" onClick="flipPanel('whyAddress', this);">Why do you need my address?</button>
+   <div class="accordion" onClick="flipPanel('whyAddress', this);">Why do you need my address?</div>
    <div class="panel" id='whyAddress'>
       To find your voting districts and polling places.&nbsp;
       We do not store, share, or sell your address.&nbsp;
@@ -35,7 +36,7 @@ Frequently Asked Questions
       Clicking on the round X in the address bar clears your address cookie.
    </div>
 
-   <button class="accordion" onClick="flipPanel('endorsed', this);">Endorsed by whom?</button>
+   <div class="accordion" onClick="flipPanel('endorsed', this);">Endorsed by whom?</div>
    <div class="panel" id='endorsed'>
       <ul>
          <li>Michigan Democratic Party endorses the following:</li>
@@ -50,7 +51,7 @@ Frequently Asked Questions
       </ul>
    </div>
 
-   <button class="accordion" onClick="flipPanel('whyDemocratic', this);">Why a Democratic-only voter guide?</button>
+   <div class="accordion" onClick="flipPanel('whyDemocratic', this);">Why a Democratic-only voter guide?</div>
    <div class="panel" id='whyDemocratic'>
       To provide Democratic-leaning voters in Michigan with an easy way to find <b>all</b> candidates
       and proposals endorsed by the Democratic Party.&nbsp; (Especially the non-partisan
@@ -60,7 +61,7 @@ Frequently Asked Questions
       <a href="https://www.vote411.org/" target="_blank">vote411.org</a>.
    </div>
 
-   <button class="accordion" onClick="flipPanel('missingOffices', this);">Why do I see only some offices?</button>
+   <div class="accordion" onClick="flipPanel('missingOffices', this);">Why do I see only some offices?</div>
    <div class="panel" id='missingOffices'>
       If you don't see some candidates for your district, it's because we have not (yet)
       received information about endorsed Democratic candidates for your area.
@@ -69,8 +70,8 @@ Frequently Asked Questions
       site for a listing of local candidates.
    </div>
 
-   <button class="accordion" onClick="flipPanel('votingDenied', this);"
-         >Who can I contact if I believe my right to vote has been unfairly denied?</button>
+   <div class="accordion" onClick="flipPanel('votingDenied', this);"
+         >Who can I contact if I believe my right to vote has been unfairly denied?</div>
    <div class="panel" id='votingDenied'>
       Please contact the non-partisan organization
       <a href="https://866ourvote.org/">Election Protection</a><sup>*</sup>.
@@ -90,21 +91,21 @@ Frequently Asked Questions
       <sup>*</sup> Election Protection is not affiliated with MIvoter.org.
    </div>
 
-   <button class="accordion" onClick="flipPanel('iAmCandidate', this);">I'm a Democratic candidate.&nbsp; Why don't I appear?</button>
+   <div class="accordion" onClick="flipPanel('iAmCandidate', this);">I'm a Democratic candidate.&nbsp; Why don't I appear?</div>
    <div class="panel" id='iAmCandidate'>
       If you are a candidate and do not see your information, please contact us ASAP at
       <a href="mailto:mivoter.org@gmail.com">mivoter.org@gmail.com</a>.&nbsp; We especially
       need to hear from county Democratic party leaders about endorsements for their regions.
    </div>
 
-   <button class="accordion" onClick="flipPanel('whoIs', this);">Who is MIvoter.org?</button>
+   <div class="accordion" onClick="flipPanel('whoIs', this);">Who is MIvoter.org?</div>
    <div class="panel" id='whoIs'>
       This site was built by a group of passionate volunteers, working towards a more
       democratic Michigan.&nbsp; Candidate data was supplied by the Michigan Democratic Party,
-      the Washtenaw County Democratic Party, individual candidates, and their campaign websites.
+      the relevant county Democratic parties, individual candidates, and their campaign websites.
    </div>
 
-   <button class="accordion" onClick="flipPanel('feedback', this);">How do I send feedback?</button>
+   <div class="accordion" onClick="flipPanel('feedback', this);">How do I send feedback?</div>
    <div class="panel" id='feedback'>
       We'd love to hear your <a href="feedback.php">feedback</a>, especially if you're having trouble
       with the site.
@@ -113,7 +114,7 @@ Frequently Asked Questions
       </div>
    </div>
 
-   <button class="accordion" onClick="flipPanel('video', this);">There's a funny video about MIvoter?</button>
+   <div class="accordion" onClick="flipPanel('video', this);">There's a funny video about MIvoter?</div>
    <div class="panel" id='video'>
       Yes!&nbsp;
       <a href="video_frame.html">Take a look!</a>&nbsp;
@@ -126,10 +127,6 @@ Frequently Asked Questions
 
 </div>
 
-
-
-<p>&nbsp;</p>
-<p>&nbsp;</p>
 <p>&nbsp;</p>
 
 {include file="inc-trailer.tpl"}

@@ -149,30 +149,12 @@ address-search {
 }
 
 /* ===================================================== */
-.accordion {
-          background-color: #eee;
-          color: #444;
-          cursor: pointer;
-          padding: 18px;
-          width: 100%;
-          text-align: left;
-          border: none;
-          outline: none;
-          transition: 0.4s;
-          font-size: 120%;
-}
-
- .accordion:after {
-           /* content: '\02795';*/ /* Unicode character for "plus" sign (+) */
-           content: '\02228';   /* &#8964 */
-           font-size: 23px;
-           color: #777;
-           float: right;
-           margin-left: 5px;
-       }
-
-       .active:after {
-           content: '\02227'
+      .accordion {
+          padding: 14px;
+          font-weight: bold;
+          width: 90%;
+          border:    1px solid grey;
+          margin-bottom: -1px;
        }
 
        /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
@@ -182,10 +164,14 @@ address-search {
 
        /* Style the accordion panel. Note: hidden by default */
        .panel {
+          margin-top: 0.8em;
+          margin-bottom: 0.8em;
           padding: 0 18px;
           background-color: white;
           display: none;
           overflow: hidden;
+          transition: 1.0s;
+          width: 90%;
        }
 
    .noUnderline { text-decoration: none; }

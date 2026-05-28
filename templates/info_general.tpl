@@ -26,7 +26,7 @@
 
 <div class="darkBlueText pageText unindentList">
 
-   <button class="accordion" onClick="flipPanel('whoNeeds', this);">Who needs to register or re-register?</button>
+   <div class="accordion" onClick="flipPanel('whoNeeds', this);">Who needs to register or re-register?</div>
    <div class="panel" id='whoNeeds'>
           <ul  style="padding-left: 0.5em;">
                <li>New voters (people who are just turning 18)</li>
@@ -39,19 +39,19 @@
           </ul>
    </div>
 
-   <button class="accordion" onClick="flipPanel('checkReg', this);">I haven't voted in a while.&nbsp; How can I check my registration?</button>
+   <div class="accordion" onClick="flipPanel('checkReg', this);">I haven't voted in a while.&nbsp; How can I check my registration?</div>
    <div class="panel" id='checkReg'>
       Check on-line with the <a href="https://mvic.sos.state.mi.us/Voter/Index">Secretary of State</a>.
    </div>
 
-   <button class="accordion" onClick="flipPanel('howLate', this);">How late can I register to vote?</button>
+   <div class="accordion" onClick="flipPanel('howLate', this);">How late can I register to vote?</div>
    <div class="panel" id='howLate'>
               You can register to vote through Election Day.&nbsp;
               <a href="https://mvic.sos.state.mi.us/Home/RegisterToVote/#how">
                 Here’s how to register on election day.</a>
    </div>
 
-   <button class="accordion" onClick="flipPanel('elegible', this);">Who is eligible to vote?</button>
+   <div class="accordion" onClick="flipPanel('elegible', this);">Who is eligible to vote?</div>
    <div class="panel" id='elegible'>
               To vote you must be:
                   <ul  style="padding-left: 0.5em;">
@@ -64,7 +64,7 @@
                   </ul>
    </div>
     
-   <button class="accordion" onClick="flipPanel('student', this);">Can I vote as a student?</button>
+   <div class="accordion" onClick="flipPanel('student', this);">Can I vote as a student?</div>
    <div class="panel" id='student'>
               Yes. According to the Secretary of State's
               <a href="https://mvic.sos.state.mi.us/Home/RegisterToVote/#student">
@@ -86,7 +86,7 @@
               </p>
   </div>
 
-   <button class="accordion" onClick="flipPanel('emergency', this);">What if I have an emergency on Election Day?</button>
+   <div class="accordion" onClick="flipPanel('emergency', this);">What if I have an emergency on Election Day?</div>
    <div class="panel" id='emergency'>
               You may request an emergency absent voter ballot <i>after</i> the deadline
               for regular absent voter ballots has passed, but <i>before</i> 4 PM on
@@ -100,7 +100,7 @@
                 for more information about emergency absent voter ballots.
   </div>
 
-   <button class="accordion" onClick="flipPanel('changeVote', this);">Can I change my vote?</button>
+   <div class="accordion" onClick="flipPanel('changeVote', this);">Can I change my vote?</div>
    <div class="panel" id='changeVote'>
       If you would like to change your vote after returning your completed and signed absentee ballot to 
       your local clerk's office, your written and signed request must be received by your local clerk’s 
@@ -114,21 +114,21 @@
       If you have already cast your ballot at an early voting or election day polling location, your vote cannot be changed.
   </div>
 
-   <button class="accordion" onClick="flipPanel('trackBallot', this);">How do I track my ballot?</button>
+   <div class="accordion" onClick="flipPanel('trackBallot', this);">How do I track my ballot?</div>
    <div class="panel" id='trackBallot'>
              You can search by your name or driver's license number at
              <a href="https://michigan.gov/vote">
                Michigan.gov/vote</a>.
   </div>
 
-   <button class="accordion" onClick="flipPanel('noBallot', this);">What if my ballot didn't arrive?</ballot>
+   <div class="accordion" onClick="flipPanel('noBallot', this);">What if my ballot didn't arrive?</ballot>
    <div class="panel" id='noBallot'>
              At your polling place, you can sign a statement stating that the ballot
              was lost or destroyed and vote at the polls on Election Day or during
              the early voting period.
   </div>
 
-   <button class="accordion" onClick="flipPanel('absenteeAlways', this);">How do I get an absentee ballot for every election?</ballot>
+   <div class="accordion" onClick="flipPanel('absenteeAlways', this);">How do I get an absentee ballot for every election?</ballot>
    <div class="panel" id='absenteeAlways'>
               When you <a href="https://www.michigan.gov/sos/elections/voting/absentee-voting#Request"
                 >apply for an absentee ballot</a> for a specific upcoming election,
@@ -137,7 +137,7 @@
               election, add your name to the Permanent Mailed Ballot list.
   </div>
 
-   <button class="accordion" onClick="flipPanel('disability', this);">What help is there for people with disabilities?</button>
+   <div class="accordion" onClick="flipPanel('disability', this);">What help is there for people with disabilities?</div>
    <div class="panel" id='disability'>
           <ul  style="padding-left: 0.5em;">
                 <li>Voters with print disabilities can <a href="https://mi.omniballot.us/sites/26/absentee/app/home">
@@ -157,7 +157,7 @@
           </ul>
   </div>
 
-   <button class="accordion" onClick="flipPanel('noId', this);">What if I don't have an ID on election day?</button>
+   <div class="accordion" onClick="flipPanel('noId', this);">What if I don't have an ID on election day?</div>
    <div class="panel" id='noId'>
              You can still vote if you don't have an ID. A poll worker will ask you to
              sign a form saying you don't have an ID. Your ballot should be included

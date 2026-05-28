@@ -19,3 +19,7 @@ How-to-vote
        fix the bullet point indents
 
 accordion panel: transitions!
+
+individual incumbent: in phone simulator, tends to
+  wander off the right edge. (??)
+    (See bill schuette (501 mill st, coleman 48618)

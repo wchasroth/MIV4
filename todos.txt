@@ -15,3 +15,7 @@ Feedback:
     
 
 Pull down CSS for Roboto, make it locally served.
+
+How-to-vote
+   info-general
+       fix the bullet point indents

@@ -39,6 +39,11 @@
           </ul>
    </div>
 
+   <button class="accordion" onClick="flipPanel('checkReg', this);">I haven't voted in a while.&nbsp; How can I check my registration?</button>
+   <div class="panel" id='checkReg'>
+      Check on-line with the <a href="https://mvic.sos.state.mi.us/Voter/Index">Secretary of State</a>.
+   </div>
+
    <button class="accordion" onClick="flipPanel('howLate', this);">How late can I register to vote?</button>
    <div class="panel" id='howLate'>
               You can register to vote through Election Day.&nbsp;
@@ -97,35 +102,16 @@
 
    <button class="accordion" onClick="flipPanel('changeVote', this);">Can I change my vote?</button>
    <div class="panel" id='changeVote'>
-
-          <ul  style="padding-left: 0.5em;">
-            <li><b>You can't spoil an absentee ballot that</b>
-              <ul  style="padding-left: 0.5em;">
-                <li>has been received by the clerk or</li>
-                <li>had been returned to an Early Voting Site</li>
-              </ul>
-            </li>
-            <li><b>Otherwise</b>, if you voted absentee and want to change your
-              vote, you can submit a written request to your
-              <a href="#" onClick="if (do_juris_clerk_map() == 'OK') openCurtain('juris_clerk');  return false;">
-                 <b>{{ jurisdiction }} Clerk</b>
-              </a>
-              for a new ballot.
-              <ul  style="padding-left: 0.5em;">
-                <li>You'll sign a request and note whether you want a new
-                  ballot mailed to you or if you'll pick it up at the clerk's
-                  office. (Picking it up in person is recommended if you're
-                  within 2 weeks of the election).
-                </li>
-                <li>If your ballot has already been returned, your request must
-                  be received by 5 PM the Friday before the election.
-                </li>
-                <li>If you still have your ballot, you can spoil it in person at
-                  the clerk's office until 4 PM the Monday prior to the election.
-                </li>
-              </ul>
-            </li>
-          </ul>
+      If you would like to change your vote after returning your completed and signed absentee ballot to 
+      your local clerk's office, your written and signed request must be received by your local clerk’s 
+      office by 5 p.m. the second Friday before Election Day.
+      <p/>
+      Voters who wish to vote in person after obtaining an absentee ballot can do so at their early 
+      voting site or Election Day polling place if they have not already returned their absentee ballot.&nbsp; 
+      Voters may either submit their voted absentee ballot for tabulation at the early voting site or
+      Election Day polling place or they may “spoil” their absentee ballot and be issued a new ballot.&nbsp;
+      <p/>
+      If you have already cast your ballot at an early voting or election day polling location, your vote cannot be changed.
   </div>
 
    <button class="accordion" onClick="flipPanel('trackBallot', this);">How do I track my ballot?</button>
@@ -144,7 +130,8 @@
 
    <button class="accordion" onClick="flipPanel('absenteeAlways', this);">How do I get an absentee ballot for every election?</ballot>
    <div class="panel" id='absenteeAlways'>
-              When you apply for an absentee ballot for a specific upcoming election,
+              When you <a href="https://www.michigan.gov/sos/elections/voting/absentee-voting#Request"
+                >apply for an absentee ballot</a> for a specific upcoming election,
               you can choose to receive your absentee ballot for all future elections.
               If you want to automatically receive absentee ballots before <i>every</i>
               election, add your name to the Permanent Mailed Ballot list.
@@ -164,10 +151,8 @@
                   choices but does not tally the votes. Once the ballot is marked, it
                   is counted in exactly the same fashion as all other ballots.
                 </li>
-                <li>Additional information is available at the Secretary of State's
-                  <a href="https://mvic.sos.state.mi.us/Home/AccessibleVoting">
-                    website.
-                  </a>
+                <li><a href="https://mvic.sos.state.mi.us/Home/AccessibleVoting"
+                     >Learn more about accessible voting</a>.
                 </li>
           </ul>
   </div>

@@ -38,17 +38,14 @@
 
    <div class="accordion" onClick="flipPanel('endorsed', this);">Endorsed by whom?</div>
    <div class="panel" id='endorsed'>
-      <ul>
-         <li>Michigan Democratic Party endorses the following:</li>
+      Michigan Democratic Party endorses the following:
          <ul>
             <li>US candidates</li>
             <li>Statewide candidates</li>
             <li>Michigan State Senators/Representatives</li>
             <li>Statewide proposals</li>
          </ul>
-         </li>
-         <li>County Democratic Parties and Clubs endorse all other candidates.</li>
-      </ul>
+         County Democratic Parties and Clubs endorse all other candidates.</li>
    </div>
 
    <div class="accordion" onClick="flipPanel('whyDemocratic', this);">Why a Democratic-only voter guide?</div>
@@ -73,22 +70,27 @@
    <div class="accordion" onClick="flipPanel('votingDenied', this);"
          >Who can I contact if I believe my right to vote has been unfairly denied?</div>
    <div class="panel" id='votingDenied'>
-      Please contact the non-partisan organization
-      <a href="https://866ourvote.org/">Election Protection</a><sup>*</sup>.
       <ul>
-         <li>English: 866-OUR-VOTE -- <a href="https://www.lawyerscommittee.org/"
-         >Lawyers' Committee for Civil Rights Under Law</a>
-         <li>Spanish/English: 888-VE-Y-VOTA-- <a href="https://naleo.org/"
-         >NALEO Educational Fund</a>
-         <li>Arabic/English: 844-YALLA-US -- <a href="https://www.aaiusa.org/"
-         >Arab American Institute (AAI)</a>
-         <li>Asian Languages/English: 888-API-VOTE --
-            <a href="https://apiavote.org/">APIAVote</a> &amp;
-            <a href="https://www.advancingjustice-aajc.org/"
-            >Asian Americans Advancing Justice (AAJC)</a>
-         <li>Text: <a href="sms:866-687-8683">866-687-8683</a>
+         <li>English, Spanish, Arabic: <a href="tel:+18336486837">833-MI-VOTES</a> 
+                (Michigan Democrats Voter Protection Hotline)
+         <li>English: <a href="tel:+18666878683">866-OUR-VOTE</a> -- <a href="https://www.lawyerscommittee.org/" target="_blank"
+            >Lawyers' Committee for Civil Rights Under Law</a>
+
+         <li>Spanish/English: <a href="tel:+18888398682">888-VE-Y-VOTA</a> -- <a href="https://naleo.org/" target="_blank"
+            >NALEO Educational Fund</a>
+
+         <li>Arabic/English:  <a href="tel:1+8449255287">844-YALLA-US</a> -- <a href="https://www.aaiusa.org/" target="_blank"
+            >Arab American Institute (AAI)</a>
+
+         <li>Asian Languages/English: <a href="tel:+18882748683">888-API-VOTE</a> --
+            <a href="https://apiavote.org/" target="_blank">APIAVote</a> &amp;
+            <a href="https://www.advancingjustice-aajc.org/" target="_blank"
+               >Asian Americans Advancing Justice (AAJC)</a>
+         <li>Text: <a href="sms:+18666878683">866-687-8683</a>
+         <li>Or contact the non-partisan organization
+              <a href="https://866ourvote.org/" target="_blank">Election Protection</a>
+                  <i>(not affiliated with MIvoter.org)</i>
       </ul>
-      <sup>*</sup> Election Protection is not affiliated with MIvoter.org.
    </div>
 
    <div class="accordion" onClick="flipPanel('iAmCandidate', this);">I'm a Democratic candidate.&nbsp; Why don't I appear?</div>

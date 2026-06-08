@@ -140,6 +140,8 @@ body {
    max-width: 750px;
 }
 
+.howToVoteSpacer { padding-top: 0.5em; }
+
 address-search {
     font-family: 'Roboto';
     display: block;

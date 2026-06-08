@@ -172,7 +172,6 @@ address-search {
           background-color: white;
           display: none;
           overflow: hidden;
-          transition: 1.0s;
           width: 90%;
        }
 

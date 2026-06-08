@@ -28,7 +28,7 @@
 
    <div class="accordion" onClick="flipPanel('whoNeeds', this);">Who needs to register or re-register?</div>
    <div class="panel" id='whoNeeds'>
-          <ul  style="padding-left: 0.5em;">
+          <ul style="padding-left: 20px;">
                <li>New voters (people who are just turning 18)</li>
                <li>People who are new to Michigan</li>
                <li>People who move to a new city within Michigan
@@ -54,7 +54,7 @@
    <div class="accordion" onClick="flipPanel('elegible', this);">Who is eligible to vote?</div>
    <div class="panel" id='elegible'>
               To vote you must be:
-                  <ul  style="padding-left: 0.5em;">
+                  <ul  style="padding-left: 20px;">
                     <li>A Michigan resident (at the time you register) and a resident
                       of your city or township for at least 30 days (when you vote)
                     </li>
@@ -72,7 +72,7 @@
               </a>:
               <p>
                 <b>If you're from Michigan and go to school...</b>
-              <ul  style="padding-left: 0.5em;">
+              <ul  style="padding-left: 40px;">
                 <li><b>In Michigan:</b> register to vote at either your school address or your
                   home address.
                 </li>
@@ -121,14 +121,14 @@
                Michigan.gov/vote</a>.
   </div>
 
-   <div class="accordion" onClick="flipPanel('noBallot', this);">What if my ballot didn't arrive?</ballot>
+   <div class="accordion" onClick="flipPanel('noBallot', this);">What if my ballot didn't arrive?</div>
    <div class="panel" id='noBallot'>
              At your polling place, you can sign a statement stating that the ballot
              was lost or destroyed and vote at the polls on Election Day or during
              the early voting period.
   </div>
 
-   <div class="accordion" onClick="flipPanel('absenteeAlways', this);">How do I get an absentee ballot for every election?</ballot>
+   <div class="accordion" onClick="flipPanel('absenteeAlways', this);">How do I get an absentee ballot for every election?</div>
    <div class="panel" id='absenteeAlways'>
               When you <a href="https://www.michigan.gov/sos/elections/voting/absentee-voting#Request"
                 >apply for an absentee ballot</a> for a specific upcoming election,
@@ -139,7 +139,7 @@
 
    <div class="accordion" onClick="flipPanel('disability', this);">What help is there for people with disabilities?</div>
    <div class="panel" id='disability'>
-          <ul  style="padding-left: 0.5em;">
+          <ul  style="padding-left: 20px;">
                 <li>Voters with print disabilities can <a href="https://mi.omniballot.us/sites/26/absentee/app/home">
                   apply for an accessible ballot
                 </a> that can be completed electronically, printed, and returned to your

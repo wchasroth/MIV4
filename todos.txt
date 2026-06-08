@@ -14,8 +14,8 @@ Feedback:
 
 Pull down CSS for Roboto, make it locally served.
 
-How-to-vote
-   info-general
-       fix the bullet point indents
-
 accordion panel: transitions!
+
+individual incumbent: in phone simulator, tends to
+  wander off the right edge. (??)
+    (See bill schuette (501 mill st, coleman 48618)

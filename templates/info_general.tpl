@@ -28,7 +28,7 @@
 
    <div class="accordion" onClick="flipPanel('whoNeeds', this);">Who needs to register or re-register?</div>
    <div class="panel" id='whoNeeds'>
-          <ul style="padding-left: 20px;">
+          <ul style="padding-left: 1em;">
                <li>New voters (people who are just turning 18)</li>
                <li>People who are new to Michigan</li>
                <li>People who move to a new city within Michigan
@@ -54,7 +54,7 @@
    <div class="accordion" onClick="flipPanel('elegible', this);">Who is eligible to vote?</div>
    <div class="panel" id='elegible'>
               To vote you must be:
-                  <ul  style="padding-left: 20px;">
+                  <ul  style="padding-left: 1em;">
                     <li>A Michigan resident (at the time you register) and a resident
                       of your city or township for at least 30 days (when you vote)
                     </li>
@@ -72,7 +72,7 @@
               </a>:
               <p>
                 <b>If you're from Michigan and go to school...</b>
-              <ul  style="padding-left: 40px;">
+              <ul>
                 <li><b>In Michigan:</b> register to vote at either your school address or your
                   home address.
                 </li>
@@ -100,6 +100,17 @@
                 for more information about emergency absent voter ballots.
   </div>
 
+   <div class="accordion" onClick="flipPanel('absenteeAlways', this);">How do I get an absentee ballot?</div>
+   <div class="panel" id='absenteeAlways'>
+       You can <a href="https://mvic.sos.state.mi.us/AVApplication/Index">request an absentee ballot</a>
+       online.&nbsp;
+       At the same time, you can also be added to the permanent absentee ballot list, so that you 
+       will automatically get a ballot for all future elections.
+       <p/>
+       See the Secretary of State's website for <a href="https://www.michigan.gov/sos/elections/voting/absentee-voting"
+             >more information</a> about absentee voting.
+  </div>
+
    <div class="accordion" onClick="flipPanel('changeVote', this);">Can I change my vote?</div>
    <div class="panel" id='changeVote'>
       If you would like to change your vote after returning your completed and signed absentee ballot to 
@@ -116,25 +127,18 @@
 
    <div class="accordion" onClick="flipPanel('trackBallot', this);">How do I track my ballot?</div>
    <div class="panel" id='trackBallot'>
-             You can search by your name or driver's license number at
-             <a href="https://michigan.gov/vote">
-               Michigan.gov/vote</a>.
+       Using the Michigan Secretary of State's website, 
+       you can <a href="https://mvic.sos.state.mi.us/Voter/Index">check the status</a>
+       of your absentee ballot,
+       or you can <a href="https://mvic.sos.state.mi.us/Voter/VoterSearch">subscribe</a>
+        to automatic ballot tracking (via email).
   </div>
 
    <div class="accordion" onClick="flipPanel('noBallot', this);">What if my ballot didn't arrive?</div>
    <div class="panel" id='noBallot'>
              At your polling place, you can sign a statement stating that the ballot
-             was lost or destroyed and vote at the polls on Election Day or during
+             was lost or destroyed, and vote at the polls on Election Day or during
              the early voting period.
-  </div>
-
-   <div class="accordion" onClick="flipPanel('absenteeAlways', this);">How do I get an absentee ballot for every election?</div>
-   <div class="panel" id='absenteeAlways'>
-              When you <a href="https://www.michigan.gov/sos/elections/voting/absentee-voting#Request"
-                >apply for an absentee ballot</a> for a specific upcoming election,
-              you can choose to receive your absentee ballot for all future elections.
-              If you want to automatically receive absentee ballots before <i>every</i>
-              election, add your name to the Permanent Mailed Ballot list.
   </div>
 
    <div class="accordion" onClick="flipPanel('disability', this);">What help is there for people with disabilities?</div>

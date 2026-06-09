@@ -55,7 +55,7 @@
     </tr>
 </table>
 
-<div id="clerkMap" style="width: 100vw; height: 400px;"></div>
+<div id="clerkMap" style="width: 100vw; height: 400px; max-width: 40em;"></div>
 
 <script>
     let lat  = {$clerk['lat']};

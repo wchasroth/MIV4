@@ -45,8 +45,7 @@
   
          <b>Register in person</b>&nbsp;
          <br>Go to any Secretary of State branch office or the
-         <a href="#" onClick="if (do_juris_clerk_map() == 'OK') openCurtain('juris_clerk'); return false;">
-          {{ jurisdiction }}</a>
+         <a href="clerkMap.php">{$clerk['jurisdiction']}</a>
 
             <!-- (Recommended NOT to show county clerk, as local clerk closer/better)
                or <a href="#" onClick="if (do_county_clerk_map() == 'OK') openCurtain('county_clerk'); return false;">

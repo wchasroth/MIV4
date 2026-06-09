@@ -1,3 +1,4 @@
+https://docs.google.com/document/d/1svScu8ABz5RZ-6O3-6KjBMuUd9tykTHUIvbuhmXTI84/edit?tab=t.0
 
 Implement the fancy {/welcome|text} operator
 
@@ -19,3 +20,11 @@ accordion panel: transitions!
 individual incumbent: in phone simulator, tends to
   wander off the right edge. (??)
     (See bill schuette (501 mill st, coleman 48618)
+
+Links for how to track my ballot
+   https://mvic.sos.state.mi.us/Voter/VoterSearch
+   https://mvic.sos.state.mi.us/Voter/Index
+
+LOGGING!
+
+Reconnect everything in editor to proper sites/tables/db

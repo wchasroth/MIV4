@@ -26,28 +26,48 @@
 
 <div class="darkBlueText pageText unindentList">
 
-      <b>Early Voting</b><br/>
-  Early in-person voting for the August 2026 primary election starts
-        July 25, and runs through election day, August 4th.
-       <p/>
-       Early voting for the November 2026 general election starts October 24th,
-        and runs through election day, Tuesday November 3rd.&nbsp;
-       Check the
-      <a href="https://www.michigan.gov/sos/elections/voting/early-in-person-voting">
-        Michigan Secretary of State</a> web site for the latest information.
+    <b>Early Voting</b><br/>
+    <ul>
+    <li>Early in-person voting for the <b>August 2026 primary election</b>
+       starts July 25, and runs through election day, August 4th.
+    <li>Early voting for the <b>November 2026 general election</b> 
+        starts October 24th, and runs through election day, Tuesday November 3rd.&nbsp;
+    <li>Early in-person polling locations may be different than election day
+        polling places.&nbsp;
+        <a href="https://mvic.sos.state.mi.us/Voter/Index#early-voting-search-section"
+           >Find your early voting location</a>.
+    <li><a href="https://www.michigan.gov/sos/elections/voting/early-in-person-voting"
+            >Learn more about early voting in Michigan</a>.
+    </ul>
 
-<p></p>
+    <b>Voting in Person on Primary Election Day (Aug 4, 2026)</b>
+    <ul>
+    <li>You can vote at a polling place or a clerk's office.
+    <li>As the election gets closer, we will provide the location of
+    <b>your</b> polling place.
+    </ul>
+    
+    <!--
+      Your clerk's office is
+      … [tailored to address]
+      Eligible voters have until 8 p.m. on Election Day to visit their local clerk’s
+      office to register to vote or update their registration address. In this situation, you can vote at the clerk’s office.
+      Learn more about voting at a clerk's office.
+    -->
+
+    <!--
       <b>Voting in Person on Election Day (Nov 3)</b>
       <br>Your polling place is
       <ul>
-        <li>{{ jwp }}</li>
-        <li>{{ polling_place['name'] }}</li>
-        <li>{{ polling_place['address'] }}</li>
+        <li>| jwp |</li>
+        <li>| polling_place['name'] |</li>
+        <li>| polling_place['address'] |</li>
         <li>
           <a href="#" onClick="if (do_polling_place_map() == 'OK') openCurtain('polling_place');  return false;"
              >Map</a>
         </li>
       </ul>
+     -->
 
       <b>Bring Your ID.</b>&nbsp;  You can use:
       <ul>
@@ -62,12 +82,9 @@
       <b>Note:</b> You can still vote without ID.&nbsp; You just have to sign an
       affidavit affirming your identity.</b>
 
-<p></p>
-<p>
-      <a href="https://mvic.sos.state.mi.us/Home/">See more from the Secretary of State</a>
-</p>
-
-
+      <br/>
+      <br/>
+      <a href="https://mvic.sos.state.mi.us/Home/">Learn more about voting on election day</a> from the Secretary of State.
 
   
 </div>

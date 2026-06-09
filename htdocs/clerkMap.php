@@ -24,10 +24,11 @@ $logger  = new DumbFileLogger($env->get('logFile'));
 $pdo     = PdoHelper::makePdo($env);
 $miCodes = trim($_COOKIE['miCodes'] ?? "");
 $codes   = json_decode($miCodes, true);
+$apiKey  = $env->get('googleMapsApiKey');
 
 $clerk = Clerk::getClerkArray($pdo, intval($codes['county_code']), intval($codes['juris_code']));
 
 $smarty = new SmartyPage();
-$smarty->assign('address', $address);
 $smarty->assign('clerk', $clerk);
-$smarty->display('info_register.tpl');
+$smarty->assign('apiKey', $apiKey);
+$smarty->display('clerkMap.tpl');

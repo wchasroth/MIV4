@@ -13,3 +13,5 @@ we just do refresh or go to /index.php.
             bubbles: true,
             composed: true
         }));
+
+Robin's idea about gaming how to talk to each other about problematic issues.

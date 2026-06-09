@@ -26,7 +26,7 @@
 
  <table width="100%">
  <tr valign="top">
-     <td><button onClick="">Back</button></td>
+     <td><button onClick="window.history.back();">Back</button></td>
      <td>&nbsp;&nbsp;</td>
      <td align="right">
          <b style="font-size: 125%;">{$clerk['jurisdiction']} Clerk</b><br/>

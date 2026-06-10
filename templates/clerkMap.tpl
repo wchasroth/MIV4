@@ -43,7 +43,7 @@
         <td class="pad"><b>Mail:</b>    {$clerk['mailing_address']}</td>
     </tr>
     <tr valign="top">
-        <td class="pad"><b>Phone:</b> {$clerk['phone']}</td>
+        <td class="pad"><b>Phone:</b> <a href="tel:+1{$clerk['phoneDigits']}">{$clerk['phone']}</a></td>
         <td></td>
         <td class="pad"><b>Fax:</b>   {$clerk['fax']}</td>
     </tr>

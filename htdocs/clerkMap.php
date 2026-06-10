@@ -10,6 +10,7 @@ use CharlesRothDotNet\EditorV4\EnvHelper;
 use Smarty\Smarty;
 use CharlesRothDotNet\Alfred\SmartyPage;
 use CharlesRothDotNet\MIV4\Clerk;
+use CharlesRothDotNet\MIV4\Utils;
 
 require_once("../vendor/autoload.php");
 
@@ -26,7 +27,9 @@ $miCodes = trim($_COOKIE['miCodes'] ?? "");
 $codes   = json_decode($miCodes, true);
 $apiKey  = $env->get('googleMapsApiKey');
 
-$clerk = Clerk::getClerkArray($pdo, intval($codes['county_code']), intval($codes['juris_code']));
+$clerk = Clerk::getClerkInfo($pdo, intval($codes['county_code']), intval($codes['juris_code']));
+$clerk['phoneDigits'] = Utils::phoneDigits($clerk['phone']);
+$clerk['faxDigits']   = Utils::phoneDigits($clerk['fax']);
 
 $smarty = new SmartyPage();
 $smarty->assign('clerk', $clerk);

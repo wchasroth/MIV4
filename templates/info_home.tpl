@@ -40,16 +40,14 @@
       <b>Request a ballot from your clerk</b><br>
       Your options include:
       <ul>
-        <li>Call your clerk, and they'll mail you an application that you return by mail.</li>
+        <li>Call your clerk, and they'll send you an application that you return by mail.</li>
         <li><a href="https://www.michigan.gov/sos/-/media/Project/Websites/sos/Elections/Election-Forms/Absent-Voter-Ballot-Application-Fillable.pdf"
              target="_blank">Download an application</a> that you can fill in, and return by mail.</li>
         <li>Go to your clerk's office and request a ballot in person.&nbsp;
             You can even fill out the ballot and return it while you're there.&nbsp;
           <b>Recommended if election day is less than two weeks away.</b></li>
            <ul>
-              <li><a href="#one_time_abs" onClick="if (do_juris_clerk_map() == 'OK') openCurtain('juris_clerk');  return false;">
-                <b>{{ jurisdiction }} Clerk</b></a>
-              </li>
+              <li><a href="clerkMap.php"><b>{$clerkJurisdiction} Clerk</b></a></li>
     
               <!-- (Recommended NOT to show county clerk, local is closer/better/has more services)
                   <li><a href="#one_time_abs" 
@@ -79,12 +77,15 @@
       <b>Return Your Ballot</b><br>
       You can return your ballot by mail (but allow 2 weeks),
       or at your clerk's office,
-      or at a drop box.&nbsp; 
-    
+      or at a drop box.&nbsp;
+      (We will provide drop-box locations as the elections get closer.)
+
+    <!--
       <a href="#dropbox_section" onClick="return dropBoxMapCall();">Find your Drop Box Locations</a>.&nbsp;
       <br/><br/>
       (You can also find drop-boxes from the Secretary of State‘s website, under
          "<a href="https://mvic.sos.state.mi.us/Voter/Index/#yourclerk">Search for your city/township clerk</a>".)
+         -->
       </p>
 <p></p>
 

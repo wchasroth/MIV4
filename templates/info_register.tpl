@@ -45,15 +45,14 @@
   
          <b>Register in person</b>&nbsp;
          <br>Go to any Secretary of State branch office or the
-         <a href="clerkMap.php">{$clerk['jurisdiction']}</a>
+         <a href="clerkMap.php">{$clerkJurisdiction}</a>
+           clerk's office.</b>
 
             <!-- (Recommended NOT to show county clerk, as local clerk closer/better)
                or <a href="#" onClick="if (do_county_clerk_map() == 'OK') openCurtain('county_clerk'); return false;">
-                  {{ county_name }} county</a>
+                  | county_name | county</a>
             -->
 
-        clerk's office.</b>
-   
    <p></p>
          <b>Military or Overseas</b>&nbsp;
            <br>See the

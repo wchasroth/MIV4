@@ -42,7 +42,8 @@
 
     <b>Voting in Person on Primary Election Day (Aug 4, 2026)</b>
     <ul>
-    <li>You can vote at a polling place or a clerk's office.
+    <li>You can vote at a polling place or a clerk's office
+        (such as the <a href="clerkMap.php">{$clerkJurisdiction} Clerk</a>).
     <li>As the election gets closer, we will provide the location of
     <b>your</b> polling place.
     </ul>
@@ -79,8 +80,8 @@
         <li>Student ID with photo</li>
         <li>Tribal ID with photo</li>
       </ul>
-      <b>Note:</b> You can still vote without ID.&nbsp; You just have to sign an
-      affidavit affirming your identity.</b>
+      <b>Note:</b> You can still vote without your ID.&nbsp; You just have to sign an
+      affidavit affirming your identity, and then return within 6 days with your ID.
 
       <br/>
       <br/>

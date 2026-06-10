@@ -189,7 +189,7 @@
                (You may be asked to sign a form confirming your identity.)
            </li>
            <li>If you don't have your ID, <b>and</b> you are not on the precinct list, you can still
-               vote a "provisional" ballot.&nbsp; In that case, you must return with 6 days with
+               vote a "provisional" ballot.&nbsp; In that case, you must return within 6 days with
                your ID to prove that you are a registered voter.&nbsp;
                Learn more about <a href="https://www.wzzm13.com/article/news/politics/michigan-politics/what-is-provisional-ballot-how-do-they-work/69-054742fe-486b-425b-b0a0-80fc51b9a19d"
                                    target="_blank">provisional ballots</a> and how they work.

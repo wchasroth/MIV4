@@ -183,14 +183,18 @@
 
    <div class="accordion" onClick="flipPanel('noId', this);">What if I don't have an ID on election day?</div>
    <div class="panel" id='noId'>
-       <p>
-             You can still vote if you don't have an ID with you.&nbsp;
-             A poll worker will ask you to sign a form saying you don't have your ID.&nbsp;
-             You must still provide your ID within 6 days after the election for your vote to count.
-       </p>
-       <p>Learn more about <a href="https://www.wzzm13.com/article/news/politics/michigan-politics/what-is-provisional-ballot-how-do-they-work/69-054742fe-486b-425b-b0a0-80fc51b9a19d"
-           target="_blank">provisional ballots</a> and how they work.
-       </p>
+       <ul>
+           <li>If you don't have your ID with you, the poll workers will check if you appear on the
+              precinct's registration list.&nbsp; If you are on the list, you can still vote.&nbsp;
+               (You may be asked to sign a form confirming your identity.)
+           </li>
+           <li>If you don't have your ID, <b>and</b> you are not on the precinct list, you can still
+               vote a "provisional" ballot.&nbsp; In that case, you must return with 6 days with
+               your ID to prove that you are a registered voter.&nbsp;
+               Learn more about <a href="https://www.wzzm13.com/article/news/politics/michigan-politics/what-is-provisional-ballot-how-do-they-work/69-054742fe-486b-425b-b0a0-80fc51b9a19d"
+                                   target="_blank">provisional ballots</a> and how they work.
+           </li>
+       </ul>
   </div>
 
   

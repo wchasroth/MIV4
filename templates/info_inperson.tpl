@@ -80,9 +80,8 @@
         <li>Student ID with photo</li>
         <li>Tribal ID with photo</li>
       </ul>
-      <b>Note:</b> You can still vote without your ID.&nbsp; You just have to sign an
-      affidavit affirming your identity, and then return within 6 days with your ID.
-
+      <b>Note:</b> You can still vote without your ID.&nbsp;
+       See <a href="info_general.php#noIdAccordion">What if I don't have an ID?</a>.
       <br/>
       <br/>
       <a href="https://mvic.sos.state.mi.us/Home/">Learn more about voting on election day</a> from the Secretary of State.

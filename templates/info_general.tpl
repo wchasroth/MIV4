@@ -181,7 +181,7 @@
           </ul>
   </div>
 
-   <div class="accordion" onClick="flipPanel('noId', this);">What if I don't have an ID on election day?</div>
+   <div class="accordion" id='noIdAccordion' onClick="flipPanel('noId', this);">What if I don't have an ID on election day?</div>
    <div class="panel" id='noId'>
        <ul>
            <li>If you don't have your ID with you, the poll workers will check if you appear on the

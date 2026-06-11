@@ -26,7 +26,7 @@
 
 <div class="darkBlueText pageText unindentList">
 
-   <div class="accordion" onClick="flipPanel('whoNeeds', this);">Who needs to register or re-register?</div>
+   <div class="accordion" onClick="flipPanel('whoNeeds');">Who needs to register or re-register?</div>
    <div class="panel" id='whoNeeds'>
           <ul>
                <li>New voters (people who are just turning 18)</li>
@@ -39,14 +39,14 @@
           </ul>
    </div>
 
-   <div class="accordion" onClick="flipPanel('checkReg', this);">I haven't voted in a while.&nbsp; How can I check my registration?</div>
+   <div class="accordion" onClick="flipPanel('checkReg');">I haven't voted in a while.&nbsp; How can I check my registration?</div>
    <div class="panel" id='checkReg'>
        <p>
       Check on-line with the <a href="https://mvic.sos.state.mi.us/Voter/Index">Secretary of State</a>.
        </p>
    </div>
 
-   <div class="accordion" onClick="flipPanel('howLate', this);">How late can I register to vote?</div>
+   <div class="accordion" onClick="flipPanel('howLate');">How late can I register to vote?</div>
    <div class="panel" id='howLate'>
        <p>
               You can register to vote through Election Day.&nbsp;
@@ -55,7 +55,7 @@
        </p>
    </div>
 
-   <div class="accordion" onClick="flipPanel('elegible', this);">Who is eligible to vote?</div>
+   <div class="accordion" onClick="flipPanel('elegible');">Who is eligible to vote?</div>
    <div class="panel" id='elegible'>
        <p>
               To vote you must be:
@@ -71,7 +71,7 @@
        <br/>
    </div>
     
-   <div class="accordion" onClick="flipPanel('student', this);">Can I vote as a student?</div>
+   <div class="accordion" onClick="flipPanel('student');">Can I vote as a student?</div>
    <div class="panel" id='student'>
        <p>
               Yes. According to the Secretary of State's
@@ -95,7 +95,7 @@
         </p>
   </div>
 
-   <div class="accordion" onClick="flipPanel('emergency', this);">What if I have an emergency on Election Day?</div>
+   <div class="accordion" onClick="flipPanel('emergency');">What if I have an emergency on Election Day?</div>
    <div class="panel" id='emergency'>
        <p>
               You may request an emergency absent voter ballot <i>after</i> the deadline
@@ -109,7 +109,7 @@
        </p>
   </div>
 
-   <div class="accordion" onClick="flipPanel('absenteeAlways', this);">How do I get an absentee ballot?</div>
+   <div class="accordion" onClick="flipPanel('absenteeAlways');">How do I get an absentee ballot?</div>
    <div class="panel" id='absenteeAlways'>
        <p>
        You can <a href="https://mvic.sos.state.mi.us/AVApplication/Index">request an absentee ballot</a>
@@ -123,7 +123,7 @@
        </p>
   </div>
 
-   <div class="accordion" onClick="flipPanel('changeVote', this);">Can I change my vote?</div>
+   <div class="accordion" onClick="flipPanel('changeVote');">Can I change my vote?</div>
    <div class="panel" id='changeVote'>
        <p>
       If you would like to change your vote after returning your completed and signed absentee ballot to 
@@ -141,7 +141,7 @@
        </p>
   </div>
 
-   <div class="accordion" onClick="flipPanel('trackBallot', this);">How do I track my ballot?</div>
+   <div class="accordion" onClick="flipPanel('trackBallot');">How do I track my ballot?</div>
    <div class="panel" id='trackBallot'>
        <ul>
        <li>Using the Michigan Secretary of State's website,
@@ -152,7 +152,7 @@
        </ul>
   </div>
 
-   <div class="accordion" onClick="flipPanel('noBallot', this);">What if my ballot didn't arrive?</div>
+   <div class="accordion" onClick="flipPanel('noBallot');">What if my ballot didn't arrive?</div>
    <div class="panel" id='noBallot'>
        <p>
              At your polling place, you can sign a statement stating that the ballot
@@ -161,7 +161,7 @@
        </p>
   </div>
 
-   <div class="accordion" onClick="flipPanel('disability', this);">What help is there for people with disabilities?</div>
+   <div class="accordion" onClick="flipPanel('disability');">What help is there for people with disabilities?</div>
    <div class="panel" id='disability'>
           <ul>
                 <li>Voters with print disabilities can <a href="https://mi.omniballot.us/sites/26/absentee/app/home">
@@ -181,7 +181,7 @@
           </ul>
   </div>
 
-   <div class="accordion" id='noIdAccordion' onClick="flipPanel('noId', this);">What if I don't have an ID on election day?</div>
+   <div class="accordion" id='noIdAccordion' onClick="flipPanel('noId');">What if I don't have an ID on election day?</div>
    <div class="panel" id='noId'>
        <ul>
            <li>If you don't have your ID with you, the poll workers will check if you appear on the

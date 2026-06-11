@@ -28,15 +28,17 @@
 <b>Frequently Asked Questions</b>
 <p/>
 
-   <div class="accordion" onClick="flipPanel('whyAddress', this);">Why do you need my address?</div>
+   <div class="accordion" onClick="flipPanel('whyAddress');">Why do you need my address?</div>
    <div class="panel" id='whyAddress'>
+      <p>
       To find your voting districts and polling places.&nbsp;
       We do not store, share, or sell your address.&nbsp;
       Only your browser remembers it, in a cookie.&nbsp;
       Clicking on the round X in the address bar clears your address cookie.
+      </p>
    </div>
 
-   <div class="accordion" onClick="flipPanel('endorsed', this);">Endorsed by whom?</div>
+   <div class="accordion" onClick="flipPanel('endorsed');">Endorsed by whom?</div>
    <div class="panel" id='endorsed'>
       Michigan Democratic Party endorses the following:
          <ul>
@@ -48,7 +50,7 @@
          County Democratic Parties and Clubs endorse all other candidates.</li>
    </div>
 
-   <div class="accordion" onClick="flipPanel('whyDemocratic', this);">Why a Democratic-only voter guide?</div>
+   <div class="accordion" onClick="flipPanel('whyDemocratic');">Why a Democratic-only voter guide?</div>
    <div class="panel" id='whyDemocratic'>
       To provide Democratic-leaning voters in Michigan with an easy way to find <b>all</b> candidates
       and proposals endorsed by the Democratic Party.&nbsp; (Especially the non-partisan
@@ -58,7 +60,7 @@
       <a href="https://www.vote411.org/" target="_blank">vote411.org</a>.
    </div>
 
-   <div class="accordion" onClick="flipPanel('missingOffices', this);">Why do I see only some offices?</div>
+   <div class="accordion" onClick="flipPanel('missingOffices');">Why do I see only some offices?</div>
    <div class="panel" id='missingOffices'>
       If you don't see some candidates for your district, it's because we have not (yet)
       received information about endorsed Democratic candidates for your area.
@@ -67,7 +69,7 @@
       site for a listing of local candidates.
    </div>
 
-   <div class="accordion" onClick="flipPanel('votingDenied', this);"
+   <div class="accordion" onClick="flipPanel('votingDenied');"
          >Who can I contact if I believe my right to vote has been unfairly denied?</div>
    <div class="panel" id='votingDenied'>
       <ul>
@@ -93,21 +95,21 @@
       </ul>
    </div>
 
-   <div class="accordion" onClick="flipPanel('iAmCandidate', this);">I'm a Democratic candidate.&nbsp; Why don't I appear?</div>
+   <div class="accordion" onClick="flipPanel('iAmCandidate');">I'm a Democratic candidate.&nbsp; Why don't I appear?</div>
    <div class="panel" id='iAmCandidate'>
       If you are a candidate and do not see your information, please contact us ASAP at
       <a href="mailto:mivoter.org@gmail.com">mivoter.org@gmail.com</a>.&nbsp; We especially
       need to hear from county Democratic party leaders about endorsements for their regions.
    </div>
 
-   <div class="accordion" onClick="flipPanel('whoIs', this);">Who is MIvoter.org?</div>
+   <div class="accordion" onClick="flipPanel('whoIs');">Who is MIvoter.org?</div>
    <div class="panel" id='whoIs'>
       This site was built by a group of passionate volunteers, working towards a more
       democratic Michigan.&nbsp; Candidate data was supplied by the Michigan Democratic Party,
       the relevant county Democratic parties, individual candidates, and their campaign websites.
    </div>
 
-   <div class="accordion" onClick="flipPanel('feedback', this);">How do I send feedback?</div>
+   <div class="accordion" onClick="flipPanel('feedback');">How do I send feedback?</div>
    <div class="panel" id='feedback'>
       We'd love to hear your <a href="feedback.php">feedback</a>, especially if you're having trouble
       with the site.
@@ -116,7 +118,7 @@
       </div>
    </div>
 
-   <div class="accordion" onClick="flipPanel('video', this);">There's a funny video about MIvoter?</div>
+   <div class="accordion" onClick="flipPanel('video');">There's a funny video about MIvoter?</div>
    <div class="panel" id='video'>
       Yes!&nbsp;
       <a href="video_frame.html">Take a look!</a>&nbsp;

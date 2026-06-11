@@ -13,7 +13,7 @@ class Clerk {
          $clerk = [];
          $fields = ['name', 'street_address', 'mailing_address', 'phone', 'fax', 'email', 'hours',
             'election_date', 'pre_hours', 'place_id', 'lat', 'lng'];
-         foreach ($fields as $field)  $empty[$field] = '';
+         foreach ($fields as $field)  $clerk[$field] = '';
          return $clerk;
       }
 

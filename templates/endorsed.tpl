@@ -25,7 +25,7 @@
    <script type="module" src="address-search02.js"></script>
 </head>
 
-<body style="font-family: Roboto;" onLoad="setCounty({$county});">
+<body style="font-family: Roboto;">
 
 {include file="inc-topbar.tpl"}
 
@@ -39,7 +39,21 @@
    After the primary elections are over in August, we'll be able to post a fully-detailed list
    for your district.
 
-   <p/>
+   <center>
+      <div style="padding-bottom: 0.5em;"><b>Nov 3, 2026</b> Democratic Party Endorsements</b></div>
+      {$backclass=1}
+         {foreach from=$rows item=row}
+            <table width="100%" cellspacing="0" cellpadding="4" style="max-width: 30em;">
+               <tr valign="top" class="back{$backclass}">
+                  <td>{$row['miv_title']}</td>
+                  <td align="right"><a href="singleOfficial.php?id={$row['id']}" class="noUnderline">{$row['name']}</a></td>
+               </tr>
+            </table>
+            {$backclass=1-$backclass}
+         {/foreach}
+   </center>
+   <br/>
+
    Currently, the known endorsed candidates are:
    <ul style="margin-top: 0.3em;">
       <li>State attorney general: <a href="https://www.eliformichigan.com/">Eli Savit</a></li>

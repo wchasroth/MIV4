@@ -40,6 +40,7 @@
 
    <div class="accordion" onClick="flipPanel('endorsed');">Endorsed by whom?</div>
    <div class="panel" id='endorsed'>
+      <br/>
       Michigan Democratic Party endorses the following:
          <ul>
             <li>US candidates</li>
@@ -47,26 +48,31 @@
             <li>Michigan State Senators/Representatives</li>
             <li>Statewide proposals</li>
          </ul>
-         County Democratic Parties and Clubs endorse all other candidates.</li>
+         County Democratic Parties and Clubs endorse all other candidates.
+       <br/>&nbsp;
    </div>
 
    <div class="accordion" onClick="flipPanel('whyDemocratic');">Why a Democratic-only voter guide?</div>
    <div class="panel" id='whyDemocratic'>
+      <br/>
       To provide Democratic-leaning voters in Michigan with an easy way to find <b>all</b> candidates
       and proposals endorsed by the Democratic Party.&nbsp; (Especially the non-partisan
       races, like judges.)&nbsp;
       For a reliable non-partisan source of
       information about all candidates and proposals, see
       <a href="https://www.vote411.org/" target="_blank">vote411.org</a>.
+      <br/>&nbsp;
    </div>
 
    <div class="accordion" onClick="flipPanel('missingOffices');">Why do I see only some offices?</div>
    <div class="panel" id='missingOffices'>
+      <br/>
       If you don't see some candidates for your district, it's because we have not (yet)
       received information about endorsed Democratic candidates for your area.
       You can also try <a href="county.php">your local county's</a> Democratic party,
       or the <a href="https://michigandems.com/" target="_blank">MichiganDems</a>
       site for a listing of local candidates.
+      <br/>&nbsp;
    </div>
 
    <div class="accordion" onClick="flipPanel('votingDenied');"
@@ -97,35 +103,43 @@
 
    <div class="accordion" onClick="flipPanel('iAmCandidate');">I'm a Democratic candidate.&nbsp; Why don't I appear?</div>
    <div class="panel" id='iAmCandidate'>
+      <br/>
       If you are a candidate and do not see your information, please contact us ASAP at
       <a href="mailto:mivoter.org@gmail.com">mivoter.org@gmail.com</a>.&nbsp; We especially
       need to hear from county Democratic party leaders about endorsements for their regions.
+      <br/>&nbsp;
    </div>
 
    <div class="accordion" onClick="flipPanel('whoIs');">Who is MIvoter.org?</div>
    <div class="panel" id='whoIs'>
+      <br/>
       This site was built by a group of passionate volunteers, working towards a more
       democratic Michigan.&nbsp; Candidate data was supplied by the Michigan Democratic Party,
       the relevant county Democratic parties, individual candidates, and their campaign websites.
+      <br/>&nbsp;
    </div>
 
    <div class="accordion" onClick="flipPanel('feedback');">How do I send feedback?</div>
    <div class="panel" id='feedback'>
+      <br/>
       We'd love to hear your <a href="feedback.php">feedback</a>, especially if you're having trouble
       with the site.
       <div style="margin-top: 6px;">
          You can also email us at <a href="mailto:mivoter.org@gmail.com" target="_blank">mivoter.org@gmail.com</a>.
       </div>
+      <br/>&nbsp;
    </div>
 
    <div class="accordion" onClick="flipPanel('video');">There's a funny video about MIvoter?</div>
    <div class="panel" id='video'>
+      <br/>
       Yes!&nbsp;
       <a href="video_frame.html">Take a look!</a>&nbsp;
       That's the wonderful
       <a href="https://www.youtube.com/c/AmirforAmerica/videos">Amir for America</a>,
       who has a whole series of hilarious and informative
       videos on getting people to vote.
+      <br/>&nbsp;
    </div>
 
 

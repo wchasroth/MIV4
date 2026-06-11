@@ -27,11 +27,19 @@ $miCodes = trim($_COOKIE['miCodes'] ?? "");
 $codes   = json_decode($miCodes, true);
 $apiKey  = $env->get('googleMapsApiKey');
 
-$clerk = Clerk::getClerkInfo($pdo, intval($codes['county_code']), intval($codes['juris_code']));
+$clerk = Clerk::getClerkInfo($pdo, intval($codes['county_code']), intval($codes['juris_code']), $logger);
 $clerk['phoneDigits'] = Utils::phoneDigits($clerk['phone']);
 $clerk['faxDigits']   = Utils::phoneDigits($clerk['fax']);
 
 $smarty = new SmartyPage();
-$smarty->assign('clerk', $clerk);
-$smarty->assign('apiKey', $apiKey);
-$smarty->display('clerkMap.tpl');
+
+if (empty($clerk['name'])) {
+   $logger->log("FIXME: clerkMap failed for: $miCodes");
+   $smarty->display("clerkError.tpl");
+}
+else {
+   $smarty->assign('clerk', $clerk);
+   $smarty->assign('apiKey', $apiKey);
+   $smarty->assign('miCodes', $miCodes);
+   $smarty->display('clerkMap.tpl');
+}

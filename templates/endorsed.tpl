@@ -33,12 +33,10 @@
 
 <div class="darkBlueText pageText unindentList">
    <p/>
-   <b>THIS PAGE IS STILL EXPERIMENTAL</b>
-   <p/>
    <b>Endorsed Candidates</b>
    <p/>
-   Right now, only a very few Democratically-endorsed candidates have been identified.&nbsp;
-   After the primary elections are over in August, we'll be able to post a fully-detailed list
+   Right now, there are only a few Democratically-endorsed candidates.&nbsp;
+   After the August primary elections are over, you'll see a full list
    for your district.
 
    <center>
@@ -56,28 +54,7 @@
    </center>
    <br/>
 
-   Currently, the known endorsed candidates are:
-   <ul style="margin-top: 0.3em;">
-      <li>State attorney general: <a href="https://www.eliformichigan.com/">Eli Savit</a></li>
-      <li>Secretary of State: <a href="https://garlingilchrist.com/">Garlin Gilchrist</a></li>
-      <li>State Supreme Court: (2 seats):
-         <ul>
-            <li><a href="https://cavanaghforjustice.com/">Megan Cavanagh</a></li>
-            <li><a href="https://www.noahhoodforjustice.com/">Noah Hood</a></li>
-         </ul>
-      </li>
-      <li>State Board of Education: (2 seats)
-         <ul>
-            <li><a href="https://www.facebook.com/tiffanytilleyforstateboard/">Tiffany Tilley</a></li>
-            <li>Judith Pritchett</li>
-         </ul>
-      </li>
-      <li>University of Michigan Board of Regents: (2 seats)
-         <ul>
-            <li><a href="https://www.facebook.com/GoBlueVoteBrown/">Paul Brown</a></li>
-            <li><a href="https://amirmakled.com/">Amir Makled</a></li>
-         </ul>
-      </li>
+   <!--
       <li>Michigan State University Board of Trustees:
          <ul>
             <li>Brianna Scott</li>
@@ -91,6 +68,7 @@
          </ul>
       </li>
    </ul>
+   -->
 
 </div>
 

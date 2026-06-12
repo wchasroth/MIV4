@@ -104,8 +104,9 @@
    <div class="accordion" onClick="flipPanel('iAmCandidate');">I'm a Democratic candidate.&nbsp; Why don't I appear?</div>
    <div class="panel" id='iAmCandidate'>
       <br/>
-      If you are a candidate and do not see your information, please contact us ASAP at
-      <a href="mailto:mivoter.org@gmail.com">mivoter.org@gmail.com</a>.&nbsp; We especially
+      If you are a candidate and do not see your information, please contact us ASAP
+      via the <a href="feedback.php">feedback</a> page.&nbsp;
+      We especially
       need to hear from county Democratic party leaders about endorsements for their regions.
       <br/>&nbsp;
    </div>
@@ -124,9 +125,6 @@
       <br/>
       We'd love to hear your <a href="feedback.php">feedback</a>, especially if you're having trouble
       with the site.
-      <div style="margin-top: 6px;">
-         You can also email us at <a href="mailto:mivoter.org@gmail.com" target="_blank">mivoter.org@gmail.com</a>.
-      </div>
       <br/>&nbsp;
    </div>
 

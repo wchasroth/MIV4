@@ -25,15 +25,14 @@
 
 <div class="darkBlueText pageText unindentList">
 
-<b>Welcome!</b>&nbsp;
-   Use the buttons at the bottom to
+<b>Welcome!</b><br/><br/>
+   Use the <b>buttons at the bottom</b> to:
    <ul>
-      <li>Learn about <b>Endorsed Candidates</b>
-      <li>Learn where and <b>How to Vote</b> (&amp;&nbsp;registering to vote!)
-      <li>See your <b>Current Officials</b>
-      <li>Read answers to <b>Frequent Questions</b>
+      <li>Learn about Endorsed Candidates
+      <li>Learn where and How to Vote (&amp;&nbsp;registering to vote!)
+      <li>See your Current Officials
+      <li>Read answers to Frequent Questions
    </ul>
-   From <b>any</b> page, click on the logo at the top to return here.
 
    <p>&nbsp;</p>
    <b>Ways you can defend democracy</b>

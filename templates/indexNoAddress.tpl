@@ -25,7 +25,7 @@
 
 <p style="font-size: 10%;">&nbsp;</p>
 <div class="darkBlueText pageText unindentList">
-    <b>To get started,</b> enter your address in the box above.
+    To get started, <b>enter your address</b> in the box above.
     <div style="height: 10px;">&nbsp;</div>
 
     MIvoter.org is the <b>one stop shop</b> for all Michigan Democratic voters:

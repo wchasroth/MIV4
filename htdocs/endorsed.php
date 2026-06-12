@@ -78,7 +78,7 @@ $smarty->display('endorsed.tpl');
 
 function select(string $dist): string {
    return  "SELECT s.id, s.org, s.office, s.district, s.subdist, $dist AS dist, "
-      . "       i.name, t.ballot_order, t.miv_title ";
+      . "       i.name, t.ballot_order, t.miv_title, i.id AS iid ";
 }
 
 function from (): string {
@@ -95,7 +95,7 @@ function whereOrgIn (... $orgs): string {
 }
 
 function endorsed(): string {
-   return ") AND i.name!=''";
+   return ") AND i.name!='' AND i.endorsed = 1";
 }
 
 function removeDuplicateTitles (array &$rows): void {

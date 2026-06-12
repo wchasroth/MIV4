@@ -43,10 +43,10 @@
       <div style="padding-bottom: 0.5em;"><b>Nov 3, 2026</b> Democratic Party Endorsements</b></div>
       {$backclass=1}
          {foreach from=$rows item=row}
-            <table width="100%" cellspacing="0" cellpadding="4" style="max-width: 30em;">
+            <table width="90%" cellspacing="0" cellpadding="4" style="max-width: 30em;">
                <tr valign="top" class="back{$backclass}">
                   <td>{$row['miv_title']}</td>
-                  <td align="right"><a href="singleOfficial.php?id={$row['id']}" class="noUnderline">{$row['name']}</a></td>
+                  <td align="right"><a href="singleCandidate.php?id={$row['iid']}" class="noUnderline">{$row['name']}</a></td>
                </tr>
             </table>
             {$backclass=1-$backclass}

@@ -6,7 +6,7 @@
       </a>
 
       <div style="margin-top: 20px; float: right; ">
-         <img onClick="share();"  src="IMG/waveIconShare5.png" width="30" style="margin-right: 7px;"/>
+         <img onClick="share();"  src="IMG/waveIconShare5.png" width="30" title="Share" style="margin-right: 7px;"/>
       </div>
 
       <div style="margin-top: 20px; float: right; ">

@@ -25,15 +25,15 @@
 
 <p style="font-size: 10%;">&nbsp;</p>
 <div class="darkBlueText pageText unindentList">
-    To get started, <b>enter your address</b> in the box above.
-    <div style="height: 10px;">&nbsp;</div>
+    <b>Enter your address</b> above to get tailored voting info <i><b>just for you</b></i>:
+    <!-- <div style="height: 10px;">&nbsp;</div> -->
 
-    MIvoter.org is the <b>one stop shop</b> for all Michigan Democratic voters:
+<!--    MIvoter.org is the <b>one stop shop</b> for all Michigan Democratic voters: -->
     <ul>
-        <li>See <b>your</b> elected officials
-        <li>Register to vote
-        <li>See endorsed candidates
-        <li>Find protests &amp; events
+        <li>Endorsed candidates who will be on your ballot
+        <li>Ways to cast your ballot
+        <li>Current officials who serve you
+        <li>Protests and events near you
         <li>And much, much more
     </ul>
 

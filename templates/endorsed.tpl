@@ -29,10 +29,7 @@
 
 {include file="inc-topbar.tpl"}
 
-<p style="font-size: 10%;">&nbsp;</p>
-
-<div class="darkBlueText pageText unindentList">
-   <p/>
+<div class="darkBlueText pageText unindentList" style="padding-top: 0.5em;">
    <b>Endorsed Candidates</b>
    <p/>
    Right now, there are only a few Democratically-endorsed candidates.&nbsp;

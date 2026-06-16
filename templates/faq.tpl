@@ -128,6 +128,7 @@
       <br/>&nbsp;
    </div>
 
+   <!--
    <div class="accordion" onClick="flipPanel('video');">There's a funny video about MIvoter?</div>
    <div class="panel" id='video'>
       <br/>
@@ -139,6 +140,7 @@
       videos on getting people to vote.
       <br/>&nbsp;
    </div>
+   -->
 
 
 </div>

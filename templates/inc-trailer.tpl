@@ -24,7 +24,7 @@
                <a href="https://www.facebook.com/mivoter.org"><img src="IMG/icon-fb.2.png" width="40"/></a>&nbsp;
                <a href="https://www.instagram.com/mivoter.org5"><img src="IMG/icon-instagram.2.png" width="40"/></a>&nbsp;
                <a href="https://www.tiktok.com/@mivoter.org"><img src="IMG/icon-tiktok.2.png" width="40"/></a>&nbsp;
-               <a href="https://x.com/mivoter_org"><img src="IMG/icon-x.2.png" width="40"/></a>&nbsp;
+               <a href="https://x.com/mivoter_org"><img src="IMG/icon-x.3.png" width="40"/></a>&nbsp;
                <a href="https://www.youtube.com/@mivoter_org"><img src="IMG/icon-youtube.2.png" width="40"/></a>&nbsp;
             </center>
          </div>

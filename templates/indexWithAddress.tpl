@@ -26,7 +26,7 @@
 <div class="darkBlueText pageText unindentList">
 
 <b>Welcome!</b><br/><br/>
-   Use the <b>buttons at the bottom</b> to:
+   Use the <b>buttons at the bottom</b> to see info just for you.
    <ul>
       <li>Learn about Endorsed Candidates
       <li>Learn where and How to Vote (&amp;&nbsp;registering to vote!)
@@ -34,7 +34,6 @@
       <li>Read answers to Frequent Questions
    </ul>
 
-   <p>&nbsp;</p>
    <b>Ways you can defend democracy</b>
    <ul>
       <li><a href="county.php">County Parties</a>: Find your county's Democratic parties &amp; clubs,

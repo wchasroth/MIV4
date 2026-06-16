@@ -15,7 +15,7 @@
    </div>
 
    <div class="waveHeaderText" style="margin-left: 7px; margin-right: 7px; line-height: 130%; color: white;" >
-      &nbsp;<i><u>Your</u></i> 2026 Michigan Voter Guide
+      &nbsp;<i>Your</i> Michigan Voter Guide
    </div>
 
 

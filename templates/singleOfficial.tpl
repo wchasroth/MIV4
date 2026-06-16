@@ -33,7 +33,7 @@
 <table width="100%" style="font-size: 120%;">
     <tr valign="top">
         <td>{$name}<br>{$title} {$party}<br/><br/>
-            <button onClick="window.history.back();">Back</button>
+            <button class='roundButton' onClick="window.history.back();">Back</button>
         </td>
         <td align="right"><img src="{$headshot}" width="150"/></td>
     </tr>

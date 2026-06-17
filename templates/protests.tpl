@@ -20,6 +20,7 @@
        .indented    { padding-left: 1.5em;}
    </style>
 
+   <script               src="mivoter.js"></script>
    <script               src="share.js"></script>
    <script               src="parseHouseStreet.js"></script>
    <script type="module" src="address-search02.js"></script>
@@ -43,7 +44,7 @@
    </script>
 </head>
 
-<body style="font-family: Roboto;" onLoad="setCounty({$county});">
+<body style="font-family: Roboto;" onLoad="initialize(); setCounty({$county});">
 
 {include file="inc-topbar.tpl"}
 

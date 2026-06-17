@@ -12,6 +12,7 @@
    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto">
    <link rel="stylesheet" href="mivoter.css">
 
+   <script               src="mivoter.js"></script>
    <script               src="share.js"></script>
    <script               src="parseHouseStreet.js"></script>
    <script type="module" src="address-search02.js"></script>
@@ -42,7 +43,7 @@
 
 </head>
 
-<body style="font-family: Roboto;">
+<body style="font-family: Roboto;" onLoad="initialize();">
 
 {include file="inc-topbar.tpl"}
 

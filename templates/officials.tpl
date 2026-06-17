@@ -18,7 +18,7 @@
    <script type="module" src="address-search02.js"></script>
 </head>
 
-<body style="font-family: Roboto;">
+<body style="font-family: Roboto;" onLoad="initialize();">
 
 {include file="inc-topbar.tpl"}
 

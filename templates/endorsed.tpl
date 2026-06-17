@@ -20,12 +20,13 @@
        .indented    { padding-left: 1.5em;}
    </style>
 
+   <script               src="mivoter.js"></script>
    <script               src="share.js"></script>
    <script               src="parseHouseStreet.js"></script>
    <script type="module" src="address-search02.js"></script>
 </head>
 
-<body style="font-family: Roboto;">
+<body style="font-family: Roboto;" onLoad="initialize();">
 
 {include file="inc-topbar.tpl"}
 
@@ -71,6 +72,7 @@
 
 
 <p>&nbsp;</p>
+show={$show}
 
 {include file="inc-trailer.tpl"}
 

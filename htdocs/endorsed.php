@@ -7,6 +7,7 @@ use CharlesRothDotNet\Alfred\PdoHelper;
 use CharlesRothDotNet\Alfred\AlfredPDO;
 use CharlesRothDotNet\Alfred\Str;
 use CharlesRothDotNet\EditorV4\EnvHelper;
+use CharlesRothDotNet\MIV4\VoterLog;
 use Smarty\Smarty;
 use CharlesRothDotNet\Alfred\SmartyPage;
 use CharlesRothDotNet\MIV4\Plugins;
@@ -23,10 +24,13 @@ $env    = new EnvFile("_env");
 $logger = new DumbFileLogger($env->get('logFile'));
 $pdo    = PdoHelper::makePdo($env);
 
-$miCodes = trim($_COOKIE['miCodes'] ?? "");
-$codes   = json_decode($miCodes, true);
-$show    = print_r($codes, true);
-$ward    = getWard($codes['wardpct']);
+$miCodes   = trim($_COOKIE['miCodes'] ?? "");
+$sessionId = trim($_COOKIE['sessionid'] ?? "");
+$codes     = json_decode($miCodes, true);
+$show      = print_r($codes, true);
+$ward      = getWard($codes['wardpct']);
+date_default_timezone_set('America/New_York');
+VoterLog::write($pdo, $sessionId, 'B', $codes);
 
 $sql = [];
 $sql[] = select('district') . from() . whereOrgIn('us', 'us-sen') . " OR (s.org='us-hou' AND s.district='{$codes['congress']}') " . endorsed();
@@ -73,6 +77,7 @@ $smarty = new SmartyPage();
 
 $smarty->assign('address', $address);
 $smarty->assign('rows', $rows);
+$smarty->assign('show', $show);
 $smarty->display('endorsed.tpl');
 
 

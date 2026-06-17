@@ -30,7 +30,8 @@ $codes     = json_decode($miCodes, true);
 $show      = print_r($codes, true);
 $ward      = getWard($codes['wardpct']);
 date_default_timezone_set('America/New_York');
-VoterLog::write($pdo, $sessionId, 'B', $codes);
+$voterLog = new VoterLog($pdo, $logger);
+$voterLog->write($sessionId, 'B', $codes);
 
 $sql = [];
 $sql[] = select('district') . from() . whereOrgIn('us', 'us-sen') . " OR (s.org='us-hou' AND s.district='{$codes['congress']}') " . endorsed();

@@ -13,9 +13,9 @@ $env       = new EnvFile("_env");
 $logger    = new DumbFileLogger($env->get('logFile'));
 $pdo       = PdoHelper::makePdo($env);
 
-$miCodes   = trim($_COOKIE['miCodes']   ?? "");
-$sessionId = trim($_COOKIE['sessionid'] ?? "");
-$codes     = json_decode($miCodes, true);
+$miCodes   = trim($_COOKIE['miCodes']    ?? "");
+$sessionId = trim($_COOKIE['sessionid']  ?? "");
+$codes     = json_decode($miCodes, true) ?? [];
 
 $address = trim($_COOKIE['miAddress'] ?? "");
 date_default_timezone_set('America/New_York');

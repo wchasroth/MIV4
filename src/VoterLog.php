@@ -12,13 +12,15 @@ use CharlesRothDotNet\Alfred\Str;
 class VoterLog {
    private AlfredPDO      $pdo;
    private DumbFileLogger $logger;
+   private string         $addressHashSalt;
 
-   function __construct(AlfredPDO $pdo, DumbFileLogger $logger) {
-      $this->pdo = $pdo;
-      $this->logger = $logger;
+   function __construct(AlfredPDO $pdo, DumbFileLogger $logger, string $addressHashSalt) {
+      $this->pdo             = $pdo;
+      $this->logger          = $logger;
+      $this->addressHashSalt = $addressHashSalt;
    }
 
-   public function write(string $sessionId, string $pageCode, array $miCodes): void {
+   public function write(string $sessionId, string $pageCode, array $miCodes, string $fullAddress): void {
       $now = date('Y-m-d H:i:s');
       $ipAddress = new IpAddress();
       $sqlFields = new SqlFields(['sessionId' => $sessionId, 'timestamp' => $now, 'page' => $pageCode,
@@ -29,6 +31,7 @@ class VoterLog {
          'referer'    => $this->getReferer(),
          'ip'         => $ipAddress->getIp(),
          'ip_method'  => $ipAddress->getMethod(),
+         'hash_addr'  => hash('sha256', $fullAddress . $this->addressHashSalt)
       ]);
       $result = $this->pdo->runSF("INSERT INTO v4voter_log", "", $sqlFields, true);
       if ($result->failed()) $this->logger->log("VoterLog: " . $result->getError());

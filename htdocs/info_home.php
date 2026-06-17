@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 use CharlesRothDotNet\Alfred\EnvFile;
 use CharlesRothDotNet\Alfred\PdoHelper;
-use CharlesRothDotNet\EditorV4\DumbFileLogger;
+use CharlesRothDotNet\Alfred\DumbFileLogger;
 use CharlesRothDotNet\Alfred\SmartyPage;
 use CharlesRothDotNet\MIV4\Clerk;
 use CharlesRothDotNet\MIV4\VoterLog;

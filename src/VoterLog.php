@@ -6,6 +6,7 @@ namespace CharlesRothDotNet\MIV4;
 use CharlesRothDotNet\Alfred\AlfredPDO;
 use CharlesRothDotNet\Alfred\SqlFields;
 use CharlesRothDotNet\Alfred\IpAddress;
+use CharlesRothDotNet\Alfred\Str;
 
 class VoterLog {
    public static function write(AlfredPDO $pdo, string $sessionId, string $pageCode, array $miCodes): void {

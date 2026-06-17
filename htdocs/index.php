@@ -24,7 +24,7 @@ $sessionId = trim($_COOKIE['sessionid'] ?? "");
 $codes     = json_decode($miCodes, true) ?? [];
 
 $voterLog = new VoterLog($pdo, $logger, $env->get('addressHashSalt'));
-$voterLog->write($sessionId, 'H', $codes, $_COOKIE['miAddress'] ?? '');
+$voterLog->write($sessionId, 'H', $codes, $address);
 
 $smarty = new SmartyPage();
 $smarty->assign ('address',    $address);

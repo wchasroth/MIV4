@@ -44,6 +44,16 @@ class VoterLog {
    }
 
 }
-//new_addr     char(1)
-//hash_addr    char(64)
 //pageargs     varchar(40)
+
+// ----DONE----
+// B ballot (endorsed)
+// H   home (both)
+
+// C county display
+// D display uitext pages
+// F   faq
+// I   info (any/all?)
+// M
+// O   official
+// P   protests

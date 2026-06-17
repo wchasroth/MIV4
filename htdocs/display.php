@@ -4,12 +4,8 @@ declare(strict_types=1);
 use CharlesRothDotNet\Alfred\DumbFileLogger;
 use CharlesRothDotNet\Alfred\EnvFile;
 use CharlesRothDotNet\Alfred\PdoHelper;
-use CharlesRothDotNet\Alfred\AlfredPDO;
-use CharlesRothDotNet\Alfred\Str;
-use CharlesRothDotNet\EditorV4\EnvHelper;
-use Smarty\Smarty;
 use CharlesRothDotNet\Alfred\SmartyPage;
-use CharlesRothDotNet\MIV4\Plugins;
+use CharlesRothDotNet\MIV4\VoterLog;
 
 require_once("../vendor/autoload.php");
 
@@ -23,6 +19,14 @@ if ($address === ""  ||  $key === "") {
 $env              = new EnvFile("_env");
 $logger           = new DumbFileLogger($env->get('logFile'));
 $pdo              = PdoHelper::makePdo($env);
+
+$miCodes   = trim($_COOKIE['miCodes'] ?? "");
+$codes     = json_decode($miCodes, true) ?? [];
+$sessionId = trim($_COOKIE['sessionid'] ?? "");
+
+date_default_timezone_set('America/New_York');
+$voterLog = new VoterLog($pdo, $logger, $env->get('addressHashSalt'));
+$voterLog->write($sessionId, 'D', $codes, $address);
 
 // id       | varchar(20)    | NO   | PRI | NULL              |                                               |
 //| what     | varchar(40)    | YES  |     | NULL              |                                               |

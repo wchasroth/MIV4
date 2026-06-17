@@ -6,9 +6,8 @@ use CharlesRothDotNet\Alfred\EnvFile;
 use CharlesRothDotNet\Alfred\PdoHelper;
 use CharlesRothDotNet\Alfred\AlfredPDO;
 use CharlesRothDotNet\Alfred\Str;
-use CharlesRothDotNet\EditorV4\EnvHelper;
-use Smarty\Smarty;
 use CharlesRothDotNet\Alfred\SmartyPage;
+use CharlesRothDotNet\MIV4\VoterLog;
 
 require_once("../vendor/autoload.php");
 
@@ -21,11 +20,17 @@ if ($address === "") {
 $env              = new EnvFile("_env");
 $logger           = new DumbFileLogger($env->get('logFile'));
 $pdo              = PdoHelper::makePdo($env);
+$logger = new DumbFileLogger($env->get('logFile'));
 
 $miCodes = trim($_COOKIE['miCodes'] ?? "");
+$sessionId = trim($_COOKIE['sessionid'] ?? "");
 $codes = json_decode($miCodes, true);
 $show = print_r($codes, true);
 $ward = getWard($codes['wardpct']);
+
+date_default_timezone_set('America/New_York');
+$voterLog = new VoterLog($pdo, $logger, $env->get('addressHashSalt'));
+$voterLog->write($sessionId, 'O', $codes, $address);
 
 $sql = [];
 $sql[] = select('0natl',  'district') . from() . whereOrgIn('us', 'us-sen') . " OR (s.org='us-hou' AND s.district='{$codes['congress']}') ";

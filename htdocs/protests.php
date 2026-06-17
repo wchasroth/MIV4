@@ -4,12 +4,10 @@ declare(strict_types=1);
 use CharlesRothDotNet\Alfred\DumbFileLogger;
 use CharlesRothDotNet\Alfred\EnvFile;
 use CharlesRothDotNet\Alfred\PdoHelper;
-use CharlesRothDotNet\Alfred\AlfredPDO;
-use CharlesRothDotNet\Alfred\Str;
-use CharlesRothDotNet\EditorV4\EnvHelper;
 use Smarty\Smarty;
 use CharlesRothDotNet\Alfred\SmartyPage;
 use CharlesRothDotNet\MIV4\Plugins;
+use CharlesRothDotNet\MIV4\VoterLog;
 
 require_once("../vendor/autoload.php");
 
@@ -22,12 +20,18 @@ if ($address === "") {
 $env              = new EnvFile("_env");
 $logger           = new DumbFileLogger($env->get('logFile'));
 $pdo              = PdoHelper::makePdo($env);
+$logger = new DumbFileLogger($env->get('logFile'));
 
 $miCodes = trim($_COOKIE['miCodes'] ?? "");
 $codes = json_decode($miCodes, true);
-$myCounty = $codes['county_code'];
+$sessionId = trim($_COOKIE['sessionid'] ?? "");
 
-$county = $_GET["county"] ?? $myCounty;
+date_default_timezone_set('America/New_York');
+$voterLog = new VoterLog($pdo, $logger, $env->get('addressHashSalt'));
+$voterLog->write($sessionId, 'P', $codes, $address);
+
+$myCounty = $codes['county_code'];
+$county = $_GET["county"] ?? $myCounty;  // ???? does this really get used?
 
 // There's a better way to do this...
 if ($county > 0) {

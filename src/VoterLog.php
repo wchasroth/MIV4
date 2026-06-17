@@ -30,7 +30,8 @@ class VoterLog {
          'ip'         => $ipAddress->getIp(),
          'ip_method'  => $ipAddress->getMethod(),
       ]);
-      $this->pdo->runSF("INSERT INTO v4voter_log", "", $sqlFields, true);
+      $result = $this->pdo->runSF("INSERT INTO v4voter_log", "", $sqlFields, true);
+      if ($result->failed()) $this->logger->log("VoterLog: " . $result->getError());
    }
 
    private function getReferer() {

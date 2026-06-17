@@ -3,6 +3,11 @@ declare(strict_types=1);
 
 use Smarty\Smarty;
 use CharlesRothDotNet\Alfred\SmartyPage;
+use CharlesRothDotNet\Alfred\EnvFile;
+use CharlesRothDotNet\Alfred\DumbFileLogger;
+use CharlesRothDotNet\Alfred\PdoHelper;
+
+use CharlesRothDotNet\MIV4\VoterLog;
 
 require_once("../vendor/autoload.php");
 

@@ -24,7 +24,7 @@ $email = $_POST['email']    ?? "";
 $text  = $_POST['comments'] ?? "";
 
 $sqlFields = new SqlFields(['name' => $name, 'email' => $email, 'comment' => $text]);
-$pdo->runSF("INSERT INTO comments", "", $sqlFields);
+$pdo->runSF("INSERT INTO v4comments", "", $sqlFields);
 
 $smarty = new SmartyPage();
 $smarty->assign('address', $address);

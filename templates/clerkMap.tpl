@@ -82,7 +82,6 @@
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-miCodes={$miCodes}
 
 {include file="inc-bottombuttons.tpl" hasAddress=true}
 

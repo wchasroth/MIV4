@@ -51,9 +51,7 @@
    <ul>
       <li><a href="follow.php">Follow MIvoter</a> to receive a monthly email about other actions
       <li><a href="share.php">Share MIvoter</a> on social media
-      <!--
-         <li>Share this <a href="video_frame.html">fun video</a> about MIvoter
-      -->
+      <li>Share this <a href="video_frame.html">fun video</a> about MIvoter
    </ul>
    <i style="font-size: 90%;">(We <b>never</b> track your address.&nbsp; Only your browser remembers it.)</i>
 </div>

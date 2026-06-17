@@ -6,7 +6,20 @@ use CharlesRothDotNet\Alfred\SmartyPage;
 
 require_once("../vendor/autoload.php");
 
+date_default_timezone_set('America/New_York');
+
 $address = $_COOKIE['miAddress'] ?? "";
+
+$env    = new EnvFile("_env");
+$logger = new DumbFileLogger($env->get('logFile'));
+$pdo    = PdoHelper::makePdo($env);
+
+$miCodes   = trim($_COOKIE['miCodes'] ?? "");
+$sessionId = trim($_COOKIE['sessionid'] ?? "");
+$codes     = json_decode($miCodes, true);
+
+$voterLog = new VoterLog($pdo, $logger);
+$voterLog->write($sessionId, 'H', $codes);
 
 $smarty = new SmartyPage();
 $smarty->assign ('address',    $address);

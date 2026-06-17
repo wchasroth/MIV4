@@ -31,7 +31,7 @@ class VoterLog {
          'referer'    => $this->getReferer(),
          'ip'         => $ipAddress->getIp(),
          'ip_method'  => $ipAddress->getMethod(),
-         'hash_addr'  => hash('sha256', $fullAddress . $this->addressHashSalt)
+         'hash_addr'  => $this->getHash($fullAddress)
       ]);
       $result = $this->pdo->runSF("INSERT INTO v4voter_log", "", $sqlFields, true);
       if ($result->failed()) $this->logger->log("VoterLog: " . $result->getError());
@@ -41,6 +41,10 @@ class VoterLog {
       $referer = $_SERVER['HTTP_REFERER'] ?? '';
       if (Str::contains($referer, 'mivoter.org')) $referer = '';
       return $referer;
+   }
+
+   private function getHash(string $text): string {
+      return (empty($text) ? "" : hash('sha256', $text . $this->addressHashSalt));
    }
 
 }

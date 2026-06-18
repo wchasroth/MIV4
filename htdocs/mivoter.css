@@ -176,7 +176,7 @@ address-search {
 
        .panel.show {
           opacity: 1;
-          max-height: 500px;
+          max-height: 2000px;
        }
 
    .noUnderline { text-decoration: none; }

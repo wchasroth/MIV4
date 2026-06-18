@@ -10,7 +10,7 @@
    <title>MIVoter</title>
    
    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto">
-   <link rel="stylesheet" href="mivoter.css">
+   <link rel="stylesheet" href="mivoter01.css">
 
    <style>
        .protestPanel      { display: none; }

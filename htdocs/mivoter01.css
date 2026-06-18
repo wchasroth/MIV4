@@ -185,10 +185,15 @@ address-search {
        a, a:visited { color: blue; }
 
 
-       .roundButton {
-           color: #ffffff;
-           background-color: #5CACE6;
-           border-color: #5CACE6;
-           border-radius: 15px;
-           padding: 8px;
-       }
+.roundButton {
+    border: none;
+    background-color: #5cace6;
+    color:  white;
+    padding: 0.5em;
+    display: inline-block;
+    margin:  4px 2px;
+    border-radius: 20px;
+    font-size: 100%;
+    letter-spacing: .1rem;
+    text-align: left;
+}

@@ -10,7 +10,7 @@
    <title>MIVoter</title>
    
    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto">
-   <link rel="stylesheet" href="mivoter01.css">
+   <link rel="stylesheet" href="mivoter02.css">
 
    <script               src="share.js"></script>
    <script               src="mivoter02.js"></script>
@@ -25,8 +25,10 @@
 <p style="font-size: 10%;">&nbsp;</p>
 
 <div class="darkBlueText pageText unindentList">
+   <span class="red">
     Want all your ballots mailed to you?&nbsp; Get on the permanent mail ballot list.&nbsp;
     <a href="/display.php?key=pmblist">Learn more</a>.
+   </span>
 
     <p/>
       <b>Apply for ballot online</b>
@@ -41,8 +43,10 @@
          "permanent mail ballot list".
          -->
       <li>
+         <span class="red">
          To receive ballots for all future elections in the mail, select the "permanent mail ballot list"
           when you fill out your online ballot form.
+        </span>
       </ul>
     
       <b>Request a ballot from your clerk</b><br>

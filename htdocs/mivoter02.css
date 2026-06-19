@@ -197,3 +197,7 @@ address-search {
     letter-spacing: .1rem;
     text-align: left;
 }
+
+.red {
+   color: red;
+}

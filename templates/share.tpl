@@ -10,7 +10,7 @@
    <title>MIVoter</title>
    
    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto">
-   <link rel="stylesheet" href="mivoter01.css">
+   <link rel="stylesheet" href="mivoter02.css">
 
    <script               src="mivoter02.js"></script>
    <script               src="share.js"></script>

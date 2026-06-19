@@ -25,16 +25,24 @@
 <p style="font-size: 10%;">&nbsp;</p>
 
 <div class="darkBlueText pageText unindentList">
+    Want all your ballots mailed to you?&nbsp; Get on the permanent mail ballot list.&nbsp;
+    <a href="/display.php?key=pmblist">Learn more</a>.
 
+    <p/>
       <b>Apply for ballot online</b>
       <ul>
       <li>You can <a href="https://mvic.sos.state.mi.us/AVApplication/Index">
          request a ballot online</a> if you're already registered to vote in
          Michigan.
       <li>Ballots are available starting 40 days before an election.
+          <!--
       <li>The ballot request form <b>also</b> has an option to automatically
          receive ballots for <b>all</b> future elections, called the 
          "permanent mail ballot list".
+         -->
+      <li>
+         To receive ballots for all future elections in the mail, select the "permanent mail ballot list"
+          when you fill out your online ballot form.
       </ul>
     
       <b>Request a ballot from your clerk</b><br>

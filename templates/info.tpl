@@ -25,6 +25,7 @@
 <p style="font-size: 10%;">&nbsp;</p>
 
 <div class="darkBlueText pageText unindentList">
+   Michigan law ensures that you have options for how to cast your ballot, and all of them are simple and safe.
    <center>
       <table border="0">
          <tr valign='top'>
@@ -59,7 +60,8 @@
             <td></td>
             <td class="howToVoteSpacer"><a href="info_home.php"><b>Vote at Home</b></a>
                 <div class="howToVoteSubText">
-                   Anyone can vote 'absentee', in the convenience of your home.&nbsp; Learn how.
+                   Anyone can vote absentee once or for every election using the permanent mail ballot list.&nbsp;
+                   Learn how.
                 </div>
             </td>
          </tr>

@@ -44,7 +44,7 @@
          -->
       <li>
          <span class="red">
-         To receive ballots for all future elections in the mail, select the "permanent mail ballot list"
+         <b>To receive ballots for all future elections in the mail</b>, select the "permanent mail ballot list"
           when you fill out your online ballot form.
         </span>
       </ul>

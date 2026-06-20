@@ -62,7 +62,6 @@
             <td class="howToVoteSpacer"><a href="info_home.php"><b>Vote at Home</b></a>
                 <div class="howToVoteSubText red">
                    Anyone can vote absentee once or for every election using the permanent mail ballot list.&nbsp;
-                   Learn how.
                 </div>
             </td>
          </tr>
@@ -82,10 +81,12 @@
       </table>
    </center>
 
+   <span class="red">Questions?&nbsp;
+      Call the Michigan Democratic Party's Voter Assistance Hotline at
+      <a href="tel:+18336486837">833-MI-VOTES</a> (833-648-6837).
+   </span>
 </div>
 
-<p>&nbsp;</p>
-<p>&nbsp;</p>
 <p>&nbsp;</p>
 
 {include file="inc-trailer.tpl"}

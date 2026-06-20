@@ -24,7 +24,7 @@
 
 <p style="font-size: 10%;">&nbsp;</p>
 
-<div class="darkBlueText pageText unindentList">
+<span class="darkBlueText pageText unindentList">
    <span class="red">
     Want all your ballots mailed to you?&nbsp; Get on the permanent mail ballot list.&nbsp;
     <a href="/display.php?key=pmblist">Learn more</a>.
@@ -77,7 +77,9 @@
           before the election.
         </li>
         <li>If you're already registered, you can request an absent voter
-          ballot <b>in person</b> at your clerk's office up until
+          ballot <b>in person</b> at your
+            <a href="clerkMap.php">clerk's office</a>
+            up until
           4 PM on the day of the election.
         </li>
         <li>If you're registering or updating your address at your clerk's
@@ -87,11 +89,16 @@
       </ul>
 
       <b>Return Your Ballot</b><br>
-      You can return your ballot by mail (but allow 2 weeks),
-      or at your clerk's office,
-      or at a drop box.&nbsp;
-      (We will provide drop-box locations as the elections get closer.)
-
+       <span class="red">You can return your ballot:</span>
+       <ul>
+           <li class="red">by mail (but allow 2 weeks)</li>
+           <li class="red">at your
+               <a href="clerkMap.php">clerk's office</a>
+           </li>
+           <li class="red">at a drop box</li>
+           <li class="red">at a polling place or early voting site</li>
+       </ul>
+       <span class="red">We will provide drop-box, polling place, and early voting locations closer to election day.</span>
     <!--
       <a href="#dropbox_section" onClick="return dropBoxMapCall();">Find your Drop Box Locations</a>.&nbsp;
       <br/><br/>

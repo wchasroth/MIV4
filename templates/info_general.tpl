@@ -152,13 +152,13 @@
        </ul>
   </div>
 
-   <div class="accordion" onClick="flipPanel('noBallot');">What if my ballot didn't arrive?</div>
+   <div class="accordion" onClick="flipPanel('noBallot');">What if my ballot didn't arrive <span class="red">in the mail</span>?</div>
    <div class="panel" id='noBallot'>
-       <p>
-             At your polling place, you can sign a statement stating that the ballot
-             was lost or destroyed, and vote at the polls on Election Day or during
-             the early voting period.
-       </p>
+       <ul>
+           <li class="red">Prior to election day, you can ask for a new ballot at the clerk's office.</li>
+           <li class="red">On election day, you can receive a new ballot at your polling place.</li>
+           <li class="red">Officials at either of these locations will guide you through the process.</li>
+       </ul>
   </div>
 
    <div class="accordion" onClick="flipPanel('disability');">What help is there for people with disabilities?</div>

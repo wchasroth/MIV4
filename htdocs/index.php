@@ -22,12 +22,14 @@ $pdo    = PdoHelper::makePdo($env);
 $miCodes   = trim($_COOKIE['miCodes'] ?? "");
 $sessionId = trim($_COOKIE['sessionid'] ?? "");
 $codes     = json_decode($miCodes, true) ?? [];
+$zipcode   = $codes['zipcode'] ?? '';
 
 $voterLog = new VoterLog($pdo, $logger, $env->get('addressHashSalt'));
 $voterLog->write($sessionId, 'H', $codes, $address);
 
 $smarty = new SmartyPage();
 $smarty->assign ('address',    $address);
+$smarty->assign ('zipcode',    $zipcode);
 
 if ($address === "")  $smarty->display('indexNoAddress.tpl');
 else                  $smarty->display('indexWithAddress.tpl');

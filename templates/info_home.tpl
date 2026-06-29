@@ -27,7 +27,7 @@
 <span class="darkBlueText pageText unindentList">
    <span class="red">
     Want all your ballots mailed to you?&nbsp; Get on the permanent mail ballot list.&nbsp;
-    <a href="/display.php?key=pmblist">Learn more</a>.
+    <a href="display.php?key=pmblist">Learn more</a>.
    </span>
 
     <p/>
@@ -52,9 +52,20 @@
       <b>Request a ballot from your clerk</b><br>
       Your options include:
       <ul>
-        <li>Call your clerk, and they'll send you an application that you return by mail.</li>
+        <li>Call your clerk, and they'll send you an application that you return by mail&nbsp;
+           <span class='red'>
+             or in one of your city or township's ballot drop boxes.
+           </span>
+              </li>
+
         <li><a href="https://www.michigan.gov/sos/-/media/Project/Websites/sos/Elections/Election-Forms/Absent-Voter-Ballot-Application-Fillable.pdf"
-             target="_blank">Download an application</a> that you can fill in, and return by mail.</li>
+             target="_blank">Download an application</a>  
+            that you can fill in, and return by mail&nbsp;
+            <span class='red'>
+              or in one of your city or township's ballot drop boxes.
+            </span>
+        </li>
+
         <li>Go to your clerk's office and request a ballot in person.&nbsp;
             You can even fill out the ballot and return it while you're there.&nbsp;
           <b>Recommended if election day is less than two weeks away.</b></li>
@@ -72,15 +83,21 @@
 
       <b>Deadlines for Requesting a Ballot</b>
       <ul>
-        <li>Requests for an absent voter ballot must be <b>received</b>
-          by your city or township clerk no later than 5 PM on the Friday
-          before the election.
-        </li>
+        <li><span class='red'>
+           If you are going to request an absent voter ballot be mailed to you, 
+           it is recommended that you do so at least three weeks before Election Day to allow sufficient time for delivery.
+           </span></li>
+        <!--
+           <li>Requests for an absent voter ballot must be <b>received</b>
+             by your city or township clerk no later than 5 PM on the Friday
+             before the election.
+           </li>
+        -->
         <li>If you're already registered, you can request an absent voter
           ballot <b>in person</b> at your
             <a href="clerkMap.php">clerk's office</a>
             up until
-          4 PM on the day of the election.
+          4 PM on the day&nbsp; <span class='red'>before</span> the election.
         </li>
         <li>If you're registering or updating your address at your clerk's
           office on Election Day, you can request an absent voter ballot
@@ -89,15 +106,15 @@
       </ul>
 
       <b>Return Your Ballot</b><br>
-       <span class="red">You can return your ballot:</span>
-       <ul>
-           <li class="red">by mail (but allow 2 weeks)</li>
-           <li class="red">at your
-               <a href="clerkMap.php">clerk's office</a>
-           </li>
-           <li class="red">at a drop box</li>
-           <li class="red">at a polling place or early voting site</li>
-       </ul>
+       
+       <span class="red">
+          Your ballot must be received at your clerk’s office or deposited in your local ballot drop box 
+          by 8 pm on Election Day for it to count.&nbsp;
+          You can also scan your marked absent voter ballot into a tabulator machine at your 
+          early voting site or at your Election Day polling place.
+       </span>
+
+       <p/>
        <span class="red">We will provide drop-box, polling place, and early voting locations closer to election day.</span>
     <!--
       <a href="#dropbox_section" onClick="return dropBoxMapCall();">Find your Drop Box Locations</a>.&nbsp;

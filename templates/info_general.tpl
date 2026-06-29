@@ -112,9 +112,16 @@
    <div class="accordion" onClick="flipPanel('absenteeAlways');">How do I get an absentee ballot?</div>
    <div class="panel" id='absenteeAlways'>
        <p>
-       You can <a href="https://mvic.sos.state.mi.us/AVApplication/Index">request an absentee ballot</a>
-       online.&nbsp;
-       At the same time, you can also be added to the permanent absentee ballot list, so that you 
+       You can <a href="https://mvic.sos.state.mi.us/AVApplication/Index">request an absentee ballot</a> online
+
+       <span class='red'>
+       or in person at the 
+              <a href="clerkMap.php">{$clerkJurisdiction} Clerk's</a> office.
+       </span>
+
+       At the same time, you can also 
+       <span class='red'>check the additional box to be added to</span>
+       the permanent absentee ballot list, so that you 
        will automatically get a ballot for all future elections.
        </p>
        <p>
@@ -148,15 +155,19 @@
        you can <a href="https://mvic.sos.state.mi.us/Voter/Index">check the status</a>
            of your absentee ballot.</li>
        <li>Or you can <a href="https://mvic.sos.state.mi.us/Voter/VoterSearch">subscribe</a>
-           to receive automatic emails when your ballot is received and processed.
+           to receive automatic emails when your ballot is&nbsp;
+           <span class='red'>mailed to you,</span>
+           received, and processed.
        </ul>
   </div>
 
    <div class="accordion" onClick="flipPanel('noBallot');">What if my ballot didn't arrive <span class="red">in the mail</span>?</div>
    <div class="panel" id='noBallot'>
        <ul>
-           <li class="red">Prior to election day, you can ask for a new ballot at the clerk's office.</li>
-           <li class="red">On election day, you can receive a new ballot at your polling place.</li>
+           <li class="red">You can ask for a new ballot at your city or township clerk's office
+               until 4 p.m. on the day before election day.
+              </li>
+           <li class="red">On election day, you can vote in person at your polling place.</li>
            <li class="red">Officials at either of these locations will guide you through the process.</li>
        </ul>
   </div>
@@ -170,10 +181,15 @@
                   local clerk.
                 </li>
                 <li>All voters, including voters with disabilities, have access to a
-                  Voter Assist Terminal in all polling places. The Voter Assist Terminal
-                  helps the voter mark a ballot. It marks the ballot with the voter's
-                  choices but does not tally the votes. Once the ballot is marked, it
-                  is counted in exactly the same fashion as all other ballots.
+                  Voter Assist Terminal in all polling places.&nbsp;
+                  The Voter Assist Terminal&nbsp;
+                  <span class='red'>
+                     allows the voter to mark their choices
+                     using the electronic interface and then print a ballot with
+                     those choices marked.&nbsp;
+                     The printed ballot is scanned into the tabulator machine
+                  </span>
+                  in exactly the same fashion as all other ballots.
                 </li>
                 <li><a href="https://mvic.sos.state.mi.us/Home/AccessibleVoting"
                      >Learn more about accessible voting</a>.
@@ -184,16 +200,26 @@
    <div class="accordion" id='noIdAccordion' onClick="flipPanel('noId');">What if I don't have an ID on election day?</div>
    <div class="panel" id='noId'>
        <ul>
-           <li>If you don't have your ID with you, the poll workers will check if you appear on the
+           <li>If you don't have your ID with you,&nbsp;
+             <span class='red'>
+               you will be asked to sign a form to confirm your identity.&nbsp;
+               Once you sign, 
+             </span>
+              the poll workers will check if you appear on the
               precinct's registration list.&nbsp; If you are on the list, you can still vote.&nbsp;
+              <!--
                (You may be asked to sign a form confirming your identity.)
+              -->
            </li>
-           <li>If you don't have your ID, <b>and</b> you are not on the precinct list, you can still
-               vote a "provisional" ballot.&nbsp; In that case, you must return within 6 days with
-               your ID to prove that you are a registered voter.&nbsp;
-               Learn more about <a href="https://www.wzzm13.com/article/news/politics/michigan-politics/what-is-provisional-ballot-how-do-they-work/69-054742fe-486b-425b-b0a0-80fc51b9a19d"
+
+           <!--
+              <li>If you don't have your ID, <b>and</b> you are not on the precinct list, you can still
+                  vote a "provisional" ballot.&nbsp; In that case, you must return within 6 days with
+                  your ID to prove that you are a registered voter.&nbsp;
+                  Learn more about <a href="https://www.wzzm13.com/article/news/politics/michigan-politics/what-is-provisional-ballot-how-do-they-work/69-054742fe-486b-425b-b0a0-80fc51b9a19d"
                                    target="_blank">provisional ballots</a> and how they work.
-           </li>
+              </li>
+           -->
        </ul>
   </div>
 

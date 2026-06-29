@@ -41,6 +41,7 @@
           <li>You have a valid Michigan driver’s license or state ID</li>
           <li>Your Michigan license or state ID has the correct address on it</li>
           <li>You haven’t applied for a duplicate license or state ID</li>
+          <li><span class='red'>You have a social security number</span></li>
         </ul>
   
          <b>Register in person</b>&nbsp;

@@ -27,7 +27,7 @@
 <span class="darkBlueText pageText unindentList">
    <span class="red">
     Want all your ballots mailed to you?&nbsp; Get on the permanent mail ballot list.&nbsp;
-    <a href="display.php?key=pmblist">Learn more</a>.
+    <a href="permanent.php">Learn more</a>.
    </span>
 
     <p/>

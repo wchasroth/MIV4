@@ -67,8 +67,10 @@
        </span>
     </li>
 
+<!--
     <li>You can vote at a polling place or a clerk's office
         (such as the <a href="clerkMap.php">{$clerkJurisdiction} Clerk</a>).
+-->
     <li>As the election gets closer, we will provide the location of
     <b>your</b> polling place.
     </ul>

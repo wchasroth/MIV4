@@ -7,7 +7,7 @@
    <meta        name="description" content="Find your Michigan Democratically-endorsed candidates" />
    <meta property="og:description" content="Find your Michigan Democratically-endorsed candidates" />
 
-   <title>MIVoter</title>
+   <title>MIvoter</title>
 
    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto">
    <link rel="stylesheet" href="mivoter02.css">

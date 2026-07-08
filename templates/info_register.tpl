@@ -55,10 +55,14 @@
             -->
 
    <p></p>
-         <b>Military or Overseas</b>&nbsp;
+         <b>Military or Overseas</b><br/>
+          Please visit <a href="https://www.votefromabroad.org/" target="_blank">VoteFromAbroad.org</a> for general information or
+          <a href="https://www.votefromabroad.org/states/Michigan" target="_blank">information specific to Michigan</a>.
+          <!--
            <br>See the
            <a href="https://www.fvap.gov/">
              Federal Voting Assistance Program</a>.
+          -->
   
    <p></p>
       <b>More information</b>&nbsp;<br/>

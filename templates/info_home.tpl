@@ -81,30 +81,12 @@
            </ul>
       </ul>
 
-      <b>Deadlines for Requesting a Ballot</b>
-      <ul>
-        <li><span class='red'>
-           If you are going to request an absent voter ballot be mailed to you, 
-           it is recommended that you do so at least three weeks before Election Day to allow sufficient time for delivery.
-           </span></li>
-        <!--
-           <li>Requests for an absent voter ballot must be <b>received</b>
-             by your city or township clerk no later than 5 PM on the Friday
-             before the election.
-           </li>
-        -->
-        <li>If you're already registered, you can request an absent voter
-          ballot <b>in person</b> at your
-            <a href="clerkMap.php">clerk's office</a>
-            up until
-          4 PM on the day&nbsp; <span class='red'>before</span> the election.
-        </li>
-        <li>If you're registering or updating your address at your clerk's
-          office on Election Day, you can request an absent voter ballot
-          at the same time you register.
-        </li>
-      </ul>
+      <b>Correcting Your Ballot</b><br/>
+           If you have already sent in your ballot, and <b>want to change your vote</b>, 
+           contact
+           <a href="clerkMap.php">your clerk</a>.
 
+      <p/>
       <b>Return Your Ballot</b><br>
        
        <span class="red">

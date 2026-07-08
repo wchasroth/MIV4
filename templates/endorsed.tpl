@@ -20,7 +20,7 @@
        .indented    { padding-left: 1.5em;}
    </style>
 
-   <script               src="mivoter.js"></script>
+   <script               src="mivoter02.js"></script>
    <script               src="share.js"></script>
    <script               src="parseHouseStreet.js"></script>
    <script type="module" src="address-search02.js"></script>
@@ -72,7 +72,6 @@
 
 
 <p>&nbsp;</p>
-show={$show}
 
 {include file="inc-trailer.tpl"}
 

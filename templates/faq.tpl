@@ -13,7 +13,7 @@
    <link rel="stylesheet" href="mivoter.css">
 
    <script               src="share.js"></script>
-   <script               src="mivoter.js"></script>
+   <script               src="mivoter02.js"></script>
    <script               src="parseHouseStreet.js"></script>
    <script type="module" src="address-search02.js"></script>
 </head>

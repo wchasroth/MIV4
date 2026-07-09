@@ -107,6 +107,12 @@
       </p>
 <p></p>
 
+      <b>Military or Overseas</b><br/>
+      Please visit
+          <a href="https://www.votefromabroad.org/states/Michigan" target="_blank">votefromabroad.org</a>
+      for Michigan-specific information.
+
+      <p/>
       <b>More about voting at home</b><br/>
       Learn more:
         <a href="https://mvic.sos.state.mi.us/Home/VoteAtHome">Secretary of State's absentee voting page</a>.

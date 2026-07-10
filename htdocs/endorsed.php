@@ -101,7 +101,7 @@ function whereOrgIn (... $orgs): string {
 }
 
 function endorsed(): string {
-   return ") AND i.name!='' AND i.endorsed = 1";
+   return ") AND i.name!='' AND i.endorsed=1 AND i.reviewed=1 ";
 }
 
 function removeDuplicateTitles (array &$rows): void {

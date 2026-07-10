@@ -1,30 +1,40 @@
 <!DOCTYPE html>
 {nocache}
 <html lang="en">
+
 <head>
    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-   
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://gstatic.com" crossorigin>
+   <link href="https://googleapis.com" rel="stylesheet">
+
    <meta        name="description" content="Find your Michigan Democratically-endorsed candidates" />
    <meta property="og:description" content="Find your Michigan Democratically-endorsed candidates" />
    
    <title>MIvoter</title>
    
-   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto">
    <link rel="stylesheet" href="mivoter02.css">
 
    <script               src="share.js"></script>
    <script               src="mivoter02.js"></script>
    <script               src="parseHouseStreet.js"></script>
    <script type="module" src="address-search02.js"></script>
+
+   <style>
+      body {
+         font-family: 'Roboto Flex', sans-serif;
+      }
+   </style>
 </head>
 
-<body style="font-family: Roboto;" onLoad="initialize();">
+<body onLoad="initialize();">
 
 {include file="inc-topbar.tpl"}
 
 <p style="font-size: 10%;">&nbsp;</p>
 
-<span class="darkBlueText pageText unindentList">
+<div class="darkBlueText pageText unindentList">
    <span class="red">
     Want all your ballots mailed to you?&nbsp; Get on the permanent mail ballot list.&nbsp;
     <a href="permanent.php">Learn more</a>.
@@ -103,10 +113,9 @@
       <br/><br/>
       (You can also find drop-boxes from the Secretary of State‘s website, under
          "<a href="https://mvic.sos.state.mi.us/Voter/Index/#yourclerk">Search for your city/township clerk</a>".)
-         -->
-      </p>
-<p></p>
+    -->
 
+      <p/>
       <b>Military or Overseas</b><br/>
       Please visit
           <a href="https://www.votefromabroad.org/states/Michigan" target="_blank">votefromabroad.org</a>
@@ -124,7 +133,7 @@
 
 {include file="inc-trailer.tpl"}
 
-{include file="inc-bottombuttons.tpl" hasAddress=true button=""}
+{include file="inc-bottombuttons.tpl" hasAddress=true}
 
 </body>
 </html>

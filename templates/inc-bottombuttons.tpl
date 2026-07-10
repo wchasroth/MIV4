@@ -71,6 +71,8 @@
    
    </div>
 </div>
-<script>
-   buttonSelect('{$button}')
-</script>
+{if $button != ''}
+   <script>
+      buttonSelect('{$button}')
+   </script>
+{/if}

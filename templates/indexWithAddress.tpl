@@ -32,7 +32,7 @@
       <li><a href="county.php">County Parties</a>: Find your county's Democratic parties &amp; clubs,
            get their newsletters, and learn about events and opportunities to volunteer.
       <li><a href="https://midems.controlshift.app/local?filter%5Blocation%5D={$zipcode}&page=1"
-                   onClick="return externalLink();" target="_blank"
+                   onClick="return externalLink(this);" target="_blank"
           >Other Democratic events</a> in your area.</li>
       <li><a href="protests.php">Protests</a>: See or add to a list of protests and other events in  your county.
       <li><a href="display.php?key=petitions">Ballot petitions</a>: Learn which to sign and which to avoid.

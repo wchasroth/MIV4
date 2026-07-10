@@ -28,7 +28,7 @@
       <ul>
       <li>You can 
          <a href="https://mvic.sos.state.mi.us/AVApplication/Index"
-                   onClick="return externalLink();" target="_blank"
+                   onClick="return externalLink(this);" target="_blank"
          >request a ballot online</a> if you're already registered to vote in
          Michigan.
       <li>Ballots are available starting 40 days before an election.
@@ -54,7 +54,7 @@
               </li>
 
         <li><a href="https://www.michigan.gov/sos/-/media/Project/Websites/sos/Elections/Election-Forms/Absent-Voter-Ballot-Application-Fillable.pdf"
-                   onClick="return externalLink();" target="_blank"
+                   onClick="return externalLink(this);" target="_blank"
             >Download an application</a>  
             that you can fill in, and return by mail&nbsp;
             <span class='red'>
@@ -105,7 +105,7 @@
       <b>Military or Overseas</b><br/>
       Please visit
           <a href="https://www.votefromabroad.org/states/Michigan" 
-                   onClick="return externalLink();" target="_blank"
+                   onClick="return externalLink(this);" target="_blank"
           >votefromabroad.org</a>
       for Michigan-specific information.
 
@@ -113,7 +113,7 @@
       <b>More about voting at home</b><br/>
       Learn more:
         <a href="https://mvic.sos.state.mi.us/Home/VoteAtHome"
-                   onClick="return externalLink();" target="_blank"
+                   onClick="return externalLink(this);" target="_blank"
         >Secretary of State's absentee voting page</a>.
 
 </div>

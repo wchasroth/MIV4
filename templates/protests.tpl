@@ -145,7 +145,7 @@
          re&shy;spon&shy;si&shy;bility.&nbsp;
          See the ACLU guide to 
          <a href="https://www.aclu.org/know-your-rights/protesters-rights" 
-                   onClick="return externalLink();" target="_blank"
+                   onClick="return externalLink(this);" target="_blank"
          >protesters' rights</a>.
       </i>
    </p>
@@ -176,7 +176,7 @@
       {$protest['descr']|showWithPrefix:"<b>Description</b>: "}<br/>
       <b>Source/corrections:</b>
       <a href="{$protest['srcurl']}"
-                   onClick="return externalLink();" target="_blank"
+                   onClick="return externalLink(this);" target="_blank"
       >{$protest['srcname']}</a>
       &nbsp;&nbsp;&nbsp;
       (UniqueId: {$protest['hashcode']})
@@ -209,15 +209,15 @@
                        target="_blank">MI-Resist</a>
       -->
       <li><a href="https://tockify.com/tkf2/submitEvent/52da8db339c443afab943a987fea5fe0"
-                   onClick="return externalLink();" target="_blank"
+                   onClick="return externalLink(this);" target="_blank"
           >Michigan Resistance</a>
 
       <li><a href="https://tockify.com/mifreedomcoalition/pinboard" 
-                   onClick="return externalLink();" target="_blank"
+                   onClick="return externalLink(this);" target="_blank"
       >Michigan Freedom Coalition</a>
 
       <li><a href="https://events.mivoter.org"
-                   onClick="return externalLink();" target="_blank"
+                   onClick="return externalLink(this);" target="_blank"
           >MIvoter events</a>
          &nbsp;&nbsp;&nbsp;(especially for County Democratic Parties and clubs)
    </ul>

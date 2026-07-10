@@ -35,7 +35,7 @@
    <div class="panel" id='checkReg'>
        <p>
       Check on-line with the <a href="https://mvic.sos.state.mi.us/Voter/Index"
-                   onClick="return externalLink();" target="_blank"
+                   onClick="return externalLink(this);" target="_blank"
            >Secretary of State</a>.
        </p>
    </div>
@@ -45,7 +45,7 @@
        <p>
               You can register to vote through Election Day.&nbsp;
               <a href="https://mvic.sos.state.mi.us/Home/RegisterToVote/#how"
-                   onClick="return externalLink();" target="_blank"
+                   onClick="return externalLink(this);" target="_blank"
                 >Here’s how to register on election day.</a>
        </p>
    </div>
@@ -71,7 +71,7 @@
        <p>
               Yes. According to the Secretary of State's
               <a href="https://mvic.sos.state.mi.us/Home/RegisterToVote/#student"
-                   onClick="return externalLink();" target="_blank"
+                   onClick="return externalLink(this);" target="_blank"
                 >website
               </a>:
               <p>
@@ -109,7 +109,7 @@
    <div class="panel" id='absenteeAlways'>
        <p>
        You can <a href="https://mvic.sos.state.mi.us/AVApplication/Index"
-                 onClick="return externalLink();" target="_blank"
+                 onClick="return externalLink(this);" target="_blank"
                >request an absentee ballot</a> online
 
        <span class='red'>
@@ -125,7 +125,7 @@
        <p>
        See the Secretary of State's website for 
          <a href="https://www.michigan.gov/sos/elections/voting/absentee-voting"
-              onClick="return externalLink();" target="_blank"
+              onClick="return externalLink(this);" target="_blank"
          >more information</a> about absentee voting.
        </p>
   </div>
@@ -153,13 +153,13 @@
        <ul>
        <li>Using the Michigan Secretary of State's website, you can 
           <a href="https://mvic.sos.state.mi.us/Voter/Index"
-                   onClick="return externalLink();" target="_blank"
+                   onClick="return externalLink(this);" target="_blank"
           >check the status</a>
            of your absentee ballot.</li>
 
        <li>Or you can 
            <a href="https://mvic.sos.state.mi.us/Voter/VoterSearch"
-                   onClick="return externalLink();" target="_blank"
+                   onClick="return externalLink(this);" target="_blank"
            >subscribe</a>
            to receive automatic emails when your ballot is&nbsp;
            <span class='red'>mailed to you,</span>
@@ -183,7 +183,7 @@
           <ul>
                 <li>Voters with print disabilities can 
                    <a href="https://mi.omniballot.us/sites/26/absentee/app/home"
-                      onClick="return externalLink();" target="_blank"
+                      onClick="return externalLink(this);" target="_blank"
                    >apply for an accessible ballot</a> 
                   that can be completed electronically, printed, and returned to your local clerk.
                 </li>
@@ -199,7 +199,7 @@
                   in exactly the same fashion as all other ballots.
                 </li>
                 <li><a href="https://mvic.sos.state.mi.us/Home/AccessibleVoting"
-                       onClick="return externalLink();" target="_blank"
+                       onClick="return externalLink(this);" target="_blank"
                     >Learn more about accessible voting</a>.
                 </li>
           </ul>

@@ -43,10 +43,10 @@
     <li>Early in-person polling locations may be different than election day
         polling places.&nbsp;
         <a href="https://mvic.sos.state.mi.us/Voter/Index#early-voting-search-section"
-                   onClick="return externalLink();" target="_blank"
+                   onClick="return externalLink(this);" target="_blank"
            >Find your early voting location</a>.
     <li><a href="https://www.michigan.gov/sos/elections/voting/early-in-person-voting"
-                   onClick="return externalLink();" target="_blank"
+                   onClick="return externalLink(this);" target="_blank"
             >Learn more about early voting in Michigan</a>.
     </ul>
 
@@ -113,7 +113,7 @@
       <br/>
       <br/>
       <a href="https://mvic.sos.state.mi.us/Home/"
-                   onClick="return externalLink();" target="_blank"
+                   onClick="return externalLink(this);" target="_blank"
       >Learn more about voting on election day</a> from the Secretary of State.
 
   

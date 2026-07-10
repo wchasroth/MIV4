@@ -135,7 +135,7 @@
     regardless of voter request or need. 
 <li>If you have questions about your absentee ballot status, check 
     <a href="https://Michigan.gov/Vote"
-           onClick="return externalLink();" target="_blank"
+           onClick="return externalLink(this);" target="_blank"
     >Michigan.gov/Vote</a> or contact your local clerk.
 
 <li>You are not required to submit another application after you have already joined the permanent mail ballot list. 

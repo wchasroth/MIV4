@@ -39,49 +39,49 @@
 
             {if $county['web']}
                <br/>&nbsp;&nbsp;&nbsp;<a href="{$county['web']|addProtocol}"
-                   onClick="return externalLink();" target="_blank"
+                   onClick="return externalLink(this);" target="_blank"
                 >{$county['web']|stripProtocol}</a>
             {/if}
 
             {if $county['email']}
                <br/>&nbsp;&nbsp;&nbsp;<a href="{$county['email']|addProtocol}"
-                  onClick="return externalLink();" target="_blank"
+                  onClick="return externalLink(this);" target="_blank"
                 >{$county['email']|stripProtocol}</a>
             {/if}
 
             {if $county['facebook']}
                <br/>&nbsp;&nbsp;&nbsp;<a href="{$county['facebook']|addProtocol}"
-                  onClick="return externalLink();" target="_blank"
+                  onClick="return externalLink(this);" target="_blank"
                  >{$county['facebook']|stripProtocol}</a>
             {/if}
 
             {if $county['twitter']}
                <br/>&nbsp;&nbsp;&nbsp;<a href="{$county['twitter']|addProtocol}"
-                   onClick="return externalLink();" target="_blank"
+                   onClick="return externalLink(this);" target="_blank"
                   >{$county['twitter']|stripProtocol}</a>
             {/if}
 
             {if $county['bluesky']}
                <br/>&nbsp;&nbsp;&nbsp;<a href="{$county['bluesky']|addProtocol}"
-                   onClick="return externalLink();" target="_blank"
+                   onClick="return externalLink(this);" target="_blank"
                  >{$county['bluesky']|stripProtocol}</a>
             {/if}
 
             {if $county['tiktok']}
                <br/>&nbsp;&nbsp;&nbsp;<a href="{$county['tiktok']|addProtocol}"
-                   onClick="return externalLink();" target="_blank"
+                   onClick="return externalLink(this);" target="_blank"
                  >{$county['tiktok']|stripProtocol}</a>
             {/if}
 
             {if $county['instagram']}
                <br/>&nbsp;&nbsp;&nbsp;<a href="{$county['instagram']|addProtocol}"
-                   onClick="return externalLink();" target="_blank"
+                   onClick="return externalLink(this);" target="_blank"
                  >{$county['instagram']|stripProtocol}</a>
             {/if}
 
             {if $county['volunteer']}
                <br/>&nbsp;&nbsp;&nbsp;<a href="{$county['volunteer']|addProtocol}"
-                   onClick="return externalLink();" target="_blank"
+                   onClick="return externalLink(this);" target="_blank"
                  >{$county['volunteer']|stripProtocol}</a>
             {/if}
          {/foreach}

@@ -67,6 +67,7 @@ body {
     max-width: 25em;
     margin-top: 1px;
     margin: 0;
+    font-family: 'Roboto Flex', sans-serif;
 }
 
 .topBar {

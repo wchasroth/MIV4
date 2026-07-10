@@ -2,15 +2,7 @@
 {nocache}
 <html lang="en">
 <head>
-   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-   
-   <meta        name="description" content="Find your Michigan Democratically-endorsed candidates" />
-   <meta property="og:description" content="Find your Michigan Democratically-endorsed candidates" />
-   
-   <title>MIvoter</title>
-   
-   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto">
-   <link rel="stylesheet" href="mivoter02.css">
+   {include file="inc-head.tpl"}
 
    <style>
        a { text-decoration: none; }
@@ -20,7 +12,7 @@
    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key={$apiKey}&libraries=places"></script>
 </head>
 
-<body style="font-family: Roboto;">
+<body>
 
 <div class="darkBlueText pageText unindentList" style="max-width: 40em; font-size: 90%;">
 

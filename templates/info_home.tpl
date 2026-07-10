@@ -3,29 +3,12 @@
 <html lang="en">
 
 <head>
-   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://gstatic.com" crossorigin>
-   <link href="https://googleapis.com" rel="stylesheet">
-
-   <meta        name="description" content="Find your Michigan Democratically-endorsed candidates" />
-   <meta property="og:description" content="Find your Michigan Democratically-endorsed candidates" />
-   
-   <title>MIvoter</title>
-   
-   <link rel="stylesheet" href="mivoter02.css">
+   {include file="inc-head.tpl"}
 
    <script               src="share.js"></script>
    <script               src="mivoter02.js"></script>
    <script               src="parseHouseStreet.js"></script>
    <script type="module" src="address-search02.js"></script>
-
-   <style>
-      body {
-         font-family: 'Roboto Flex', sans-serif;
-      }
-   </style>
 </head>
 
 <body onLoad="initialize();">

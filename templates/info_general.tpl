@@ -34,7 +34,9 @@
    <div class="accordion" onClick="flipPanel('checkReg');">I haven't voted in a while.&nbsp; How can I check my registration?</div>
    <div class="panel" id='checkReg'>
        <p>
-      Check on-line with the <a href="https://mvic.sos.state.mi.us/Voter/Index">Secretary of State</a>.
+      Check on-line with the <a href="https://mvic.sos.state.mi.us/Voter/Index"
+                   onClick="return externalLink();" target="_blank"
+           >Secretary of State</a>.
        </p>
    </div>
 
@@ -42,8 +44,9 @@
    <div class="panel" id='howLate'>
        <p>
               You can register to vote through Election Day.&nbsp;
-              <a href="https://mvic.sos.state.mi.us/Home/RegisterToVote/#how">
-                Here’s how to register on election day.</a>
+              <a href="https://mvic.sos.state.mi.us/Home/RegisterToVote/#how"
+                   onClick="return externalLink();" target="_blank"
+                >Here’s how to register on election day.</a>
        </p>
    </div>
 
@@ -67,8 +70,9 @@
    <div class="panel" id='student'>
        <p>
               Yes. According to the Secretary of State's
-              <a href="https://mvic.sos.state.mi.us/Home/RegisterToVote/#student">
-                website
+              <a href="https://mvic.sos.state.mi.us/Home/RegisterToVote/#student"
+                   onClick="return externalLink();" target="_blank"
+                >website
               </a>:
               <p>
                 <b>If you're from Michigan and go to school...</b>
@@ -104,7 +108,9 @@
    <div class="accordion" onClick="flipPanel('absenteeAlways');">How do I get an absentee ballot?</div>
    <div class="panel" id='absenteeAlways'>
        <p>
-       You can <a href="https://mvic.sos.state.mi.us/AVApplication/Index">request an absentee ballot</a> online
+       You can <a href="https://mvic.sos.state.mi.us/AVApplication/Index"
+                 onClick="return externalLink();" target="_blank"
+               >request an absentee ballot</a> online
 
        <span class='red'>
        or in person at the 
@@ -117,8 +123,10 @@
        will automatically get a ballot for all future elections.
        </p>
        <p>
-       See the Secretary of State's website for <a href="https://www.michigan.gov/sos/elections/voting/absentee-voting"
-             >more information</a> about absentee voting.
+       See the Secretary of State's website for 
+         <a href="https://www.michigan.gov/sos/elections/voting/absentee-voting"
+              onClick="return externalLink();" target="_blank"
+         >more information</a> about absentee voting.
        </p>
   </div>
 
@@ -143,10 +151,16 @@
    <div class="accordion" onClick="flipPanel('trackBallot');">How do I track my ballot?</div>
    <div class="panel" id='trackBallot'>
        <ul>
-       <li>Using the Michigan Secretary of State's website,
-       you can <a href="https://mvic.sos.state.mi.us/Voter/Index">check the status</a>
+       <li>Using the Michigan Secretary of State's website, you can 
+          <a href="https://mvic.sos.state.mi.us/Voter/Index"
+                   onClick="return externalLink();" target="_blank"
+          >check the status</a>
            of your absentee ballot.</li>
-       <li>Or you can <a href="https://mvic.sos.state.mi.us/Voter/VoterSearch">subscribe</a>
+
+       <li>Or you can 
+           <a href="https://mvic.sos.state.mi.us/Voter/VoterSearch"
+                   onClick="return externalLink();" target="_blank"
+           >subscribe</a>
            to receive automatic emails when your ballot is&nbsp;
            <span class='red'>mailed to you,</span>
            received, and processed.
@@ -167,10 +181,11 @@
    <div class="accordion" onClick="flipPanel('disability');">What help is there for people with disabilities?</div>
    <div class="panel" id='disability'>
           <ul>
-                <li>Voters with print disabilities can <a href="https://mi.omniballot.us/sites/26/absentee/app/home">
-                  apply for an accessible ballot
-                </a> that can be completed electronically, printed, and returned to your
-                  local clerk.
+                <li>Voters with print disabilities can 
+                   <a href="https://mi.omniballot.us/sites/26/absentee/app/home"
+                      onClick="return externalLink();" target="_blank"
+                   >apply for an accessible ballot</a> 
+                  that can be completed electronically, printed, and returned to your local clerk.
                 </li>
                 <li>All voters, including voters with disabilities, have access to a
                   Voter Assist Terminal in all polling places.&nbsp;
@@ -184,7 +199,8 @@
                   in exactly the same fashion as all other ballots.
                 </li>
                 <li><a href="https://mvic.sos.state.mi.us/Home/AccessibleVoting"
-                     >Learn more about accessible voting</a>.
+                       onClick="return externalLink();" target="_blank"
+                    >Learn more about accessible voting</a>.
                 </li>
           </ul>
   </div>

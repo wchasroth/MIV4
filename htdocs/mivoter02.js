@@ -45,3 +45,7 @@ function getMivoterCookie(cookieName) {
     return '';
 }
 
+function externalLink(atag) {
+   return true;
+}
+

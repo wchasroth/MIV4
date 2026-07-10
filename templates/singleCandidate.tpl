@@ -25,7 +25,9 @@
 
 <table width="100%" style="font-size: 120%;">
     <tr valign="top">
-        <td><a href="{$web}">{$name}</a><br>{$title}<br/><br/>
+        <td><a href="{$web}"
+                   onClick="return externalLink();" target="_blank"
+            >{$name}</a><br>{$title}<br/><br/>
             <button class="roundButton" onClick="window.history.back();">Back</button>
         </td>
         <td align="right"><img src="{$photoBase}/{$headshot}" width="150"/></td>

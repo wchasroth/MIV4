@@ -41,7 +41,7 @@
     </tr>
     <tr valign="top">
         <td class="pad"><b>Email:</b>
-            <a href="mailto:{$clerk['email']}">{$clerk['email']}</a></td>
+            <a href="mailto:{$clerk['email']}" onClick="return externalLink();" target="_blank">{$clerk['email']}</a></td>
         <td></td>
         <td class="pad"><b>Hours:</b>   {$clerk['hours']}</td>
     </tr>

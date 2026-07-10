@@ -20,14 +20,15 @@
 
          <b>Are you registered?</b>&nbsp;
          <br>Check on-line with the
-         <a href="https://mvic.sos.state.mi.us/Voter/Index">
-            Secretary of State</a>.
+         <a" href="https://mvic.sos.state.mi.us/Voter/Index" onClick="return externalLink();" target="_blank
+           >Secretary of State</a>.
    <p></p>
   
          <b>Register on-line</b>&nbsp;
          <br>You can file your voter registration
-        <a href="https://mvic.sos.state.mi.us/RegisterVoter/Index">
-           on-line</a>
+        <a href="https://mvic.sos.state.mi.us/RegisterVoter/Index"
+                   onClick="return externalLink();" target="_blank"
+        >on-line</a>
         if:
         <ul>
           <li>You have a valid Michigan driver’s license or state ID</li>
@@ -48,8 +49,14 @@
 
    <p></p>
          <b>Military or Overseas</b><br/>
-          Please visit <a href="https://www.votefromabroad.org/" target="_blank">VoteFromAbroad.org</a> for general information or
-          <a href="https://www.votefromabroad.org/states/Michigan" target="_blank">information specific to Michigan</a>.
+          Please visit <a href="https://www.votefromabroad.org/"
+                   onClick="return externalLink();" target="_blank"
+            >VoteFromAbroad.org</a> 
+          for general information or
+
+          <a href="https://www.votefromabroad.org/states/Michigan"
+                   onClick="return externalLink();" target="_blank"
+          >information specific to Michigan</a>.
           <!--
            <br>See the
            <a href="https://www.fvap.gov/">
@@ -59,6 +66,7 @@
    <p></p>
       <b>More information</b>&nbsp;<br/>
       <a href="https://mvic.sos.state.mi.us/Home/"
+                   onClick="return externalLink();" target="_blank"
          >See more from the Secretary of State</a>.
   
 </div>

@@ -21,11 +21,25 @@
             </b>
 
             <center style="margin-top: 0em;">
-               <a href="https://www.facebook.com/mivoter.org"><img src="IMG/icon-fb.2.png" width="40"/></a>&nbsp;
-               <a href="https://www.instagram.com/mivoter.org5"><img src="IMG/icon-instagram.2.png" width="40"/></a>&nbsp;
-               <a href="https://www.tiktok.com/@mivoter.org"><img src="IMG/icon-tiktok.2.png" width="40"/></a>&nbsp;
-               <a href="https://x.com/mivoter_org"><img src="IMG/icon-x.3.png" width="40"/></a>&nbsp;
-               <a href="https://www.youtube.com/@mivoter_org"><img src="IMG/icon-youtube.2.png" width="40"/></a>&nbsp;
+               <a href="https://www.facebook.com/mivoter.org"
+                   onClick="return externalLink();" target="_blank"
+                 ><img src="IMG/icon-fb.2.png" width="40"/></a>&nbsp;
+
+               <a href="https://www.instagram.com/mivoter.org5"
+                   onClick="return externalLink();" target="_blank"
+                 ><img src="IMG/icon-instagram.2.png" width="40"/></a>&nbsp;
+
+               <a href="https://www.tiktok.com/@mivoter.org"
+                   onClick="return externalLink();" target="_blank"
+                 ><img src="IMG/icon-tiktok.2.png" width="40"/></a>&nbsp;
+
+               <a href="https://x.com/mivoter_org"
+                   onClick="return externalLink();" target="_blank"
+                 ><img src="IMG/icon-x.3.png" width="40"/></a>&nbsp;
+
+               <a href="https://www.youtube.com/@mivoter_org"
+                   onClick="return externalLink();" target="_blank"
+                 ><img src="IMG/icon-youtube.2.png" width="40"/></a>&nbsp;
             </center>
          </div>
 
@@ -41,7 +55,9 @@
             MIvoter.org is an all-volunteer project.&nbsp;
             Expenses paid for by the
             Washtenaw County Democratic Committee
-            (<a href="https://washtenawdems.org" class="buttonLink">washtenawdems.org</a>).&nbsp;
+            (<a href="https://washtenawdems.org" class="buttonLink"
+                   onClick="return externalLink();" target="_blank"
+              >washtenawdems.org</a>).&nbsp;
             Not coordinated with any candidate or candidate's committee.
             <br/>
             <p>&nbsp;</p>

@@ -41,8 +41,12 @@
 <table cellspacing="0" cellpadding="0">
     <tr class="zebra" valign="top"><td>Address</td> <td>{$address}</td></tr>
     <tr class="zebra" valign="top"><td>Phone</td>   <td class="urlColumn"><a href="tel:{$phone}">{$phone}</a></td></tr>
-    <tr class="zebra" valign="top"><td>Email</td>   <td class="urlColumn"><a href="mailto:{$email}" target="_blank">{$email}</a></td></tr>
-    <tr class="zebra" valign="top"><td>Web</td>   <td class="urlColumn"><a href="{$url}">{$web}</a></td></tr>
+    <tr class="zebra" valign="top"><td>Email</td>   <td class="urlColumn"><a href="mailto:{$email}"
+                   onClick="return externalLink();" target="_blank"
+            >{$email}</a></td></tr>
+    <tr class="zebra" valign="top"><td>Web</td>   <td class="urlColumn"><a href="{$url}"
+                   onClick="return externalLink();" target="_blank"
+           >{$web}</a></td></tr>
     <tr class="zebra" valign="top"><td colspan="2" style="font-size: 90%;">
         Please use the contact information above for matters related to official businesss.&nbsp;
         Note that elected officers are prohibited from communicating about their campaign

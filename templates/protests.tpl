@@ -143,8 +143,10 @@
          Check the links before attending.&nbsp;
          All protests are in&shy;tended to be <b>peaceful</b> assem&shy;blies &mdash; but your safety is your
          re&shy;spon&shy;si&shy;bility.&nbsp;
-         See the ACLU guide to <a href="https://www.aclu.org/know-your-rights/protesters-rights" target="_blank"
-      >protesters' rights</a>.
+         See the ACLU guide to 
+         <a href="https://www.aclu.org/know-your-rights/protesters-rights" 
+                   onClick="return externalLink();" target="_blank"
+         >protesters' rights</a>.
       </i>
    </p>
    <p/>
@@ -173,7 +175,9 @@
       {$protest['signup']|showWithPrefix:"<b>Signup:</b> "}<br/>
       {$protest['descr']|showWithPrefix:"<b>Description</b>: "}<br/>
       <b>Source/corrections:</b>
-      <a href="{$protest['srcurl']}" target="_blank">{$protest['srcname']}</a>
+      <a href="{$protest['srcurl']}"
+                   onClick="return externalLink();" target="_blank"
+      >{$protest['srcname']}</a>
       &nbsp;&nbsp;&nbsp;
       (UniqueId: {$protest['hashcode']})
    </div>
@@ -205,10 +209,16 @@
                        target="_blank">MI-Resist</a>
       -->
       <li><a href="https://tockify.com/tkf2/submitEvent/52da8db339c443afab943a987fea5fe0"
-             target="_blank">Michigan Resistance</a>
-      <li><a href="https://tockify.com/mifreedomcoalition/pinboard" target="_blank"
+                   onClick="return externalLink();" target="_blank"
+          >Michigan Resistance</a>
+
+      <li><a href="https://tockify.com/mifreedomcoalition/pinboard" 
+                   onClick="return externalLink();" target="_blank"
       >Michigan Freedom Coalition</a>
-      <li><a href="https://events.mivoter.org" target="_blank">MIvoter events</a>
+
+      <li><a href="https://events.mivoter.org"
+                   onClick="return externalLink();" target="_blank"
+          >MIvoter events</a>
          &nbsp;&nbsp;&nbsp;(especially for County Democratic Parties and clubs)
    </ul>
       <b>Correcting events.</b>&nbsp;

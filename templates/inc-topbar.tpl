@@ -6,12 +6,15 @@
       </a>
 
       <div style="margin-top: 20px; float: right; ">
-         <img onClick="share();"  src="IMG/waveIconShare5.png" width="30" title="Share" style="margin-right: 7px;"/>
+         <!-- <img onClick="share();"  src="IMG/waveIconShare5.png" width="30" title="Share" style="margin-right: 7px;"/> -->
+         <img src="IMG/hamburger1.svg" width="35" style="margin-right: 7px; margin-top: -4px;" />
       </div>
 
+<!--
       <div style="margin-top: 20px; float: right; ">
          <a href="index.php"><img src="IMG/waveHome6.png" width="30" title="Home" style="margin-right: 7px;"/></a>
       </div>
+-->
    </div>
 
    <div class="waveHeaderText" style="margin-left: 7px; margin-right: 7px; line-height: 130%; color: white;" >

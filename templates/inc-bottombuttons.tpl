@@ -6,63 +6,50 @@
    }
 </script>
 
-<div class="bottom" style='max-width: 25em; background-color: #003052; padding-bottom: 0px;'>
    <div class="bottom fullWidth" style="background-color: #003052; padding-bottom: 0px;">
       <table width="100%" border='0' cellspacing=0 cellpadding=0 style='margin: auto;'>
-         <tr>
+         <tr valign='top'>
             <td width="20%" id="candidates_td">
-               {if $hasAddress}
-                  <div class="button" id="candidates">
-                     <a class="buttonLink" href="endorsed.php" onClick="return buttonSelect('candidates_td');">
-                        <img src="IMG/waveButtonCandidates5.png" width="24" class="buttonImage"/><br/>
-                        Endorsed<br/>Candidates
-                     </a>
-                  </div>
-               {else}
-                  <div class="button inactive">
-                     <img src="IMG/waveButtonCandidates-deactivated2.png" width="24" class="buttonImage" /><br/>
-                     Endorsed<br/>Candidates
-                  </div>
-               {/if}
+               <div class="button" id="candidates" style="position: relative;">
+                  <a class="buttonLink" href="endorsed.php" 
+                     {if $hasAddress}  onClick="return buttonSelect('candidates_td');"
+                     {else}            onClick="alert('Nope'); return false;"
+                     {/if}
+                  ><img src="IMG/button_endorsed_normal.svg" class="buttonImage" style="width: 2.5em;"/>
+                   <div style="position: absolute;  top: 2.5em; width: 100%;">Endorsed<br/>Candidates</div>
+                  </a>
+               </div>
             </td>
    
             <td width="20%" id="howVote_td">
-               {if $hasAddress}
-                  <div class="button" id="howVote_on">
-                     <a class="buttonLink" href="info.php" onClick="return buttonSelect('howVote_td');">
-                        <img src="IMG/waveButtonVote5.png" width="24" class="buttonImage"/><br/>
-                        How to<br/>Vote
-                     </a>
-                  </div>
-               {else}
-                  <div class="button inactive">
-                     <img src="IMG/waveButtonVote-deactivated3.png" width="24" class="buttonImage"/><br/>
-                     How to<br/>Vote
-                  </div>
-               {/if}
+               <div class="button" id="howVote_on" style="position: relative;">
+                  <a class="buttonLink" href="info.php" 
+                     {if $hasAddress}  onClick="return buttonSelect('howVote_td');"
+                     {else}            onClick="alert('nope');  return false;"
+                     {/if}
+                  ><img src="IMG/button_vote_normal.svg" class="buttonImage" style="width: 2.5em;"/>
+                   <div style="position: absolute;  top: 2.5em; width: 100%;">How to<br/>Vote</div>
+                  </a>
+               </div>
             </td>
    
             <td width="20%" id="officials_td">
-               {if $hasAddress}
-                  <div class="button" id="officials_on">
-                     <a class="buttonLink" id='btn_officials' href="officials.php" onClick="return buttonSelect('officials');">
-                        <img src="IMG/waveButtonOfficials5.png" width="24" class="buttonImage" /><br/>
-                        Current<br/>Officials
-                     </a>
-                  </div>
-               {else}
-                  <div class="button inactive">
-                     <img src="IMG/waveButtonOfficials-deactivated4.png" width="24" class="buttonImage" /><br/>
-                     Current<br/>Officials
-                  </div>
-               {/if}
+               <div class="button" id="officials_on" style="position: relative;">
+                  <a class="buttonLink" id='btn_officials' href="officials.php" 
+                     {if $hasAddress}  onClick="return buttonSelect('officials');"
+                     {else}            onClick="alert('nope');  return false;"
+                     {/if}
+                  ><img src="IMG/button_officials_normal.svg" class="buttonImage" style="width: 2.5em;"/>
+                   <div style="position: absolute;  top: 2.5em; width: 100%;">Current<br/>Officials</div>
+                  </a>
+               </div>
             </td>
    
             <td width="20%" id="faq_td">
-               <div class="button">
-                  <a id='btn_faq' class="buttonLink" href="faq.php" onClick="return buttonSelect('faq');">
-                     <img src="IMG/waveButtonFAQ5.png" width="24" class="buttonImage" /><br/>
-                     Frequent<br/>Questions
+               <div class="button" style="position: relative;">
+                  <a id='btn_faq' class="buttonLink" href="faq.php" onClick="return buttonSelect('faq');"
+                  ><img src="IMG/button_civic_normal.svg" class="buttonImage" style="width: 2.5em;"/>
+                   <div style="position: absolute;  top: 2.5em; width: 100%;">Civic<br/>Actions</div>
                   </a>
                </div>
             </td>
@@ -70,7 +57,7 @@
       </table>
    
    </div>
-</div>
+
 {if $button != ''}
    <script>
       buttonSelect('{$button}')

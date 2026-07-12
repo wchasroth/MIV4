@@ -67,7 +67,7 @@
 
 {include file="inc-trailer.tpl"}
 
-{include file="inc-bottombuttons.tpl" hasAddress=true}
+{include file="inc-bottombuttons.tpl" hasAddress=true button="endorsed"}
 
 </body>
 </html>

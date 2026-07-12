@@ -156,7 +156,7 @@
 
 {include file="inc-trailer.tpl"}
 
-{include file="inc-bottombuttons.tpl" hasAddress={$hasAddress} button="faq_td"}
+{include file="inc-bottombuttons.tpl" hasAddress={$hasAddress} button="civic"}
 
 </body>
 </html>

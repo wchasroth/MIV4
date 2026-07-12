@@ -86,7 +86,7 @@
 
 {include file="inc-trailer.tpl"}
 
-{include file="inc-bottombuttons.tpl" hasAddress=true button="howVote_td"}
+{include file="inc-bottombuttons.tpl" hasAddress=true button="vote"}
 
 </body>
 </html>

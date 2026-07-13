@@ -10,10 +10,10 @@
 
    <!-- Ensure these are already loaded and available to the browser, so that 
         the 'switch' to them appears instanteous.  -->
-   <img src="IMG/button_endorsed_select.svg" style="display: hidden;"/>
-   <img src="IMG/button_vote_select.svg" style="display: hidden;"/>
-   <img src="IMG/button_vote_officials.svg" style="display: hidden;"/>
-   <img src="IMG/button_vote_civic.svg" style="display: hidden;"/>
+   <img src="IMG/button_endorsed_select.svg"  style="display: hidden;"/>
+   <img src="IMG/button_vote_select.svg"      style="display: hidden;"/>
+   <img src="IMG/button_officials_select.svg" style="display: hidden;"/>
+   <img src="IMG/button_civic_select.svg"     style="display: hidden;"/>
 
    <div class="bottomBar fullWidth">
       <table width="100%" border='0' cellspacing=0 cellpadding=0 style='margin: auto;'>

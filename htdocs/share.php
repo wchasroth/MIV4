@@ -21,4 +21,5 @@ if ($address === "") {
 
 $smarty = new SmartyPage();
 $smarty->assign('address', $address);
+$smarty->assign('hasAddress', true);
 $smarty->display('share.tpl');

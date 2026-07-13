@@ -10,17 +10,17 @@
 
    <!-- Ensure these are already loaded and available to the browser, so that 
         the 'switch' to them appears instanteous.  -->
-   <img src="IMG/button_endorsed_select.svg"  style="display: hidden;"/>
-   <img src="IMG/button_vote_select.svg"      style="display: hidden;"/>
-   <img src="IMG/button_officials_select.svg" style="display: hidden;"/>
-   <img src="IMG/button_civic_select.svg"     style="display: hidden;"/>
+   <img src="IMG/button_endorsed_select.svg"  style="display: none;"/>
+   <img src="IMG/button_vote_select.svg"      style="display: none;"/>
+   <img src="IMG/button_officials_select.svg" style="display: none;"/>
+   <img src="IMG/button_civic_select.svg"     style="display: none;"/>
 
    <style>
       #needAddress {
-         position: fixed;
+         position: relative;
          background-color: #e7f5fd;
          z-index: 10;
-         bottom: 6em;
+         bottom: 2em;
          left:   1em;
          border-style: solid;
          border-color: black;
@@ -33,12 +33,13 @@
       }
    </style>
 
-   <div id="needAddress">
-      Please enter your address to see <b>your</b>
-      candidates, voting info, or officials.
-   </div>
 
    <div class="bottomBar fullWidth">
+      <div id="needAddress">
+         Please enter your address to see <b>your</b>
+         candidates, voting info, or officials.
+      </div>
+      <div class="bottomStuff">
       <table width="100%" border='0' cellspacing=0 cellpadding=0 style='margin: auto;'>
          <tr valign='top'>
             <td width="20%" id="endorsed_td">
@@ -87,6 +88,7 @@
             </td>
          </tr>
       </table>
+      </div>
    
    </div>
 

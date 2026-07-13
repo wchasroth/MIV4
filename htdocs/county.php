@@ -52,4 +52,5 @@ $smarty->registerPlugin(Smarty::PLUGIN_MODIFIER, "stripProtocol", [Plugins::clas
 $smarty->assign('address', $address);
 $smarty->assign('county', $county);
 $smarty->assign('counties', $counties);
+$smarty->assign('hasAddress', true);
 $smarty->display('county.tpl');

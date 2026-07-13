@@ -70,6 +70,7 @@ $smarty->registerPlugin(Smarty::PLUGIN_MODIFIER, "splitComma",  [Plugins::class,
 $smarty->registerPlugin(Smarty::PLUGIN_MODIFIER, "showWithPrefix",  [Plugins::class, "showWithPrefix"]);
 
 $smarty->assign('address', $address);
+$smarty->assign('hasAddress', true);
 $smarty->assign('county', $county);
 $smarty->assign('protests', $protests);
 $smarty->display('protests.tpl');

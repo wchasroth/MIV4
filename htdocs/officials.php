@@ -105,6 +105,7 @@ foreach ($result->getRows() as $college) {
 
 $smarty = new SmartyPage();
 $smarty->assign('address', $address);
+$smarty->assign('hasAddress', true);
 $smarty->assign('miCodes', $miCodes);
 $smarty->assign('show', $show);
 $smarty->assign('query', $query);

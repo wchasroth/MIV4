@@ -79,6 +79,7 @@ $smarty = new SmartyPage();
 $smarty->assign('address', $address);
 $smarty->assign('rows', $rows);
 $smarty->assign('show', $show);
+$smarty->assign('hasAddress', true);
 $smarty->display('endorsed.tpl');
 
 

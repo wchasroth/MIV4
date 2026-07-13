@@ -28,5 +28,6 @@ $pdo->runSF("INSERT INTO v4comments", "", $sqlFields);
 
 $smarty = new SmartyPage();
 $smarty->assign('address', $address);
+$smarty->assign('hasAddress', true);
 $smarty->display('feedbacksubmit.tpl');
 

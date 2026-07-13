@@ -27,4 +27,5 @@ $pdo->runSF("INSERT INTO follow", "", $sqlFields);
 
 $smarty = new SmartyPage();
 $smarty->assign('address', $address);
+$smarty->assign('hasAddress', true);
 $smarty->display('followsubmit.tpl');

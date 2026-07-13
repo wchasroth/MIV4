@@ -14,10 +14,12 @@ use CharlesRothDotNet\MIV4\Plugins;
 require_once("../vendor/autoload.php");
 
 $address = trim($_COOKIE['miAddress'] ?? "");
+/*
 if ($address === "") {
    header("Location: index.php");
    exit();
 }
+*/
 
 $env              = new EnvFile("_env");
 $logger           = new DumbFileLogger($env->get('logFile'));
@@ -27,4 +29,5 @@ $pdo              = PdoHelper::makePdo($env);
 $smarty = new SmartyPage();
 
 $smarty->assign('address', $address);
+$smarty->assign('hasAddress', ($address !== ''));
 $smarty->display('feedback.tpl');

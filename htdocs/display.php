@@ -49,4 +49,5 @@ $smarty = new SmartyPage();
 
 $smarty->assign('text', $text);
 $smarty->assign('address', $address);
+$smarty->assign('hasAddress', true);
 $smarty->display('display.tpl');

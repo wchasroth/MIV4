@@ -29,4 +29,5 @@ $voterLog->write($sessionId, 'I', $codes, $_COOKIE['miAddress'] ?? '');
 
 $smarty = new SmartyPage();
 $smarty->assign('address', $address);
+$smarty->assign('hasAddress', true);
 $smarty->display('info.tpl');

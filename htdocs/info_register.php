@@ -31,5 +31,6 @@ $clerkJurisdiction = Clerk::getJurisdictionName($pdo, intval($codes['juris_code'
 
 $smarty = new SmartyPage();
 $smarty->assign('address', $address);
+$smarty->assign('hasAddress', true);
 $smarty->assign('clerkJurisdiction', $clerkJurisdiction);
 $smarty->display('info_register.tpl');

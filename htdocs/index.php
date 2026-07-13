@@ -31,5 +31,11 @@ $smarty = new SmartyPage();
 $smarty->assign ('address',    $address);
 $smarty->assign ('zipcode',    $zipcode);
 
-if ($address === "")  $smarty->display('indexNoAddress.tpl');
-else                  $smarty->display('indexWithAddress.tpl');
+if ($address === "") {
+   $smarty->assign('hasAddress', false);
+   $smarty->display('indexNoAddress.tpl');
+}
+else {
+   $smarty->assign('hasAddress', true);
+   $smarty->display('indexWithAddress.tpl');
+}

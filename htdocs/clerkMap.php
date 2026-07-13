@@ -41,5 +41,6 @@ else {
    $smarty->assign('clerk', $clerk);
    $smarty->assign('apiKey', $apiKey);
    $smarty->assign('miCodes', $miCodes);
+   $smarty->assign('hasAddress', true);
    $smarty->display('clerkMap.tpl');
 }

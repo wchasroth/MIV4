@@ -27,4 +27,5 @@ date_default_timezone_set('America/New_York');
 
 $smarty = new SmartyPage();
 $smarty->assign('address', $address);
+$smarty->assign('hasAddress', true);
 $smarty->display('permanent.tpl');

@@ -24,7 +24,7 @@
       <li>Learn about Endorsed Candidates
       <li>Learn where and How to Vote (&amp;&nbsp;registering to vote!)
       <li>See your Current Officials
-      <li>Read answers to Frequent Questions
+      <li>Learn about civic actions <b>you</b> can take.
    </ul>
 
    <i style="font-size: 90%;">(We <b>never</b> track your address.&nbsp; Only your browser remembers it.)</i>

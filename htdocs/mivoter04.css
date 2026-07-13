@@ -71,8 +71,12 @@ body {
     bottom: 0;
     width: 100%;
     margin-left: 0;
-    background-color: #003052;
+    /* background-color: #003052; */
     z-index: 3;
+}
+.bottomStuff {
+    background-color: #003052;
+    /* z-index: 3; */
 }
 
 .bottomButton {

@@ -15,6 +15,29 @@
    <img src="IMG/button_officials_select.svg" style="display: hidden;"/>
    <img src="IMG/button_civic_select.svg"     style="display: hidden;"/>
 
+   <style>
+      #needAddress {
+         position: fixed;
+         background-color: #e7f5fd;
+         z-index: 10;
+         bottom: 6em;
+         left:   1em;
+         border-style: solid;
+         border-color: black;
+         border-width: 1px;
+         border-radius: 10%;
+         padding: 0.5em;
+         max-width: 12em;
+         color: #003052;
+         display: none;
+      }
+   </style>
+
+   <div id="needAddress">
+      Please enter your address to see <b>your</b>
+      candidates, voting info, or officials.
+   </div>
+
    <div class="bottomBar fullWidth">
       <table width="100%" border='0' cellspacing=0 cellpadding=0 style='margin: auto;'>
          <tr valign='top'>
@@ -22,7 +45,7 @@
                <div class="bottomButton" id="endorsed_div">
                   <a class="whiteLink" href="endorsed.php" 
                      {if $hasAddress}  onClick="return buttonSelect('endorsed');"
-                     {else}            onClick="alert('Nope'); return false;"
+                     {else}            onClick="flip('needAddress'); return false;"
                      {/if}
                   ><img class="bottomButtonImage" id="endorsed_img" src="IMG/button_endorsed_normal.svg"/>
                    <div class="bottomButtonText" >Endorsed<br/>Candidates</div>
@@ -34,7 +57,7 @@
                <div class="bottomButton" id="vote_div">
                   <a class="whiteLink" href="info.php" 
                      {if $hasAddress}  onClick="return buttonSelect('vote');"
-                     {else}            onClick="alert('nope');  return false;"
+                     {else}            onClick="flip('needAddress');  return false;"
                      {/if}
                   ><img class="bottomButtonImage" id="vote_img" src="IMG/button_vote_normal.svg" />
                    <div class="bottomButtonText" >How to<br/>Vote</div>
@@ -46,7 +69,7 @@
                <div class="bottomButton" id="officials_div">
                   <a class="whiteLink" href="officials.php" 
                      {if $hasAddress}  onClick="return buttonSelect('officials');"
-                     {else}            onClick="alert('nope');  return false;"
+                     {else}            onClick="flip('needAddress');  return false;"
                      {/if}
                   ><img class="bottomButtonImage" id="officials_img" src="IMG/button_officials_normal.svg" />
                    <div class="bottomButtonText" >Current<br/>Officials</div>
@@ -56,7 +79,7 @@
    
             <td width="20%" id="civic_td">
                <div class="bottomButton" id="civic_div">
-                  <a class="whiteLink" href="faq.php" onClick="return buttonSelect('civic');"
+                  <a class="whiteLink" href="civicActions.php" onClick="return buttonSelect('civic');"
                   ><img class="bottomButtonImage" id="civic_img" src="IMG/button_civic_normal.svg" />
                    <div class="bottomButtonText" >Civic<br/>Actions</div>
                   </a>

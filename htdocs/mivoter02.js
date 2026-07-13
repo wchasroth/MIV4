@@ -10,6 +10,11 @@ function flipPanel(id) {
    panel.classList.toggle('show');
 }
 
+function flip(id) {
+   let element = document.getElementById(id);
+   if (element) element.style.display = (element.style.display != 'block' ? 'block' : 'none');
+}
+
 function makeSessionId() {
      var now = new Date();
      var ranValue = Math.floor(Math.random() * 99999);

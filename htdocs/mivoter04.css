@@ -80,6 +80,18 @@ body {
     font-size:   90%;
     text-align: center;
     text-decoration: none;
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: white;
+    border-radius: 15%;
+    max-width: 85%;
+    max-height: 90%;
+
+    margin-top:    0.3em;
+    margin-bottom: 0.3em;
+    margin-left:   0.3em;
+    /* margin-right:  0.3em; */
 }
 .bottomButtonImage {
    width: 2.5em;

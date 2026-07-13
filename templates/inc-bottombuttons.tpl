@@ -1,6 +1,6 @@
 <script>
    function buttonSelect(buttonName) {
-       buttonClicked = document.getElementById(buttonName + "_td");
+       buttonClicked = document.getElementById(buttonName + "_div");
        imgClicked    = document.getElementById(buttonName + "_img");
        if (buttonClicked) buttonClicked.style.backgroundColor = "#2d6887";
        if (imgClicked)    imgClicked.src = "IMG/button_" + buttonName + "_select.svg";
@@ -19,7 +19,7 @@
       <table width="100%" border='0' cellspacing=0 cellpadding=0 style='margin: auto;'>
          <tr valign='top'>
             <td width="20%" id="endorsed_td">
-               <div class="bottomButton">
+               <div class="bottomButton" id="endorsed_div">
                   <a class="whiteLink" href="endorsed.php" 
                      {if $hasAddress}  onClick="return buttonSelect('endorsed');"
                      {else}            onClick="alert('Nope'); return false;"
@@ -31,7 +31,7 @@
             </td>
    
             <td width="20%" id="vote_td">
-               <div class="bottomButton">
+               <div class="bottomButton" id="vote_div">
                   <a class="whiteLink" href="info.php" 
                      {if $hasAddress}  onClick="return buttonSelect('vote');"
                      {else}            onClick="alert('nope');  return false;"
@@ -43,7 +43,7 @@
             </td>
    
             <td width="20%" id="officials_td">
-               <div class="bottomButton">
+               <div class="bottomButton" id="officials_div">
                   <a class="whiteLink" href="officials.php" 
                      {if $hasAddress}  onClick="return buttonSelect('officials');"
                      {else}            onClick="alert('nope');  return false;"
@@ -55,7 +55,7 @@
             </td>
    
             <td width="20%" id="civic_td">
-               <div class="bottomButton">
+               <div class="bottomButton" id="civic_div">
                   <a class="whiteLink" href="faq.php" onClick="return buttonSelect('civic');"
                   ><img class="bottomButtonImage" id="civic_img" src="IMG/button_civic_normal.svg" />
                    <div class="bottomButtonText" >Civic<br/>Actions</div>

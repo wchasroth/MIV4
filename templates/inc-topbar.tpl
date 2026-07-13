@@ -19,9 +19,8 @@
       </a>
 
       <div style="margin-top: 20px; float: right;  position: relative;">
-         <img src="IMG/hamburger1.svg" width="35" style="margin-right: 7px; margin-top: -4px;" onClick="flip('hamburgerMenu');" />
 
-         <div id='hamburgerMenu' style="position: absolute; display: none; z-index: 10; left: -4.5em;">
+         <div id='hamburgerMenu' style="position: absolute; display: none; z-index: 10; left: -4.5em; top: 2.5em;">
             <table class="hamburgerTable" cellpadding='0' cellspacing='0'>
                <tr><td><a href="index.php"           >Home</a></td></tr>
                {if $hasAddress}
@@ -35,6 +34,8 @@
                <tr><td><a href="video_frame.html"    >Video</a></td></tr>
             </table>
          </div>
+
+         <img src="IMG/hamburger1.svg" width="35" style="margin-right: 7px; margin-top: -4px;" onClick="flip('hamburgerMenu');" />
       </div>
 
    </div>

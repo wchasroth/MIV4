@@ -1,8 +1,19 @@
 <html>
-   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-   <frameset rows="*,35px" border='0'>
-      <frame src="video.html"                  frameborder='0' />
-      <frame src="bottom.html"  scrolling='no' frameborder='0' />
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+      <script>
+         function showVideo() {
+            urlParams = new URLSearchParams(window.location.search);
+            video = urlParams.get('video');
+            var videoFrame = document.getElementById('videoFrame');
+            videoFrame.src = "video-" + video + ".html";
+         }
+      </script>
+   </head>
+
+   <frameset rows="*,35px" border='0' onLoad="showVideo();">
+      <frame id='videoFrame'  src=""                            frameborder='0' />
+      <frame id='bottomFrame' src="bottom.html"  scrolling='no' frameborder='0' />
    </frameset>
 </html>
 

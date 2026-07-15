@@ -14,7 +14,7 @@
 
 {include file="inc-topbar.tpl"}
 
-<p style="font-size: 10%;">&nbsp;</p>
+<!-- <p style="font-size: 10%;">&nbsp;</p> -->
 
 <div class="darkBlueText pageText unindentList">
 

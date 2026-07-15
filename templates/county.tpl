@@ -14,9 +14,7 @@
 
 {include file="inc-topbar.tpl"}
 
-<p style="font-size: 10%;">&nbsp;</p>
-
-<div class="darkBlueText pageText unindentList">
+<div class="darkBlueText pageText unindentList" style="margin-top: 0.8ex;">
          
          <p/>
          As we look forward to the 2026 elections, and reclaiming the U.S. House

@@ -14,9 +14,7 @@
 
 {include file="inc-topbar.tpl"}
 
-<p style="font-size: 10%;">&nbsp;</p>
-
-<div class="darkBlueText pageText unindentList">
+<div class="darkBlueText pageText unindentList" style="margin-top: 0.8ex;">
 
 {include file="inc-official-block.tpl" block="0natl"  title="National" rows=$blocks['0natl']}
 {include file="inc-official-block.tpl" block="1state" title="State"    rows=$blocks['1state']}

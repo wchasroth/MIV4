@@ -40,9 +40,7 @@
 
 {include file="inc-topbar.tpl"}
 
-<p style="font-size: 10%;">&nbsp;</p>
-
-<div class="darkBlueText pageText unindentList">
+<div class="darkBlueText pageText unindentList" style="margin-top: 0.8ex;">
 
                There are several ways you can share MIvoter.org with
                your friends:

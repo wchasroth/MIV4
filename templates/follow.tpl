@@ -39,9 +39,7 @@
 
 {include file="inc-topbar.tpl"}
 
-<p style="font-size: 10%;">&nbsp;</p>
-
-<div class="darkBlueText pageText unindentList">
+<div class="darkBlueText pageText unindentList" style="margin-top: 0.8ex;">
 <center>
    <form action="followsubmit.php" method="POST">
       <p/>

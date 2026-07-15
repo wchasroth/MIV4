@@ -14,9 +14,8 @@
 
 {include file="inc-topbar.tpl"}
 
-<p style="font-size: 10%;">&nbsp;</p>
+<div class="darkBlueText pageText unindentList" style="margin-top: 0.8ex;">
 
-<div class="darkBlueText pageText unindentList">
 <b>Frequently Asked Questions</b>
 <p/>
 

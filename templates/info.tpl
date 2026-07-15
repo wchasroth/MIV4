@@ -14,9 +14,7 @@
 
 {include file="inc-topbar.tpl"}
 
-<p style="font-size: 10%;">&nbsp;</p>
-
-<div class="darkBlueText pageText unindentList">
+<div class="darkBlueText pageText unindentList" style="margin-top: 0.8ex;">
 <!--
    <span class="red">Michigan law ensures that you have options for how to cast your ballot, 
     and all of them are simple and safe.</span>

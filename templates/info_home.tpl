@@ -15,9 +15,7 @@
 
 {include file="inc-topbar.tpl"}
 
-<p style="font-size: 10%;">&nbsp;</p>
-
-<div class="darkBlueText pageText unindentList">
+<div class="darkBlueText pageText unindentList" style="margin-top: 0.8ex;">
    <span class="red">
     Want all your ballots mailed to you?&nbsp; Get on the permanent mail ballot list.&nbsp;
     <a href="permanent.php">Learn more</a>.

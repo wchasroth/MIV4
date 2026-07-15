@@ -13,9 +13,7 @@
 
 {include file="inc-topbar.tpl"}
 
-<p style="font-size: 10%;">&nbsp;</p>
-
-<div class="darkBlueText pageText unindentList">
+<div class="darkBlueText pageText unindentList" style="margin-top: 0.8ex;">
      <b>Thank you!</b><br/>
             <br/>
             We will send you (infrequent) updates via email.&nbsp;

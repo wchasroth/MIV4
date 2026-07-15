@@ -4,7 +4,7 @@
       border-style: solid;
       border-color: black;
       border-width: 1px;
-      border-radius: 10%;
+      border-radius: 1em;
       background-color: white;
       color: #003052;
       padding: 0.5em;

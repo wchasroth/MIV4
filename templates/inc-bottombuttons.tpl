@@ -25,7 +25,7 @@
          border-style: solid;
          border-color: black;
          border-width: 1px;
-         border-radius: 10%;
+         border-radius: 1em;
          padding: 0.5em;
          max-width: 12em;
          color: #003052;

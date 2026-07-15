@@ -19,21 +19,17 @@
 <div class="darkBlueText pageText unindentList">
 <b>Videos</b>
 <p/>
-We have several videos that help explain and publicize MIvoter.org:
+We have several videos that help explain and publicize MIvoter.org:<br/>
+<br/>
 
 <ul>
-<li>
+<li><a href="video_frame.html?video=amir">Amir for America</a>'s
+       hilarious introduction to <b>why</b> you need MIvoter.org.
 
-      <a href="video_frame.html">Take a look!</a>&nbsp;
-      That's the wonderful
-      <a href="https://www.youtube.com/c/AmirforAmerica/videos"
-               onClick="return externalLink(this);" target="_blank"
-             >Amir for America</a>,
-      who has a whole series of hilarious and informative
-      videos on getting people to vote.
-      <br/>&nbsp;
-   </div>
-
+<li><a href="video_frame.html?video=hannah1">June 2026 launch</a>
+       of the upgraded MIvoter.org, with an emphasis on the 
+       state-wide database of elected officials.
+</ul>
 
 </div>
 

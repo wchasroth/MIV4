@@ -139,13 +139,7 @@
    <div class="panel" id='video'>
       <br/>
       Yes!&nbsp;
-      <a href="video_frame.html">Take a look!</a>&nbsp;
-      That's the wonderful
-      <a href="https://www.youtube.com/c/AmirforAmerica/videos"
-               onClick="return externalLink(this);" target="_blank"
-             >Amir for America</a>,
-      who has a whole series of hilarious and informative
-      videos on getting people to vote.
+      In fact, there are <a href="videos.php">several</a> -- take a look!
       <br/>&nbsp;
    </div>
 

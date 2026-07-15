@@ -31,7 +31,7 @@
                   <tr><td><a href="follow.php"          >Follow</a></td></tr>
                {/if}
                <tr><td><a href="#" onClick="share();">Share</a></td></tr>
-               <tr><td><a href="video_frame.html"    >Video</a></td></tr>
+               <tr><td><a href="videos.php"    >Videos</a></td></tr>
             </table>
          </div>
 

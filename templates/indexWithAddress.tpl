@@ -14,9 +14,7 @@
 
 {include file="inc-topbar.tpl"}
 
-<!-- <p style="font-size: 10%;">&nbsp;</p> -->
-
-<div class="darkBlueText pageText unindentList">
+<div class="darkBlueText pageText unindentList" style="margin-top: .5ex;">
 
 <b>Welcome!</b><br/><br/>
    Use the <b>buttons at the bottom</b> to see info just for you.

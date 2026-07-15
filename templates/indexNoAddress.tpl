@@ -14,11 +14,10 @@
 
 {include file="inc-topbar.tpl"}
 
-<img src="IMG/ourFutureOurVote.png" style="width: 100%;">
+<img src="IMG/ourFutureOurVote2.png" style="width: 100%;">
 
 <div class="darkBlueText pageText unindentList" style="margin-top: .8ex;">
     <b>Enter your address</b> above to get tailored voting info <i><b>just for you</b></i>:
-    <!-- <div style="height: 10px;">&nbsp;</div> -->
 
 <!--    MIvoter.org is the <b>one stop shop</b> for all Michigan Democratic voters: -->
     <ul>

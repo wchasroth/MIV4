@@ -14,10 +14,9 @@
 
 {include file="inc-topbar.tpl"}
 
-<img src="IMG/ourFutureOurVote.png" style="width: 100%;"><br/>
+<img src="IMG/ourFutureOurVote.png" style="width: 100%;">
 
-<p style="font-size: 10%;">&nbsp;</p>
-<div class="darkBlueText pageText unindentList">
+<div class="darkBlueText pageText unindentList" style="margin-top: .8ex;">
     <b>Enter your address</b> above to get tailored voting info <i><b>just for you</b></i>:
     <!-- <div style="height: 10px;">&nbsp;</div> -->
 

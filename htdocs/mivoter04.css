@@ -92,7 +92,8 @@ body {
     border-style: solid;
     border-width: 1px;
     border-color: white;
-    border-radius: 15%;
+    /* border-radius: 15%; */
+    border-radius: 1em;
     max-width: 85%;
     max-height: 90%;
 

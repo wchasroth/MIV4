@@ -22,16 +22,17 @@
 
          <div id='hamburgerMenu' style="position: absolute; display: none; z-index: 10; left: -4.5em; top: 2.5em;">
             <table class="hamburgerTable" cellpadding='0' cellspacing='0'>
-               <tr><td><a href="index.php"           >Home</a></td></tr>
+               <tr><td><a href="index.php"              >Home</a></td></tr>
                {if $hasAddress}
                   <tr><td><a href="info_general.php"    >FAQ: voting</a></td></tr>
                {/if}
-               <tr><td><a href="faq.php"             >FAQ: mivoter</a></td></tr>
+               <tr><td><a href="faq.php"                >FAQ: mivoter</a></td></tr>
                {if $hasAddress}
                   <tr><td><a href="follow.php"          >Follow</a></td></tr>
+                  <tr><td><a href="protests.php"        >Protests</a></td></tr>
                {/if}
-               <tr><td><a href="#" onClick="share();">Share</a></td></tr>
-               <tr><td><a href="videos.php"    >Videos</a></td></tr>
+               <tr><td><a href="#" onClick="share();"   >Share</a></td></tr>
+               <tr><td><a href="videos.php"             >Videos</a></td></tr>
             </table>
          </div>
 

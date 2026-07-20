@@ -17,18 +17,16 @@
 <img src="IMG/ourFutureOurVote2.png" style="width: 100%;">
 
 <div class="darkBlueText pageText unindentList" style="margin-top: .8ex;">
-    <b>Enter your address</b> above to get tailored voting info <i><b>just for you</b></i>:
+    <b>Enter your address</b> to find:
 
-<!--    MIvoter.org is the <b>one stop shop</b> for all Michigan Democratic voters: -->
     <ul>
-        <li>Endorsed candidates who will be on your ballot
-        <li>Ways to cast your ballot
-        <li>Current officials who serve you
-        <li>Protests and events near you
-        <li>And much, much more
+        <li>All elected officials serving you
+        <li>Where, when, and how you'll vote
+        <li>Democratically endorsed candidates on your ballot
+        <li>Protests and other civic actions near you
     </ul>
 
-    <i style="font-size: 90%;">(We <b>never</b> track your address.&nbsp; Only your browser remembers it.)</i>
+    <i style="font-size: 90%;">(We <b>never</b> save your address.&nbsp; Only your browser remembers it.)</i>
 </div>
 
 

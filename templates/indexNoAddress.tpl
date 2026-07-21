@@ -21,7 +21,7 @@
 
     <ul>
         <li>All elected officials serving you
-        <li>Where, when, and how to vote
+        <li>How, where, and when you'll vote
         <li>Democratically endorsed candidates on your ballot
         <li>Protests and other civic actions near you
     </ul>

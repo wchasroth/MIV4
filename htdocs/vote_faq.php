@@ -11,10 +11,10 @@ use CharlesRothDotNet\MIV4\VoterLog;
 require_once("../vendor/autoload.php");
 
 $address = trim($_COOKIE['miAddress'] ?? "");
-if ($address === "") {
-   header("Location: index.php");
-   exit();
-}
+//if ($address === "") {
+//   header("Location: index.php");
+//   exit();
+//}
 
 $env     = new EnvFile("_env");
 $logger  = new DumbFileLogger($env->get('logFile'));
@@ -31,6 +31,6 @@ $clerkJurisdiction = Clerk::getJurisdictionName($pdo, intval($codes['juris_code'
 
 $smarty = new SmartyPage();
 $smarty->assign('address', $address);
-$smarty->assign('hasAddress', true);
+$smarty->assign('hasAddress', !empty($address));
 $smarty->assign('clerkJurisdiction', $clerkJurisdiction);
-$smarty->display('info_general.tpl');
+$smarty->display('vote_faq.tpl');

@@ -8,17 +8,16 @@
          </div>
          <br/>
 
+<!--
          <div class="bottomPill" onClick="location.href = 'follow.php';" style="position: relative;">
             <img src="IMG/waveIconFollow5.png"/>
             <span style="position: absolute; top:  8px;">Follow</span>
          </div>
          <br/>
+-->
 
          <div style="color: white;   font-size: 120%; margin-top: 5px;">
-            <b>
-               <a href="#" class="whiteLink" onClick="share();  return false;"
-               >Share MIvoter.org with a friend</a>.
-            </b>
+            <b>Follow MIvoter.org on:</b>
 
             <center style="margin-top: 0em;">
                <a href="https://www.facebook.com/mivoter.org"
@@ -33,9 +32,9 @@
                    onClick="return externalLink(this);" target="_blank"
                  ><img src="IMG/icon4-tt1.png" width="40"   title="TikTok" /></a>&nbsp;
 
-               <a href="https://x.com/mivoter_org"
+               <a href="https://bsky.app/profile/mivoterdotorg.bsky.social"
                    onClick="return externalLink(this);" target="_blank"
-                 ><img src="IMG/icon4-x1.png" width="40"    title="X" /></a>&nbsp;
+                 ><img src="IMG/icon4-bsky.png" width="40"    title="BlueSky" /></a>&nbsp;
 
                <a href="https://www.youtube.com/@mivoter_org"
                    onClick="return externalLink(this);" target="_blank"

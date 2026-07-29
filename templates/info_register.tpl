@@ -66,6 +66,15 @@
       <a href="https://mvic.sos.state.mi.us/Home/"
                    onClick="return externalLink(this);" target="_blank"
          >See more from the Secretary of State</a>.
+
+   <p></p>
+      <b>Questions?</b>&nbsp;<br/>
+      {include file="inc-vq-whoeligible.tpl"}
+      {include file="inc-vq-student.tpl"}
+      {include file="inc-vq-register.pl"}
+      {include file="inc-vq-checkreg.tpl"}
+      {include file="inc-vq-howlate.tpl"}
+      {include file="inc-vq-disability.tpl"}
   
 </div>
 

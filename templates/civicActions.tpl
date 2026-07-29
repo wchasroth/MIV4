@@ -35,14 +35,13 @@
 
    <b>Ways you can support MIvoter.org</b>:
    <ul>
-      <li><a href="follow.php">Follow MIvoter</a> to receive a monthly email about other actions
+      <li>Follow MIvoter (see the social media icons below)
       <li><a href="share.php">Share MIvoter</a> on social media
-      <li>Share this <a href="video_frame.html">fun video</a> about MIvoter
+      <li>Share these <a href="videos.php">fun videos</a> about MIvoter
    </ul>
   
 </div>
 
-<p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 

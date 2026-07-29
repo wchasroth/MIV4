@@ -115,6 +115,14 @@
       >Learn more about voting on election day</a> from the Secretary of State.
 
   
+    <p/>
+    <b>Questions?</b><br/>
+    {include file="inc-vq-whoeligible.tpl"}
+    {include file="inc-vq-student.tpl"}
+    {include file="inc-vq-disability.tpl"}
+    {include file="inc-vq-emergency.tpl"}
+    {include file="inc-vq-noid.tpl"}
+
 </div>
 
 <p>&nbsp;</p>

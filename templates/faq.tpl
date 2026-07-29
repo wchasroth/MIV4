@@ -16,7 +16,7 @@
 
 <div class="darkBlueText pageText unindentList" style="margin-top: 0.8ex;">
 
-<b>Frequently Asked Questions</b>
+<b>About MIvoter.org</b>
 <p/>
 
    <div class="accordion" onClick="flipPanel('whyAddress');">Why do you need my address?</div>

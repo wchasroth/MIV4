@@ -114,6 +114,18 @@
                    onClick="return externalLink(this);" target="_blank"
         >Secretary of State's absentee voting page</a>.
 
+      <p/>
+      <b>Questions?</b><br/>
+      {include file="inc-vq-whoeligible.tpl"}
+      {include file="inc-vq-student.tpl"}
+      {include file="inc-vq-getballot.tpl"}
+      {include file="inc-vq-trackballot.tpl"}
+      {include file="inc-vq-noarrive.tpl"}
+      {include file="inc-vq-disability.tpl"}
+      {include file="inc-vq-changevote.tpl"}
+      {include file="inc-vq-emergency.tpl"}
+      {include file="inc-vq-noid.tpl"}
+
 </div>
 
   

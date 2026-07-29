@@ -32,6 +32,13 @@
          window.open(url, "_blank");
          return false;
       }
+
+      function shareToBlueSky() {
+         var url = 'https://bsky.app/intent/compose?'
+                 + 'text=' + encodeURIComponent("Personalized Michigan Democratic Voter Guide at https://MIvoter.org");
+         window.open(url, "_blank");
+         return false;
+      }
     </script>
 
 </head>
@@ -48,7 +55,7 @@
                <li><a href='#' onClick="return sendEmail();">Email</a>
                <li><a href='#' onClick="return shareToFacebook();">Facebook</a>
                <li><a href='qr.html' target="_blank">QR code</a>
-               <li><a href='#' onClick="return shareToTwitter();">X / Twitter</a>
+               <li><a href='#' onClick="return shareToBlueSky();">Bluesky</a>
                </ul>
 
          For other platforms (e.g. Instagram, TikTok, etc.) try using 

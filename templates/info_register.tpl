@@ -68,7 +68,7 @@
          >See more from the Secretary of State</a>.
 
    <p></p>
-      <b>Questions?</b>&nbsp;<br/>
+      <b>Frequent Questions</b>&nbsp;<br/>
       {include file="inc-vq-whoeligible.tpl"}
       {include file="inc-vq-student.tpl"}
       {include file="inc-vq-register.pl"}

@@ -115,7 +115,7 @@
         >Secretary of State's absentee voting page</a>.
 
       <p/>
-      <b>Questions?</b><br/>
+      <b>Frequent Questions</b><br/>
       {include file="inc-vq-whoeligible.tpl"}
       {include file="inc-vq-student.tpl"}
       {include file="inc-vq-getballot.tpl"}

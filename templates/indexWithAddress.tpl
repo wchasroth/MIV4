@@ -17,7 +17,7 @@
 <div class="darkBlueText pageText unindentList" style="margin-top: .8ex;">
 
 <b>Welcome!</b><br/><br/>
-   Click the <b>buttons at the bottom</b> for info tailored to your address:
+   Click the <b>buttons at the bottom</b> for information tailored to your address:
    <ul>
       <li>Endorsed Candidates
       <li>How to Vote

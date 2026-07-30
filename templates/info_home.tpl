@@ -62,7 +62,8 @@
 
         <li>Go to your clerk's office and request a ballot in person.&nbsp;
             You can even fill out the ballot and return it while you're there.&nbsp;
-          <b>Recommended if election day is less than two weeks away.</b></li>
+          <b>Recommended if election day is less than two weeks away.</b>&nbsp;
+          {if $hasAddress}
            <ul>
               <li><a href="clerkMap.php"><b>{$clerkJurisdiction} Clerk</b></a></li>
     
@@ -73,12 +74,19 @@
                   </li>
               -->
            </ul>
+          {else}
+             (Enter your address above to find your clerk's office.)
+          {/if}
+          </li>
       </ul>
 
       <b>Correcting Your Ballot</b><br/>
-           If you have already sent in your ballot, and <b>want to change your vote</b>, 
-           contact
-           <a href="clerkMap.php">your clerk</a>.
+           If you have already sent in your ballot, and <b>want to change your vote</b>, contact
+           {if $hasAddress}
+              <a href="clerkMap.php">your clerk</a>.
+           {else}
+              your local clerk (enter your address above to find it).
+           {/if}
 
       <p/>
       <b>Return Your Ballot</b><br>
@@ -133,7 +141,7 @@
 
 {include file="inc-trailer.tpl"}
 
-{include file="inc-bottombuttons.tpl" hasAddress=true}
+{include file="inc-bottombuttons.tpl" hasAddress=$hasAddress}
 
 </body>
 </html>

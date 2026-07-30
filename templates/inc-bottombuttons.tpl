@@ -56,10 +56,7 @@
    
             <td width="20%" id="vote_td">
                <div class="bottomButton" id="vote_div">
-                  <a class="whiteLink" href="info.php" 
-                     {if $hasAddress}  onClick="return buttonSelect('vote');"
-                     {else}            onClick="flip('needAddress');  return false;"
-                     {/if}
+                  <a class="whiteLink" href="info.php" onClick="return buttonSelect('vote');"
                   ><img class="bottomButtonImage" id="vote_img" src="IMG/button_vote_normal.svg" />
                    <div class="bottomButtonText" >How to<br/>Vote</div>
                   </a>

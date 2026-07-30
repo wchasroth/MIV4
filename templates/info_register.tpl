@@ -36,9 +36,12 @@
         </ul>
   
          <b>Register in person</b>&nbsp;
-         <br>Go to any Secretary of State branch office or the
-         <a href="clerkMap.php">{$clerkJurisdiction}</a>
-           clerk's office.</b>
+         <br>Go to any Secretary of State branch office or 
+         {if $hasAddress}
+            the <a href="clerkMap.php">{$clerkJurisdiction}</a> clerk's office.</b>
+         {else}
+            your local clerk's office (enter your address above to find it).
+         {/if}
 
             <!-- (Recommended NOT to show county clerk, as local clerk closer/better)
                or <a href="#" onClick="if (do_county_clerk_map() == 'OK') openCurtain('county_clerk'); return false;">
@@ -84,7 +87,7 @@
 
 {include file="inc-trailer.tpl"}
 
-{include file="inc-bottombuttons.tpl" hasAddress=true button=""}
+{include file="inc-bottombuttons.tpl" hasAddress=$hasAddress button=""}
 
 </body>
 </html>

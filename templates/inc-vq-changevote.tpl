@@ -6,7 +6,11 @@
           your ballot and receive a new one.&nbsp;
           Your request must be received by 5 pm at least two Fridays before Election day.&nbsp;
           We recommend submitting your request in person so you can get your new ballot right away.&nbsp;
-          <a href="clerkMap.php">Find your local clerk's office</a>.
+          {if $hasAddress}
+             <a href="clerkMap.php">Find your local clerk's office</a>.
+          {else}
+             Enter your address above, to find your local clerk's office.
+          {/if}
       <li><b>If you have your ballot:</b> 
           You can vote at a polling place or early voting site.&nbsp;
           Workers at the site will help you get a new ballot.&nbsp;

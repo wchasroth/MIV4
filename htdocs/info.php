@@ -10,10 +10,10 @@ use CharlesRothDotNet\MIV4\VoterLog;
 require_once("../vendor/autoload.php");
 
 $address = trim($_COOKIE['miAddress'] ?? "");
-if ($address === "") {
-   header("Location: index.php");
-   exit();
-}
+//if ($address === "") {
+//   header("Location: index.php");
+//   exit();
+//}
 
 $env    = new EnvFile("_env");
 $logger = new DumbFileLogger($env->get('logFile'));
@@ -29,5 +29,5 @@ $voterLog->write($sessionId, 'I', $codes, $_COOKIE['miAddress'] ?? '');
 
 $smarty = new SmartyPage();
 $smarty->assign('address', $address);
-$smarty->assign('hasAddress', true);
+$smarty->assign('hasAddress', ! empty($address));
 $smarty->display('info.tpl');

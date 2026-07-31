@@ -16,10 +16,10 @@
          <br/>
 -->
 
-         <div style="color: white;   font-size: 120%; margin-top: 5px;">
+         <div style="color: white;   font-size: 120%; margin-top: 0.5em;">
             <b>Follow MIvoter.org on:</b>
 
-            <center style="margin-top: 0em;">
+            <center style="margin-top: 0.5em;">
                <a href="https://www.facebook.com/mivoter.org"
                    onClick="return externalLink(this);" target="_blank"
                  ><img src="IMG/icon4-fb2.png" width="36" title="Facebook"/></a>&nbsp;

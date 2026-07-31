@@ -43,7 +43,7 @@ class AddressSearch extends HTMLElement {
           background-color: #666;
           color: white;
           font-size: 22px;
-          font-family: "Segoe UI", "Roboto", sans-serif;
+          font-family: "Roboto Flex", sans-serif;
           font-weight: 100;
           line-height: 1;
           cursor: pointer;
@@ -90,6 +90,7 @@ class AddressSearch extends HTMLElement {
           padding: 0.15em 10px 0 1.7em;
           text-indent: -1.5em;
           cursor: pointer;
+          font-family: "Roboto Flex", sans-serif;
         }
         li.highlight {
           background-color: #f0f0f0;

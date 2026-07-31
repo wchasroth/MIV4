@@ -9,7 +9,8 @@
           {if $hasAddress}
              <a href="clerkMap.php">Find your local clerk's office</a>.
           {else}
-             Enter your address above, to find your local clerk's office.
+             <p/>
+             To find your local clerk's office, enter your address at the very top of this page.
           {/if}
       <li><b>If you have your ballot:</b> 
           You can vote at a polling place or early voting site.&nbsp;

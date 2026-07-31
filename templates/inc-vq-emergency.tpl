@@ -6,13 +6,15 @@
               Election Day.
               <p></p>
               The emergency must have made it impossible for you to apply for a regular
-              absent voter ballot. Contact your
+              absent voter ballot.&nbsp;
+              For more information about emergency absent voter ballots,
               {if $hasAddress}
-                 <a href="clerkMap.php"><b>{$clerkJurisdiction} Clerk</b></a>
+                 contact the
+                 <a href="clerkMap.php"><b>{$clerkJurisdiction} Clerk</b></a>.
               {else}
-                 local clerk's office (enter your address above to find it)
+                 contact your local clerk's office.&nbsp;
+                 (To find your clerk, enter your address at the very top of this page.)
               {/if}
-              for more information about emergency absent voter ballots.
        </p>
   </div>
 

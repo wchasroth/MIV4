@@ -66,16 +66,9 @@
           {if $hasAddress}
            <ul>
               <li><a href="clerkMap.php"><b>{$clerkJurisdiction} Clerk</b></a></li>
-    
-              <!-- (Recommended NOT to show county clerk, local is closer/better/has more services)
-                  <li><a href="#one_time_abs" 
-                        onClick="if (do_county_clerk_map() == 'OK') openCurtain('county_clerk');  return false;">
-                      <b>{{ county_name }} County Clerk</b></a>
-                  </li>
-              -->
            </ul>
           {else}
-             (Enter your address above to find your clerk's office.)
+             (To find your clerk's office, enter your address at the very top of this page.)
           {/if}
           </li>
       </ul>
@@ -85,7 +78,8 @@
            {if $hasAddress}
               <a href="clerkMap.php">your clerk</a>.
            {else}
-              your local clerk (enter your address above to find it).
+              your local clerk.&nbsp;
+             (To find your clerk's office, enter your address at the very top of this page.)
            {/if}
 
       <p/>

@@ -40,7 +40,8 @@
          {if $hasAddress}
             the <a href="clerkMap.php">{$clerkJurisdiction}</a> clerk's office.</b>
          {else}
-            your local clerk's office (enter your address above to find it).
+            your local clerk's office.&nbsp;
+            (To find your clerk, enter your address at the very top of this page.)
          {/if}
 
             <!-- (Recommended NOT to show county clerk, as local clerk closer/better)

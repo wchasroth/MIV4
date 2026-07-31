@@ -22,23 +22,23 @@
             <center style="margin-top: 0em;">
                <a href="https://www.facebook.com/mivoter.org"
                    onClick="return externalLink(this);" target="_blank"
-                 ><img src="IMG/icon4-fb1.png" width="40" title="Facebook"/></a>&nbsp;
+                 ><img src="IMG/icon4-fb2.png" width="36" title="Facebook"/></a>&nbsp;
 
                <a href="https://www.instagram.com/mivoter.org5"
                    onClick="return externalLink(this);" target="_blank"
-                 ><img src="IMG/icon4-inst1.png" width="40" title="Instagram"/></a>&nbsp;
+                 ><img src="IMG/icon4-inst2.png" width="36" title="Instagram"/></a>&nbsp;
 
                <a href="https://www.tiktok.com/@mivoter.org"
                    onClick="return externalLink(this);" target="_blank"
-                 ><img src="IMG/icon4-tt1.png" width="40"   title="TikTok" /></a>&nbsp;
+                 ><img src="IMG/icon4-tt2.png" width="36"   title="TikTok" /></a>&nbsp;
 
                <a href="https://bsky.app/profile/mivoterdotorg.bsky.social"
                    onClick="return externalLink(this);" target="_blank"
-                 ><img src="IMG/icon4-bsky.png" width="40"    title="BlueSky" /></a>&nbsp;
+                 ><img src="IMG/icon4-bsky2.png" width="36"    title="BlueSky" /></a>&nbsp;
 
                <a href="https://www.youtube.com/@mivoter_org"
                    onClick="return externalLink(this);" target="_blank"
-                 ><img src="IMG/icon4-yt2.png" width="40"   title="YouTube"/></a>&nbsp;
+                 ><img src="IMG/icon4-yt3.png" width="36"   title="YouTube"/></a>&nbsp;
             </center>
          </div>
 

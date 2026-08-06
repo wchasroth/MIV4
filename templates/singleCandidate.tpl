@@ -27,7 +27,15 @@
     <tr valign="top">
         <td><a href="{$web}"
                    onClick="return externalLink(this);" target="_blank"
-            >{$name}</a><br>{$title}<br/><br/>
+                   title="Candidate's website"
+            >{$name} 
+               <svg xmlns="http://w3.org" width="1em" viewBox="0 0 24 24" fill="none" 
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+               </svg>
+            </a><br>{$title}<br/><br/>
             <button class="roundButton" onClick="window.history.back();">Back</button>
         </td>
         <td align="right"><img src="{$photoBase}/{$headshot}" width="150"/></td>

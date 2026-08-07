@@ -18,7 +18,7 @@ $address = trim($_COOKIE['miAddress'] ?? "");
 
 $env     = new EnvFile("_env");
 $pdo     = PdoHelper::makePdo($env);
-$miCodes = trim($_COOKIE['miCodes'] ?? "");
+$miCodes = trim($_COOKIE['miCodes'] ?? "{}");
 $codes   = json_decode($miCodes, true);
 $sessionId = trim($_COOKIE['sessionid'] ?? "");
 $logger = new DumbFileLogger($env->get('logFile'));
@@ -27,7 +27,7 @@ date_default_timezone_set('America/New_York');
 $voterLog = new VoterLog($pdo, $logger, $env->get('addressHashSalt'));
 $voterLog->write($sessionId, 'I', $codes, $_COOKIE['miAddress'] ?? '');
 
-$clerkJurisdiction = Clerk::getJurisdictionName($pdo, intval($codes['juris_code']));
+$clerkJurisdiction = Clerk::getJurisdictionName($pdo, intval($codes['juris_code'] ?? '0'));
 
 $smarty = new SmartyPage();
 $smarty->assign('address', $address);

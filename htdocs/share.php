@@ -14,10 +14,10 @@ use CharlesRothDotNet\MIV4\Plugins;
 require_once("../vendor/autoload.php");
 
 $address = trim($_COOKIE['miAddress'] ?? "");
-if ($address === "") {
-   header("Location: index.php");
-   exit();
-}
+//if ($address === "") {
+//   header("Location: index.php");
+//   exit();
+//}
 
 $smarty = new SmartyPage();
 $smarty->assign('address', $address);

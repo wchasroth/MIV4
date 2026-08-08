@@ -16,19 +16,33 @@
 
 <div class="darkBlueText pageText unindentList" style="margin-top: 0.8ex;">
 
-<b>Videos</b>
+<b>Videos</b><br/>
 <p/>
-We have several videos that help explain and publicize MIvoter.org:<br/>
-<br/>
+Learn more and share with your friends and neighbors
+<p/>
 
-<ul>
-<li><a href="video_frame.html?video=amir">Amir for America</a>'s
-       hilarious introduction to <b>why</b> you need MIvoter.org.
+<table cellspacing="0" cellpadding="0">
+    <tr valign="top">
+        <td><a href="video_frame.html?video=amir"><img src="IMG/video-amir1.png" width="200"/></a></td>
+        <td>&nbsp;&nbsp;&nbsp;</td>
+        <td>Why you need MIvoter.org (1:00)</td>
+    </tr>
 
-<li><a href="video_frame.html?video=hannah1">June 2026 launch</a>
-       of the upgraded MIvoter.org, with an emphasis on the 
-       state-wide database of elected officials.
-</ul>
+    <tr><td>&nbsp;</td></tr>
+    <tr valign="top">
+        <td><img src="IMG/video-hannah1a.png" width="200"/></td>
+        <td></td>
+        <td>How MIvoter.org helps Michigan voters like you (1:08)</td>
+    </tr>
+
+    <tr><td>&nbsp;</td></tr>
+    <tr valign="top">
+        <td><img src="IMG/video-hannah2a.png" width="200"/></td>
+        <td></td>
+        <td>MIvoter.org for elected officials (1:04)</td>
+    </tr>
+
+</table>
 
 </div>
 

@@ -43,6 +43,30 @@ Learn more and share with your friends and neighbors
     </tr>
 
 </table>
+<p/>
+
+<table cellspacing="0" cellpadding="0">
+    <tr valign="top">
+        <td><a href="video_frame.html?video=amir"><img src="IMG/video-amir1.png" width="100"/></a></td>
+        <td>&nbsp;&nbsp;&nbsp;</td>
+        <td>Why you need MIvoter.org (1:00)</td>
+    </tr>
+
+    <tr><td>&nbsp;</td></tr>
+    <tr valign="top">
+        <td><img src="IMG/video-hannah1a.png" width="100"/></td>
+        <td></td>
+        <td>How MIvoter.org helps Michigan voters like you (1:08)</td>
+    </tr>
+
+    <tr><td>&nbsp;</td></tr>
+    <tr valign="top">
+        <td><img src="IMG/video-hannah2a.png" width="100"/></td>
+        <td></td>
+        <td>MIvoter.org for elected officials (1:04)</td>
+    </tr>
+
+</table>
 
 </div>
 

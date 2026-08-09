@@ -36,8 +36,8 @@ If the voters say "Yes", it starts a 3-stage process.
 <ol>
 <li><b>Elect delegates.</b>&nbsp; Voters would elect convention delegates, starting
 with a primary in Feb 2027, and then a general election in May 2027.&nbsp;
-Voters would select one delegate for each state house district,
-<b>and</b> one for each state senate district.&nbsp;
+Voters would select one delegate for their state house district,
+<b>and</b> one for their state senate district.&nbsp;
 (So everyone gets to vote for <b>two</b> delegates.)
 
 <li><b>Write the new constitution.</b>&nbsp; The convention would start in October 2027.&nbsp;

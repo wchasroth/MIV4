@@ -39,15 +39,15 @@ Learn more and share with your friends and neighbors
 <p/>
 <div class="flex-container">
     <div class="flex-item">
-        <a href="video_frame.html?video=amir"><img src="IMG/video-amir1.png" width="160"/></a><br/>
+        <a href="video_frame.html?video=amir"><img src="IMG/video-amir3.png" width="160"/></a><br/>
         <center>Why you need MIvoter.org (1:00)</center>
     </div>
     <div class="flex-item">
-        <img src="IMG/video-hannah1a.png" width="160"/><br/>
+        <a href="video_frame.html?video=hannah1"><img src="IMG/video-hannah1a.png" width="160"/></a><br/>
         <center>How MIvoter.org helps Michigan voters like you (1:08)</center>
     </div>
     <div class="flex-item">
-        <img src="IMG/video-hannah2a.png" width="160"/><br/>
+        <a href="video_frame.html?video=hannah2"><img src="IMG/video-hannah4a.png" width="160"/></a><br/>
         <center>MIvoter.org for elected officials (1:04)</center>
     </div>
 </div>

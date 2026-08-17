@@ -47,8 +47,16 @@ Learn more and share with your friends and neighbors
         <center>How MIvoter.org helps Michigan voters like you (1:08)</center>
     </div>
     <div class="flex-item">
+        <a href="video_frame.html?video=vannessa1"><img src="IMG/video-vannessa1.png" width="160"/></a><br/>
+        <center>Be a Voting Genius (0:26)</center>
+    </div>
+    <div class="flex-item">
         <a href="video_frame.html?video=hannah2"><img src="IMG/video-hannah4a.png" width="160"/></a><br/>
         <center>MIvoter.org for elected officials (1:04)</center>
+    </div>
+    <div class="flex-item">
+        <a href="video_frame.html?video=hannah5"><img src="IMG/video-hannah5a.png" width="160"/></a><br/>
+        <center>Who represents you? (0:56)</center>
     </div>
 </div>
 </center>

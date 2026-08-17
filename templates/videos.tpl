@@ -48,7 +48,7 @@ Learn more and share with your friends and neighbors
     </div>
     <div class="flex-item">
         <a href="video_frame.html?video=vannessa1"><img src="IMG/video-vannessa1.png" width="160"/></a><br/>
-        <center>Be a Voting Genius (0:26)</center>
+        <center>Be a Voting Genius with MIvoter.org (0:25)</center>
     </div>
     <div class="flex-item">
         <a href="video_frame.html?video=hannah2"><img src="IMG/video-hannah4a.png" width="160"/></a><br/>
@@ -56,7 +56,7 @@ Learn more and share with your friends and neighbors
     </div>
     <div class="flex-item">
         <a href="video_frame.html?video=hannah5"><img src="IMG/video-hannah5a.png" width="160"/></a><br/>
-        <center>Who represents you? (0:56)</center>
+        <center>MIvoter.org... find information in about 10 seconds (0:55)</center>
     </div>
 </div>
 </center>

@@ -20,6 +20,8 @@ if ($address === "") {
    exit();
 }
 
+$numFormatter = new NumberFormatter("en_US", NumberFormatter::ORDINAL);
+
 $env    = new EnvFile("_env");
 $logger = new DumbFileLogger($env->get('logFile'));
 $pdo    = PdoHelper::makePdo($env);
@@ -69,8 +71,8 @@ for ($i=0;   $i<$rowCount;  $i++) {
    $name = $rows[$i]['name'] ?? '';
    if ($name === strtoupper($name))   $rows[$i]['name'] = ucwords(strtolower($name));
 
-   $dist = $rows[$i]['dist'];
-   $dist = (intval($dist) === 0 ? '' : "($dist)");
+   $dist = intval($rows[$i]['dist']);
+   $dist = ($dist === 0 ? '' : "(" . $numFormatter->format($dist) . ")");
    if ($rows[$i]['miv_title'] !== "") $rows[$i]['miv_title'] .= " $dist";
 }
 

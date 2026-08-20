@@ -35,8 +35,8 @@
       {$backclass=1}
          {foreach from=$rows item=row}
             <table width="90%" cellspacing="0" cellpadding="4" style="max-width: 30em;">
-               <tr valign="top" class="back{$backclass}">
-                  <td>{$row['miv_title']}</td>
+               <tr valign="top" class="{$row['color']}{$backclass}">
+                  <td>{$row['miv_title']} : {$row['party']}</td>
                   <td align="right"><a href="singleCandidate.php?id={$row['iid']}" class="noUnderline">{$row['name']}</a></td>
                </tr>
             </table>

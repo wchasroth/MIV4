@@ -72,6 +72,7 @@ for ($i=0;   $i<$rowCount;  $i++) {
    $dist = $rows[$i]['dist'];
    $dist = (intval($dist) === 0 ? '' : "($dist)");
    if ($rows[$i]['miv_title'] !== "") $rows[$i]['miv_title'] .= " $dist";
+   $rows[$i]['color'] = $rows[$i]['party'] == 'D' ? 'blue' : 'green';
 }
 
 $smarty = new SmartyPage();
@@ -85,7 +86,7 @@ $smarty->display('endorsed.tpl');
 
 function select(string $dist): string {
    return  "SELECT s.id, s.org, s.office, s.district, s.subdist, $dist AS dist, "
-      . "       i.name, t.ballot_order, t.miv_title, i.id AS iid ";
+      . "       i.name, t.ballot_order, t.miv_title, i.id AS iid, i.party ";
 }
 
 function from (): string {

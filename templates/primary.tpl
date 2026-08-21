@@ -32,18 +32,35 @@ Basically, if you're good at doing Google searches -- you can be a big help.&nbs
 <b>So, what's the problem?</b>
 <p>
 We already know most of the offices or "seats" that are up for election in November.&nbsp;
-<b>Except</b> -- there are about 100 elected officials in Michigan, who resigned before their
+<b>Except</b> -- there are hundreds of elected officials in Michigan who resigned before their
 term was over.&nbsp; We even know many of the people who are running to replace them.&nbsp;
-But we don't know <b>who</b> they are replacing!
+But we don't know <b>who</b> (or which "seats") they are replacing!
 
 <p/>
-Here's a specific example that will make this clearer.&nbsp;
-The city of Mount Pleasant, in the county of Isabella, is supposed to have 7 council ("comission") members.&nbsp;
-Two of those seats are up for election in 2026.&nbsp;
+This causes some problems when we try to match up candidates (from the county primary election reports)
+with "seats" (from our existing database of offices and incumbents).
+<p/>
+We have a program that identifies these 'problem' races, and shows the (likely) problem, as either:
+<ul style="margin-top: 1em;">
+   <li><b>Case 4: no regular seat.</b>&nbsp; This means that a candidate appears to be running for a seat that
+      isn't empty, or isn't up for election.&nbsp; Maybe we got the election year wrong for the office,
+      or maybe the candidate is running for a partial-term election, but the county report data didn't
+      tell us that.</li>
+   <li><b>Case 5: no partial term seat.</b>&nbsp; This means that a candidate appears to be running for a partial-term
+      seat... but we have no indication that there is one!&nbsp;  Maybe someone resigned, and we didn't know about it.
+   </li>
+</ul>
+
+<b>An Example</b>
+<p/>
+Here's a specific example that will make this clearer.<br/><br/>
+
+The city of Mount Pleasant, in the county of Isabella, is supposed to have 7 council ("commission") members.&nbsp;
+Two of those seats are up for election in 2026.
 
 <p/>
-But the primary election result shows one "Hanna Demerath" as running for a partial-term race,
-but we have no record of someone resigning.&nbsp;
+But our problem report shows a "Case 5", with one "Hanna Demerath" as running for a partial-term race --
+yet we have no record of someone resigning.&nbsp;
 So, who is she running to replace?&nbsp; For which seat?
 
 <p/>
@@ -69,17 +86,28 @@ We want volunteers to pick a few (or more) rows from this sheet, and resolve eac
    to the "Initials" column.&nbsp;
 
    <p/>
-   From there, it's just a matter of doing Google (or other) searches to find (a) what offices
-   and officers really currently exist, (b) who or what seat the "problem" candidate is running
-   to replace, and (c) what corrections we need to make to our database.
+   From there, it's just a matter of doing Google (or other) searches to find out:
+   <ol type="a">
+   <li>What offices and officers really currently exist for this jurisdiction.
+   <li>Who or what seat the "problem" candidate is running to replace
+   <li>What corrections do we need to make to our database?&nbsp;
+       (Do we need to fix the 'Next' election year, or mark someone as resigned, aka "Vacant"?)
+   </ol>
 
    <p/>
-   <b>The Candidate Editor</b>
+   <b>The Candidate Editor -- OPTIONAL</b>
    <p/>
-   Once you're signed up, you'll see pages like the example below, for the Mount Pleasant case.&nbsp;
+   I built a powerful "Candidate Editor" tool, that we used to actually manipulate our database.&nbsp;
+   You don't necessarily need it to resolve the questions above -- but it <b>may</b> be
+   helpful, especially to see what data we already have.
+
+   <p/>
+   Once you're signed up, I'll give you read-only access to the editor, and you can choose to use
+   it, or not.&nbsp;  If you do, you'll see pages like the example below, for the Mount Pleasant case.&nbsp;
    The first image is the "Candidate Editor" page, that shows the seats open for this election.&nbsp;
    (The little pull-down menu is a list of candidates known to have filed to run, which has some
    duplications.)
+   <p/>
    <img src="IMG/primary-1.png"/>
 
    <p/>
@@ -93,7 +121,7 @@ We want volunteers to pick a few (or more) rows from this sheet, and resolve eac
    <p/>
    <ol>
       <li>Search for the jurisdiction (city, township, whatever), and find out who the current members really are.</li>
-      <li>Compare that to what appears in our "Officials" editor, and note what should be fixed.&nbsp;
+      <li>(Optional) Compare that to what appears in our "Officials" editor, and note what should be fixed.&nbsp;
          Most column headers in that editor have "hover-overs" that explain what they mean.&nbsp;
          The "Next" column, in particular is important -- normally this is the next year that office should be up for election.
       </li>
@@ -101,6 +129,10 @@ We want volunteers to pick a few (or more) rows from this sheet, and resolve eac
       Try to find out who they are replacing.&nbsp;
          (Sometimes, they may be 'replacing' themselves -- e.g. they may have been appointed, temporarily, to fill a seat --
          and now are running to officially fill that seat for the rest of the normal term.)
+      </li>
+      <li>Try to find 'reputable' sources, e.g. the website for the relevant jurisdiction is best.&nbsp;
+         Sometimes on-line newspapers can be helpful (especially for information about resignations).&nbsp;
+         In questionable cases, send along links to the resources you used.
       </li>
       <li>Email <a href="mailto:wchasroth@gmail.com" target="_blank">Charles</a> everything that you found, and how you
           think our data should be fixed.

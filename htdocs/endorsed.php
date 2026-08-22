@@ -37,7 +37,7 @@ $voterLog->write($sessionId, 'B', $codes, $_COOKIE['miAddress'] ?? '');
 
 $sql = [];
 $sql[] = select('district') . from() . whereOrgIn('us', 'us-sen') . " OR (s.org='us-hou' AND s.district='{$codes['congress']}') " . endorsed();
-$sql[] = select('district') . from() . whereOrgIn('mi', 'mi-ag', 'mi-boe', 'mi-sos')
+$sql[] = select('district') . from() . whereOrgIn('mi', 'mi-ag', 'mi-boe', 'mi-sos', 'mi-prop')
        . "  OR (s.org='mi-sen' AND s.district='{$codes['senate']}') "
        . "  OR (s.org='mi-hou' AND s.district='{$codes['house']}') "  . endorsed();
 $sql[] = select('subdist')  . from() . whereOrgIn('cnty')     . "AND district={$codes['county_code']} "  . endorsed();

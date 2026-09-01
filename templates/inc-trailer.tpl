@@ -45,54 +45,30 @@
          <b>
             <div style="color: white;   font-size: 120%; margin-top: 0px; padding-left: 0.2em;" ignore='feedback'>
                <a href="feedback.php" class="whiteLink"
-               ><span style="font-size: 12px;">Anything missing or incorrect?&nbsp; Other comments?&nbsp;</span>
+               ><span style="font-size: 12px;">Anything missing or incorrect?&nbsp; Comments?&nbsp;</span>
                   <span style="font-size: 12px;">Send&nbsp;</span><u><span style="font-size: 12px;">Feedback</span></u></a>
             </div>
          </b>
 
 
          <div style="color: white;   font-size: 70%; padding-left: 10px;  padding-right: 10px; max-width: 500px; margin-top: 10px; background-color: #003052;">
-
-         <center>
-            <img src="IMG/mdpLogo2.jpg" width="150" style="margin-top: 1em;"/>
-         </center>
-            <p/>
-            MIvoter.org is an all-volunteer project.&nbsp;
-            Expenses paid for by the
-            Washtenaw County Democratic Committee
-            (<a href="https://washtenawdems.org" class="whiteLink"
-                   onClick="return externalLink(this);" target="_blank"
-              >washtenawdems.org</a>).&nbsp;
-            Not coordinated with any candidate or candidate's committee.
-            <br/>
-
-            <p>&nbsp;</p>
            <table>
               <tr valign='top'>
-              <td><img src="IMG/mdpLogo2.jpg" width="100"/></td>
+              <td><a href="https://michigandems.com" target="_blank"><img src="IMG/mdpLogo2.jpg" width="100"/></a></td>
               <td>&nbsp;&nbsp;</td>
               <td>
-                MIvoter.org is an all-volunteer project.&nbsp;
+                MIvoter.org is an all-volun&shy;teer project.&nbsp;
                 Expenses paid for by the
-                Washtenaw County Democratic Committee
+                Washtenaw County Democratic Party
                 (<a href="https://washtenawdems.org" class="whiteLink"
                        onClick="return externalLink(this);" target="_blank"
                   >washtenawdems.org</a>).&nbsp;
-                Not coordinated with any candidate or candidate's committee.
+                Not coordinated with any can&shy;didate or candidate's committee.
               </td>
-              <td><img src="IMG/wcdp-merged.png" width="100"/></td>
+              <td><a href="https://www.washtenawdems.org" target="_blank"><img src="IMG/wcdp-merged2.png" width="100"/></a></td>
               </tr>
             </table>
-            <br/>
 
-            <p>&nbsp;</p>
-
-            <p>&nbsp;</p>
-            <div style="background-color: white; padding: 10px;"/>
-               <img src="IMG/mdpLogo4.png" width="350"/>
-            </div>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
             <p>&nbsp;</p>
             <p>&nbsp;</p>
          </div>

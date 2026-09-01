@@ -68,7 +68,7 @@ $rows = $result->getRows();
 removeDuplicateTitles($rows);
 $rowCount = $result->getRowCount();
 for ($i=0;   $i<$rowCount;  $i++) {
-   $name = $rows[$i]['name'];
+   $name = $rows[$i]['name'] ?? '';
    if ($name === strtoupper($name))   $rows[$i]['name'] = ucwords(strtolower($name));
 
    $dist = $rows[$i]['dist'];

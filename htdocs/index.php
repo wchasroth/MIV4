@@ -27,15 +27,13 @@ $zipcode   = $codes['zipcode'] ?? '';
 $voterLog = new VoterLog($pdo, $logger, $env->get('addressHashSalt'));
 $voterLog->write($sessionId, 'H', $codes, $address);
 
+if ($address !== "") {
+   header("Location: endorsed.php");
+   exit();
+}
+
 $smarty = new SmartyPage();
 $smarty->assign ('address',    $address);
 $smarty->assign ('zipcode',    $zipcode);
-
-if ($address === "") {
-   $smarty->assign('hasAddress', false);
-   $smarty->display('indexNoAddress.tpl');
-}
-else {
-   $smarty->assign('hasAddress', true);
-   $smarty->display('indexWithAddress.tpl');
-}
+$smarty->assign('hasAddress', false);
+$smarty->display('indexNoAddress.tpl');

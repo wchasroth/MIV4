@@ -58,7 +58,7 @@
               <td>&nbsp;&nbsp;</td>
               <td>
                 MIvoter.org is an all-volun&shy;teer project.&nbsp;
-                Expenses paid for by the
+                Exp&shy;enses paid for by the
                 Washtenaw County Democratic Party
                 (<a href="https://washtenawdems.org" class="whiteLink"
                        onClick="return externalLink(this);" target="_blank"

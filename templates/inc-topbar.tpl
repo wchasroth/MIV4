@@ -27,7 +27,7 @@
                <tr><td><a href="#" onClick="share();" >Share</a></td></tr>
                <tr><td><a href="feedback.php"         >Feedback</a></td></tr>
                <tr><td><a href="faq.php"              >About MIvoter</a></td></tr>
-               <tr><td><a href="videos.php"           >Videos</a></td></tr>
+               <tr><td><a href="videos.php"           >Worth Watching</a></td></tr>
             </table>
          </div>
 

@@ -8,6 +8,7 @@
    <script               src="share.js"></script>
    <script               src="parseHouseStreet.js"></script>
    <script type="module" src="address-search03.js"></script>
+   <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
    <style>
        tr:nth-child(odd of .zebra) { background-color: #f2f2f2;}
@@ -21,7 +22,7 @@
 
 <body onLoad="initialize();">
 
-<div class="darkBlueText pageText unindentList" style="max-width: 30em;">
+<div class="darkBlueText pageText unindentList translate" style="max-width: 30em;">
 
 <table width="100%" style="font-size: 120%;">
     <tr valign="top">
@@ -37,6 +38,7 @@
                </svg>
             </a><br>{$title}<br/><br/>
             <button class="roundButton" onClick="window.history.back();">Back</button>
+            <div id="google_translate_element" style="display: none;"></div>
         </td>
         <td align="right"><img src="{$photoBase}/{$headshot}" width="150"/></td>
     </tr>
@@ -49,11 +51,25 @@
 
 
 
+<div class="notranslate">
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
 {include file="inc-bottombuttons.tpl" hasAddress=true}
+</div>
+
+{literal}
+<script type="text/javascript">
+   function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+         pageLanguage: 'en', includedLanguages: 'es', 
+         layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+         autoDisplay: false
+      }, 'google_translate_element');
+   }
+</script>
+{/literal}
 
 </body>
 </html>

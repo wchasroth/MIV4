@@ -19,7 +19,10 @@ $address = trim($_COOKIE['miAddress'] ?? "");
 //   exit();
 //}
 
+$editor    = ! empty(trim($_COOKIE['editor'] ?? ""));
+
 $smarty = new SmartyPage();
 $smarty->assign('address', $address);
 $smarty->assign('hasAddress', true);
+$smarty->assign('editor', $editor);
 $smarty->display('share.tpl');

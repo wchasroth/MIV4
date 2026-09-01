@@ -18,8 +18,10 @@ if ($address === "") {
    header("Location: index.php");
    exit();
 }
+$editor    = ! empty(trim($_COOKIE['editor'] ?? ""));
 
 $smarty = new SmartyPage();
 $smarty->assign('address', $address);
 $smarty->assign('hasAddress', true);
+$smarty->assign('editor', $editor);
 $smarty->display('follow.tpl');

@@ -29,6 +29,7 @@ if ($id === "") {
 }
 
 $miCodes = trim($_COOKIE['miCodes'] ?? "");
+$editor  = ! empty(trim($_COOKIE['editor'] ?? ""));
 $codes = json_decode($miCodes, true);
 
 $sql = "SELECT s.id, s.org, s.office, s.district, s.subdist, s.termcycle, "
@@ -73,4 +74,5 @@ $smarty->assign('email',   $row['email']);
 $smarty->assign('web',     $web);
 $smarty->assign('url',     $url);
 $smarty->assign('headshot', $headshot);
+$smarty->assign('editor', $editor);
 $smarty->display('singleOfficial.tpl');

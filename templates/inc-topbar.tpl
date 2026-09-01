@@ -22,12 +22,12 @@
 
          <div id='hamburgerMenu' style="position: absolute; display: none; z-index: 10; left: -4.5em; top: 2.5em;">
             <table class="hamburgerTable" cellpadding='0' cellspacing='0'>
-               <tr><td><a href="index.php"            >Home</a></td></tr>
-               <tr><td><a href="vote_faq.php"         >Voting FAQ</a></td></tr>
-               <tr><td><a href="#" onClick="share();" >Share</a></td></tr>
-               <tr><td><a href="feedback.php"         >Feedback</a></td></tr>
-               <tr><td><a href="faq.php"              >About MIvoter</a></td></tr>
-               <tr><td><a href="videos.php"           >Worth Watching</a></td></tr>
+               <tr><td><a href="index.php"            {if $editor} title='ham-home'  {/if} >Home</a></td></tr>
+               <tr><td><a href="vote_faq.php"         {if $editor} title='ham-vote'  {/if} >Voting FAQ</a></td></tr>
+               <tr><td><a href="#" onClick="share();" {if $editor} title='ham-share' {/if} >Share</a></td></tr>
+               <tr><td><a href="feedback.php"         {if $editor} title='ham-feed'  {/if} >Feedback</a></td></tr>
+               <tr><td><a href="faq.php"              {if $editor} title='ham-abt'   {/if} >About MIvoter</a></td></tr>
+               <tr><td><a href="videos.php"           {if $editor} title='ham-vid'   {/if} >Worth Watching</a></td></tr>
             </table>
          </div>
 
@@ -36,7 +36,8 @@
 
    </div>
 
-   <div class="waveHeaderText" style="margin-left: 7px; margin-right: 7px; line-height: 130%; color: white;" >
+   <div class="waveHeaderText" style="margin-left: 7px; margin-right: 7px; line-height: 130%; color: white;" 
+      {if $editor} title='top-yourguide' {/if} >
       &nbsp;<i>Your</i> Michigan Voter Guide
    </div>
 

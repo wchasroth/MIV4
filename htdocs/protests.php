@@ -25,6 +25,7 @@ $logger = new DumbFileLogger($env->get('logFile'));
 $miCodes = trim($_COOKIE['miCodes'] ?? "");
 $codes = json_decode($miCodes, true);
 $sessionId = trim($_COOKIE['sessionid'] ?? "");
+$editor    = ! empty(trim($_COOKIE['editor'] ?? ""));
 
 date_default_timezone_set('America/New_York');
 $voterLog = new VoterLog($pdo, $logger, $env->get('addressHashSalt'));
@@ -73,4 +74,5 @@ $smarty->assign('address', $address);
 $smarty->assign('hasAddress', true);
 $smarty->assign('county', $county);
 $smarty->assign('protests', $protests);
+$smarty->assign('editor', $editor);
 $smarty->display('protests.tpl');

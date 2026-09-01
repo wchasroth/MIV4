@@ -21,6 +21,7 @@ $pdo    = PdoHelper::makePdo($env);
 
 $miCodes   = trim($_COOKIE['miCodes'] ?? "{}");
 $sessionId = trim($_COOKIE['sessionid'] ?? "");
+$editor    = ! empty(trim($_COOKIE['editor'] ?? ""));
 $codes     = json_decode($miCodes, true);
 
 date_default_timezone_set('America/New_York');
@@ -30,4 +31,5 @@ $voterLog->write($sessionId, 'I', $codes, $_COOKIE['miAddress'] ?? '');
 $smarty = new SmartyPage();
 $smarty->assign('address', $address);
 $smarty->assign('hasAddress', ! empty($address));
+$smarty->assign('editor', $editor);
 $smarty->display('info.tpl');

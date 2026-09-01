@@ -21,6 +21,7 @@ $logger  = new DumbFileLogger($env->get('logFile'));
 $pdo     = PdoHelper::makePdo($env);
 $miCodes = trim($_COOKIE['miCodes'] ?? "{}");
 $codes   = json_decode($miCodes, true);
+$editor  = ! empty(trim($_COOKIE['editor'] ?? ""));
 $sessionId = trim($_COOKIE['sessionid'] ?? "");
 
 date_default_timezone_set('America/New_York');
@@ -33,4 +34,5 @@ $smarty = new SmartyPage();
 $smarty->assign('address', $address);
 $smarty->assign('hasAddress', ! empty($address));
 $smarty->assign('clerkJurisdiction', $clerkJurisdiction);
+$smarty->assign('editor', $editor);
 $smarty->display('info_register.tpl');

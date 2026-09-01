@@ -18,6 +18,7 @@ if ($address === "") {
 $env              = new EnvFile("_env");
 $logger           = new DumbFileLogger($env->get('logFile'));
 $pdo              = PdoHelper::makePdo($env);
+$editor    = ! empty(trim($_COOKIE['editor'] ?? ""));
 
 $name  = $_POST['name']     ?? "";
 $email = $_POST['email']    ?? "";
@@ -29,5 +30,6 @@ $pdo->runSF("INSERT INTO v4comments", "", $sqlFields);
 $smarty = new SmartyPage();
 $smarty->assign('address', $address);
 $smarty->assign('hasAddress', true);
+$smarty->assign('editor', $editor);
 $smarty->display('feedbacksubmit.tpl');
 

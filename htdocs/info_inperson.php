@@ -19,6 +19,7 @@ $address = trim($_COOKIE['miAddress'] ?? "");
 $env     = new EnvFile("_env");
 $pdo     = PdoHelper::makePdo($env);
 $miCodes = trim($_COOKIE['miCodes'] ?? "{}");
+$editor  = ! empty(trim($_COOKIE['editor'] ?? ""));
 $codes   = json_decode($miCodes, true);
 $sessionId = trim($_COOKIE['sessionid'] ?? "");
 $logger = new DumbFileLogger($env->get('logFile'));
@@ -32,5 +33,6 @@ $clerkJurisdiction = Clerk::getJurisdictionName($pdo, intval($codes['juris_code'
 $smarty = new SmartyPage();
 $smarty->assign('address', $address);
 $smarty->assign('hasAddress', ! empty($address));
+$smarty->assign('editor', $editor);
 $smarty->assign('clerkJurisdiction', $clerkJurisdiction);
 $smarty->display('info_inperson.tpl');

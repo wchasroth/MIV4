@@ -23,15 +23,14 @@
 {include file="inc-topbar.tpl"}
 
 <div class="darkBlueText pageText unindentList" style="padding-top: 0.5em;">
-   <!--
-   <b>Endorsed Candidates</b>
-   <p/>
-   -->
+   <span {if $editor} title="pg-endorsed-1-hdr" {/if} >
    <b>Endorsed candidates</b> will appear here as County Democratic Party officials complete their
    endorse&shy;ment process.&nbsp; Check back before you vote!
+   </span>
 
    <center>
-      <div style="padding-bottom: 0.5em; padding-top: 0.5em;"><b>Nov 3, 2026</b> Democratic Party Endorsements</b></div>
+      <div style="padding-bottom: 0.5em; padding-top: 0.5em;"
+         {if $editor} title="pg-endorsed-2-endorse" {/if} ><b>Nov 3, 2026</b> Democratic Party Endorsements</b></div>
       {$backclass=1}
          {foreach from=$rows item=row}
             <table width="90%" cellspacing="0" cellpadding="4" style="max-width: 30em;">

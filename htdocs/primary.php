@@ -16,6 +16,7 @@ $env     = new EnvFile("_env");
 $logger  = new DumbFileLogger($env->get('logFile'));
 $pdo     = PdoHelper::makePdo($env);
 $miCodes = trim($_COOKIE['miCodes'] ?? "{}");
+$editor  = ! empty(trim($_COOKIE['editor'] ?? ""));
 $codes   = json_decode($miCodes, true);
 $sessionId = trim($_COOKIE['sessionid'] ?? "");
 
@@ -26,4 +27,5 @@ $voterLog->write($sessionId, 'X', $codes, $_COOKIE['miAddress'] ?? '');
 $smarty = new SmartyPage();
 $smarty->assign('address', $address);
 $smarty->assign('hasAddress', ! empty($address));
+$smarty->assign('editor', $editor);
 $smarty->display('primary.tpl');

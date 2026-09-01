@@ -21,6 +21,7 @@ $pdo    = PdoHelper::makePdo($env);
 
 $miCodes   = trim($_COOKIE['miCodes'] ?? "");
 $sessionId = trim($_COOKIE['sessionid'] ?? "");
+$editor    = ! empty(trim($_COOKIE['editor'] ?? ""));
 $codes     = json_decode($miCodes, true) ?? [];
 $zipcode   = $codes['zipcode'] ?? '';
 
@@ -33,9 +34,11 @@ $smarty->assign ('zipcode',    $zipcode);
 
 if ($address === "") {
    $smarty->assign('hasAddress', false);
+   $smarty->assign('editor', $editor);
    $smarty->display('indexNoAddress.tpl');
 }
 else {
    $smarty->assign('hasAddress', true);
+   $smarty->assign('editor', $editor);
    $smarty->display('indexWithAddress.tpl');
 }

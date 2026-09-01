@@ -30,6 +30,7 @@ if ($id === "") {
 
 $photoBase = $env->get('photoBase');
 $miCodes = trim($_COOKIE['miCodes'] ?? "");
+$editor  = ! empty(trim($_COOKIE['editor'] ?? ""));
 $codes = json_decode($miCodes, true);
 
 $sql = "SELECT s.id, s.org, s.office, s.district, s.subdist, s.termcycle, "
@@ -66,4 +67,5 @@ $smarty->assign('web',       $web);
 $smarty->assign('photoBase', $photoBase);
 $smarty->assign('headshot',  $headshot);
 $smarty->assign('description',  $description);
+$smarty->assign('editor', $editor);
 $smarty->display('singleCandidate.tpl');

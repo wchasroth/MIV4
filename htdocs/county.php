@@ -23,6 +23,7 @@ $logger           = new DumbFileLogger($env->get('logFile'));
 $pdo              = PdoHelper::makePdo($env);
 
 $miCodes   = trim($_COOKIE['miCodes'] ?? "");
+$editor    = ! empty(trim($_COOKIE['editor'] ?? ""));
 $codes     = json_decode($miCodes, true);
 $myCounty  = $codes['county_code'];
 $sessionId = trim($_COOKIE['sessionid'] ?? "");
@@ -53,4 +54,5 @@ $smarty->assign('address', $address);
 $smarty->assign('county', $county);
 $smarty->assign('counties', $counties);
 $smarty->assign('hasAddress', true);
+$smarty->assign('editor', $editor);
 $smarty->display('county.tpl');

@@ -22,8 +22,9 @@ $logger           = new DumbFileLogger($env->get('logFile'));
 $pdo              = PdoHelper::makePdo($env);
 $logger = new DumbFileLogger($env->get('logFile'));
 
-$miCodes = trim($_COOKIE['miCodes'] ?? "");
+$miCodes   = trim($_COOKIE['miCodes'] ?? "");
 $sessionId = trim($_COOKIE['sessionid'] ?? "");
+$editor    = ! empty(trim($_COOKIE['editor'] ?? ""));
 $codes = json_decode($miCodes, true);
 $show = print_r($codes, true);
 $ward = getWard($codes['wardpct']);
@@ -113,6 +114,7 @@ $smarty->assign('blocks', $blocks);
 $smarty->assign('titles', $titles);
 $smarty->assign('hasVillage', intval($codes['village_code']) > 0);
 $smarty->assign('colleges', $colleges);
+$smarty->assign('editor', $editor);
 $smarty->display('officials.tpl');
 
 function getName (AlfredPDO $pdo, string $sql): string {

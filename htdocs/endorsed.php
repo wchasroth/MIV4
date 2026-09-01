@@ -26,8 +26,9 @@ $env    = new EnvFile("_env");
 $logger = new DumbFileLogger($env->get('logFile'));
 $pdo    = PdoHelper::makePdo($env);
 
-$miCodes   = trim($_COOKIE['miCodes'] ?? "");
-$sessionId = trim($_COOKIE['sessionid'] ?? "");
+$miCodes   = trim($_COOKIE['miCodes']        ?? "");
+$sessionId = trim($_COOKIE['sessionid']      ?? "");
+$editor    = ! empty(trim($_COOKIE['editor'] ?? ""));
 $codes     = json_decode($miCodes, true);
 $show      = print_r($codes, true);
 $ward      = getWard($codes['wardpct']);
@@ -82,6 +83,7 @@ $smarty->assign('address', $address);
 $smarty->assign('rows', $rows);
 $smarty->assign('show', $show);
 $smarty->assign('hasAddress', true);
+$smarty->assign('editor', $editor);
 $smarty->display('endorsed.tpl');
 
 

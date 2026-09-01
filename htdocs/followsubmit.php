@@ -18,6 +18,7 @@ if ($address === "") {
 $env              = new EnvFile("_env");
 $logger           = new DumbFileLogger($env->get('logFile'));
 $pdo              = PdoHelper::makePdo($env);
+$editor    = ! empty(trim($_COOKIE['editor'] ?? ""));
 
 $name  = $_POST['namefld']  ?? "";
 $email = $_POST['emailfld'] ?? "";
@@ -28,4 +29,5 @@ $pdo->runSF("INSERT INTO follow", "", $sqlFields);
 $smarty = new SmartyPage();
 $smarty->assign('address', $address);
 $smarty->assign('hasAddress', true);
+$smarty->assign('editor', $editor);
 $smarty->display('followsubmit.tpl');

@@ -24,10 +24,12 @@ if ($address === "") {
 $env              = new EnvFile("_env");
 $logger           = new DumbFileLogger($env->get('logFile'));
 $pdo              = PdoHelper::makePdo($env);
+$editor    = ! empty(trim($_COOKIE['editor'] ?? ""));
 
 
 $smarty = new SmartyPage();
 
 $smarty->assign('address', $address);
+$smarty->assign('editor', $editor);
 $smarty->assign('hasAddress', ($address !== ''));
 $smarty->display('feedback.tpl');

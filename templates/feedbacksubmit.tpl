@@ -13,7 +13,7 @@
 
 {include file="inc-topbar.tpl"}
 
-<div class="darkBlueText pageText unindentList" style="margin-top: 0.8ex;">
+<div class="darkBlueText pageText unindentList" style="margin-top: 0.8ex;" {if $editor} title='pg-feedsubmit' {/if}>
      <b>Thank you!</b><br/>
             <br/>
      If you supplied an email address, we will respond once we have examined
@@ -26,11 +26,6 @@
      questions you might have.
 </div>
 <br/>
-
-<center>
-<i><a href="index.php">(Return to home page)</a></i>
-</center>
-
 
 <p>&nbsp;</p>
 

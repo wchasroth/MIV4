@@ -15,7 +15,7 @@
 {include file="inc-topbar.tpl"}
 
 <div class="darkBlueText pageText unindentList" style="margin-top: 0.8ex;">
-<b>Voting FAQ</b><br/>
+<b {if $editor} title='pg-votefaq-hdr' {/if}>Voting FAQ</b><br/>
 <br/>
 
    {include file="inc-vq-whoeligible.tpl"}

@@ -15,46 +15,27 @@
 {include file="inc-topbar.tpl"}
 
 <div class="darkBlueText pageText unindentList" style="margin-top: 0.8ex;">
-<!--
-   <span class="red">Michigan law ensures that you have options for how to cast your ballot, 
-    and all of them are simple and safe.</span>
--->
    <center>
       <table border="0">
          <tr valign='top'>
             <td>&nbsp;</td>
             <td><a href="info_register.php"><img src="IMG/voteRegister2.png"></a></td>
             <td>&nbsp;</td>
-            <td class="howToVoteSpacer"><b><a href="info_register.php">Register to Vote</a></b>
-                <div class="howToVoteSubText">
+            <td class="howToVoteSpacer"><b><a href="info_register.php" {if $editor} title='pg-info-reg' {/if} >Register to Vote</a></b>
+                <div class="howToVoteSubText" {if $editor} title='pg-info-reg-text' {/if} >
                    Make sure you can vote!&nbsp;
                    Check your status, or learn how to register on-line or in-person.
                 </div>
             </td>
          </tr>
 
-<!--
-         <tr><td style="font-size: 0.1em;">&nbsp;</td></tr>
-         <tr valign='top'>
-            <td></td>
-            <td><a href="info_general.php"><img src="IMG/voteGeneralInfo2.png"></a></td>
-            <td></td>
-            <td class="howToVoteSpacer"><a href="info_general.php"><b>General Info</b></a>
-                <div class="howToVoteSubText">
-                   Frequently asked questions about registration,
-                   eligibility, absentee ballots, and more.
-                </div>
-            </td>
-         </tr>
--->
-
          <tr><td style="font-size: 0.1em;">&nbsp;</td></tr>
          <tr valign='top'>
             <td></td>
             <td><a href="info_home.php"><img src="IMG/voteAtHome2.png"></a></td>
             <td></td>
-            <td class="howToVoteSpacer"><a href="info_home.php"><b>Vote at Home</b></a>
-                <div class="howToVoteSubText red">
+            <td class="howToVoteSpacer"><a href="info_home.php" {if $editor} title='pg-info-votehome' {/if} ><b>Vote at Home</b></a>
+                <div class="howToVoteSubText red" {if $editor} title='pg-info-votehome-text' {/if}>
                    Anyone can vote absentee for a single election or for every election by signing up for 
                    the permanent mail ballot list.&nbsp;
                 </div>
@@ -66,8 +47,8 @@
             <td></td>
             <td><a href="info_inperson.php"><img src="IMG/voteInPerson2.png"></a></td>
             <td></td>
-            <td class="howToVoteSpacer"><a href="info_inperson.php"><b>Vote in Person</b></a>
-                <div class="howToVoteSubText">
+            <td class="howToVoteSpacer"><a href="info_inperson.php" {if $editor} title='pg-info-voteip' {/if} ><b>Vote in Person</b></a>
+                <div class="howToVoteSubText" {if $editor} title='pg-info-voteip-text' {/if} >
                    Where to vote, in-person, on Election Day,
                    or in the 9 days of "early&nbsp;voting".
                 </div>
@@ -76,7 +57,7 @@
       </table>
    </center>
 
-   <span class="red">Questions?&nbsp;
+   <span class="red" {if $editor} title='pg-info-questions' {/if} >Questions?&nbsp;
       Call the Michigan Democratic Party's Voter Assistance Hotline at
       <a href="tel:+18336486837">833-MI-VOTES</a> (833-648-6837).
    </span>

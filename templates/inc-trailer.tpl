@@ -50,7 +50,13 @@
             </div>
          </b>
 
+
          <div style="color: white;   font-size: 70%; padding-left: 10px;  padding-right: 10px; max-width: 500px; margin-top: 10px; background-color: #003052;">
+
+         <center>
+            <img src="IMG/mdpLogo2.jpg" width="150" style="margin-top: 1em;"/>
+         </center>
+            <p/>
             MIvoter.org is an all-volunteer project.&nbsp;
             Expenses paid for by the
             Washtenaw County Democratic Committee
@@ -59,8 +65,33 @@
               >washtenawdems.org</a>).&nbsp;
             Not coordinated with any candidate or candidate's committee.
             <br/>
+
             <p>&nbsp;</p>
-            <img src="IMG/mdpLogo2.jpg" />
+           <table>
+              <tr valign='top'>
+              <td><img src="IMG/mdpLogo2.jpg" width="100"/></td>
+              <td>&nbsp;&nbsp;</td>
+              <td>
+                MIvoter.org is an all-volunteer project.&nbsp;
+                Expenses paid for by the
+                Washtenaw County Democratic Committee
+                (<a href="https://washtenawdems.org" class="whiteLink"
+                       onClick="return externalLink(this);" target="_blank"
+                  >washtenawdems.org</a>).&nbsp;
+                Not coordinated with any candidate or candidate's committee.
+              </td>
+              <td><img src="IMG/wcdp-merged.png" width="100"/></td>
+              </tr>
+            </table>
+            <br/>
+
+            <p>&nbsp;</p>
+
+            <p>&nbsp;</p>
+            <div style="background-color: white; padding: 10px;"/>
+               <img src="IMG/mdpLogo4.png" width="350"/>
+            </div>
+            <p>&nbsp;</p>
             <p>&nbsp;</p>
             <p>&nbsp;</p>
             <p>&nbsp;</p>

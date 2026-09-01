@@ -60,6 +60,7 @@
             Not coordinated with any candidate or candidate's committee.
             <br/>
             <p>&nbsp;</p>
+            <img src="IMG/mdpLogo2.jpg" />
             <p>&nbsp;</p>
             <p>&nbsp;</p>
             <p>&nbsp;</p>

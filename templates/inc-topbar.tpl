@@ -14,7 +14,7 @@
 
 <div class="fullWidth" style="background-image: url('IMG/waveTopBackground5.png'); background-size: cover;">
    <div class="topBar">
-      <a class="navbar-brand" href="index.php">
+      <a class="navbar-brand" href="index2.php">
          <img src="IMG/waveLogo5.png" width="200" style="margin-top: 10px;"/>
       </a>
 

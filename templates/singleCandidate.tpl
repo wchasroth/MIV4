@@ -10,6 +10,13 @@
    <script type="module" src="address-search03.js"></script>
    {if $lang == 'es'}
       <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+      <script>
+         (function() {
+             const targetLangPair = '/en/es'; 
+             document.cookie = "googtrans=" + targetLangPair + "; path=/;";
+             document.cookie = "googtrans=" + targetLangPair + "; domain=" + window.location.hostname + "; path=/;";
+           })();
+      </script>
    {/if}
 
    <style>
@@ -71,6 +78,13 @@
             autoDisplay: true
          }, 'google_translate_element');
       }
+      var a = document.querySelector("#google_translate_element select");
+/*
+      if (a) {
+         a.selectedIndex=1;
+         a.dispatchEvent(new Event('change'));
+      }
+*/
    </script>
    {/literal}
 {/if}

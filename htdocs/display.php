@@ -34,7 +34,7 @@ $voterLog->write($sessionId, 'D', $codes, $address);
 //| modified | datetime       | YES  |     | CURRENT_TIMESTAMP | DEFAULT_GENERATED on update CURRENT_TIMESTAMP |
 //| text     | varchar(10000) | YES  |     | NULL         
 
-$sql = "SELECT text FROM uitext WHERE id='$key'";
+$sql = "SELECT text FROM v4uitext WHERE id='$key'";
 $result = $pdo->run($sql);
 $text = $result->getSingleValue('text');
 

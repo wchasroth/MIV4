@@ -20,6 +20,7 @@ $logger = new DumbFileLogger($env->get('logFile'));
 $pdo    = PdoHelper::makePdo($env);
 
 $miCodes   = trim($_COOKIE['miCodes'] ?? "");
+$lang      = trim($_COOKIE['lang']           ?? "");
 $sessionId = trim($_COOKIE['sessionid'] ?? "");
 $codes     = json_decode($miCodes, true) ?? [];
 $zipcode   = $codes['zipcode'] ?? '';
@@ -30,6 +31,7 @@ $voterLog->write($sessionId, 'H', $codes, $address);
 $smarty = new SmartyPage();
 $smarty->assign ('address',    $address);
 $smarty->assign ('zipcode',    $zipcode);
+$smarty->assign('lang',   $lang);
 
 if ($address === "") {
    $smarty->assign('hasAddress', false);

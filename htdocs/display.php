@@ -21,6 +21,7 @@ $logger           = new DumbFileLogger($env->get('logFile'));
 $pdo              = PdoHelper::makePdo($env);
 
 $miCodes   = trim($_COOKIE['miCodes'] ?? "");
+$lang      = trim($_COOKIE['lang']           ?? "");
 $editor    = ! empty(trim($_COOKIE['editor'] ?? ""));
 $codes     = json_decode($miCodes, true) ?? [];
 $sessionId = trim($_COOKIE['sessionid'] ?? "");
@@ -52,4 +53,5 @@ $smarty->assign('text', $text);
 $smarty->assign('address', $address);
 $smarty->assign('hasAddress', true);
 $smarty->assign('editor', $editor);
+$smarty->assign('lang',   $lang);
 $smarty->display('display.tpl');

@@ -15,6 +15,7 @@ $pdo       = PdoHelper::makePdo($env);
 
 $miCodes   = trim($_COOKIE['miCodes']    ?? "");
 $sessionId = trim($_COOKIE['sessionid']  ?? "");
+$lang      = trim($_COOKIE['lang']           ?? "");
 $editor    = ! empty(trim($_COOKIE['editor'] ?? ""));
 $codes     = json_decode($miCodes, true) ?? [];
 
@@ -28,4 +29,5 @@ $smarty = new SmartyPage();
 $smarty->assign('hasAddress', $address !== "");
 $smarty->assign('address', $address);
 $smarty->assign('editor', $editor);
+$smarty->assign('lang',   $lang);
 $smarty->display('videos.tpl');

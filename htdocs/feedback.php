@@ -25,11 +25,13 @@ $env              = new EnvFile("_env");
 $logger           = new DumbFileLogger($env->get('logFile'));
 $pdo              = PdoHelper::makePdo($env);
 $editor    = ! empty(trim($_COOKIE['editor'] ?? ""));
+$lang      = trim($_COOKIE['lang']           ?? "");
 
 
 $smarty = new SmartyPage();
 
 $smarty->assign('address', $address);
 $smarty->assign('editor', $editor);
+$smarty->assign('lang',   $lang);
 $smarty->assign('hasAddress', ($address !== ''));
 $smarty->display('feedback.tpl');

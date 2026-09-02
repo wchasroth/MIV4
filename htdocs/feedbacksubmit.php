@@ -19,6 +19,7 @@ $env              = new EnvFile("_env");
 $logger           = new DumbFileLogger($env->get('logFile'));
 $pdo              = PdoHelper::makePdo($env);
 $editor    = ! empty(trim($_COOKIE['editor'] ?? ""));
+$lang      = trim($_COOKIE['lang']           ?? "");
 
 $name  = $_POST['name']     ?? "";
 $email = $_POST['email']    ?? "";
@@ -31,5 +32,6 @@ $smarty = new SmartyPage();
 $smarty->assign('address', $address);
 $smarty->assign('hasAddress', true);
 $smarty->assign('editor', $editor);
+$smarty->assign('lang',   $lang);
 $smarty->display('feedbacksubmit.tpl');
 

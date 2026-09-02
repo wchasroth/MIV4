@@ -24,6 +24,7 @@ $pdo              = PdoHelper::makePdo($env);
 
 $miCodes   = trim($_COOKIE['miCodes'] ?? "");
 $editor    = ! empty(trim($_COOKIE['editor'] ?? ""));
+$lang      = trim($_COOKIE['lang']           ?? "");
 $codes     = json_decode($miCodes, true);
 $myCounty  = $codes['county_code'];
 $sessionId = trim($_COOKIE['sessionid'] ?? "");
@@ -55,4 +56,5 @@ $smarty->assign('county', $county);
 $smarty->assign('counties', $counties);
 $smarty->assign('hasAddress', true);
 $smarty->assign('editor', $editor);
+$smarty->assign('lang',   $lang);
 $smarty->display('county.tpl');

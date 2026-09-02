@@ -28,6 +28,7 @@ $pdo    = PdoHelper::makePdo($env);
 
 $miCodes   = trim($_COOKIE['miCodes']        ?? "");
 $sessionId = trim($_COOKIE['sessionid']      ?? "");
+$lang      = trim($_COOKIE['lang']           ?? "");
 $editor    = ! empty(trim($_COOKIE['editor'] ?? ""));
 $codes     = json_decode($miCodes, true);
 $show      = print_r($codes, true);
@@ -84,6 +85,7 @@ $smarty->assign('rows', $rows);
 $smarty->assign('show', $show);
 $smarty->assign('hasAddress', true);
 $smarty->assign('editor', $editor);
+$smarty->assign('lang',   $lang);
 $smarty->display('endorsed.tpl');
 
 

@@ -29,6 +29,7 @@ if ($id === "") {
 }
 
 $miCodes = trim($_COOKIE['miCodes'] ?? "");
+$lang    = trim($_COOKIE['lang']           ?? "");
 $editor  = ! empty(trim($_COOKIE['editor'] ?? ""));
 $codes = json_decode($miCodes, true);
 
@@ -75,4 +76,5 @@ $smarty->assign('web',     $web);
 $smarty->assign('url',     $url);
 $smarty->assign('headshot', $headshot);
 $smarty->assign('editor', $editor);
+$smarty->assign('lang',   $lang);
 $smarty->display('singleOfficial.tpl');

@@ -19,9 +19,11 @@ if ($address === "") {
    exit();
 }
 $editor    = ! empty(trim($_COOKIE['editor'] ?? ""));
+$lang      = trim($_COOKIE['lang']           ?? "");
 
 $smarty = new SmartyPage();
 $smarty->assign('address', $address);
 $smarty->assign('hasAddress', true);
 $smarty->assign('editor', $editor);
+$smarty->assign('lang',   $lang);
 $smarty->display('follow.tpl');

@@ -23,6 +23,7 @@ $pdo              = PdoHelper::makePdo($env);
 $logger = new DumbFileLogger($env->get('logFile'));
 
 $miCodes   = trim($_COOKIE['miCodes'] ?? "");
+$lang      = trim($_COOKIE['lang']           ?? "");
 $sessionId = trim($_COOKIE['sessionid'] ?? "");
 $editor    = ! empty(trim($_COOKIE['editor'] ?? ""));
 $codes = json_decode($miCodes, true);
@@ -115,6 +116,7 @@ $smarty->assign('titles', $titles);
 $smarty->assign('hasVillage', intval($codes['village_code']) > 0);
 $smarty->assign('colleges', $colleges);
 $smarty->assign('editor', $editor);
+$smarty->assign('lang',   $lang);
 $smarty->display('officials.tpl');
 
 function getName (AlfredPDO $pdo, string $sql): string {

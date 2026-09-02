@@ -24,7 +24,7 @@
 
 <div class="darkBlueText pageText unindentList" style="padding-top: 0.5em;">
    <span {if $editor} title="pg-endorsed-1-hdr" {/if} >
-   <b>Endorsed candidates</b> will appear here as County Democratic Party officials complete their
+   <b>Additional endorsed candidates</b> will appear here as County Democratic Party officials complete their
    endorse&shy;ment process.&nbsp; Check back before you vote!
    </span>
 

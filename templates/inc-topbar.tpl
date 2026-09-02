@@ -14,7 +14,7 @@
 
 <div class="fullWidth" style="background-image: url('IMG/waveTopBackground5.png'); background-size: cover;">
    <div class="topBar">
-      <a class="navbar-brand" href="index.php">
+      <a class="navbar-brand" href="index2.php">
          <img src="IMG/waveLogo5.png" width="200" style="margin-top: 10px;"/>
       </a>
 
@@ -22,7 +22,7 @@
 
          <div id='hamburgerMenu' style="position: absolute; display: none; z-index: 10; left: -4.5em; top: 2.5em;">
             <table class="hamburgerTable" cellpadding='0' cellspacing='0'>
-               <tr><td><a href="index.php"            {if $editor} title='ham-home'  {/if} >Home</a></td></tr>
+               <tr><td><a href="index2.php"           {if $editor} title='ham-home'  {/if} >Home</a></td></tr>
                <tr><td><a href="vote_faq.php"         {if $editor} title='ham-vote'  {/if} >Voting FAQ</a></td></tr>
                <tr><td><a href="#" onClick="share();" {if $editor} title='ham-share' {/if} >Share</a></td></tr>
                <tr><td><a href="feedback.php"         {if $editor} title='ham-feed'  {/if} >Feedback</a></td></tr>

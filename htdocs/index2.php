@@ -21,20 +21,21 @@ $pdo    = PdoHelper::makePdo($env);
 
 $miCodes   = trim($_COOKIE['miCodes'] ?? "");
 $sessionId = trim($_COOKIE['sessionid'] ?? "");
-$editor    = ! empty(trim($_COOKIE['editor'] ?? ""));
 $codes     = json_decode($miCodes, true) ?? [];
 $zipcode   = $codes['zipcode'] ?? '';
 
 $voterLog = new VoterLog($pdo, $logger, $env->get('addressHashSalt'));
 $voterLog->write($sessionId, 'H', $codes, $address);
 
-if ($address !== "") {
-   header("Location: endorsed.php");
-   exit();
-}
-
 $smarty = new SmartyPage();
 $smarty->assign ('address',    $address);
 $smarty->assign ('zipcode',    $zipcode);
-$smarty->assign('hasAddress', false);
-$smarty->display('indexNoAddress.tpl');
+
+if ($address === "") {
+   $smarty->assign('hasAddress', false);
+   $smarty->display('indexNoAddress.tpl');
+}
+else {
+   $smarty->assign('hasAddress', true);
+   $smarty->display('indexWithAddress.tpl');
+}

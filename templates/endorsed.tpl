@@ -24,14 +24,7 @@
 
 <div class="darkBlueText pageText unindentList" style="padding-top: 0.5em;">
    <span {if $editor} title="pg-endorsed-1-hdr" {/if} >
-   {if $lang == 'es'}
-      Aquí aparecerán <b>otros candidatos respaldados</b> a medida que los funcionarios del Partido Demócrata del 
-      condado completen su proceso de respaldo. ¡Vuelva a consultar antes de votar!
-   {else}
-      <b>Additional endorsed candidates</b> will appear here as County Democratic Party officials complete their
-      endorse&shy;ment process.&nbsp; Check back before you vote!
-   {/if}
-
+      {$ui->get('pg-endorsed-1-hdr')}
    </span>
 
    <center>

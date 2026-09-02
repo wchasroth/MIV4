@@ -8,7 +8,9 @@
    <script               src="share.js"></script>
    <script               src="parseHouseStreet.js"></script>
    <script type="module" src="address-search03.js"></script>
-   <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+   {if $lang == 'es'}
+      <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+   {/if}
 
    <style>
        tr:nth-child(odd of .zebra) { background-color: #f2f2f2;}
@@ -59,17 +61,19 @@
 {include file="inc-bottombuttons.tpl" hasAddress=true}
 </div>
 
-{literal}
-<script type="text/javascript">
-   function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-         pageLanguage: 'en', includedLanguages: 'es', 
-         layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-         autoDisplay: false
-      }, 'google_translate_element');
-   }
-</script>
-{/literal}
+{if $lang == 'es'}
+   {literal}
+   <script type="text/javascript">
+      function googleTranslateElementInit() {
+         new google.translate.TranslateElement({
+            pageLanguage: 'en', includedLanguages: 'es', 
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+            autoDisplay: true
+         }, 'google_translate_element');
+      }
+   </script>
+   {/literal}
+{/if}
 
 </body>
 </html>

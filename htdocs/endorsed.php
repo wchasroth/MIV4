@@ -8,6 +8,7 @@ use CharlesRothDotNet\Alfred\AlfredPDO;
 use CharlesRothDotNet\Alfred\Str;
 use CharlesRothDotNet\EditorV4\EnvHelper;
 use CharlesRothDotNet\MIV4\VoterLog;
+use CharlesRothDotNet\MIV4\Uitext;
 use Smarty\Smarty;
 use CharlesRothDotNet\Alfred\SmartyPage;
 use CharlesRothDotNet\MIV4\Plugins;
@@ -26,9 +27,11 @@ $env    = new EnvFile("_env");
 $logger = new DumbFileLogger($env->get('logFile'));
 $pdo    = PdoHelper::makePdo($env);
 
+$lang      = trim($_COOKIE['lang']           ?? "");
+$ui        = new Uitext($pdo, $logger, $lang, 'pg-endorsed%', 'noSuch');
+
 $miCodes   = trim($_COOKIE['miCodes']        ?? "");
 $sessionId = trim($_COOKIE['sessionid']      ?? "");
-$lang      = trim($_COOKIE['lang']           ?? "");
 $editor    = ! empty(trim($_COOKIE['editor'] ?? ""));
 $codes     = json_decode($miCodes, true);
 $show      = print_r($codes, true);
@@ -86,6 +89,7 @@ $smarty->assign('show', $show);
 $smarty->assign('hasAddress', true);
 $smarty->assign('editor', $editor);
 $smarty->assign('lang',   $lang);
+$smarty->assign('ui',     $ui);
 $smarty->display('endorsed.tpl');
 
 

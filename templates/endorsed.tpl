@@ -27,7 +27,7 @@
    <b>Endorsed Candidates</b>
    <p/>
    -->
-   <b>Endorsed candidates</b> will appear here as County Democratic Party officials complete their
+   <b>Additional endorsed candidates</b> will appear here as County Democratic Party officials complete their
    endorse&shy;ment process.&nbsp; Check back before you vote!
 
    <center>

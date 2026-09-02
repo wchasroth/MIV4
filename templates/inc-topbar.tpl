@@ -22,7 +22,7 @@
 
          <div id='hamburgerMenu' style="position: absolute; display: none; z-index: 10; left: -4.5em; top: 2.5em;">
             <table class="hamburgerTable" cellpadding='0' cellspacing='0'>
-               <tr><td><a href="index.php"            >Home</a></td></tr>
+               <tr><td><a href="index2.php"           >Home</a></td></tr>
                <tr><td><a href="vote_faq.php"         >Voting FAQ</a></td></tr>
                <tr><td><a href="#" onClick="share();" >Share</a></td></tr>
                <tr><td><a href="feedback.php"         >Feedback</a></td></tr>

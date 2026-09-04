@@ -20,8 +20,15 @@
 <p/>
    <b>Ways you can defend democracy</b>
    <ul>
+      <li><a href="https://www.mobilize.us/teammichigan/?event_type=1" target="_blank"
+            >Get Out The Vote:</a> Knock on doors and call voters with One Team Michigan, a coordinated project of the 
+        Michigan Democratic Party, Abdul El-Sayed, Jocelyn Benson, Garlin Gilchrist, Eli Savit, and Democrats 
+          up and down the ballot.
+      </li>
+
       <li><a href="county.php">County Parties</a>: Find your county's Democratic parties &amp; clubs,
            get their newsletters, and learn about events and opportunities to volunteer.
+
       <li><a href="https://midems.controlshift.app/local?filter%5Blocation%5D={$zipcode}&page=1"
                    onClick="return externalLink(this);" target="_blank"
           >Other Democratic events</a> in your area.</li>

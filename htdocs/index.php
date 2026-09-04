@@ -6,6 +6,7 @@ use CharlesRothDotNet\Alfred\SmartyPage;
 use CharlesRothDotNet\Alfred\EnvFile;
 use CharlesRothDotNet\Alfred\DumbFileLogger;
 use CharlesRothDotNet\Alfred\PdoHelper;
+use CharlesRothDotNet\MIV4\Uitext;
 
 use CharlesRothDotNet\MIV4\VoterLog;
 
@@ -21,6 +22,7 @@ $pdo    = PdoHelper::makePdo($env);
 
 $miCodes   = trim($_COOKIE['miCodes'] ?? "");
 $lang      = trim($_COOKIE['lang']           ?? "");
+$ui        = new Uitext($pdo, $logger, $lang, 'pg-index%', 'btm%', 'ham%', 'top%');
 $sessionId = trim($_COOKIE['sessionid'] ?? "");
 $editor    = ! empty(trim($_COOKIE['editor'] ?? ""));
 $codes     = json_decode($miCodes, true) ?? [];
@@ -39,4 +41,6 @@ $smarty->assign ('address',    $address);
 $smarty->assign ('zipcode',    $zipcode);
 $smarty->assign('hasAddress', false);
 $smarty->assign('lang',   $lang);
+$smarty->assign('editor',   $editor);
+$smarty->assign('ui',   $ui);
 $smarty->display('indexNoAddress.tpl');

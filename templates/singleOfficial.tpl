@@ -39,19 +39,17 @@
 </table>
 
 <table cellspacing="0" cellpadding="0">
-    <tr class="zebra" valign="top"><td {if $editor} title='pg-1official-addr' {/if} >Address</td> <td>{$address}</td></tr>
-    <tr class="zebra" valign="top"><td {if $editor} title='pg-1official-phone' {/if} >Phone</td>   
+    <tr class="zebra" valign="top"><td {if $editor} title='pg-1official-addr' {/if} >{$ui->get('pg-1official-addr')}</td> <td>{$address}</td></tr>
+    <tr class="zebra" valign="top"><td {if $editor} title='pg-1official-phone' {/if} >{$ui->get('pg-1official-phone')}</td>   
             <td class="urlColumn"><a href="tel:{$phone}">{$phone}</a></td></tr>
-    <tr class="zebra" valign="top"><td {if $editor} title='pg-1official-email' {/if} >Email</td>   <td class="urlColumn"><a href="mailto:{$email}"
+    <tr class="zebra" valign="top"><td {if $editor} title='pg-1official-email' {/if} >{$ui->get('pg-1official-email')}</td>   <td class="urlColumn"><a href="mailto:{$email}"
                    onClick="return externalLink(this);" target="_blank"
             >{$email}</a></td></tr>
-    <tr class="zebra" valign="top"><td {if $editor} title='pg-1official-web' {/if} >Web</td>   <td class="urlColumn"><a href="{$url}"
+    <tr class="zebra" valign="top"><td {if $editor} title='pg-1official-web' {/if} >{$ui->get('pg-1official-web')}</td>   <td class="urlColumn"><a href="{$url}"
                    onClick="return externalLink(this);" target="_blank"
            >{$web}</a></td></tr>
     <tr class="zebra" valign="top"><td colspan="2" style="font-size: 90%;" {if $editor} title='pg-1official-disclaim' {/if} >
-        Please use the contact information above for matters related to official businesss.&nbsp;
-        Note that elected officers are prohibited from communicating about their campaign
-        or candidacy through tax-payer-funded official emails or office calls.
+        {$ui->get('pg-1official-disclaim')}
     </td></tr>
 
 </table>

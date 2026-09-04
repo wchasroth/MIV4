@@ -7,6 +7,7 @@ use CharlesRothDotNet\Alfred\PdoHelper;
 use CharlesRothDotNet\Alfred\SmartyPage;
 use CharlesRothDotNet\MIV4\Clerk;
 use CharlesRothDotNet\MIV4\VoterLog;
+use CharlesRothDotNet\MIV4\Uitext;
 
 require_once("../vendor/autoload.php");
 

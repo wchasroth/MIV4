@@ -9,6 +9,7 @@ use CharlesRothDotNet\Alfred\Str;
 use CharlesRothDotNet\EditorV4\EnvHelper;
 use Smarty\Smarty;
 use CharlesRothDotNet\Alfred\SmartyPage;
+use CharlesRothDotNet\MIV4\Uitext;
 
 require_once("../vendor/autoload.php");
 

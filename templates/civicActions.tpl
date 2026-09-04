@@ -15,33 +15,15 @@
 {include file="inc-topbar.tpl"}
 
 <div class="darkBlueText pageText unindentList" style="margin-top: 0.8ex;">
-<b {if $editor} title='pg-civic-hdr' {/if}>Civic Actions</b>
+<b {if $editor} title='pg-civic-hdr' {/if}>{$ui->get('pg-civic-hdr')}</b>
 
 <p/>
    <div {if $editor} title='pg-civic-defend' {/if}>
-   <b>Ways you can defend democracy</b>
-   <ul>
-      <li><a href="county.php">County Parties</a>: Find your county's Democratic parties &amp; clubs,
-           get their newsletters, and learn about events and opportunities to volunteer.
-      <li><a href="https://midems.controlshift.app/local?filter%5Blocation%5D={$zipcode}&page=1"
-                   onClick="return externalLink(this);" target="_blank"
-          >Other Democratic events</a> in your area.</li>
-      <li><a href="protests.php">Protests</a>: See or add to a list of protests and other events in  your county.
-      <!-- <li><a href="display.php?key=petitions">Ballot petitions</a>: Learn which to sign and which to avoid. -->
-      <li><a href="display.php?key=whatcanido">More political actions</a> you can take.
-<!--
-      <li>Read how Trump's "big beautiful bill" <a href="https://docs.mivoter.org/BBB/slotkin.html" target="_blank">hurts Michiganders</a> -- and tell your friends and neighbors!
--->
-   </ul>
+   {$ui->get('pg-civic-defend')}
    </div>
 
    <div {if $editor} title='pg-civic-support' {/if} >
-   <b>Ways you can support MIvoter.org</b>:
-   <ul>
-      <li>Follow MIvoter (see the social media icons below)
-      <li><a href="share.php">Share MIvoter</a> on social media
-      <li>Share these <a href="videos.php">fun videos</a> about MIvoter
-   </ul>
+   {$ui->get('pg-civic-support')}
    </div>
   
 </div>

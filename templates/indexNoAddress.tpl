@@ -16,7 +16,9 @@
 
 <img src="IMG/ourFutureOurVote2.png" style="width: 100%;">
 
-<div class="darkBlueText pageText unindentList" style="margin-top: .8ex;">
+<div class="darkBlueText pageText unindentList" style="margin-top: .8ex;" {if $editor} title='pg-index-enteraddr' {/if}>
+    {$ui->get('pg-index-enteraddr')}
+<!--
     <b>Enter your address</b> above to find:
 
     <ul>
@@ -27,6 +29,7 @@
     </ul>
 
     <i style="font-size: 90%;">(We <b>never</b> save your address.&nbsp; Only your browser remembers it.)</i>
+-->
 </div>
 
 

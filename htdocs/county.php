@@ -9,6 +9,7 @@ use CharlesRothDotNet\Alfred\SmartyPage;
 
 use CharlesRothDotNet\MIV4\Plugins;
 use CharlesRothDotNet\MIV4\VoterLog;
+use CharlesRothDotNet\MIV4\Uitext;
 
 require_once("../vendor/autoload.php");
 

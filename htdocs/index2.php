@@ -8,6 +8,7 @@ use CharlesRothDotNet\Alfred\DumbFileLogger;
 use CharlesRothDotNet\Alfred\PdoHelper;
 
 use CharlesRothDotNet\MIV4\VoterLog;
+use CharlesRothDotNet\MIV4\Uitext;
 
 require_once("../vendor/autoload.php");
 
@@ -21,6 +22,7 @@ $pdo    = PdoHelper::makePdo($env);
 
 $miCodes   = trim($_COOKIE['miCodes'] ?? "");
 $lang      = trim($_COOKIE['lang']           ?? "");
+$ui        = new Uitext($pdo, $logger, $lang, 'btm%', 'ham%', 'top%');
 $sessionId = trim($_COOKIE['sessionid'] ?? "");
 $codes     = json_decode($miCodes, true) ?? [];
 $zipcode   = $codes['zipcode'] ?? '';
@@ -32,6 +34,7 @@ $smarty = new SmartyPage();
 $smarty->assign ('address',    $address);
 $smarty->assign ('zipcode',    $zipcode);
 $smarty->assign('lang',   $lang);
+$smarty->assign('ui',   $ui);
 
 if ($address === "") {
    $smarty->assign('hasAddress', false);

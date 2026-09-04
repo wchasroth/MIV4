@@ -25,7 +25,7 @@ class Uitext {
       $combine    = (! empty($inClause)  &&  ! empty($likeClause) ? ' OR ' : '');
 
       $sql = "SELECT id, text FROM v4uitext WHERE $inClause $combine $likeClause";
-//    $logger->log("Uitext SQL: " . $sql);
+      $logger->log("Uitext SQL: " . $sql);
       $result = $pdo->run($sql);
       foreach ($result->getRows() as $row) $this->key2text[$row['id']] = $row['text'];
       $this->lang = $lang;

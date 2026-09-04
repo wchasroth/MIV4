@@ -29,7 +29,7 @@
 
    <center>
       <div style="padding-bottom: 0.5em; padding-top: 0.5em;"
-         {if $editor} title="pg-endorsed-2-endorse" {/if} ><b>Nov 3, 2026</b> Democratic Party Endorsements</b></div>
+         {if $editor} title="pg-endorsed-2-endors" {/if} >{$ui->get('pg-endorsed-2-endors')}</div>
       {$backclass=1}
          {foreach from=$rows item=row}
             <table width="90%" cellspacing="0" cellpadding="4" style="max-width: 30em;">

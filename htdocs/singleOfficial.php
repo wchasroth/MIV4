@@ -9,6 +9,7 @@ use CharlesRothDotNet\Alfred\Str;
 use CharlesRothDotNet\EditorV4\EnvHelper;
 use Smarty\Smarty;
 use CharlesRothDotNet\Alfred\SmartyPage;
+use CharlesRothDotNet\MIV4\Uitext;
 
 require_once("../vendor/autoload.php");
 
@@ -30,6 +31,7 @@ if ($id === "") {
 
 $miCodes = trim($_COOKIE['miCodes'] ?? "");
 $lang    = trim($_COOKIE['lang']           ?? "");
+$ui      = new Uitext($pdo, $logger, $lang, 'pg-1off%', 'btm%', 'ham%', 'top%');
 $editor  = ! empty(trim($_COOKIE['editor'] ?? ""));
 $codes = json_decode($miCodes, true);
 
@@ -77,4 +79,5 @@ $smarty->assign('url',     $url);
 $smarty->assign('headshot', $headshot);
 $smarty->assign('editor', $editor);
 $smarty->assign('lang',   $lang);
+$smarty->assign('ui',   $ui);
 $smarty->display('singleOfficial.tpl');

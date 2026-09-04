@@ -4,12 +4,12 @@
       <center>
          <div class="bottomPill" onClick="share();">
             <img src="IMG/waveIconShare5.png"/>
-            <span style="position: absolute; top: 14px;" {if $editor} title='btn-share' {/if} >Share</span>
+            <span style="position: absolute; top: 14px;" {if $editor} title='btm-share' {/if} >{$ui->get('btm-share')}</span>
          </div>
          <br/>
 
          <div style="color: white;   font-size: 120%; margin-top: 0.5em;">
-            <b {if $editor} title='btm-follow' {/if} >Follow MIvoter.org on:</b>
+            <b {if $editor} title='btm-follow' {/if} >{$ui->get('btm-follow')}</b>
 
             <center style="margin-top: 0.5em;">
                <a href="https://www.facebook.com/mivoter.org"
@@ -36,8 +36,8 @@
 
          <b>
             <div style="color: white;   font-size: 120%; margin-top: 0px; padding-left: 0.2em;" ignore='feedback'>
-               <a href="feedback.php" class="whiteLink" style="font-size: 65%;" {if $editor} title='btn-feedback' {/if}>
-                  Anything missing or incorrect?&nbsp; Comments?&nbsp; Send&nbsp;<u>Feedback</u>
+               <a href="feedback.php" class="whiteLink" style="font-size: 65%;" {if $editor} title='btm-feedback' {/if}>
+                  {$ui->get('btm-feedback')}
                </a>
             </div>
          </b>
@@ -49,15 +49,7 @@
               <td><a href="https://michigandems.com" target="_blank"><img src="IMG/mdpLogo2.jpg" width="100"/></a></td>
               <td>&nbsp;&nbsp;</td>
               <td>
-                <span {if $editor} title='btn-mivoter' {/if} >
-                MIvoter.org is an all-volun&shy;teer project.&nbsp;
-                Exp&shy;enses paid for by the
-                Washtenaw County Democratic Party
-                (<a href="https://washtenawdems.org" class="whiteLink"
-                       onClick="return externalLink(this);" target="_blank"
-                  >washtenawdems.org</a>).&nbsp;
-                Not coordinated with any can&shy;didate or candidate's committee.
-                </span>
+                <span {if $editor} title='btm-mivoter' {/if} >{$ui->get('btm-mivoter')}</span>
               </td>
               <td><a href="https://www.washtenawdems.org" target="_blank"><img src="IMG/wcdp-merged2.png" width="100"/></a></td>
               </tr>

@@ -49,7 +49,7 @@
                      {else}            onClick="flip('needAddress'); return false;"
                      {/if}
                   ><img class="bottomButtonImage" id="endorsed_img" src="IMG/button_endorsed_normal.svg"/>
-                   <div class="bottomButtonText" {if $editor} title='btn-endorse' {/if} >Endorsed<br/>Candidates</div>
+                   <div class="bottomButtonText" {if $editor} title='btm-endorse' {/if} >{$ui->get('btm-endorse')}</div>
                   </a>
                </div>
             </td>
@@ -58,7 +58,7 @@
                <div class="bottomButton" id="vote_div">
                   <a class="whiteLink" href="info.php" onClick="return buttonSelect('vote');"
                   ><img class="bottomButtonImage" id="vote_img" src="IMG/button_vote_normal.svg" />
-                   <div class="bottomButtonText" {if $editor} title='btn-vote' {/if} >How to<br/>Vote</div>
+                   <div class="bottomButtonText" {if $editor} title='btm-vote' {/if} >{$ui->get('btm-vote')}</div>
                   </a>
                </div>
             </td>
@@ -70,7 +70,7 @@
                      {else}            onClick="flip('needAddress');  return false;"
                      {/if}
                   ><img class="bottomButtonImage" id="officials_img" src="IMG/button_officials_normal.svg" />
-                   <div class="bottomButtonText" {if $editor} title='btn-current' {/if} >Current<br/>Officials</div>
+                   <div class="bottomButtonText" {if $editor} title='btm-current' {/if} >{$ui->get('btm-current')}</div>
                   </a>
                </div>
             </td>
@@ -79,7 +79,7 @@
                <div class="bottomButton" id="civic_div">
                   <a class="whiteLink" href="civicActions.php" onClick="return buttonSelect('civic');"
                   ><img class="bottomButtonImage" id="civic_img" src="IMG/button_civic_normal.svg" />
-                   <div class="bottomButtonText" {if $editor} title='btn-civic' {/if} >Civic<br/>Actions</div>
+                   <div class="bottomButtonText" {if $editor} title='btm-civic' {/if} >{$ui->get('btm-civic')}</div>
                   </a>
                </div>
             </td>

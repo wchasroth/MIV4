@@ -8,6 +8,7 @@ use CharlesRothDotNet\Alfred\AlfredPDO;
 use CharlesRothDotNet\Alfred\Str;
 use CharlesRothDotNet\Alfred\SmartyPage;
 use CharlesRothDotNet\MIV4\VoterLog;
+use CharlesRothDotNet\MIV4\Uitext;
 
 require_once("../vendor/autoload.php");
 
@@ -24,6 +25,7 @@ $logger = new DumbFileLogger($env->get('logFile'));
 
 $miCodes   = trim($_COOKIE['miCodes'] ?? "");
 $lang      = trim($_COOKIE['lang']           ?? "");
+$ui        = new Uitext($pdo, $logger, $lang, 'pg-official%', 'btm%', 'ham%', 'top%');
 $sessionId = trim($_COOKIE['sessionid'] ?? "");
 $editor    = ! empty(trim($_COOKIE['editor'] ?? ""));
 $codes = json_decode($miCodes, true);
@@ -117,6 +119,7 @@ $smarty->assign('hasVillage', intval($codes['village_code']) > 0);
 $smarty->assign('colleges', $colleges);
 $smarty->assign('editor', $editor);
 $smarty->assign('lang',   $lang);
+$smarty->assign('ui',   $ui);
 $smarty->display('officials.tpl');
 
 function getName (AlfredPDO $pdo, string $sql): string {

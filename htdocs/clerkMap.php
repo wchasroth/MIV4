@@ -33,7 +33,8 @@ $clerk['faxDigits']   = Utils::phoneDigits($clerk['fax']);
 
 $smarty = new SmartyPage();
 
-if (empty($clerk['name'])) {
+#if (empty($clerk['name'])) {
+if (empty($clerk['street_address'])) {
    $logger->log("FIXME: clerkMap failed for: $miCodes");
    $smarty->display("clerkError.tpl");
 }

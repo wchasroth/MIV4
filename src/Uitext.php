@@ -12,7 +12,7 @@ class Uitext {
    private array  $key2text = [];
    private string $lang;
 
-   function __construct(AlfredPDO $pdo, DumbFileLogger $logger, string $lang, string ... $keys) {
+   function __construct(AlfredPDO $pdo, ?DumbFileLogger $logger, string $lang, string ... $keys) {
       $lang  = (!empty($lang) ? "-$lang" : "");
       $likes = [];
       $ins   = [];
@@ -25,7 +25,7 @@ class Uitext {
       $combine    = (! empty($inClause)  &&  ! empty($likeClause) ? ' OR ' : '');
 
       $sql = "SELECT id, text FROM v4uitext WHERE $inClause $combine $likeClause";
-      $logger->log("Uitext SQL: " . $sql);
+      if ($logger !== null)  $logger->log("Uitext SQL: " . $sql);
       $result = $pdo->run($sql);
       foreach ($result->getRows() as $row) $this->key2text[$row['id']] = $row['text'];
       $this->lang = $lang;

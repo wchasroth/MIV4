@@ -21,10 +21,10 @@
             <td>&nbsp;</td>
             <td><a href="info_register.php"><img src="IMG/voteRegister2.png"></a></td>
             <td>&nbsp;</td>
-            <td class="howToVoteSpacer"><b><a href="info_register.php" {if $editor} title='pg-info-reg' {/if} >Register to Vote</a></b>
+            <td class="howToVoteSpacer"><b><a href="info_register.php" {if $editor} title='pg-info-reg' {/if} 
+                   >{$ui->get('pg-info-reg')}</a></b>
                 <div class="howToVoteSubText" {if $editor} title='pg-info-reg-text' {/if} >
-                   Make sure you can vote!&nbsp;
-                   Check your status, or learn how to register on-line or in-person.
+                   {$ui->get('pg-info-reg-text')}
                 </div>
             </td>
          </tr>
@@ -34,10 +34,10 @@
             <td></td>
             <td><a href="info_home.php"><img src="IMG/voteAtHome2.png"></a></td>
             <td></td>
-            <td class="howToVoteSpacer"><a href="info_home.php" {if $editor} title='pg-info-votehome' {/if} ><b>Vote at Home</b></a>
+            <td class="howToVoteSpacer"><a href="info_home.php" {if $editor} title='pg-info-votehome' {/if} 
+                   >{$ui->get('pg-info-votehome')}</a>
                 <div class="howToVoteSubText red" {if $editor} title='pg-info-votehome-text' {/if}>
-                   Anyone can vote absentee for a single election or for every election by signing up for 
-                   the permanent mail ballot list.&nbsp;
+                   {$ui->get('pg-info-votehome-text')}
                 </div>
             </td>
          </tr>
@@ -47,10 +47,10 @@
             <td></td>
             <td><a href="info_inperson.php"><img src="IMG/voteInPerson2.png"></a></td>
             <td></td>
-            <td class="howToVoteSpacer"><a href="info_inperson.php" {if $editor} title='pg-info-voteip' {/if} ><b>Vote in Person</b></a>
+            <td class="howToVoteSpacer"><a href="info_inperson.php" {if $editor} title='pg-info-voteip' {/if} 
+                  >{$ui->get('pg-info-voteip')}</a>
                 <div class="howToVoteSubText" {if $editor} title='pg-info-voteip-text' {/if} >
-                   Where to vote, in-person, on Election Day,
-                   or in the 9 days of "early&nbsp;voting".
+                  {$ui->get('pg-info-voteip-text')}
                 </div>
             </td>
          </tr>

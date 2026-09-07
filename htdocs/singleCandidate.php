@@ -32,6 +32,7 @@ if ($id === "") {
 $photoBase = $env->get('photoBase');
 $miCodes = trim($_COOKIE['miCodes'] ?? "");
 $lang    = trim($_COOKIE['lang']           ?? "");
+$ui      = new Uitext($pdo, $logger, $lang, 'pg-1can%', 'btm%', 'ham%', 'top%');
 $editor  = ! empty(trim($_COOKIE['editor'] ?? ""));
 $codes = json_decode($miCodes, true);
 
@@ -71,4 +72,5 @@ $smarty->assign('headshot',  $headshot);
 $smarty->assign('description',  $description);
 $smarty->assign('editor', $editor);
 $smarty->assign('lang',   $lang);
+$smarty->assign('ui',   $ui);
 $smarty->display('singleCandidate.tpl');

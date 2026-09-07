@@ -21,8 +21,9 @@ $logger = new DumbFileLogger($env->get('logFile'));
 $pdo    = PdoHelper::makePdo($env);
 
 $miCodes   = trim($_COOKIE['miCodes'] ?? "");
+$editor    = ! empty(trim($_COOKIE['editor'] ?? ""));
 $lang      = trim($_COOKIE['lang']           ?? "");
-$ui        = new Uitext($pdo, $logger, $lang, 'btm%', 'ham%', 'top%');
+$ui        = new Uitext($pdo, $logger, $lang, 'pg-index%', 'btm%', 'ham%', 'top%');
 $sessionId = trim($_COOKIE['sessionid'] ?? "");
 $codes     = json_decode($miCodes, true) ?? [];
 $zipcode   = $codes['zipcode'] ?? '';
@@ -34,6 +35,7 @@ $smarty = new SmartyPage();
 $smarty->assign ('address',    $address);
 $smarty->assign ('zipcode',    $zipcode);
 $smarty->assign('lang',   $lang);
+$smarty->assign('editor',   $editor);
 $smarty->assign('ui',   $ui);
 
 if ($address === "") {

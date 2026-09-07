@@ -23,7 +23,7 @@ $pdo    = PdoHelper::makePdo($env);
 $miCodes   = trim($_COOKIE['miCodes'] ?? "{}");
 $sessionId = trim($_COOKIE['sessionid'] ?? "");
 $lang      = trim($_COOKIE['lang']           ?? "");
-$ui        = new Uitext($pdo, $logger, $lang, 'info%', 'btm%', 'ham%', 'top%');
+$ui        = new Uitext($pdo, $logger, $lang, 'pg-info%', 'btm%', 'ham%', 'top%');
 $editor    = ! empty(trim($_COOKIE['editor'] ?? ""));
 $codes     = json_decode($miCodes, true);
 

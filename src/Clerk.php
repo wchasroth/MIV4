@@ -3,6 +3,7 @@
 namespace CharlesRothDotNet\MIV4;
 
 use CharlesRothDotNet\Alfred\AlfredPDO;
+use CharlesRothDotNet\Alfred\Str;
 use CharlesRothDotNet\Alfred\DumbFileLogger;
 
 class Clerk {
@@ -16,13 +17,15 @@ class Clerk {
 
          $clerk = [];
          $fields = ['name', 'street_address', 'mailing_address', 'phone', 'fax', 'email', 'hours',
-            'election_date', 'pre_hours', 'place_id', 'lat', 'lng', 'jurisdiction'];
+            'election_date', 'pre_hours', 'place_id', 'lat', 'lng', 'jurisdiction', 'web'];
          foreach ($fields as $field)  $clerk[$field] = '';
          return $clerk;
       }
 
       $clerk = $result->getRows()[0];
       $clerk['jurisdiction'] = self::getJurisdictionName($pdo, $jurisCode);
+      $web = $clerk['web'];
+      if ($web != '') $clerk['web'] = Str::startsWith($web, 'http') ? $web : 'https://' . $web;
       return $clerk;
    }
 

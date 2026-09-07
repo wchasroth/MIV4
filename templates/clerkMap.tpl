@@ -28,7 +28,16 @@
  </table>
 
 <table width="100%">
-    <tr><td class="pad" colspan="3"><b>Clerk: {$clerk['name']}</b></td></tr>
+    <tr>
+       <td class="pad" colspan="2"><b>Clerk: {$clerk['name']}</b></td>
+       <td class="pad">
+          {if $clerk['web'] != ''}
+             <table cellspacing="0" cellpadding="0">
+                <tr><td><b><a href="{$clerk['web']}" target="_blank">Web</a>&nbsp;</td><td><img src="IMG/external3.png"/></td></tr>
+             </table>
+          {/if}
+       </td>
+    </tr>
     <tr valign="top">
         <td class="pad"><b>Address:</b> {$clerk['street_address']}</td>
         <td></td>

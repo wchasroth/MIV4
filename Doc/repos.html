@@ -1,0 +1,194 @@
+<html>
+<head>
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto">
+   <style>
+      body, td, li, div {
+         font-family: 'Roboto', sans-serif;
+      }
+     li  { margin-top: .4em; }
+      pre { font-size: 120%;}
+   </style>
+   <title>MIvoter.org repositories &amp; projects</title>
+</head>
+
+<body style="max-width: 50em;">
+<h2>MIvoter.org repositories &amp; projects</h2>
+
+<a href="mailto:wchasroth@gmail.com">Charles Roth</a><br>
+Last updated: Sept 8, 2026.
+
+<p/>
+<b>I. Introduction</b><br/>
+MIvoter.org is actually a combination of several distinct
+project repositories.&nbsp;
+This division allows us to more easily parcel out pieces to
+different developers, and support different versions during
+development.
+
+<p/>
+The overall project is a classic "LAMP" stack, currently running on:
+<ul>
+<li>AlmaLinux 8
+<li>PHP 8.2.3 with Smarty 5.4 (and Twig 3.8)
+<li>MySQL 8.0.45
+<li>Python 3.9 (for just a few data management scripts)
+</ul>
+
+Currently, everything lives on a single server.&nbsp;
+The MySQL database, in particular, is locked-down to only
+allow access from the local server -- no network access at all.&nbsp;
+
+<p/>
+However, we will need to find ways to scale up the overall operation,
+as we get nearer to the election.&nbsp;
+
+<p/>
+(We are looking at a "lift and shift" migration to an AWS EC2
+environment, but the goal is to change as little as possible
+in the process.)
+
+<p/>
+<b>II. Project Repos</b><br>
+<ol>
+<li>mivoter.org.&nbsp;  The actual UI for the voting guide.
+<li>address.mivoter.org.&nbsp;  A stand-alone web service for matching voter addresses.
+<li>editor.mivoter.org.&nbsp;  The overall data editor, for volunteer curators and CDPs.
+<li>Data Manager (editor.mivoter.org/dm).&nbsp;  The "officials" (incumbents)
+   and "candidates" editor.
+<li>Alfred.&nbsp; A library of low-level PHP utilities, that are used throughout
+  mivoter.org.
+<li>feedback.editor.mivoter.org.&nbsp; Site feedback manager, and voter log graphing.
+<li>ElectionImport.&nbsp; A large collection of PHP (and some Python) scripts
+  dealing with data import from a variety of sources.
+
+
+</ol>
+
+<b>III. mivoter.org</b></br>
+Repo: git@github.com:/wchasroth/miv4.git<br/>
+Location: /home/miv_ui_v4/MIV4
+
+<ol>
+<li>With the exception of the logging of voter visits, everything
+in mivoter.org just <b>reads</b> from the database.&nbsp;
+We use cookies to 'remember' the voter's address and district
+information, but there is no "session" to speak of.&nbsp;
+This means that we could easily load-balance the site by 
+simply spinning up multiple instances, each with their
+own copy of the database.
+<li>But this means we'll probably need a more service-like
+way of logging visits.
+</ol>
+
+<p/>
+<b>IV. address.mivoter.org</b><br/>
+Repo: git@github.com:/mivoter/AddressService.git<br/>
+Location: /home/address/AddressService
+
+<ol>
+<li>In 2024, we used the google address tool to rapidly identify 
+a voter's address -- they could just start typing their address,
+and quickly get a pull-down list of matching locations.
+<p/>
+Unfortunately, there were often serious mismatches between google's
+address data, and the official State of Michigan data.
+<p/>
+So, we wrote our own.&nbsp;
+It starts with the data from Michigan's "street index", which is the
+master table that maps sections of streets across the state, into
+the various district codes (us congress, state senate, state house,
+county, city, township, village, school board, etc.).
+<p/>
+It then "mutates" the street names for better matching (e.g. "N" and "North").
+
+<li>The service itself simply takes a partial address, and quickly returns
+a list of possible matches.&nbsp;
+It's up to javascript in the actual mivoter.org UI to deal with them.
+
+<li>This service uses only a few tables from the MySQL database, and
+does not write anything.&nbsp;
+So it is also an easy candidate for splitting off for load-balancing.
+
+</ol>
+
+<p/>
+<b>IV. editor.mivoter.org</b><br/>
+Repo: git@github.com:/wchasroth/azure_v4.git<br/>
+Location: /home/miv_ed_v4/AzureV4
+
+<ol>
+<li>The editor site itself is a frameset (yes, an ancient construct, but in this
+case still a useful tool) that handles a variety of different "kinds" of data editing.&nbsp;
+Some of the editing is built-in to this project; others are links to different URLs that
+are implemented in separate project repos.
+
+<li>We use Google Auth for authentication -- much easier than rolling our own.
+
+<li>Authorization for the different "kinds" of editing is handled by this editor,
+and we use encrypted cookies to validate the authorization, especially for the
+tasks that are handled by different project repos.
+
+<li>As such, this is the most potentially vulnerable project, since it can write
+to everything in the MySQL database.
+</ol>
+
+<P/>
+<b>V. Data Manager</b><br/>
+Repo: git@github.com:/wchasroth/editorV4.git<br/>
+Location: /home/miv_dm_v4/EDV4
+
+<ol>
+<li>This is the biggest single part of the "editor", as it manages
+all of the data for officials (incumbents) and candidates.&nbsp;
+It in turn has a left frame (explodable list of counties etc.)
+and a right frame (panel for editing selected jurisdiction's offices).
+<li>Like the editor, it too is a potentially vulnerable area, although
+it uses the encrypted cookie supplied from editor.mivoter.org to
+determine authorization.
+
+</ol>
+
+<b>VI. Alfred</b><br/>
+Repo: git@github.com:/wchasroth/Alfred.git
+
+<ol>
+<li>Alfred (think Bruce Wayne's butler) is a library of support classes for
+ all of our political infrastructure work.&nbsp;
+ E.g. an extended version of PHP's PDO MySQL interface, a cookie-handling
+  utility class, etc.
+<li>Alfred is published via packagist, and is freely downloadable via PHP's composer.
+</ol>
+
+<p/>
+<b>VII. feedback.editor.mivoter.org</b><br/>
+Repo: git@github.com:/mivoter/mivoter-feedback.git
+Location: /home/miv_fb_sta/MIV24
+
+<ol>
+<li>This project combines two different tools -- the feedback manager,
+and the voter log graphing tool.&nbsp;
+They are in turn linked to from the master editor.mivoter.org.
+
+<li><a href="mailto:will@jaynes.org">Will Jaynes</a> is the author of this project.
+<li>It is potentially vulnerable, although it only (intentionally) writes to the
+'feedback' table.
+</ol>
+
+<p/>
+<b>VIII. ElectionImport</b></br>
+Repo: git@github.com:/wchasroth/ElectionImport.git
+
+<ol>
+<li>Collection of a wide variety of scripts for handling data import (some old, some new).
+<li>No internet exposure: these are all for dealing with data internally, on the server.
+</ol>
+
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+</body>
+</html>

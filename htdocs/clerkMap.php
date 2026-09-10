@@ -11,6 +11,7 @@ use Smarty\Smarty;
 use CharlesRothDotNet\Alfred\SmartyPage;
 use CharlesRothDotNet\MIV4\Clerk;
 use CharlesRothDotNet\MIV4\Utils;
+use CharlesRothDotNet\MIV4\MiCodesDecoder;
 
 require_once("../vendor/autoload.php");
 
@@ -23,8 +24,7 @@ if ($address === "") {
 $env     = new EnvFile("_env");
 $logger  = new DumbFileLogger($env->get('logFile'));
 $pdo     = PdoHelper::makePdo($env);
-$miCodes = trim($_COOKIE['miCodes'] ?? "");
-$codes   = json_decode($miCodes, true);
+$codes   = MiCodesDecoder::decode($_COOKIE['miCodes'] ?? "{}");
 $apiKey  = $env->get('googleMapsApiKey');
 
 $clerk = Clerk::getClerkInfo($pdo, intval($codes['county_code']), intval($codes['juris_code']), $logger);
@@ -35,13 +35,12 @@ $smarty = new SmartyPage();
 
 #if (empty($clerk['name'])) {
 if (empty($clerk['street_address'])) {
-   $logger->log("FIXME: clerkMap failed for: $miCodes");
+   $logger->log("FIXME: clerkMap failed for: " . print_r($codes, true));
    $smarty->display("clerkError.tpl");
 }
 else {
    $smarty->assign('clerk', $clerk);
    $smarty->assign('apiKey', $apiKey);
-   $smarty->assign('miCodes', $miCodes);
    $smarty->assign('hasAddress', true);
    $smarty->display('clerkMap.tpl');
 }

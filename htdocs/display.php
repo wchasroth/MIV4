@@ -5,7 +5,9 @@ use CharlesRothDotNet\Alfred\DumbFileLogger;
 use CharlesRothDotNet\Alfred\EnvFile;
 use CharlesRothDotNet\Alfred\PdoHelper;
 use CharlesRothDotNet\Alfred\SmartyPage;
+use CharlesRothDotNet\Alfred\SqlFields;
 use CharlesRothDotNet\MIV4\VoterLog;
+use CharlesRothDotNet\MIV4\MiCodesDecoder;
 
 require_once("../vendor/autoload.php");
 
@@ -20,8 +22,7 @@ $env              = new EnvFile("_env");
 $logger           = new DumbFileLogger($env->get('logFile'));
 $pdo              = PdoHelper::makePdo($env);
 
-$miCodes   = trim($_COOKIE['miCodes'] ?? "");
-$codes     = json_decode($miCodes, true) ?? [];
+$codes     = MiCodesDecoder::decode($_COOKIE['miCodes'] ?? "{}");
 $sessionId = trim($_COOKIE['sessionid'] ?? "");
 
 date_default_timezone_set('America/New_York');
@@ -34,7 +35,8 @@ $voterLog->write($sessionId, 'D', $codes, $address);
 //| modified | datetime       | YES  |     | CURRENT_TIMESTAMP | DEFAULT_GENERATED on update CURRENT_TIMESTAMP |
 //| text     | varchar(10000) | YES  |     | NULL         
 
-$sql = "SELECT text FROM v4uitext WHERE id='$key'";
+$sqlFields = new SqlFields(['id' => $key]);
+$sql = "SELECT text FROM v4uitext WHERE " . $sqlFields->getSelectFragment();
 $result = $pdo->run($sql);
 $text = $result->getSingleValue('text');
 

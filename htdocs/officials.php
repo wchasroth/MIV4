@@ -8,6 +8,7 @@ use CharlesRothDotNet\Alfred\AlfredPDO;
 use CharlesRothDotNet\Alfred\Str;
 use CharlesRothDotNet\Alfred\SmartyPage;
 use CharlesRothDotNet\MIV4\VoterLog;
+use CharlesRothDotNet\MIV4\MiCodesDecoder;
 
 require_once("../vendor/autoload.php");
 
@@ -22,9 +23,8 @@ $logger           = new DumbFileLogger($env->get('logFile'));
 $pdo              = PdoHelper::makePdo($env);
 $logger = new DumbFileLogger($env->get('logFile'));
 
-$miCodes = trim($_COOKIE['miCodes'] ?? "");
+$codes   = MiCodesDecoder::decode($_COOKIE['miCodes'] ?? "{}");
 $sessionId = trim($_COOKIE['sessionid'] ?? "");
-$codes = json_decode($miCodes, true);
 $show = print_r($codes, true);
 $ward = getWard($codes['wardpct']);
 
@@ -106,7 +106,6 @@ foreach ($result->getRows() as $college) {
 $smarty = new SmartyPage();
 $smarty->assign('address', $address);
 $smarty->assign('hasAddress', true);
-$smarty->assign('miCodes', $miCodes);
 $smarty->assign('show', $show);
 $smarty->assign('query', $query);
 $smarty->assign('blocks', $blocks);

@@ -9,6 +9,7 @@ use CharlesRothDotNet\Alfred\Str;
 use CharlesRothDotNet\EditorV4\EnvHelper;
 use Smarty\Smarty;
 use CharlesRothDotNet\Alfred\SmartyPage;
+use CharlesRothDotNet\MIV4\MiCodesDecoder;
 
 require_once("../vendor/autoload.php");
 
@@ -22,15 +23,14 @@ $env              = new EnvFile("_env");
 $logger           = new DumbFileLogger($env->get('logFile'));
 $pdo              = PdoHelper::makePdo($env);
 
-$id = $_GET["id"] ?? "";
+$id = intval($_GET["id"] ?? "");
 if ($id === "") {
    header("Location: index.php");
    exit();
 }
 
 $photoBase = $env->get('photoBase');
-$miCodes = trim($_COOKIE['miCodes'] ?? "");
-$codes = json_decode($miCodes, true);
+$codes = MiCodesDecoder::decode($_COOKIE['miCodes'] ?? "{}");
 
 $sql = "SELECT s.id, s.org, s.office, s.district, s.subdist, s.termcycle, "
      . "       i.name, i.web, i.headshot, i.description, "

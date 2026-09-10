@@ -6,6 +6,7 @@ use CharlesRothDotNet\Alfred\SmartyPage;
 use CharlesRothDotNet\Alfred\EnvFile;
 use CharlesRothDotNet\Alfred\DumbFileLogger;
 use CharlesRothDotNet\Alfred\PdoHelper;
+use CharlesRothDotNet\MIV4\MiCodesDecoder;
 
 use CharlesRothDotNet\MIV4\VoterLog;
 
@@ -19,9 +20,8 @@ $env    = new EnvFile("_env");
 $logger = new DumbFileLogger($env->get('logFile'));
 $pdo    = PdoHelper::makePdo($env);
 
-$miCodes   = trim($_COOKIE['miCodes'] ?? "");
+$codes     = MiCodesDecoder::decode($_COOKIE['miCodes'] ?? "{}");
 $sessionId = trim($_COOKIE['sessionid'] ?? "");
-$codes     = json_decode($miCodes, true) ?? [];
 $zipcode   = $codes['zipcode'] ?? '';
 
 $voterLog = new VoterLog($pdo, $logger, $env->get('addressHashSalt'));

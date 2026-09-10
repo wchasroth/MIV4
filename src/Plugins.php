@@ -49,6 +49,8 @@ class Plugins {
       if ($links === "")  return "";
       $result = [];
       foreach (Str::splitIntoTokens($links, ",") as $url) {
+         if (Str::contains(strtolower($url), "javascript:")) continue;
+         if (Str::contains($url, "'"))                       continue;
          $linkText = self::stripProtocol($url);
          $result[] = "<a href='$url'>$linkText</a>";
       }

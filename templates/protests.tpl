@@ -159,25 +159,25 @@
    {foreach from=$protests item=protest}
    <p class="outdented">
       <b>{$protest['day']|shortDate}</b>&nbsp;&nbsp;
-      {$protest['time']}&nbsp;&nbsp;
-      <a href='#' onClick="return flipVisibility('ploop{$protest@index}');">{$protest['name']}</a>&nbsp;
+      {$protest['time']|escape}&nbsp;&nbsp;
+      <a href='#' onClick="return flipVisibility('ploop{$protest@index}');">{$protest['name']|escape}</a>&nbsp;
       {$protest['ctyname']|showCounty}
       <br/>
-      {$protest['location']}
+      {$protest['location']|escape}
 
    <div id="ploop{$protest@index}" class="protestPanel indented">
-      <b>Contacts:</b> {$protest['organizer']}
+      <b>Contacts:</b> {$protest['organizer']|escape}
       {$protest['emails']|emailLinks}&nbsp;
       {$protest['urls']|hyperLinks}&nbsp;
-      {$protest['phones']|splitComma}<br/>
-      {$protest['signup']|showWithPrefix:"<b>Signup:</b> "}<br/>
-      {$protest['descr']|showWithPrefix:"<b>Description</b>: "}<br/>
+      {$protest['phones']|splitComma|escape}<br/>
+      {$protest['signup']|escape|showWithPrefix:"<b>Signup:</b> "}<br/>
+      {$protest['descr']|escape|showWithPrefix:"<b>Description</b>: "}<br/>
       <b>Source/corrections:</b>
       <a href="{$protest['srcurl']}"
                    onClick="return externalLink(this);" target="_blank"
-      >{$protest['srcname']}</a>
+      >{$protest['srcname']|escape}</a>
       &nbsp;&nbsp;&nbsp;
-      (UniqueId: {$protest['hashcode']})
+      (UniqueId: {$protest['hashcode']|escape})
    </div>
    <p/>
    {/foreach}

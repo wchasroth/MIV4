@@ -38,10 +38,10 @@ $sql = "SELECT s.id, s.org, s.office, s.district, s.subdist, s.termcycle, "
      . "  FROM      v4seats      AS s "
      . "  LEFT JOIN v4candidates AS i ON (i.seat_id = s.id) "
      . "  LEFT JOIN s4titles     AS t ON (t.org = s.org AND t.office = s.office) "
-     . " WHERE i.id = $id";
+     . " WHERE i.id = $id  AND i.reviewed=1 AND i.endorsed=1 ";
    ;
 $result = $pdo->run($sql);
-if ($result->failed()) {
+if ($result->failed() ||  $result->getRowCount() === 0) {
    $logger->log("singleOfficial error: " . $result->getError());
    header("Location: index.php");
    exit();

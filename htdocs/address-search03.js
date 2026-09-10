@@ -131,6 +131,7 @@ class AddressSearch extends HTMLElement {
             this.input.value = '';
             this.clearList();
             this.deleteCookie('miAddress');
+            this.deleteCookie('miCodes');
             location.href = window.location.href.includes('localhost')
                ? 'http://localhost/MIV4/htdocs/'
                : '/index.php';

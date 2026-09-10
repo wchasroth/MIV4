@@ -11,7 +11,8 @@ use CharlesRothDotNet\MIV4\MiCodesDecoder;
 
 require_once("../vendor/autoload.php");
 
-$key     = $_GET['key'] ?? "";
+$key = $_GET['key'] ?? "";
+$key = preg_replace('/[^a-zA-z0-9_-]/', '', $key);
 $address = trim($_COOKIE['miAddress'] ?? "");
 if ($address === ""  ||  $key === "") {
    header("Location: index.php");

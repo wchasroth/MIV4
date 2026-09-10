@@ -59,6 +59,10 @@ $sql = $sql . " ORDER BY day ASC ";
 $result = $pdo->run($sql);
 $protests = $result->getRows();
 $noMore = count($protests) == 0;
+for ($i=0;   $i<count($protests);  $i++) {
+   $srcurl = strtolower($protests[$i]['srcurl']);
+   if (Str::contains($srcurl, "javascript:")  ||  Str::contains($srcurl, "\"'")) $protests[$i]['srcurl'] = "";
+}
 
 $smarty = new SmartyPage();
 $smarty->registerPlugin(Smarty::PLUGIN_MODIFIER, "shortDate",   [Plugins::class, "shortDate"]);

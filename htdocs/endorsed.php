@@ -69,6 +69,7 @@ $sql[] = select('s.district')  . from()
 $sql[] = select('district') . from() . whereOrgIn('mi-msu', 'mi-wsu', 'mi-um')  . endorsed();
 
 $query = Str::join($sql, " UNION ALL ") . " ORDER BY ballot_order, name";
+//$logger->log("Endorsed: $query");
 
 $result = $pdo->run($query);
 $rows = $result->getRows();

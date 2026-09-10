@@ -1,0 +1,4 @@
+#!/bin/bash
+
+ps --no-headers -o "rss,cmd" -C php-fpm | awk '{ sum+=$1; count++ } END { if (count > 0) print "Average PHP-FPM Memory Usage: " sum/count/1024 " MB"; else print "No PHP-FPM processes running" }'
+

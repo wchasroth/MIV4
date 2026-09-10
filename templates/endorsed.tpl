@@ -40,23 +40,6 @@
          {/foreach}
    </center>
    <br/>
-
-   <!--
-      <li>Michigan State University Board of Trustees:
-         <ul>
-            <li>Brianna Scott</li>
-            <li>Kelly Tebay Zemke</li>
-            </ul>
-         </li>
-      <li>Wayne State University Board of Governors: (2 seats)
-         <ul>
-            <li>Shereef Akeel</li>
-            <li>Richard Mack</li>
-         </ul>
-      </li>
-   </ul>
-   -->
-
 </div>
 
 

@@ -9,7 +9,7 @@ class MiCodesDecoder {
 
    public static function decode(string $miCodes): array {
       $codes = json_decode(trim($miCodes), true);
-      foreach (self::$numericFields as $field) $codes[$field] = intval($codes[$field]);
+      foreach (self::$numericFields as $field) $codes[$field] = intval($codes[$field] ?? "");
       return $codes;
    }
 

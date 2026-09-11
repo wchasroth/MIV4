@@ -284,7 +284,7 @@ class AddressSearch extends HTMLElement {
     }
 
     writeCookie(name, value) {
-       document.cookie = name + "=" + encodeURIComponent(value) + "; path=/; max-age=31536000";
+       document.cookie = name + "=" + encodeURIComponent(value) + "; SameSite=Strict; Secure; path=/; max-age=31536000";
     }
 
     deleteCookie(name) {

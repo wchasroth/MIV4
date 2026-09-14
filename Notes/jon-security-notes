@@ -12,3 +12,5 @@ editorV4: https://docs.google.com/document/d/1jdcjh5pwL4B_QOYjuRIqAzNwfjsz-gTR5W
         to validate who really sent in the form change.
 
    F8.  HtmlPurifier of description field?
+
+  F15.  Bigger issue about passing in id ... how to verify that it is in the user's edit-counties allowance?

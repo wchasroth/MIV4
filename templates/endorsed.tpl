@@ -25,13 +25,24 @@
 <div class="darkBlueText pageText unindentList" style="padding-top: 0.5em;">
    <b>Why Vote Democratic?</b>&nbsp; <a href="display.php?key=whydems">Ten Easy Reasons</a>
 
+   <!--
    <p/>
    <b>More endorsed candidates</b> will appear here as County Parties complete their
    process.&nbsp; Check back before you vote!
+   -->
 
+   <p/>
+   <b>More endorsements</b> are coming.&nbsp; Check back before you vote!
+
+   <!--
    <p/>
    <b>Remember the non-partisan races!</b>&nbsp;
    Checking the straight-party box on your ballot is not enough.
+   -->
+
+   <p/>
+   <b>Remember the non-partisan races!</b>&nbsp;
+   Checking the straight-party box only fills in some of your choices.</b>
 
    <center>
       <div style="padding-bottom: 0.5em; padding-top: 0.1em;"><b>Nov 3, 2026</b> Democratic Party Endorsements</b></div>

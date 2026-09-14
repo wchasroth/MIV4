@@ -14,10 +14,10 @@ require_once("../vendor/autoload.php");
 $key = $_GET['key'] ?? "";
 $key = preg_replace('/[^a-zA-z0-9_-]/', '', $key);
 $address = trim($_COOKIE['miAddress'] ?? "");
-if ($address === ""  ||  $key === "") {
-   header("Location: index.php");
-   exit();
-}
+//if ($address === ""  ||  $key === "") {
+//   header("Location: index.php");
+//   exit();
+//}
 
 $env              = new EnvFile("_env");
 $logger           = new DumbFileLogger($env->get('logFile'));

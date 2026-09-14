@@ -23,7 +23,7 @@
 {include file="inc-topbar.tpl"}
 
 <div class="darkBlueText pageText unindentList" style="padding-top: 0.5em;">
-   <b>Why Vote Democratic?</b>&nbsp; <a href="display.php?key=whydems">Ten Easy Reasons</a>
+   <b>Why Vote Democratic?</b>&nbsp; <a href="display.php?key=whydems2">Ten Easy Reasons</a>
 
    <!--
    <p/>

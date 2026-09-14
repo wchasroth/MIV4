@@ -1,0 +1,19 @@
+Estimate free memory, and average memory used by php-fpm workers
+
+   free -h   (Look at 'free' and 'cache'.  Compare with used, minus allocation for mysql.)
+
+   Run Tools/averagePhpMemory  and Tools/peakPhpMemory
+
+   total workers = (free RAM) / (average ram used per PHP process)
+
+Modify php-fpm settings:
+
+   /etc/php-fpm.d/www.conf
+
+   pm = static    (start all workers at boot)
+   pm.max_children = (total workers)     (see calculation)
+   pm.max_requests = 500? 1000 ?   restarts worker after handling this # of requests (in case of memory leaks, etc.)
+
+
+Articles:
+   https://medium.com/codex/what-happens-when-php-fpm-children-die-faster-than-they-respawn-d016afd319e7

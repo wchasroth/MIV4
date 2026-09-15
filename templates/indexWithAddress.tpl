@@ -25,6 +25,9 @@
       <li>Civic actions
    </ul>
 
+    <b>Why Vote Democratic?</b>&nbsp; <a href="display.php?key=whydems">Ten Easy Reasons</a>
+
+   <p/>
    <i style="font-size: 90%;">(We <b>never</b> save your address.&nbsp; Only your browser remembers it.)</i>
 </div>
 

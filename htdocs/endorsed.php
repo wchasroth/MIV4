@@ -41,10 +41,11 @@ $sql[] = select('district') . from() . whereOrgIn('mi', 'mi-ag', 'mi-boe', 'mi-s
        . "  OR (s.org='mi-sen' AND s.district='{$codes['senate']}') "
        . "  OR (s.org='mi-hou' AND s.district='{$codes['house']}') "  . endorsed();
 $sql[] = select('subdist')  . from() . whereOrgIn('cnty')     . "AND district={$codes['county_code']} "  . endorsed();
-$sql[] = select('subdist')  . from() . whereOrgIn('cnty-com') . "AND district={$codes['county_code']} AND subdist={$codes['commissioner']} "  . endorsed();
+$sql[] = select('subdist')  . from() . whereOrgIn('cnty-com') . "AND district={$codes['county_code']} "
+                                     . " AND (subdist={$codes['commissioner']} OR subdist=0) "  . endorsed();
 
 $sql[] = select('subdist')  . from() . whereOrgIn('city',    'town')     . " AND district='{$codes['juris_code']}' "  . endorsed();
-$sql[] = select('subdist')  . from() . whereOrgIn('city-cou','town-cou') . " AND district='{$codes['juris_code']}' AND subdist=$ward "  . endorsed();
+$sql[] = select('subdist')  . from() . whereOrgIn('city-cou','town-cou') . " AND district='{$codes['juris_code']}' AND (subdist=$ward OR subdist=0) "  . endorsed();
 $sql[] = select('subdist')  . from() . whereOrgIn('vil','vil-cou')       . " AND district='{$codes['village_code']}' "  . endorsed();
 
 $sql[] = select('subdist')  . from() . whereOrgIn('schl-cou') . " AND district='{$codes['sd_code']}' "  . endorsed();
@@ -68,7 +69,7 @@ $sql[] = select('s.district')  . from()
        .  whereOrgIn('crt-d') . " AND d.county_id = {$codes['county_code']} AND d.juris_id = {$codes['juris_code']} "  . endorsed();
 $sql[] = select('district') . from() . whereOrgIn('mi-msu', 'mi-wsu', 'mi-um')  . endorsed();
 
-$query = Str::join($sql, " UNION ALL ") . " ORDER BY ballot_order, name";
+$query = Str::join($sql, " UNION ALL ") . " ORDER BY ballot_order, subdist, name";
 //$logger->log("Endorsed: $query");
 
 $result = $pdo->run($query);

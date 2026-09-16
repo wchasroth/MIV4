@@ -121,6 +121,7 @@
       {include file="inc-vq-whoeligible.tpl"}
       {include file="inc-vq-student.tpl"}
       {include file="inc-vq-getballot.tpl"}
+      {include file="inc-vq-concerned.tpl"}
       {include file="inc-vq-trackballot.tpl"}
       {include file="inc-vq-noarrive.tpl"}
       {include file="inc-vq-disability.tpl"}

@@ -10,6 +10,7 @@ use CharlesRothDotNet\Alfred\SmartyPage;
 use CharlesRothDotNet\MIV4\Plugins;
 use CharlesRothDotNet\MIV4\VoterLog;
 use CharlesRothDotNet\MIV4\Uitext;
+use CharlesRothDotNet\MIV4\MiCodesDecoder;
 
 require_once("../vendor/autoload.php");
 
@@ -23,10 +24,10 @@ $env              = new EnvFile("_env");
 $logger           = new DumbFileLogger($env->get('logFile'));
 $pdo              = PdoHelper::makePdo($env);
 
-$miCodes   = trim($_COOKIE['miCodes'] ?? "");
 $editor    = ! empty(trim($_COOKIE['editor'] ?? ""));
 $lang      = trim($_COOKIE['lang']           ?? "");
-$codes     = json_decode($miCodes, true);
+$codes     = MiCodesDecoder::decode($_COOKIE['miCodes'] ?? "{}");
+
 $myCounty  = $codes['county_code'];
 $sessionId = trim($_COOKIE['sessionid'] ?? "");
 date_default_timezone_set('America/New_York');
@@ -34,7 +35,7 @@ date_default_timezone_set('America/New_York');
 $voterLog = new VoterLog($pdo, $logger, $env->get('addressHashSalt'));
 $voterLog->write($sessionId, 'C', $codes, $_COOKIE['miAddress'] ?? '');
 
-$county = $_GET["county"] ?? $myCounty;
+$county = intval($_GET["county"] ?? $myCounty);
 
 $sql = "SELECT cc.*, co.name  "
      . "  FROM s4county_contacts AS cc "

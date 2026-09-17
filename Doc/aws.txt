@@ -1,0 +1,31 @@
+
+Create account
+   https://console.aws.amazon.com/ec2/
+     "Create a new AWS account"
+         root user email=wchasroth@gmail.com
+         account name=mivoter.org
+         pw=Lookfar4awsVoter!
+  
+     Chose free plan (6 months)
+     Enter credit card
+
+
+Sign in to existing account
+   https://aws.amazon.com/console/
+   sign in using root user email wchasroth@gmail.com
+   password
+
+   Add MFA:
+      use google auth (asterisk app in google colors)
+         hit + to scan QR code
+
+Get to EC2 (https://us-east-2.console.aws.amazon.com/ec2/home?region=us-east-2#Home:)
+
+Chose RHEL 8, m7i-flex.large  2 CPU, 8G  $0.12456/hour
+
+keypair  RSA, .pem
+   crmivoter / 
+
+Custom security group (mivoter.org IP, WCDP IP)
+
+Storage: 50GB

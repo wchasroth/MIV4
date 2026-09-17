@@ -9,6 +9,7 @@ use CharlesRothDotNet\Alfred\Str;
 use CharlesRothDotNet\Alfred\SmartyPage;
 use CharlesRothDotNet\MIV4\VoterLog;
 use CharlesRothDotNet\MIV4\Uitext;
+use CharlesRothDotNet\MIV4\MiCodesDecoder;
 
 require_once("../vendor/autoload.php");
 
@@ -18,17 +19,18 @@ if ($address === "") {
    exit();
 }
 
+$numFormatter     = new NumberFormatter("en_US", NumberFormatter::ORDINAL);
 $env              = new EnvFile("_env");
 $logger           = new DumbFileLogger($env->get('logFile'));
 $pdo              = PdoHelper::makePdo($env);
 $logger = new DumbFileLogger($env->get('logFile'));
 
-$miCodes   = trim($_COOKIE['miCodes'] ?? "");
 $lang      = trim($_COOKIE['lang']           ?? "");
 $ui        = new Uitext($pdo, $logger, $lang, 'pg-official%', 'btm%', 'ham%', 'top%');
-$sessionId = trim($_COOKIE['sessionid'] ?? "");
 $editor    = ! empty(trim($_COOKIE['editor'] ?? ""));
-$codes = json_decode($miCodes, true);
+$codes     = MiCodesDecoder::decode($_COOKIE['miCodes'] ?? "{}");
+$sessionId = trim($_COOKIE['sessionid'] ?? "");
+
 $show = print_r($codes, true);
 $ward = getWard($codes['wardpct']);
 
@@ -75,8 +77,8 @@ for ($i=0;   $i<$rowCount;  $i++) {
    $name = $rows[$i]['name'] ?? '';
    if ($name === strtoupper($name))   $rows[$i]['name'] = ucwords(strtolower($name));
 
-   $dist = $rows[$i]['dist'];
-   $dist = (intval($dist) === 0 ? '' : "($dist)");
+   $dist = intval($rows[$i]['dist']);
+   $dist = ($dist === 0 ? '' : "(" . $numFormatter->format($dist) . ")");
 // $rows[$i]['dist'] = (intval($dist) === 0 ? '' : "($dist)");
    if ($rows[$i]['miv_title'] !== "") $rows[$i]['miv_title'] .= " $dist";
    $blocks[$rows[$i]['block']][] = $rows[$i];
@@ -110,7 +112,6 @@ foreach ($result->getRows() as $college) {
 $smarty = new SmartyPage();
 $smarty->assign('address', $address);
 $smarty->assign('hasAddress', true);
-$smarty->assign('miCodes', $miCodes);
 $smarty->assign('show', $show);
 $smarty->assign('query', $query);
 $smarty->assign('blocks', $blocks);

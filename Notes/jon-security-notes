@@ -1,0 +1,18 @@
+General Intro:  https://claude.com/blog/automate-security-reviews-with-claude-code
+
+MIV4 https://docs.google.com/document/d/1jdsNLhVI2kuXtSvVuVqX8MaXlAvjDfEU4ll-nEkPRJE/edit?tab=t.0#heading=h.uei80hxyqtan
+
+AZV4 https://docs.google.com/document/d/1bXkYXxIUraAKSiLL2JNbtLRXYMW5d4wsgslQ8r3fxnY/edit?tab=t.0
+   F54.  Thinking about using HtmlPurifier, but needs testing.  (May need to specifically
+         enable target attribute.)
+
+editorV4: https://docs.google.com/document/d/1jdcjh5pwL4B_QOYjuRIqAzNwfjsz-gTR5WRPG12ETa8/edit?tab=t.0#heading=h.queq4v3zcks1
+
+   F5.  id of record to change is passed in via POST.  Probably need a CSRF token or some such
+        to validate who really sent in the form change.
+
+   F8.  HtmlPurifier of description field?
+
+  F15.  Bigger issue about passing in id ... how to verify that it is in the user's edit-counties allowance?
+
+  F26.  Can still paste image to ANY candidate.  Similar to F15 and F5.

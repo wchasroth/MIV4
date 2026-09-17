@@ -24,6 +24,7 @@
    {include file="inc-vq-checkreg.tpl"}
    {include file="inc-vq-howlate.tpl"}
    {include file="inc-vq-getballot.tpl"}
+   {include file="inc-vq-concerned.tpl"}
    {include file="inc-vq-trackballot.tpl"}
    {include file="inc-vq-noarrive.tpl"}
    {include file="inc-vq-disability.tpl"}

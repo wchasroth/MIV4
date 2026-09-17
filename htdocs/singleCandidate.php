@@ -10,6 +10,7 @@ use CharlesRothDotNet\EditorV4\EnvHelper;
 use Smarty\Smarty;
 use CharlesRothDotNet\Alfred\SmartyPage;
 use CharlesRothDotNet\MIV4\Uitext;
+use CharlesRothDotNet\MIV4\MiCodesDecoder;
 
 require_once("../vendor/autoload.php");
 
@@ -23,18 +24,18 @@ $env              = new EnvFile("_env");
 $logger           = new DumbFileLogger($env->get('logFile'));
 $pdo              = PdoHelper::makePdo($env);
 
-$id = $_GET["id"] ?? "";
+$id = intval($_GET["id"] ?? "");
 if ($id === "") {
    header("Location: index.php");
    exit();
 }
 
 $photoBase = $env->get('photoBase');
-$miCodes = trim($_COOKIE['miCodes'] ?? "");
+
 $lang    = trim($_COOKIE['lang']           ?? "");
 $ui      = new Uitext($pdo, $logger, $lang, 'pg-1can%', 'btm%', 'ham%', 'top%');
 $editor  = ! empty(trim($_COOKIE['editor'] ?? ""));
-$codes = json_decode($miCodes, true);
+$codes   = MiCodesDecoder::decode($_COOKIE['miCodes'] ?? "{}");
 
 $sql = "SELECT s.id, s.org, s.office, s.district, s.subdist, s.termcycle, "
      . "       i.name, i.web, i.headshot, i.description, "
@@ -42,10 +43,10 @@ $sql = "SELECT s.id, s.org, s.office, s.district, s.subdist, s.termcycle, "
      . "  FROM      v4seats      AS s "
      . "  LEFT JOIN v4candidates AS i ON (i.seat_id = s.id) "
      . "  LEFT JOIN s4titles     AS t ON (t.org = s.org AND t.office = s.office) "
-     . " WHERE i.id = $id";
+     . " WHERE i.id = $id  AND i.reviewed=1 AND i.endorsed=1 ";
    ;
 $result = $pdo->run($sql);
-if ($result->failed()) {
+if ($result->failed() ||  $result->getRowCount() === 0) {
    $logger->log("singleOfficial error: " . $result->getError());
    header("Location: index.php");
    exit();

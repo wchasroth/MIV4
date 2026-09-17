@@ -18,15 +18,6 @@
 
     <b>Early Voting</b><br/>
     <ul>
-    <li>Early in-person voting for the <b>August 2026 primary election</b>&nbsp;
-       <span class='red'>
-          must be available for all voters from
-       </span>
-       July 25 through August 2,&nbsp;
-       <span class='red'>
-         although some clerks may choose to offer additional dates.
-       </span>
-    </li>
 
     <li>Early voting for the <b>November 2026 general election</b>&nbsp;
         <span class='red'>
@@ -48,7 +39,7 @@
             >Learn more about early voting in Michigan</a>.
     </ul>
 
-    <b>Voting in Person on Primary Election Day (Aug 4, 2026)</b>
+    <b>Voting in Person on Election Day (Tues Nov 3, 2026)</b>
     <ul>
     <li>
        <span class='red'>

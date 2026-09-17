@@ -131,6 +131,7 @@ class AddressSearch extends HTMLElement {
             this.input.value = '';
             this.clearList();
             this.deleteCookie('miAddress');
+            this.deleteCookie('miCodes');
             location.href = window.location.href.includes('localhost')
                ? 'http://localhost/MIV4/htdocs/'
                : '/index.php';
@@ -283,7 +284,7 @@ class AddressSearch extends HTMLElement {
     }
 
     writeCookie(name, value) {
-       document.cookie = name + "=" + encodeURIComponent(value) + "; path=/; max-age=31536000";
+       document.cookie = name + "=" + encodeURIComponent(value) + "; SameSite=Strict; Secure; path=/; max-age=31536000";
     }
 
     deleteCookie(name) {

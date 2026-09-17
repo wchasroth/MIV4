@@ -7,6 +7,7 @@ use CharlesRothDotNet\Alfred\PdoHelper;
 use CharlesRothDotNet\Alfred\SmartyPage;
 use CharlesRothDotNet\MIV4\VoterLog;
 use CharlesRothDotNet\MIV4\Uitext;
+use CharlesRothDotNet\MIV4\MiCodesDecoder;
 
 require_once("../vendor/autoload.php");
 
@@ -14,12 +15,11 @@ $env       = new EnvFile("_env");
 $logger    = new DumbFileLogger($env->get('logFile'));
 $pdo       = PdoHelper::makePdo($env);
 
-$miCodes   = trim($_COOKIE['miCodes']    ?? "");
+$codes     = MiCodesDecoder::decode($_COOKIE['miCodes'] ?? "{}");
 $sessionId = trim($_COOKIE['sessionid']  ?? "");
 $lang      = trim($_COOKIE['lang']           ?? "");
 $ui        = new Uitext($pdo, $logger, $lang, 'pg-video%', 'btm%', 'ham%', 'top%');
 $editor    = ! empty(trim($_COOKIE['editor'] ?? ""));
-$codes     = json_decode($miCodes, true) ?? [];
 
 $address = trim($_COOKIE['miAddress'] ?? "");
 date_default_timezone_set('America/New_York');

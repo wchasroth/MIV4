@@ -12,6 +12,7 @@ use CharlesRothDotNet\MIV4\Uitext;
 use Smarty\Smarty;
 use CharlesRothDotNet\Alfred\SmartyPage;
 use CharlesRothDotNet\MIV4\Plugins;
+use CharlesRothDotNet\MIV4\MiCodesDecoder;
 
 require_once("../vendor/autoload.php");
 
@@ -30,10 +31,11 @@ $lang      = trim($_COOKIE['lang']           ?? "");
 $ui        = new Uitext($pdo, $logger, $lang, 'pg-endorsed%', 'btm%', 'ham%', 'top%');
 $numFormatter = new NumberFormatter( ($lang === 'es' ? "es_ES" : "en_US"), NumberFormatter::ORDINAL);
 
-$miCodes   = trim($_COOKIE['miCodes']        ?? "");
 $sessionId = trim($_COOKIE['sessionid']      ?? "");
 $editor    = ! empty(trim($_COOKIE['editor'] ?? ""));
-$codes     = json_decode($miCodes, true);
+$codes     = MiCodesDecoder::decode($_COOKIE['miCodes'] ?? "{}");
+$sessionId = trim($_COOKIE['sessionid'] ?? "");
+
 $show      = print_r($codes, true);
 $ward      = getWard($codes['wardpct']);
 date_default_timezone_set('America/New_York');
@@ -46,10 +48,11 @@ $sql[] = select('district') . from() . whereOrgIn('mi', 'mi-ag', 'mi-boe', 'mi-s
        . "  OR (s.org='mi-sen' AND s.district='{$codes['senate']}') "
        . "  OR (s.org='mi-hou' AND s.district='{$codes['house']}') "  . endorsed();
 $sql[] = select('subdist')  . from() . whereOrgIn('cnty')     . "AND district={$codes['county_code']} "  . endorsed();
-$sql[] = select('subdist')  . from() . whereOrgIn('cnty-com') . "AND district={$codes['county_code']} AND subdist={$codes['commissioner']} "  . endorsed();
+$sql[] = select('subdist')  . from() . whereOrgIn('cnty-com') . "AND district={$codes['county_code']} "
+                                     . " AND (subdist={$codes['commissioner']} OR subdist=0) "  . endorsed();
 
 $sql[] = select('subdist')  . from() . whereOrgIn('city',    'town')     . " AND district='{$codes['juris_code']}' "  . endorsed();
-$sql[] = select('subdist')  . from() . whereOrgIn('city-cou','town-cou') . " AND district='{$codes['juris_code']}' AND subdist=$ward "  . endorsed();
+$sql[] = select('subdist')  . from() . whereOrgIn('city-cou','town-cou') . " AND district='{$codes['juris_code']}' AND (subdist=$ward OR subdist=0) "  . endorsed();
 $sql[] = select('subdist')  . from() . whereOrgIn('vil','vil-cou')       . " AND district='{$codes['village_code']}' "  . endorsed();
 
 $sql[] = select('subdist')  . from() . whereOrgIn('schl-cou') . " AND district='{$codes['sd_code']}' "  . endorsed();
@@ -58,19 +61,27 @@ $sql[] = select('subdist')  . from() . whereOrgIn('crt-sup')  . endorsed();
 $sql[] = select('district') . from()
        .  " LEFT JOIN v4courts AS c  ON (c.shortname = s.district AND c.type = s.org) "
        .  whereOrgIn('crt-a', 'crt-c', 'crt-m') . " AND c.county_id = {$codes['county_code']} "  . endorsed();
+
+$sql[] = select('district', 'c.name') . from()
+   .  " LEFT JOIN s4commcolleges AS c  ON (s.district = c.id) "
+   .  " LEFT JOIN v4commcolleges_county AS y ON (y.id = c.id) "
+   .  whereOrgIn('comcol-cou') . " AND y.county_id = {$codes['county_code']} "  . endorsed();
+
 $sql[] = select('subdist') . from()
        .  " LEFT JOIN v4courts AS c  ON (c.shortname = s.district AND c.type = s.org) "
        .  whereOrgIn('crt-p') . " AND c.county_id = {$codes['county_code']} "  . endorsed();
+
 $sql[] = select('s.district')  . from()
        .  " LEFT JOIN s4district_courts AS d  ON (d.org = s.org AND d.district = s.district) "
        .  whereOrgIn('crt-d') . " AND d.county_id = {$codes['county_code']} AND d.juris_id = {$codes['juris_code']} "  . endorsed();
 $sql[] = select('district') . from() . whereOrgIn('mi-msu', 'mi-wsu', 'mi-um')  . endorsed();
 
-$query = Str::join($sql, " UNION ALL ") . " ORDER BY ballot_order, name";
+$query = Str::join($sql, " UNION ALL ") . " ORDER BY ballot_order, subdist, name";
+//$logger->log("Endorsed: $query");
 
 $result = $pdo->run($query);
 $rows = $result->getRows();
-removeDuplicateTitles($rows);
+//removeDuplicateTitles($rows);
 $rowCount = $result->getRowCount();
 for ($i=0;   $i<$rowCount;  $i++) {
    $name = $rows[$i]['name'] ?? '';
@@ -78,8 +89,10 @@ for ($i=0;   $i<$rowCount;  $i++) {
 
    $dist = intval($rows[$i]['dist']);
    $dist = ($dist === 0 ? '' : "(" . $numFormatter->format($dist) . ")");
-   if ($rows[$i]['miv_title'] !== "") $rows[$i]['miv_title'] .= " $dist";
+   if      ($rows[$i]['org'] === 'comcol-cou') $rows[$i]['miv_title'] = $rows[$i]['optField'];
+   else if ($rows[$i]['miv_title'] !== "")     $rows[$i]['miv_title'] .= " $dist";
 }
+removeDuplicateTitles($rows);
 
 $smarty = new SmartyPage();
 
@@ -93,8 +106,9 @@ $smarty->assign('ui',     $ui);
 $smarty->display('endorsed.tpl');
 
 
-function select(string $dist): string {
+function select(string $dist, string $optField=''): string {
    return  "SELECT s.id, s.org, s.office, s.district, s.subdist, $dist AS dist, "
+      .    (! empty ($optField) ? " $optField AS optField, " : " '' AS optField, ")
       . "       i.name, t.ballot_order, t.miv_title, i.id AS iid ";
 }
 

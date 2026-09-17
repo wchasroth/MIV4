@@ -30,6 +30,7 @@
    <center>
       <div style="padding-bottom: 0.5em; padding-top: 0.5em;"
          {if $editor} title="pg-endorsed-2-endors" {/if} >{$ui->get('pg-endorsed-2-endors')}</div>
+
       {$backclass=1}
          {foreach from=$rows item=row}
             <table width="90%" cellspacing="0" cellpadding="4" style="max-width: 30em;">
@@ -42,23 +43,6 @@
          {/foreach}
    </center>
    <br/>
-
-   <!--
-      <li>Michigan State University Board of Trustees:
-         <ul>
-            <li>Brianna Scott</li>
-            <li>Kelly Tebay Zemke</li>
-            </ul>
-         </li>
-      <li>Wayne State University Board of Governors: (2 seats)
-         <ul>
-            <li>Shereef Akeel</li>
-            <li>Richard Mack</li>
-         </ul>
-      </li>
-   </ul>
-   -->
-
 </div>
 
 

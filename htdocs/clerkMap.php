@@ -12,6 +12,7 @@ use CharlesRothDotNet\Alfred\SmartyPage;
 use CharlesRothDotNet\MIV4\Clerk;
 use CharlesRothDotNet\MIV4\Utils;
 use CharlesRothDotNet\MIV4\Uitext;
+use CharlesRothDotNet\MIV4\MiCodesDecoder;
 
 require_once("../vendor/autoload.php");
 
@@ -24,10 +25,10 @@ if ($address === "") {
 $env     = new EnvFile("_env");
 $logger  = new DumbFileLogger($env->get('logFile'));
 $pdo     = PdoHelper::makePdo($env);
-$miCodes = trim($_COOKIE['miCodes'] ?? "");
+<<<<<<< HEAD
 $lang    = trim($_COOKIE['lang']           ?? "");
 $editor  = ! empty(trim($_COOKIE['editor'] ?? ""));
-$codes   = json_decode($miCodes, true);
+$codes   = MiCodesDecoder::decode($_COOKIE['miCodes'] ?? "{}");
 $apiKey  = $env->get('googleMapsApiKey');
 
 $clerk = Clerk::getClerkInfo($pdo, intval($codes['county_code']), intval($codes['juris_code']), $logger);
@@ -36,14 +37,14 @@ $clerk['faxDigits']   = Utils::phoneDigits($clerk['fax']);
 
 $smarty = new SmartyPage();
 
-if (empty($clerk['name'])) {
-   $logger->log("FIXME: clerkMap failed for: $miCodes");
+#if (empty($clerk['name'])) {
+if (empty($clerk['street_address'])) {
+   $logger->log("FIXME: clerkMap failed for: " . print_r($codes, true));
    $smarty->display("clerkError.tpl");
 }
 else {
    $smarty->assign('clerk', $clerk);
    $smarty->assign('apiKey', $apiKey);
-   $smarty->assign('miCodes', $miCodes);
    $smarty->assign('hasAddress', true);
    $smarty->assign('editor', $editor);
    $smarty->assign('lang',   $lang);

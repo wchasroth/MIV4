@@ -9,6 +9,7 @@ use CharlesRothDotNet\Alfred\SmartyPage;
 use CharlesRothDotNet\MIV4\Plugins;
 use CharlesRothDotNet\MIV4\VoterLog;
 use CharlesRothDotNet\MIV4\Uitext;
+use CharlesRothDotNet\MIV4\MiCodesDecoder;
 
 require_once("../vendor/autoload.php");
 
@@ -23,9 +24,8 @@ $logger           = new DumbFileLogger($env->get('logFile'));
 $pdo              = PdoHelper::makePdo($env);
 $logger = new DumbFileLogger($env->get('logFile'));
 
-$miCodes = trim($_COOKIE['miCodes'] ?? "");
-$lang    = trim($_COOKIE['lang']           ?? "");
-$codes = json_decode($miCodes, true);
+$lang      = trim($_COOKIE['lang']           ?? "");
+$codes     = MiCodesDecoder::decode($_COOKIE['miCodes'] ?? "{}");
 $sessionId = trim($_COOKIE['sessionid'] ?? "");
 $editor    = ! empty(trim($_COOKIE['editor'] ?? ""));
 
@@ -34,7 +34,7 @@ $voterLog = new VoterLog($pdo, $logger, $env->get('addressHashSalt'));
 $voterLog->write($sessionId, 'P', $codes, $address);
 
 $myCounty = $codes['county_code'];
-$county = $_GET["county"] ?? $myCounty;  // ???? does this really get used?
+$county = intval($_GET["county"] ?? $myCounty);  // ???? does this really get used?
 
 // There's a better way to do this...
 if ($county > 0) {
@@ -62,6 +62,10 @@ $sql = $sql . " ORDER BY day ASC ";
 $result = $pdo->run($sql);
 $protests = $result->getRows();
 $noMore = count($protests) == 0;
+for ($i=0;   $i<count($protests);  $i++) {
+   $srcurl = strtolower($protests[$i]['srcurl']);
+   if (Str::contains($srcurl, "javascript:")  ||  Str::contains($srcurl, "\"'")) $protests[$i]['srcurl'] = "";
+}
 
 $smarty = new SmartyPage();
 $smarty->registerPlugin(Smarty::PLUGIN_MODIFIER, "shortDate",   [Plugins::class, "shortDate"]);

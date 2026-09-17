@@ -8,6 +8,7 @@ function flipPanel(id) {
       if (eachPanel != panel) eachPanel.classList.remove('show');
    }
    panel.classList.toggle('show');
+   return false;
 }
 
 function flip(id) {

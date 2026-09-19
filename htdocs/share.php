@@ -20,12 +20,18 @@ $address = trim($_COOKIE['miAddress'] ?? "");
 //   exit();
 //}
 
+$env    = new EnvFile("_env");
+$logger = new DumbFileLogger($env->get('logFile'));
+$pdo    = PdoHelper::makePdo($env);
+
 $editor    = ! empty(trim($_COOKIE['editor'] ?? ""));
 $lang      = trim($_COOKIE['lang']           ?? "");
+$ui        = new Uitext($pdo, $logger, $lang, 'pg-share%', 'btm%', 'ham%', 'top%');
 
 $smarty = new SmartyPage();
 $smarty->assign('address', $address);
 $smarty->assign('hasAddress', true);
 $smarty->assign('editor', $editor);
 $smarty->assign('lang',   $lang);
+$smarty->assign('ui',   $ui);
 $smarty->display('share.tpl');

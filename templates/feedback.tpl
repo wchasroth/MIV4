@@ -24,28 +24,31 @@
 
 <div class="darkBlueText pageText unindentList" style="margin-top: 0.8ex;">
    <p/>
-   <b {if $editor} title='pg-feedback-hdr' {/if}>Feedback</b>
+   <b {if $editor} title='pg-feedback-hdr' {/if}>{$ui->get('pg-feedback-hdr')}</b>
 
    <form action="feedbacksubmit.php" method="POST">
    <span {if $editor} title='pg-feedback-name' {/if} >
-   Your name (optional)<br/>
+      {$ui->get('pg-feedback-name')}
    </span>
+   <br/>
    <input type="text" name="name"  style="width: 90%; max-width: 30em;"/>
 
    <p/>
    <span {if $editor} title='pg-feedback-email' {/if} >
-   Your email address (if you want a response)<br/>
+      {$ui->get('pg-feedback-email')}
    </span>
+   <br/>
    <input type="text" name="email" style="width: 90%;  max-width: 30em;"/>
 
    <p/>
-   <span {if $editor} title='pg-feedback-name' {/if} >
-   Your comments</br>
+   <span {if $editor} title='pg-feedback-comments' {/if} >
+      {$ui->get('pg-feedback-comments')}
    </span>
+   <br/>
    <textarea name="comments" rows="4" style="width: 90%;  font-family: inherit; font-size: inherit;"></textarea>
 
    <p/>
-   <input type="submit" value="Send Feedback" {if $editor} title='pg-feedback-send' {/if} />
+   <input type="submit" value="{$ui->get('pg-feedback-send')}" {if $editor} title='pg-feedback-send' {/if} />
 
    </form>
 

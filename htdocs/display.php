@@ -27,6 +27,8 @@ $pdo              = PdoHelper::makePdo($env);
 $lang      = trim($_COOKIE['lang']           ?? "");
 $editor    = ! empty(trim($_COOKIE['editor'] ?? ""));
 $sessionId = trim($_COOKIE['sessionid'] ?? "");
+$codes     = MiCodesDecoder::decode($_COOKIE['miCodes'] ?? "{}");
+$ui        = new Uitext($pdo, $logger, $lang, $key, 'btm%', 'ham%', 'top%');
 
 date_default_timezone_set('America/New_York');
 $voterLog = new VoterLog($pdo, $logger, $env->get('addressHashSalt'));
@@ -57,4 +59,5 @@ $smarty->assign('address', $address);
 $smarty->assign('hasAddress', true);
 $smarty->assign('editor', $editor);
 $smarty->assign('lang',   $lang);
+$smarty->assign('ui',   $ui);
 $smarty->display('display.tpl');

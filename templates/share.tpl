@@ -48,8 +48,8 @@
 {include file="inc-topbar.tpl"}
 
 <div class="darkBlueText pageText unindentList" style="margin-top: 0.8ex;">
-   <span {if $editor} title='pg-share-hdr' {/if} >
-     There are several ways you can share MIvoter.org with your friends:
+   <span {if $editor} title='pg-share-intro' {/if} >
+     {$ui->get('pg-share-intro')}
    </span>
         <ul>
            <li><a href='#' onClick="return sendEmail();">Email</a>
@@ -59,11 +59,7 @@
         </ul>
 
    <span {if $editor} title='pg-share-other' {/if} >
-         For other platforms (e.g. Instagram, TikTok, etc.) try using 
-         this site on your phone -- the 'Share' button at the top right (box with up arrow) 
-         will let you use any of your installed social media apps. <br/>
-         <br/>
-         (Each of links above will open a new tab; close it when you're finished.)
+      {$ui->get('pg-share-other')}
    </span>
 </div>
 <br/>

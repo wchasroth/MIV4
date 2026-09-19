@@ -19,6 +19,7 @@ $lang      = trim($_COOKIE['lang']           ?? "");
 $editor    = ! empty(trim($_COOKIE['editor'] ?? ""));
 $codes     = MiCodesDecoder::decode($_COOKIE['miCodes'] ?? "{}");
 $sessionId = trim($_COOKIE['sessionid']  ?? "");
+$ui        = new Uitext($pdo, $logger, $lang, 'pg-faq%', 'btm%', 'ham%', 'top%');
 
 $address = trim($_COOKIE['miAddress'] ?? "");
 date_default_timezone_set('America/New_York');
@@ -31,4 +32,5 @@ $smarty->assign('hasAddress', $address !== "");
 $smarty->assign('address', $address);
 $smarty->assign('editor', $editor);
 $smarty->assign('lang',   $lang);
+$smarty->assign('ui',   $ui);
 $smarty->display('faq.tpl');

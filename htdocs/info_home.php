@@ -28,7 +28,7 @@ $editor  = ! empty(trim($_COOKIE['editor'] ?? ""));
 $codes   = MiCodesDecoder::decode($_COOKIE['miCodes'] ?? "{}");
 $sessionId = trim($_COOKIE['sessionid'] ?? "");
 $logger  = new DumbFileLogger($env->get('logFile'));
-$ui      = new Uitext($pdo, $logger, $lang, 'pg-info%', 'btm%', 'ham%', 'top%');
+$ui      = new Uitext($pdo, $logger, $lang, 'pg-info%', 'inc-vq-%', 'btm%', 'ham%', 'top%');
 
 date_default_timezone_set('America/New_York');
 $voterLog = new VoterLog($pdo, $logger, $env->get('addressHashSalt'));

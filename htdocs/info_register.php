@@ -25,7 +25,7 @@ $pdo     = PdoHelper::makePdo($env);
 $lang    = trim($_COOKIE['lang']           ?? "");
 $editor  = ! empty(trim($_COOKIE['editor'] ?? ""));
 $codes   = MiCodesDecoder::decode($_COOKIE['miCodes'] ?? "{}");
-$ui      = new Uitext($pdo, $logger, $lang, 'pg-faq%', 'btm%', 'ham%', 'top%');
+$ui      = new Uitext($pdo, $logger, $lang, 'inc-vq-%', 'btm%', 'ham%', 'top%');
 
 $sessionId = trim($_COOKIE['sessionid'] ?? "");
 

@@ -5,6 +5,8 @@ use CharlesRothDotNet\Alfred\DumbFileLogger;
 use CharlesRothDotNet\Alfred\EnvFile;
 use CharlesRothDotNet\Alfred\PdoHelper;
 use CharlesRothDotNet\Alfred\SmartyPage;
+use Smarty\Smarty;
+use CharlesRothDotNet\MIV4\Plugins;
 use CharlesRothDotNet\MIV4\Clerk;
 use CharlesRothDotNet\MIV4\VoterLog;
 use CharlesRothDotNet\MIV4\Uitext;
@@ -35,6 +37,7 @@ $voterLog->write($sessionId, 'I', $codes, $_COOKIE['miAddress'] ?? '');
 $clerkJurisdiction = Clerk::getJurisdictionName($pdo, intval($codes['juris_code'] ?? '0'));
 
 $smarty = new SmartyPage();
+$smarty->registerPlugin(Smarty::PLUGIN_MODIFIER, "dollarDollar", [Plugins::class, "dollarDollar"]);
 $smarty->assign('address', $address);
 $smarty->assign('hasAddress', !empty($address));
 $smarty->assign('clerkJurisdiction', $clerkJurisdiction);

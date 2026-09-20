@@ -6,6 +6,11 @@ namespace CharlesRothDotNet\MIV4;
 use CharlesRothDotNet\Alfred\Str;
 
 class Plugins {
+
+   public static function dollarDollar(string $input, string $substitute=""): string {
+      return Str::replaceFirst($input, "$$", $substitute);
+   }
+
    public static function fixCase(string $text): string {
       if (strtoupper($text) !== $text)  return $text;
       return ucwords(strtolower($text));

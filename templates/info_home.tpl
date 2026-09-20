@@ -16,99 +16,16 @@
 {include file="inc-topbar.tpl"}
 
 <div class="darkBlueText pageText unindentList" style="margin-top: 0.8ex;">
-   <span class="red">
-    Want all your ballots mailed to you?&nbsp; Get on the permanent mail ballot list.&nbsp;
-    <a href="permanent.php">Learn more</a>.
-   </span>
+   {if $hasAddress}
+      {$ui->get('pg-info-home-1')|dollarDollar:$clerkJurisdiction}
+      {$ui->get('pg-info-home-2')}
+   {else}
+      {$ui->get('pg-info-home-1-noaddr')}
+      {$ui->get('pg-info-home-2-noaddr')}
+   {/if}
 
-    <p/>
-      <b>Apply for ballot online</b>
-      <ul>
-      <li>You can 
-         <a href="https://mvic.sos.state.mi.us/AVApplication/Index"  target="_blank"
-         >request a ballot online</a> if you're already registered to vote in
-         Michigan.
-      <li>Ballots are available starting 40 days before an election.
-      <li>
-         <span class="red">
-         <b>To receive ballots for all future elections in the mail</b>, select the "permanent mail ballot list"
-          when you fill out your online ballot form.
-        </span>
-      </ul>
-    
-      <b>Request a ballot from your clerk</b><br>
-      Your options include:
-      <ul>
-        <li>Call your clerk, and they'll send you an application that you return by mail&nbsp;
-           <span class='red'>
-             or in one of your city or township's ballot drop boxes.
-           </span>
-        </li>
+   {$ui->get('pg-info-home-3')}
 
-        <li><a href="https://www.michigan.gov/sos/-/media/Project/Websites/sos/Elections/Election-Forms/Absent-Voter-Ballot-Application-Fillable.pdf"
-                    target="_blank"
-            >Download an application</a>  
-            that you can fill in, and return by mail&nbsp;
-            <span class='red'>
-              or in one of your city or township's ballot drop boxes.
-            </span>
-        </li>
-
-        <li>Go to your clerk's office and request a ballot in person.&nbsp;
-            You can even fill out the ballot and return it while you're there.&nbsp;
-          <b>Recommended if election day is less than two weeks away.</b>&nbsp;
-          {if $hasAddress}
-           <ul>
-              <li><a href="clerkMap.php"><b>{$clerkJurisdiction} Clerk</b></a></li>
-           </ul>
-          {else}
-             (To find your clerk's office, enter your address at the very top of this page.)
-          {/if}
-          </li>
-      </ul>
-
-      <b>Correcting Your Ballot</b><br/>
-           If you have already sent in your ballot, and <b>want to change your vote</b>, contact
-           {if $hasAddress}
-              <a href="clerkMap.php">your clerk</a>.
-           {else}
-              your local clerk.&nbsp;
-             (To find your clerk's office, enter your address at the very top of this page.)
-           {/if}
-
-      <p/>
-      <b>Return Your Ballot</b><br>
-       
-       <span class="red">
-          Your ballot must be received at your clerk’s office or deposited in your local ballot drop box 
-          by 8 pm on Election Day for it to count.&nbsp;
-          You can also scan your marked absent voter ballot into a tabulator machine at your 
-          early voting site or at your Election Day polling place.
-       </span>
-
-       <p/>
-       <span class="red">We will provide drop-box, polling place, and early voting locations closer to election day.</span>
-    <!--
-      <a href="#dropbox_section" onClick="return dropBoxMapCall();">Find your Drop Box Locations</a>.&nbsp;
-      <br/><br/>
-      (You can also find drop-boxes from the Secretary of State‘s website, under
-         "<a href="https://mvic.sos.state.mi.us/Voter/Index/#yourclerk">Search for your city/township clerk</a>".)
-    -->
-
-      <p/>
-      <b>Military or Overseas</b><br/>
-      Please visit
-          <a href="https://www.votefromabroad.org/states/Michigan"  target="_blank" >votefromabroad.org</a>
-      for Michigan-specific information.
-
-      <p/>
-      <b>More about voting at home</b><br/>
-      Learn more:
-        <a href="https://mvic.sos.state.mi.us/Home/VoteAtHome"  target="_blank"
-        >Secretary of State's absentee voting page</a>.
-
-      <p/>
-      <b>Frequent Questions</b><br/>
       {include file="inc-vq-whoeligible.tpl"}
       {include file="inc-vq-student.tpl"}
       {include file="inc-vq-getballot.tpl"}

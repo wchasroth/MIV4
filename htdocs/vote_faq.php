@@ -26,6 +26,7 @@ $editor  = ! empty(trim($_COOKIE['editor'] ?? ""));
 $lang    = trim($_COOKIE['lang']           ?? "");
 $codes   = MiCodesDecoder::decode($_COOKIE['miCodes'] ?? "{}");
 $sessionId = trim($_COOKIE['sessionid'] ?? "");
+$ui      = new Uitext($pdo, $logger, $lang, 'inc-vq%', 'btm%', 'ham%', 'top%');
 
 date_default_timezone_set('America/New_York');
 $voterLog = new VoterLog($pdo, $logger, $env->get('addressHashSalt'));
@@ -39,4 +40,5 @@ $smarty->assign('hasAddress', !empty($address));
 $smarty->assign('clerkJurisdiction', $clerkJurisdiction);
 $smarty->assign('editor', $editor);
 $smarty->assign('lang',   $lang);
+$smarty->assign('ui',   $ui);
 $smarty->display('vote_faq.tpl');

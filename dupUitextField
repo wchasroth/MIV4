@@ -1,0 +1,11 @@
+#!/bin/bash
+
+#pg-info-home-1
+#pg-info-home-1-noaddr
+#pg-info-home-2
+#pg-info-home-2-noaddr
+#pg-info-home-3
+
+echo "INSERT INTO v4uitext (id) VALUES (\"$1-es\")" | my
+
+echo "UPDATE v4uitext AS target JOIN v4uitext AS source ON source.id = \"$1\" SET target.text = source.text WHERE target.id = \"$1-es\"" | my

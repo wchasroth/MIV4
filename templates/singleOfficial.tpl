@@ -42,11 +42,9 @@
     <tr class="zebra" valign="top"><td {if $editor} title='pg-1official-addr' {/if} >{$ui->get('pg-1official-addr')}</td> <td>{$address}</td></tr>
     <tr class="zebra" valign="top"><td {if $editor} title='pg-1official-phone' {/if} >{$ui->get('pg-1official-phone')}</td>   
             <td class="urlColumn"><a href="tel:{$phone}">{$phone}</a></td></tr>
-    <tr class="zebra" valign="top"><td {if $editor} title='pg-1official-email' {/if} >{$ui->get('pg-1official-email')}</td>   <td class="urlColumn"><a href="mailto:{$email}"
-                   onClick="return externalLink(this);" target="_blank"
+    <tr class="zebra" valign="top"><td {if $editor} title='pg-1official-email' {/if} >{$ui->get('pg-1official-email')}</td>   <td class="urlColumn"><a href="mailto:{$email}" target="_blank"
             >{$email}</a></td></tr>
-    <tr class="zebra" valign="top"><td {if $editor} title='pg-1official-web' {/if} >{$ui->get('pg-1official-web')}</td>   <td class="urlColumn"><a href="{$url}"
-                   onClick="return externalLink(this);" target="_blank"
+    <tr class="zebra" valign="top"><td {if $editor} title='pg-1official-web' {/if} >{$ui->get('pg-1official-web')}</td>   <td class="urlColumn"><a href="{$url}" target="_blank"
            >{$web}</a></td></tr>
     <tr class="zebra" valign="top"><td colspan="2" style="font-size: 90%;" {if $editor} title='pg-1official-disclaim' {/if} >
         {$ui->get('pg-1official-disclaim')}

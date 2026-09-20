@@ -34,8 +34,8 @@
             <td></td>
             <td><a href="info_home.php"><img src="IMG/voteAtHome2.png"></a></td>
             <td></td>
-            <td class="howToVoteSpacer"><a href="info_home.php" {if $editor} title='pg-info-votehome' {/if} 
-                   >{$ui->get('pg-info-votehome')}</a>
+            <td class="howToVoteSpacer"><b><a href="info_home.php" {if $editor} title='pg-info-votehome' {/if} 
+                   >{$ui->get('pg-info-votehome')}</a></b>
                 <div class="howToVoteSubText red" {if $editor} title='pg-info-votehome-text' {/if}>
                    {$ui->get('pg-info-votehome-text')}
                 </div>
@@ -47,8 +47,8 @@
             <td></td>
             <td><a href="info_inperson.php"><img src="IMG/voteInPerson2.png"></a></td>
             <td></td>
-            <td class="howToVoteSpacer"><a href="info_inperson.php" {if $editor} title='pg-info-voteip' {/if} 
-                  >{$ui->get('pg-info-voteip')}</a>
+            <td class="howToVoteSpacer"><b><a href="info_inperson.php" {if $editor} title='pg-info-voteip' {/if} 
+                  >{$ui->get('pg-info-voteip')}</a></b>
                 <div class="howToVoteSubText" {if $editor} title='pg-info-voteip-text' {/if} >
                   {$ui->get('pg-info-voteip-text')}
                 </div>
@@ -57,9 +57,8 @@
       </table>
    </center>
 
-   <span class="red" {if $editor} title='pg-info-questions' {/if} >Questions?&nbsp;
-      Call the Michigan Democratic Party's Voter Assistance Hotline at
-      <a href="tel:+18336486837">833-MI-VOTES</a> (833-648-6837).
+   <span class="red" {if $editor} title='pg-info-questions' {/if} >
+      {$ui->get('pg-info-questions')}
    </span>
 </div>
 

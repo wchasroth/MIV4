@@ -2,8 +2,7 @@
    <div class="panel" id='student'>
        <p>
               Yes. According to the Secretary of State's
-              <a href="https://mvic.sos.state.mi.us/Home/RegisterToVote/#student"
-                   onClick="return externalLink(this);" target="_blank"
+              <a href="https://mvic.sos.state.mi.us/Home/RegisterToVote/#student" target="_blank"
                 >website
               </a>:
               <p>

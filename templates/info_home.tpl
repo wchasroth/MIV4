@@ -25,16 +25,10 @@
       <b>Apply for ballot online</b>
       <ul>
       <li>You can 
-         <a href="https://mvic.sos.state.mi.us/AVApplication/Index"
-                   onClick="return externalLink(this);" target="_blank"
+         <a href="https://mvic.sos.state.mi.us/AVApplication/Index"  target="_blank"
          >request a ballot online</a> if you're already registered to vote in
          Michigan.
       <li>Ballots are available starting 40 days before an election.
-          <!--
-      <li>The ballot request form <b>also</b> has an option to automatically
-         receive ballots for <b>all</b> future elections, called the 
-         "permanent mail ballot list".
-         -->
       <li>
          <span class="red">
          <b>To receive ballots for all future elections in the mail</b>, select the "permanent mail ballot list"
@@ -49,10 +43,10 @@
            <span class='red'>
              or in one of your city or township's ballot drop boxes.
            </span>
-              </li>
+        </li>
 
         <li><a href="https://www.michigan.gov/sos/-/media/Project/Websites/sos/Elections/Election-Forms/Absent-Voter-Ballot-Application-Fillable.pdf"
-                   onClick="return externalLink(this);" target="_blank"
+                    target="_blank"
             >Download an application</a>  
             that you can fill in, and return by mail&nbsp;
             <span class='red'>
@@ -104,16 +98,13 @@
       <p/>
       <b>Military or Overseas</b><br/>
       Please visit
-          <a href="https://www.votefromabroad.org/states/Michigan" 
-                   onClick="return externalLink(this);" target="_blank"
-          >votefromabroad.org</a>
+          <a href="https://www.votefromabroad.org/states/Michigan"  target="_blank" >votefromabroad.org</a>
       for Michigan-specific information.
 
       <p/>
       <b>More about voting at home</b><br/>
       Learn more:
-        <a href="https://mvic.sos.state.mi.us/Home/VoteAtHome"
-                   onClick="return externalLink(this);" target="_blank"
+        <a href="https://mvic.sos.state.mi.us/Home/VoteAtHome"  target="_blank"
         >Secretary of State's absentee voting page</a>.
 
       <p/>

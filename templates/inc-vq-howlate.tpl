@@ -2,8 +2,7 @@
    <div class="panel" id='howLate'>
        <p>
               You can register to vote through Election Day.&nbsp;
-              <a href="https://mvic.sos.state.mi.us/Home/RegisterToVote/#how"
-                   onClick="return externalLink(this);" target="_blank"
+              <a href="https://mvic.sos.state.mi.us/Home/RegisterToVote/#how" target="_blank"
                 >Here’s how to register on election day.</a>
        </p>
    </div>

@@ -12,24 +12,19 @@
             <b {if $editor} title='btm-follow' {/if} >{$ui->get('btm-follow')}</b>
 
             <center style="margin-top: 0.5em;">
-               <a href="https://www.facebook.com/mivoter.org"
-                   onClick="return externalLink(this);" target="_blank"
+               <a href="https://www.facebook.com/mivoter.org" target="_blank"
                  ><img src="IMG/icon4-fb2.png" width="36" title="Facebook"/></a>&nbsp;
 
-               <a href="https://www.instagram.com/mivoter.org5"
-                   onClick="return externalLink(this);" target="_blank"
+               <a href="https://www.instagram.com/mivoter.org5" target="_blank"
                  ><img src="IMG/icon4-inst2.png" width="36" title="Instagram"/></a>&nbsp;
 
-               <a href="https://www.tiktok.com/@mivoter.org"
-                   onClick="return externalLink(this);" target="_blank"
+               <a href="https://www.tiktok.com/@mivoter.org" target="_blank"
                  ><img src="IMG/icon4-tt2.png" width="36"   title="TikTok" /></a>&nbsp;
 
-               <a href="https://bsky.app/profile/mivoterdotorg.bsky.social"
-                   onClick="return externalLink(this);" target="_blank"
+               <a href="https://bsky.app/profile/mivoterdotorg.bsky.social" target="_blank"
                  ><img src="IMG/icon4-bsky2.png" width="36"    title="BlueSky" /></a>&nbsp;
 
-               <a href="https://www.youtube.com/@mivoter_org"
-                   onClick="return externalLink(this);" target="_blank"
+               <a href="https://www.youtube.com/@mivoter_org" target="_blank"
                  ><img src="IMG/icon4-yt3.png" width="36"   title="YouTube"/></a>&nbsp;
             </center>
          </div>

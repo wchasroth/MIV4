@@ -143,7 +143,7 @@
          re&shy;spon&shy;si&shy;bility.&nbsp;
          See the ACLU guide to 
          <a href="https://www.aclu.org/know-your-rights/protesters-rights" 
-                   onClick="return externalLink(this);" target="_blank"
+                    target="_blank"
          >protesters' rights</a>.
       </i>
    </p>
@@ -174,7 +174,7 @@
       {$protest['descr']|escape|showWithPrefix:"<b>Description</b>: "}<br/>
       <b>Source/corrections:</b>
       <a href="{$protest['srcurl']}"
-                   onClick="return externalLink(this);" target="_blank"
+                    target="_blank"
       >{$protest['srcname']|escape}</a>
       &nbsp;&nbsp;&nbsp;
       (UniqueId: {$protest['hashcode']|escape})
@@ -202,20 +202,13 @@
       To add an event, click on one or more of <b>their</b> links
       (opens in a new tab):
    <ul>
-      <!--
-                     <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSej4dyOSE3m7HE7WfBDgI8MznPO7VwQfrONnvsW2qAJ1JFWaw/viewform?usp=sharing"
-                       target="_blank">MI-Resist</a>
-      -->
-      <li><a href="https://tockify.com/tkf2/submitEvent/52da8db339c443afab943a987fea5fe0"
-                   onClick="return externalLink(this);" target="_blank"
+      <li><a href="https://tockify.com/tkf2/submitEvent/52da8db339c443afab943a987fea5fe0" target="_blank"
           >Michigan Resistance</a>
 
-      <li><a href="https://tockify.com/mifreedomcoalition/pinboard" 
-                   onClick="return externalLink(this);" target="_blank"
+      <li><a href="https://tockify.com/mifreedomcoalition/pinboard" target="_blank"
       >Michigan Freedom Coalition</a>
 
-      <li><a href="https://events.mivoter.org"
-                   onClick="return externalLink(this);" target="_blank"
+      <li><a href="https://events.mivoter.org" target="_blank"
           >MIvoter events</a>
          &nbsp;&nbsp;&nbsp;(especially for County Democratic Parties and clubs)
    </ul>

@@ -18,21 +18,19 @@
 
          <b>Are you registered?</b>&nbsp;
          <br>Check on-line with the
-         <a href="https://mvic.sos.state.mi.us/Voter/Index" onClick="return externalLink(thisthis);" target="_blank"
-           >Secretary of State</a>.
+         <a href="https://mvic.sos.state.mi.us/Voter/Index"  target="_blank" >Secretary of State</a>.
    <p></p>
   
          <b>Register on-line</b>&nbsp;
          <br>You can file your voter registration
-        <a href="https://mvic.sos.state.mi.us/RegisterVoter/Index"
-                   onClick="return externalLink(this);" target="_blank"
+        <a href="https://mvic.sos.state.mi.us/RegisterVoter/Index"  target="_blank"
         >on-line</a>
         if:
         <ul>
           <li>You have a valid Michigan driver’s license or state ID</li>
           <li>Your Michigan license or state ID has the correct address on it</li>
           <li>You haven’t applied for a duplicate license or state ID</li>
-          <li><span class='red'>You have a social security number</span></li>
+          <li>You have a social security number</li>
         </ul>
   
          <b>Register in person</b>&nbsp;
@@ -44,32 +42,16 @@
             (To find your clerk, enter your address at the very top of this page.)
          {/if}
 
-            <!-- (Recommended NOT to show county clerk, as local clerk closer/better)
-               or <a href="#" onClick="if (do_county_clerk_map() == 'OK') openCurtain('county_clerk'); return false;">
-                  | county_name | county</a>
-            -->
-
    <p></p>
          <b>Military or Overseas</b><br/>
-          Please visit <a href="https://www.votefromabroad.org/"
-                   onClick="return externalLink(this);" target="_blank"
-            >VoteFromAbroad.org</a> 
+          Please visit <a href="https://www.votefromabroad.org/"  target="_blank" >VoteFromAbroad.org</a> 
           for general information or
 
-          <a href="https://www.votefromabroad.org/states/Michigan"
-                   onClick="return externalLink(this);" target="_blank"
-          >information specific to Michigan</a>.
-          <!--
-           <br>See the
-           <a href="https://www.fvap.gov/">
-             Federal Voting Assistance Program</a>.
-          -->
+          <a href="https://www.votefromabroad.org/states/Michigan"  target="_blank" >information specific to Michigan</a>.
   
    <p></p>
       <b>More information</b>&nbsp;<br/>
-      <a href="https://mvic.sos.state.mi.us/Home/"
-                   onClick="return externalLink(this);" target="_blank"
-         >See more from the Secretary of State</a>.
+      <a href="https://mvic.sos.state.mi.us/Home/"  target="_blank" >See more from the Secretary of State</a>.
 
    <p></p>
       <b>Frequent Questions</b>&nbsp;<br/>

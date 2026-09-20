@@ -24,6 +24,8 @@ $pdo     = PdoHelper::makePdo($env);
 
 $lang    = trim($_COOKIE['lang']           ?? "");
 $editor  = ! empty(trim($_COOKIE['editor'] ?? ""));
+$codes   = MiCodesDecoder::decode($_COOKIE['miCodes'] ?? "{}");
+$ui      = new Uitext($pdo, $logger, $lang, 'pg-faq%', 'btm%', 'ham%', 'top%');
 
 $sessionId = trim($_COOKIE['sessionid'] ?? "");
 
@@ -39,4 +41,5 @@ $smarty->assign('hasAddress', ! empty($address));
 $smarty->assign('clerkJurisdiction', $clerkJurisdiction);
 $smarty->assign('editor', $editor);
 $smarty->assign('lang',   $lang);
+$smarty->assign('ui',   $ui);
 $smarty->display('info_register.tpl');

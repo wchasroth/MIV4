@@ -20,61 +20,43 @@
     <ul>
 
     <li>Early voting for the <b>November 2026 general election</b>&nbsp;
-        <span class='red'>
            must be available for all voters from 
-        </span>
         October 24 through November 1,&nbsp;
-        <span class='red'>
           although some clerks may choose to offer additional dates.
-        </span>
     </li>
 
     <li>Early in-person polling locations may be different than election day
         polling places.&nbsp;
-        <a href="https://mvic.sos.state.mi.us/Voter/Index#early-voting-search-section"
-                   onClick="return externalLink(this);" target="_blank"
+        <a href="https://mvic.sos.state.mi.us/Voter/Index#early-voting-search-section"  target="_blank"
            >Find your early voting location</a>.
-    <li><a href="https://www.michigan.gov/sos/elections/voting/early-in-person-voting"
-                   onClick="return externalLink(this);" target="_blank"
+    <li><a href="https://www.michigan.gov/sos/elections/voting/early-in-person-voting"  target="_blank"
             >Learn more about early voting in Michigan</a>.
     </ul>
 
     <b>Voting in Person on Election Day (Tues Nov 3, 2026)</b>
     <ul>
     <li>
-       <span class='red'>
           If you are already registered, you must vote at your polling place if you vote on Election Day.&nbsp;
           If you are not already registered or need to update your registration, 
           you may do so at your city or township clerk’s office on Election Day 
           and request an absentee ballot to vote at the same time.
-       </span>
     </li>
     <li>
-      <a href="https://mvic.sos.state.mi.us/Home/"
-                   onClick="return externalLink(this);" target="_blank"
+      <a href="https://mvic.sos.state.mi.us/Home/"  target="_blank"
       >Learn more about voting on election day</a> from the Secretary of State.
     </li>
-<!--
-    <li>As the election gets closer, we will provide the location of
-    <b>your</b> polling place.
--->
     </ul>
     
-      <b><span class='red'>Acceptable forms of</span> ID.</b>&nbsp;  You can use:
+      <b>Acceptable forms of ID.</b>&nbsp;  You can use:
       <ul>
-        <li>Michigan driver's license or state ID&nbsp;
-           <span class='red'>(current or expired)</span>
-        </li>
-        <li><span class='red'>A current</span> driver's license or state ID from another state</li>
+        <li>Michigan driver's license or state ID&nbsp; (current or expired) </li>
+        <li>A current driver's license or state ID from another state</li>
         <li>Federal or state-government issued ID with photo</li>
-        <li>U.S. Passport&nbsp; <span class='red'>or Passport Card</span></li>
+        <li>U.S. Passport&nbsp; or Passport Card</li>
         <li>Military ID with photo</li>
         <li>Student ID with photo</li>
         <li>Tribal ID with photo</li>
-        <li>
-           <span class='red'>
-              Local government issued ID
-           </span>
+        <li>Local government issued ID
         </ul>
       </ul>
 

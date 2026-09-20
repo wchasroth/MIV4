@@ -51,9 +51,7 @@
       races, like judges.)&nbsp;
       For a reliable non-partisan source of
       information about all candidates and proposals, see
-      <a href="https://www.vote411.org/"
-           onClick="return externalLink(this);" target="_blank"
-          >vote411.org</a>.
+      <a href="https://www.vote411.org/" target="_blank" >vote411.org</a>.
       <br/>&nbsp;
    </div>
 
@@ -63,9 +61,7 @@
       If you don't see some candidates for your district, it's because we have not (yet)
       received information about endorsed Democratic candidates for your area.
       You can also try <a href="county.php">your local county's</a> Democratic party,
-      or the <a href="https://michigandems.com/" 
-             onClick="return externalLink(this);" target="_blank"
-          >MichiganDems</a>
+      or the <a href="https://michigandems.com/" target="_blank" >MichiganDems</a>
       site for a listing of local candidates.
       <br/>&nbsp;
    </div>
@@ -77,32 +73,21 @@
          <li>English, Spanish, Arabic: <a href="tel:+18336486837">833-MI-VOTES</a> 
                 (Michigan Democrats Voter Protection Hotline)
          <li>English: <a href="tel:+18666878683">866-OUR-VOTE</a> -- 
-              <a href="https://www.lawyerscommittee.org/"
-                   onClick="return externalLink(this);" target="_blank"
+              <a href="https://www.lawyerscommittee.org/" target="_blank"
             >Lawyers' Committee for Civil Rights Under Law</a>
 
          <li>Spanish/English: <a href="tel:+18888398682">888-VE-Y-VOTA</a> -- 
-                 <a href="https://naleo.org/"
-                   onClick="return externalLink(this);" target="_blank"
-            >NALEO Educational Fund</a>
+                 <a href="https://naleo.org/" target="_blank" >NALEO Educational Fund</a>
 
          <li>Arabic/English:  <a href="tel:1+8449255287">844-YALLA-US</a> -- 
-             <a href="https://www.aaiusa.org/" 
-                   onClick="return externalLink(this);" target="_blank"
-            >Arab American Institute (AAI)</a>
+             <a href="https://www.aaiusa.org/" target="_blank" >Arab American Institute (AAI)</a>
 
          <li>Asian Languages/English: <a href="tel:+18882748683">888-API-VOTE</a> --
-            <a href="https://apiavote.org/" 
-                   onClick="return externalLink(this);" target="_blank"
-                    >APIAVote</a> &amp;
-            <a href="https://www.advancingjustice-aajc.org/"
-                   onClick="return externalLink(this);" target="_blank"
-               >Asian Americans Advancing Justice (AAJC)</a>
+            <a href="https://apiavote.org/" target="_blank" >APIAVote</a> &amp;
+            <a href="https://www.advancingjustice-aajc.org/" target="_blank" >Asian Americans Advancing Justice (AAJC)</a>
          <li>Text: <a href="sms:+18666878683">866-687-8683</a>
          <li>Or contact the non-partisan organization
-              <a href="https://866ourvote.org/"
-                      onClick="return externalLink(this);" target="_blank"
-                    >Election Protection</a>
+              <a href="https://866ourvote.org/" target="_blank" >Election Protection</a>
                   <i>(not affiliated with MIvoter.org)</i>
       </ul>
    </div>

@@ -28,6 +28,7 @@ $lang      = trim($_COOKIE['lang']           ?? "");
 $codes     = MiCodesDecoder::decode($_COOKIE['miCodes'] ?? "{}");
 $sessionId = trim($_COOKIE['sessionid'] ?? "");
 $editor    = ! empty(trim($_COOKIE['editor'] ?? ""));
+$ui      = new Uitext($pdo, $logger, $lang, 'pg-protest%', 'btm%', 'ham%', 'top%');
 
 date_default_timezone_set('America/New_York');
 $voterLog = new VoterLog($pdo, $logger, $env->get('addressHashSalt'));
@@ -82,4 +83,5 @@ $smarty->assign('county', $county);
 $smarty->assign('protests', $protests);
 $smarty->assign('editor', $editor);
 $smarty->assign('lang',   $lang);
+$smarty->assign('ui',   $ui);
 $smarty->display('protests.tpl');

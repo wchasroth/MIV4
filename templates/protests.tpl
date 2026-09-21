@@ -41,10 +41,8 @@
 {include file="inc-topbar.tpl"}
 
 <div class="darkBlueText pageText unindentList" style="margin-top: 0.8ex;">
-   <p/>
-   <b>Protests &amp; events are happening all over the state.</b>&nbsp;
-   See
-   {if $county > 0 } in {/if}
+   {$ui->get('pg-protests-1')}
+
    <select name="county" id="countySelector" onChange="newCounty();">
       <option value="0">state-wide</option>
       <option value="1">ALCONA</option>
@@ -130,32 +128,9 @@
       <option value="81">WASHTENAW</option>
       <option value="82">WAYNE</option>
       <option value="83">WEXFORD</option>
-   </select><br/>
-   or select a different county, or state-wide.&nbsp;
-   You can also <a href="#submitnew">submit new events</a> or corrections.
+   </select>
 
-<!-- FIX -->
-   <p>
-      <i>
-         <b>Disclaimer:</b>&nbsp; We do not sponsor, en&shy;dorse, or vet events.&nbsp;
-         This list is aggregated from many sources (so duplicates might appear).&nbsp;
-         Check the links before attending.&nbsp;
-         All protests are in&shy;tended to be <b>peaceful</b> assem&shy;blies &mdash; but your safety is your
-         re&shy;spon&shy;si&shy;bility.&nbsp;
-         See the ACLU guide to 
-         <a href="https://www.aclu.org/know-your-rights/protesters-rights" 
-                    target="_blank"
-         >protesters' rights</a>.
-      </i>
-   </p>
-   <p/>
-   <!--
-   if zip != 0
-   (See also the
-   <a href="https://midems.controlshift.app/local?filter%5Blocation%5D=zip" target="_blank"
-   >events near you</a> sponsored by your state and county Democratic parties.)
-   endif
-   -->
+   {$ui->get('pg-protests-2')}
 
    {foreach from=$protests item=protest}
    <p class="outdented">
@@ -183,13 +158,6 @@
    <p/>
    {/foreach}
 
-   {if $noMore}
-   <p>
-      <i>(At this time, we have no listings for protests in your county.&nbsp;
-         Select a different county, or state-wide.)</i>
-   </p>
-   {/if}
-
    <p>
       &nbsp;<br/>
       &nbsp;<br/>
@@ -197,29 +165,7 @@
    <p/>
 
    <p id="submitnew">
-      <b>Submitting new events.</b>&nbsp;
-      We do not create the list of events; we simply
-      merge the data from the organizations below.&nbsp;
-      To add an event, click on one or more of <b>their</b> links
-      (opens in a new tab):
-   <ul>
-      <li><a href="https://tockify.com/tkf2/submitEvent/52da8db339c443afab943a987fea5fe0" target="_blank"
-          >Michigan Resistance</a>
-
-      <li><a href="https://tockify.com/mifreedomcoalition/pinboard" target="_blank"
-      >Michigan Freedom Coalition</a>
-
-      <li><a href="https://events.mivoter.org" target="_blank"
-          >MIvoter events</a>
-         &nbsp;&nbsp;&nbsp;(especially for County Democratic Parties and clubs)
-   </ul>
-      <b>Correcting events.</b>&nbsp;
-      If an event listing needs correction, first try to contact the "source" organization
-      listed under the event.&nbsp; (Or you may be able to submit a 'new' event to them, and
-      note that this is a correction for a previous entry.)
-   <p/>
-   If that fails, use the "Feedback" link below, and send us the "UniqueId" listed at
-   the bottom of the event, the county name, and the corrected info (date, time, etc.)
+      {$ui->get('pg-protests-4')}
    </p>
 
 </div>

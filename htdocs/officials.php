@@ -27,6 +27,7 @@ $logger = new DumbFileLogger($env->get('logFile'));
 
 $lang      = trim($_COOKIE['lang']           ?? "");
 $ui        = new Uitext($pdo, $logger, $lang, 'pg-official%', 'btm%', 'ham%', 'top%');
+$numFormatter = new NumberFormatter( ($lang === 'es' ? "es_ES" : "en_US"), NumberFormatter::ORDINAL);
 $editor    = ! empty(trim($_COOKIE['editor'] ?? ""));
 $codes     = MiCodesDecoder::decode($_COOKIE['miCodes'] ?? "{}");
 $sessionId = trim($_COOKIE['sessionid'] ?? "");

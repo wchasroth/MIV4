@@ -4,3 +4,4 @@
       {$ui->get('inc-vq-concern-text')}
     </p>
     <br/>
+   </div>

@@ -31,7 +31,7 @@ if ($id === "") {
 }
 
 $lang    = trim($_COOKIE['lang']           ?? "");
-$ui      = new Uitext($pdo, $logger, $lang, 'pg-1off%', 'btm%', 'ham%', 'top%');
+$ui      = new Uitext($pdo, $logger, $lang, 'pg-1off%', 'btm%', 'ham%', 'top%', 'button%');
 $editor  = ! empty(trim($_COOKIE['editor'] ?? ""));
 $codes   = MiCodesDecoder::decode($_COOKIE['miCodes'] ?? "{}");
 

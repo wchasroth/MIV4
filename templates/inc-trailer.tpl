@@ -44,7 +44,9 @@
               <td><a href="https://michigandems.com" target="_blank"><img src="IMG/mdpLogo2.jpg" width="100"/></a></td>
               <td>&nbsp;&nbsp;</td>
               <td>
-                <span {if $editor} title='btm-mivoter' {/if} >{$ui->get('btm-mivoter')}</span>
+                <span {if $editor} title='btm-mivoter1' {/if} >{$ui->get('btm-mivoter1')}</span>
+                (<a href="https://washtenawdems.org" target="_blank" class="whiteLink">washtenawdems.org</a>)&nbsp;
+                <span {if $editor} title='btm-mivoter2' {/if} >{$ui->get('btm-mivoter2')}</span>
               </td>
               <td><a href="https://www.washtenawdems.org" target="_blank"><img src="IMG/wcdp-merged2.png" width="100"/></a></td>
               </tr>

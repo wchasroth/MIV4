@@ -31,7 +31,8 @@
 <table width="100%" style="font-size: 120%;">
     <tr valign="top">
         <td>{$name}<br>{$title} {$party}<br/><br/>
-            <button class='roundButton' onClick="window.history.back();" {if $editor} title='pg-1official-back' {/if}>Back</button>
+            <button class='roundButton' onClick="window.history.back();" 
+               {if $editor} title='button-back' {/if}>{$ui->get('button-back')}</button>
         </td>
         <td align="right"><img src="{$headshot}" width="150"/></td>
     </tr>

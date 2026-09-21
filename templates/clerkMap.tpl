@@ -18,41 +18,44 @@
 
  <table width="100%">
  <tr valign="top">
-     <td><button class="roundButton" onClick="window.history.back();">Back</button></td>
+     <td><button class="roundButton" onClick="window.history.back();">{$ui->get('button-back')}</button></td>
      <td>&nbsp;&nbsp;</td>
      <td align="right">
-         <b style="font-size: 125%;">{$clerk['jurisdiction']} Clerk</b><br/>
-         <i>Click pin to get full map.</i>
+         <b style="font-size: 125%;">{$ui->get('pg-clerk-clerk')|dollarDollar:$clerk['jurisdiction']}</b><br/>
+         <i>{$ui->get('pg-clerk-pin')}</i>
      </td>
  </tr>
  </table>
 
 <table width="100%">
     <tr>
-       <td class="pad" colspan="2"><b>Clerk: {$clerk['name']}</b></td>
+       <td class="pad" colspan="2"><b>{$ui->get('pg-clerk-clerk')|dollarDollar:""}: {$clerk['name']}</b></td>
        <td class="pad">
           {if $clerk['web'] != ''}
              <table cellspacing="0" cellpadding="0">
-                <tr><td><b><a href="{$clerk['web']}" target="_blank">Web</a>&nbsp;</td><td><img src="IMG/external3.png"/></td></tr>
+                <tr><td><b><a href="{$clerk['web']}" target="_blank">{$ui->get('pg-clerk-web')}</a>&nbsp;</td><td><img src="IMG/external3.png"/></td></tr>
              </table>
           {/if}
        </td>
     </tr>
+
     <tr valign="top">
-        <td class="pad"><b>Address:</b> {$clerk['street_address']}</td>
+        <td class="pad"><b>{$ui->get('pg-clerk-address')}:</b> {$clerk['street_address']}</td>
         <td></td>
-        <td class="pad"><b>Mail:</b>    {$clerk['mailing_address']}</td>
+        <td class="pad"><b>{$ui->get('pg-clerk-mail')}:</b>    {$clerk['mailing_address']}</td>
     </tr>
+
     <tr valign="top">
-        <td class="pad"><b>Phone:</b> <a href="tel:+1{$clerk['phoneDigits']}">{$clerk['phone']}</a></td>
+        <td class="pad"><b>{$ui->get('pg-clerk-phone')}:</b> <a href="tel:+1{$clerk['phoneDigits']}">{$clerk['phone']}</a></td>
         <td></td>
-        <td class="pad"><b>Fax:</b>   {$clerk['fax']}</td>
+        <td class="pad"><b>{$ui->get('pg-clerk-fax')}:</b>   {$clerk['fax']}</td>
     </tr>
+
     <tr valign="top">
-        <td class="pad"><b>Email:</b>
+        <td class="pad"><b>{$ui->get('pg-clerk-email')}:</b>
             <a href="mailto:{$clerk['email']}" target="_blank">{$clerk['email']}</a></td>
         <td></td>
-        <td class="pad"><b>Hours:</b>   {$clerk['hours']}</td>
+        <td class="pad"><b>{$ui->get('pg-clerk-hours')}:</b>   {$clerk['hours']}</td>
     </tr>
 </table>
 

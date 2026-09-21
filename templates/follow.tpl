@@ -51,6 +51,7 @@
 </center>
 </div>
 
+<!-- FIX -->
 <center>
 <i><a href="index.php">(Return to home page)</a></i>
 </center>

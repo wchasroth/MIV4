@@ -15,19 +15,8 @@
 {include file="inc-topbar.tpl"}
 
 <div class="darkBlueText pageText unindentList" style="margin-top: 0.8ex;">
-         
-         <p/>
-         As we look forward to the 2026 elections, and reclaiming the U.S. House
-         (and the Michigan State House), it's important
-         to reach out and find community with like-minded people &mdash;
-         for your own peace of mind, and to see how you might be able
-         to help.
-
-         <p/>
-
-         You can start by connecting with your
-         {$counties[0]['name']|fixCase} County Democratic party(ies):
-   <!-- fixCase -->
+   {$countyName = $counties[0]['name']|fixCase}
+   <p>{$ui->get('pg-county-top')|dollarDollar:$countyName}</p>
 
          {foreach from=$counties item=county}
 

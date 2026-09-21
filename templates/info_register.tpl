@@ -15,46 +15,17 @@
 {include file="inc-topbar.tpl"}
 
 <div class="darkBlueText pageText unindentList" style="margin-top: 0.8ex;">
+   {$ui->get('pg-info-reg1')}
+ 
+   {if $hasAddress}
+      {$ui->get('pg-info-reg2')|dollarDollar:$clerkJurisdiction}
+   {else}
+      {$ui->get('pg-info-reg2-noaddr')}
+   {/if}
 
-         <b>Are you registered?</b>&nbsp;
-         <br>Check on-line with the
-         <a href="https://mvic.sos.state.mi.us/Voter/Index"  target="_blank" >Secretary of State</a>.
-   <p></p>
-  
-         <b>Register on-line</b>&nbsp;
-         <br>You can file your voter registration
-        <a href="https://mvic.sos.state.mi.us/RegisterVoter/Index"  target="_blank"
-        >on-line</a>
-        if:
-        <ul>
-          <li>You have a valid Michigan driver’s license or state ID</li>
-          <li>Your Michigan license or state ID has the correct address on it</li>
-          <li>You haven’t applied for a duplicate license or state ID</li>
-          <li>You have a social security number</li>
-        </ul>
-  
-         <b>Register in person</b>&nbsp;
-         <br>Go to any Secretary of State branch office or 
-         {if $hasAddress}
-            the <a href="clerkMap.php">{$clerkJurisdiction}</a> clerk's office.</b>
-         {else}
-            your local clerk's office.&nbsp;
-            (To find your clerk, enter your address at the very top of this page.)
-         {/if}
+   <p/>
+   {$ui->get('pg-info-reg3')}
 
-   <p></p>
-         <b>Military or Overseas</b><br/>
-          Please visit <a href="https://www.votefromabroad.org/"  target="_blank" >VoteFromAbroad.org</a> 
-          for general information or
-
-          <a href="https://www.votefromabroad.org/states/Michigan"  target="_blank" >information specific to Michigan</a>.
-  
-   <p></p>
-      <b>More information</b>&nbsp;<br/>
-      <a href="https://mvic.sos.state.mi.us/Home/"  target="_blank" >See more from the Secretary of State</a>.
-
-   <p></p>
-      <b>Frequent Questions</b>&nbsp;<br/>
       {include file="inc-vq-whoeligible.tpl"}
       {include file="inc-vq-student.tpl"}
       {include file="inc-vq-register.pl"}

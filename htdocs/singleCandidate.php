@@ -33,7 +33,7 @@ if ($id === "") {
 $photoBase = $env->get('photoBase');
 
 $lang    = trim($_COOKIE['lang']           ?? "");
-$ui      = new Uitext($pdo, $logger, $lang, 'pg-1can%', 'btm%', 'ham%', 'top%');
+$ui      = new Uitext($pdo, $logger, $lang, 'pg-1can%', 'btm%', 'ham%', 'top%', 'button%');
 $editor  = ! empty(trim($_COOKIE['editor'] ?? ""));
 $codes   = MiCodesDecoder::decode($_COOKIE['miCodes'] ?? "{}");
 

@@ -27,6 +27,8 @@ $pdo              = PdoHelper::makePdo($env);
 $editor    = ! empty(trim($_COOKIE['editor'] ?? ""));
 $lang      = trim($_COOKIE['lang']           ?? "");
 $codes     = MiCodesDecoder::decode($_COOKIE['miCodes'] ?? "{}");
+$lang    = trim($_COOKIE['lang']           ?? "");
+$ui      = new Uitext($pdo, $logger, $lang, 'pg-county%', 'btm%', 'ham%', 'top%');
 
 $myCounty  = $codes['county_code'];
 $sessionId = trim($_COOKIE['sessionid'] ?? "");
@@ -52,6 +54,7 @@ $smarty = new SmartyPage();
 $smarty->registerPlugin(Smarty::PLUGIN_MODIFIER, "fixCase",       [Plugins::class, "fixCase"]);
 $smarty->registerPlugin(Smarty::PLUGIN_MODIFIER, "addProtocol",   [Plugins::class, "addProtocol"]);
 $smarty->registerPlugin(Smarty::PLUGIN_MODIFIER, "stripProtocol", [Plugins::class, "stripProtocol"]);
+$smarty->registerPlugin(Smarty::PLUGIN_MODIFIER, "dollarDollar",  [Plugins::class, "dollarDollar"]);
 
 $smarty->assign('address', $address);
 $smarty->assign('county', $county);
@@ -59,4 +62,5 @@ $smarty->assign('counties', $counties);
 $smarty->assign('hasAddress', true);
 $smarty->assign('editor', $editor);
 $smarty->assign('lang',   $lang);
+$smarty->assign('ui',   $ui);
 $smarty->display('county.tpl');

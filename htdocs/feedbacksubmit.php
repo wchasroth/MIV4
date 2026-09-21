@@ -21,6 +21,7 @@ $logger           = new DumbFileLogger($env->get('logFile'));
 $pdo              = PdoHelper::makePdo($env);
 $editor    = ! empty(trim($_COOKIE['editor'] ?? ""));
 $lang      = trim($_COOKIE['lang']           ?? "");
+$ui        = new Uitext($pdo, $logger, $lang, 'pg-feed%', 'btm%', 'ham%', 'top%');
 
 $name  = $_POST['name']     ?? "";
 $email = $_POST['email']    ?? "";
@@ -34,5 +35,6 @@ $smarty->assign('address', $address);
 $smarty->assign('hasAddress', true);
 $smarty->assign('editor', $editor);
 $smarty->assign('lang',   $lang);
+$smarty->assign('ui',   $ui);
 $smarty->display('feedbacksubmit.tpl');
 

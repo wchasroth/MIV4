@@ -14,16 +14,7 @@
 {include file="inc-topbar.tpl"}
 
 <div class="darkBlueText pageText unindentList" style="margin-top: 0.8ex;" {if $editor} title='pg-feedsubmit' {/if}>
-     <b>Thank you!</b><br/>
-            <br/>
-     If you supplied an email address, we will respond once we have examined
-     the issue.&nbsp;
-     We appreciate any and all suggestions for improvement.
-
-     <p/>
-     If you haven't already, you might want to look through the 
-     <a href="faq.php">FAQ</a> page -- it might help answer any
-     questions you might have.
+   {$ui->get('pg-feedbacksubmitted')}
 </div>
 <br/>
 

@@ -9,6 +9,7 @@ use CharlesRothDotNet\Alfred\Str;
 use CharlesRothDotNet\EditorV4\EnvHelper;
 use Smarty\Smarty;
 use CharlesRothDotNet\Alfred\SmartyPage;
+use CharlesRothDotNet\MIV4\Plugins;
 use CharlesRothDotNet\MIV4\Clerk;
 use CharlesRothDotNet\MIV4\Utils;
 use CharlesRothDotNet\MIV4\Uitext;
@@ -30,7 +31,7 @@ $lang    = trim($_COOKIE['lang']           ?? "");
 $editor  = ! empty(trim($_COOKIE['editor'] ?? ""));
 $codes   = MiCodesDecoder::decode($_COOKIE['miCodes'] ?? "{}");
 $apiKey  = $env->get('googleMapsApiKey');
-$ui      = new Uitext($pdo, $logger, $lang, 'pg-clerk%', 'btm%', 'ham%', 'top%');
+$ui      = new Uitext($pdo, $logger, $lang, 'pg-clerk%', 'btm%', 'ham%', 'top%', 'button%');
 
 $clerk = Clerk::getClerkInfo($pdo, intval($codes['county_code']), intval($codes['juris_code']), $logger);
 $clerk['phoneDigits'] = Utils::phoneDigits($clerk['phone']);
@@ -38,6 +39,7 @@ $clerk['faxDigits']   = Utils::phoneDigits($clerk['fax']);
 
 $smarty = new SmartyPage();
 $smarty->assign('ui', $ui);
+$smarty->registerPlugin(Smarty::PLUGIN_MODIFIER, "dollarDollar", [Plugins::class, "dollarDollar"]);
 
 #if (empty($clerk['name'])) {
 if (empty($clerk['street_address'])) {

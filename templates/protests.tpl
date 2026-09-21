@@ -134,6 +134,7 @@
    or select a different county, or state-wide.&nbsp;
    You can also <a href="#submitnew">submit new events</a> or corrections.
 
+<!-- FIX -->
    <p>
       <i>
          <b>Disclaimer:</b>&nbsp; We do not sponsor, en&shy;dorse, or vet events.&nbsp;

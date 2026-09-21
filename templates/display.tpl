@@ -21,7 +21,7 @@
 </div>
 
 <center>
-<i><a href="index.php">(Return to home page)</a></i>
+<i><a href="index.php">{$ui->get('btm-return-home')}</a></i>
 </center>
 
 

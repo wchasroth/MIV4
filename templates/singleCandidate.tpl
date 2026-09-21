@@ -43,7 +43,7 @@
                   <line x1="10" y1="14" x2="21" y2="3"></line>
                </svg>
             </a><br>{$title}<br/><br/>
-            <button class="roundButton" onClick="window.history.back();">Back</button>
+            <button class="roundButton" onClick="window.history.back();">{$ui->get('button-back')}</button>
             <div id="google_translate_element" style="display: none;"></div>
         </td>
         <td align="right"><img src="{$photoBase}/{$headshot}" width="150"/></td>

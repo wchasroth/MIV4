@@ -25,17 +25,19 @@ if ($address === "") {
 $env     = new EnvFile("_env");
 $logger  = new DumbFileLogger($env->get('logFile'));
 $pdo     = PdoHelper::makePdo($env);
-<<<<<<< HEAD
+
 $lang    = trim($_COOKIE['lang']           ?? "");
 $editor  = ! empty(trim($_COOKIE['editor'] ?? ""));
 $codes   = MiCodesDecoder::decode($_COOKIE['miCodes'] ?? "{}");
 $apiKey  = $env->get('googleMapsApiKey');
+$ui      = new Uitext($pdo, $logger, $lang, 'pg-clerk%', 'btm%', 'ham%', 'top%');
 
 $clerk = Clerk::getClerkInfo($pdo, intval($codes['county_code']), intval($codes['juris_code']), $logger);
 $clerk['phoneDigits'] = Utils::phoneDigits($clerk['phone']);
 $clerk['faxDigits']   = Utils::phoneDigits($clerk['fax']);
 
 $smarty = new SmartyPage();
+$smarty->assign('ui', $ui);
 
 #if (empty($clerk['name'])) {
 if (empty($clerk['street_address'])) {

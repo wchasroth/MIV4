@@ -17,6 +17,7 @@ $env     = new EnvFile("_env");
 $logger  = new DumbFileLogger($env->get('logFile'));
 $pdo     = PdoHelper::makePdo($env);
 $codes   = MiCodesDecoder::decode($_COOKIE['miCodes'] ?? "{}");
+$zipcode = $codes['zipcode'];
 $sessionId = trim($_COOKIE['sessionid'] ?? "");
 
 date_default_timezone_set('America/New_York');
@@ -27,6 +28,7 @@ $clerkJurisdiction = Clerk::getJurisdictionName($pdo, intval($codes['juris_code'
 
 $smarty = new SmartyPage();
 $smarty->assign('address', $address);
+$smarty->assign('zipcode', $zipcode);
 $smarty->assign('clerkJurisdiction', $clerkJurisdiction);
 $smarty->assign('hasAddress', $address !== "");
 $smarty->display('civicActions.tpl');

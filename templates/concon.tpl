@@ -42,7 +42,8 @@ Voters would select one delegate for their state house district,
 
 <li><b>Write the new constitution.</b>&nbsp; The convention would start in October 2027.&nbsp;
   There is no time limit.&nbsp; The last convention (1963) took 10 months to complete.&nbsp;
-  Delegates are paid the same as legislators (currently $72,000 per year).&nbsp;
+  Under current law, delegates would be paid a maximum (total) of $7500, 
+  although the Legislature could raise that number.&nbsp;
   The proposed new constitution must be passed by a majority vote of the delegates.
 
 <li><b>Voters accept or reject.</b>&nbsp; The voters then get final say on approving the new constitution.&nbsp;
@@ -58,7 +59,7 @@ Voters would select one delegate for their state house district,
 <li>Some argue that the current constitution and amendments have grown large and unwieldy, 
     and have had unintended consequences.</li>
 <li>Others believe that the existing amendment process requires either large amounts of money,
-    or very large, highly organized volunteer groups -- which some call "less democratic".</li>
+    or very large, highly organized volunteer groups -- which some call "less democratic."</li>
 </ul>
 <br/>
 
@@ -73,7 +74,7 @@ Voters would select one delegate for their state house district,
 </li>
 
 <li>The election of the delegates, and the final approval of a new constitution,
-is arguably "less democratic".&nbsp; They require 3 special elections,
+is arguably "less democratic."&nbsp; They require 3 special elections,
 which get far <b>fewer</b> voters than the November general election.&nbsp;
 (Normal constitutional amendments are voted on in the November general elections.)
 </li>
@@ -127,6 +128,8 @@ dealing a potentially catastrophic blow to our state’s democracy.
        target="_blank">Michigan Democratic Party</a>
 <li><a href="https://michiganadvance.com/2026/09/16/right-to-life-michigan-says-it-opposes-constitutional-convention-after-deboyer-comments-on-abortion/"
        target="_blank">Michigan Advance: Right to Life</a>
+<li><a href="https://crcmich.org/publications/2026con-con-2" target="_blank"
+     >Citizens Research Council: Prop 1 analysis</a>
 </ol>
 </div>
 

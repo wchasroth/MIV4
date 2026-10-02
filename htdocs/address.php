@@ -5,10 +5,10 @@ use CharlesRothDotNet\Alfred\EnvFile;
 use CharlesRothDotNet\Alfred\PdoHelper;
 use CharlesRothDotNet\Alfred\HttpGet;
 use CharlesRothDotNet\Alfred\Str;
-use CharlesRothDotNet\AddressService\AddressMatcher;
-use CharlesRothDotNet\AddressService\ParsedAddress;
-use CharlesRothDotNet\AddressService\StreetUtils;
-use CharlesRothDotNet\AddressService\StreetTypes;
+use CharlesRothDotNet\MIV4\AddressMatcher;
+use CharlesRothDotNet\MIV4\ParsedAddress;
+use CharlesRothDotNet\MIV4\StreetUtils;
+use CharlesRothDotNet\MIV4\StreetTypes;
 
 require_once('../vendor/autoload.php');
 

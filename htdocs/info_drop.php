@@ -42,9 +42,9 @@ $result = $pdo->run($sql);
 $rows = $result->getRows();
 
 for ($i=0;   $i<count($rows);   $i++) {
-   $hours = strtolower($rows[$i]['hours']);
+   $hours = strtolower($rows[$i]['hours'] ?? '');
    if (Str::contains($hours, "24 hrs", "24 hours", "24/7"))  $rows[$i]['hours'] = "24";
-   $rows[$i]['map'] = urlencode($rows[$i]['address']);
+   $rows[$i]['map'] = urlencode($rows[$i]['address'] ?? '');
 }
 
 $smarty = new SmartyPage();

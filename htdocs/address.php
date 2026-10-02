@@ -5,6 +5,7 @@ use CharlesRothDotNet\Alfred\EnvFile;
 use CharlesRothDotNet\Alfred\PdoHelper;
 use CharlesRothDotNet\Alfred\HttpGet;
 use CharlesRothDotNet\Alfred\Str;
+use CharlesRothDotNet\Alfred\DumbFileLogger;
 use CharlesRothDotNet\MIV4\AddressMatcher;
 use CharlesRothDotNet\MIV4\ParsedAddress;
 use CharlesRothDotNet\MIV4\StreetUtils;
@@ -12,27 +13,28 @@ use CharlesRothDotNet\MIV4\StreetTypes;
 
 require_once('../vendor/autoload.php');
 
-const MAX_ROWS = 50;
+const MAX_ROWS = 10;
 
 date_default_timezone_set("America/New_York");
 
 $env = new EnvFile("_env");
 $pdo = PdoHelper::makePdo($env);
 
+$referrerName = $_SERVER['HTTP_REFERER'] ?? 'unknown';
+$http_origin  = $_SERVER['HTTP_ORIGIN']  ?? '';
+
+//---Not the most secure, but this will filter out obvious/naive attacks.
+if (! empty($http_origin)  ||  ! Str::contains($referrerName, $env->get('domain'))) {
+   $logger = new DumbFileLogger($env->get('logFile'));
+   $logger->log("http_origin=$http_origin, referrer=$referrerName");
+   exit(1);
+}
+
 $number  = HttpGet::number("num");
 $street  = HttpGet::value("street");
 $street  = Str::replaceAll($street, "-", " ");
 $max     = HttpGet::number("max", MAX_ROWS);
 $log     = HttpGet::number("log", 0);
-
-$allowedOrigins = ['https://new.mivoter.org', 'https://mivoter.org', 'https://aws.mivoter.org', 'http://localhost', 'https://vopro.mivoter.org', 'https://alb.mivoter.org'];
-$http_origin = $_SERVER['HTTP_ORIGIN'] ?? '';
-if (in_array($http_origin, $allowedOrigins)) {
-   header("Access-Control-Allow-Origin: $http_origin");
-   header("Vary: Origin");
-}
-
-//header("Access-Control-Allow-Origin: https://new.mivoter.org");
 
 if ($number == 0  &&  empty($street)) {
    header('Content-Type: application/json; charset=utf-8');

@@ -16,12 +16,12 @@
 {include file="inc-topbar.tpl"}
 
 <div class="darkBlueText pageText unindentList" style="margin-top: 0.8ex;">
-   {if $hasAddress}
+   {if $hasAddress && count($rows) > 0}
       <b>Drop Boxes</b>
 
       <p/>
-      You can return your filled-in absentee ballot at any of these secured
-      drop-boxes.&nbsp;
+      You can return your filled-in absentee ballot at any of these 
+      secured drop-boxes.&nbsp;
 
       <ol>
          {foreach from=$rows item=row}
@@ -40,11 +40,23 @@
       <!--
          county={$county}, juris={$juris}, ward={$ward}, pct={$pct}<br/>
        -->
+   {elseif $hasAddress}
+      <b>Drop Boxes</b>
+      <p/>
+      Sorry, we could not find any drop-boxes in your area.
+      <p/>
+      You can also check the Secretary of State‘s website, under
+         "<a href="https://mvic.sos.state.mi.us/Voter/Index/#yourclerk" target="_blank">Search for your city/township clerk</a>".
+
+
    {else}
       <b>Drop Boxes</b>
       <p/>
       Please enter your address above, so that we can find the drop-boxes
       in your area.
+
+      <p/>
+      <i style="font-size: 90%;">(We <b>never</b> save your address.&nbsp; Only your browser remembers it.)</i>
    {/if}
 
 </div>

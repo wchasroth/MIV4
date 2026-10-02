@@ -39,12 +39,16 @@ $sql = "SELECT d.address, d.hours, d.directions, '' AS map "
      . "   AND p.ward      = $ward "
      . "   AND p.pct       = $pct ";
 $result = $pdo->run($sql);
-$rows = $result->getRows();
+$boxes = $result->getRows();
 
-for ($i=0;   $i<count($rows);   $i++) {
-   $hours = strtolower($rows[$i]['hours'] ?? '');
-   if (Str::contains($hours, "24 hrs", "24 hours", "24/7"))  $rows[$i]['hours'] = "24";
-   $rows[$i]['map'] = urlencode($rows[$i]['address'] ?? '');
+$rows = [];
+for ($i=0;   $i<count($boxes);   $i++) {
+   if (trim ($boxes[$i]['address'] ?? '') === '')  continue;
+
+   $hours = strtolower($boxes[$i]['hours'] ?? '');
+   if (Str::contains($hours, "24 hrs", "24 hours", "24/7"))  $boxes[$i]['hours'] = "24";
+   $boxes[$i]['map'] = urlencode($boxes[$i]['address'] ?? '');
+   $rows[] = $boxes[$i];
 }
 
 $smarty = new SmartyPage();

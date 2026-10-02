@@ -85,15 +85,12 @@
       <p/>
       <b>Return Your Ballot</b><br>
        
-       <span class="red">
-          Your ballot must be received at your clerk’s office or deposited in your local ballot drop box 
+          Your ballot must be received at your clerk’s office or deposited in one of 
+          <b>your</b> local <a href="info_drop.php">ballot drop boxes</a>
           by 8 pm on Election Day for it to count.&nbsp;
           You can also scan your marked absent voter ballot into a tabulator machine at your 
           early voting site or at your Election Day polling place.
-       </span>
 
-       <p/>
-       <span class="red">We will provide drop-box, polling place, and early voting locations closer to election day.</span>
     <!--
       <a href="#dropbox_section" onClick="return dropBoxMapCall();">Find your Drop Box Locations</a>.&nbsp;
       <br/><br/>
@@ -121,6 +118,7 @@
       {include file="inc-vq-whoeligible.tpl"}
       {include file="inc-vq-student.tpl"}
       {include file="inc-vq-getballot.tpl"}
+      {include file="inc-vq-dropbox.tpl"}
       {include file="inc-vq-concerned.tpl"}
       {include file="inc-vq-trackballot.tpl"}
       {include file="inc-vq-noarrive.tpl"}

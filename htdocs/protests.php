@@ -4,6 +4,7 @@ declare(strict_types=1);
 use CharlesRothDotNet\Alfred\DumbFileLogger;
 use CharlesRothDotNet\Alfred\EnvFile;
 use CharlesRothDotNet\Alfred\PdoHelper;
+use CharlesRothDotNet\Alfred\Str;
 use Smarty\Smarty;
 use CharlesRothDotNet\Alfred\SmartyPage;
 use CharlesRothDotNet\MIV4\Plugins;
@@ -45,8 +46,8 @@ if ($county > 0) {
 }
 else {
    $sql = "SELECT p.*, co.name as ctyname, s.name AS srcname, s.url AS srcurl "
-        . "  FROM protests AS p "
-        . "  JOIN county   AS co "
+        . "  FROM protests   AS p "
+        . "  JOIN s4counties AS co "
         . "    ON (p.county = co.id) "
         . "  JOIN protest_source AS s "
         . "    ON p.source = s.id "

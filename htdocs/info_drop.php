@@ -17,6 +17,7 @@ $address = trim($_COOKIE['miAddress'] ?? "");
 
 $env     = new EnvFile("_env");
 $pdo     = PdoHelper::makePdo($env);
+$lang    = trim($_COOKIE['lang']           ?? "");
 $codes   = MiCodesDecoder::decode($_COOKIE['miCodes'] ?? "{}");
 $sessionId = trim($_COOKIE['sessionid'] ?? "");
 $logger = new DumbFileLogger($env->get('logFile'));

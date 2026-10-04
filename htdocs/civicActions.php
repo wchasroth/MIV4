@@ -22,6 +22,7 @@ $lang    = trim($_COOKIE['lang']           ?? "");
 $ui      = new Uitext($pdo, $logger, $lang, 'pg-civic%', 'btm%', 'ham%', 'top%');
 $codes   = MiCodesDecoder::decode($_COOKIE['miCodes'] ?? "{}");
 $editor  = ! empty(trim($_COOKIE['editor'] ?? ""));
+$zipcode = $codes['zipcode'] ?? '';
 $sessionId = trim($_COOKIE['sessionid'] ?? "");
 
 date_default_timezone_set('America/New_York');
@@ -32,6 +33,7 @@ $clerkJurisdiction = Clerk::getJurisdictionName($pdo, intval($codes['juris_code'
 
 $smarty = new SmartyPage();
 $smarty->assign('address', $address);
+$smarty->assign('zipcode', $zipcode);
 $smarty->assign('clerkJurisdiction', $clerkJurisdiction);
 $smarty->assign('hasAddress', $address !== "");
 $smarty->assign('editor', $editor);

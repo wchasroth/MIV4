@@ -7,7 +7,8 @@
    <script               src="mivoter02.js"></script>
    <script               src="share.js"></script>
    <script               src="parseHouseStreet.js"></script>
-   <script type="module" src="address-search03.js"></script>
+   <script type="module" src="address-search04.js"></script>
+
    {if $lang == 'es'}
       <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
       <script>

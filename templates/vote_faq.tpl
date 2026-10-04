@@ -7,7 +7,7 @@
    <script               src="share.js"></script>
    <script               src="mivoter02.js"></script>
    <script               src="parseHouseStreet.js"></script>
-   <script type="module" src="address-search03.js"></script>
+   <script type="module" src="address-search04.js"></script>
 </head>
 
 <body onLoad="initialize();">
@@ -24,6 +24,7 @@
    {include file="inc-vq-checkreg.tpl"}
    {include file="inc-vq-howlate.tpl"}
    {include file="inc-vq-getballot.tpl"}
+   {include file="inc-vq-dropbox.tpl"}
    {include file="inc-vq-concerned.tpl"}
    {include file="inc-vq-trackballot.tpl"}
    {include file="inc-vq-noarrive.tpl"}

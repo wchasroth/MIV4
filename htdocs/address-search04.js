@@ -161,12 +161,7 @@ class AddressSearch extends HTMLElement {
         }
 
         const hostname = window.location.hostname || "";
-        const apiEndPoint = "https://address.mivoter.org";
-/*
-        const apiEndPoint = hostname.includes("mivoter.org")
-            ? "https://address.mivoter.org"
-            : "/api/address-suggest";
-*/
+        const apiEndPoint = "address.php";
         const fetchUrl = `${apiEndPoint}?street=${encodeURIComponent(street)}&num=${house}&max=5`;
 
         const useAbort = !this.constructor.WAIT_FOR_FETCH;

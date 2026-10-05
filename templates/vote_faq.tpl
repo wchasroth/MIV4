@@ -30,6 +30,7 @@
    {include file="inc-vq-noarrive.tpl"}
    {include file="inc-vq-disability.tpl"}
    {include file="inc-vq-changevote.tpl"}
+   {include file="inc-vq-early.tpl"}
    {include file="inc-vq-emergency.tpl"}
    {include file="inc-vq-noid.tpl"}
 </div>

@@ -39,13 +39,13 @@
 
     <b>Voting in Person on Election Day (Tues Nov 3, 2026)</b>
     <ul>
-    <li>
-       <span class='red'>
-          If you are already registered, you must vote at your polling place if you vote on Election Day.&nbsp;
-          If you are not already registered or need to update your registration, 
-          you may do so at your city or township clerk’s office on Election Day 
-          and request an absentee ballot to vote at the same time.
-       </span>
+    <li>If you are already registered, 
+          <a href="info_polling.php">here is your polling place</a> for Election Day.
+    </li>
+    <li>If you are not already registered or need to update your registration, 
+          you may do so at your city or township 
+          {if $hasAddress} <a href="clerkMap.php">clerk’s office</a> {else} clerk's office {/if}
+          on Election Day and request an absentee ballot to vote at the same time.
     </li>
     <li>
       <a href="https://mvic.sos.state.mi.us/Home/"
@@ -81,6 +81,7 @@
     {include file="inc-vq-whoeligible.tpl"}
     {include file="inc-vq-student.tpl"}
     {include file="inc-vq-early.tpl"}
+    {include file="inc-vq-polling.tpl"}
     {include file="inc-vq-disability.tpl"}
     {include file="inc-vq-emergency.tpl"}
     {include file="inc-vq-noid.tpl"}

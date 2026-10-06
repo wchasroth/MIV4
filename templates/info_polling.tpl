@@ -34,10 +34,11 @@
    {elseif $hasAddress}
       <b>Your Election Day Polling Place(s)</b>
       <p/>
-      Sorry, we could not your local polling place.
+      Sorry, we could not find your local polling place.
       <p/>
       You can also check the Secretary of State‘s website, under
-         "<a href="https://mvic.sos.state.mi.us/Voter/Index#early-voting-search-section">Search for your polling locations</a>".
+         "<a href="https://mvic.sos.state.mi.us/Voter/Index#early-voting-search-section" target="_blank"
+               >Search for your polling locations</a>".
 
 
    {else}

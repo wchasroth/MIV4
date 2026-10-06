@@ -41,11 +41,16 @@ $sql = "SELECT e.location, e.address, e.hours, '' AS map "
 $logger->log("Early: $sql");
 $result = $pdo->run($sql);
 $logger->log("Early err: " . $result->getError());
-$rows   = $result->getRows();
+$earlies = $result->getRows();
 
-for ($i=0;   $i<count($rows);   $i++) {
-   $rows[$i]['map'] = urlencode($rows[$i]['address'] ?? '');
-   $rows[$i]['hours'] = Str::replaceAll($rows[$i]['hours'], ',', '<br/>');
+$rows = [];
+for ($i=0;   $i<count($earlies);   $i++) {
+   $earlyAddress = trim($earlies[$i]['address'] ?? '');
+   if (empty ($earlyAddress))  continue;
+
+   $earlies[$i]['map'] = urlencode($earlyAddress);
+   $earlies[$i]['hours'] = Str::replaceAll($earlies[$i]['hours'], ',', '<br/>');
+   $rows[] = $earlies[$i];
 }
 
 $smarty = new SmartyPage();

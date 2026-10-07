@@ -19,11 +19,22 @@ $sql = "SELECT org, office, miv_title, shortname FROM s4titles";
 $result = $pdo->run($sql);
 $rows   = $result->getRows();
 foreach ($rows as $row) {
-   $title = $translator->translate($row['miv_title']);
-   $short = $translator->translate($row['shortname']);
+   $org    = $row["org"];
+   $office = $row["office"];
+   $title  = $translator->translate($row['miv_title']);
+   $short  = $translator->translate($row['shortname']);
    echo $row['org'] . ":" . $row['office'] . "  " . $row['miv_title'] . "\n";
    echo "    $short:    $title\n";
-   break;
+   if (!empty($title)) {
+      $title = Str::replaceAll($title, "'", "''");
+      $sql = "UPDATE s4titles SET miv_title_es='$title' WHERE org='$org' AND office='$office'";
+      $pdo->run($sql);
+   }
+   if (!empty($short)) {
+      $short = Str::replaceAll($short, "'", "''");
+      $sql = "UPDATE s4titles SET short_es='$short' WHERE org='$org' AND office='$office'";
+      $pdo->run($sql);
+   }
 }
 
 $translator->close();

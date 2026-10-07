@@ -29,7 +29,7 @@ class SpanishTranslator {
          $response = $this->client->translateText($request);
 
          foreach ($response->getTranslations() as $index => $translation) {
-            $translatedText .= $translation->getTranslatedText();
+            $translatedText = $translation->getTranslatedText();
             break;
          }
          $this->error = "";

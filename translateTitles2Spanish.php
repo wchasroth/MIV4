@@ -32,7 +32,7 @@ foreach ($rows as $row) {
    }
    if (!empty($short)) {
       $short = Str::replaceAll($short, "'", "''");
-      $sql = "UPDATE s4titles SET short_es='$short' WHERE org='$org' AND office='$office'";
+      $sql = "UPDATE s4titles SET shortname_es='$short' WHERE org='$org' AND office='$office'";
       $pdo->run($sql);
    }
 }

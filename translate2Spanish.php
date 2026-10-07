@@ -23,7 +23,7 @@ $sql = "SELECT id, text FROM v4uitext WHERE id NOT LIKE '%-es'";
 $result = $pdo->run($sql);
 $rows   = $result->getRows();
 $count = 0;
-foreach ($rows() as $row) {
+foreach ($rows as $row) {
    $translated = translateToSpanish($row['text'], $translationServiceClient, $formattedParent);
    echo $row['id'] . ": " . $row['text'] . "\n";
    echo "    $translated\n\n";

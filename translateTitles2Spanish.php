@@ -19,10 +19,10 @@ $sql = "SELECT org, office, miv_title, shortname FROM s4titles";
 $result = $pdo->run($sql);
 $rows   = $result->getRows();
 foreach ($rows as $row) {
-   $title = $translator->translate($row['miv_title']);
-   $short = $translator->translate($row['shortname']);
+#  $title = $translator->translate($row['miv_title']);
+#  $short = $translator->translate($row['shortname']);
    echo $row['org'] . ":" . $row['office'] . "  " . $row['miv_title'] . "\n";
-   echo "    $short    $title\n";
+#  echo "    $short    $title\n";
 }
 
 $translator->close();

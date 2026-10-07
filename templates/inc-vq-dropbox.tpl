@@ -1,7 +1,7 @@
-   <div class="accordion" onClick="flipPanel('dropbox');">Where is my ballot drop-box?</div>
+   <div class="accordion" onClick="flipPanel('dropbox');">{$ui->get('inc-vq-drop')}</div>
    <div class="panel" id='dropbox'>
       <p>
-      Find <a href="info_drop.php">your drop-boxes</a>.
+      {$ui->get('inc-vq-drop-text')}
       </p>
   </div>
 

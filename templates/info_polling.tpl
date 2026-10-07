@@ -17,31 +17,13 @@
 
 <div class="darkBlueText pageText unindentList" style="margin-top: 0.8ex;">
    {if $hasAddress && count($rows) > 0}
-      {$ui->get('pg-info-drop') }
-
-      <ol>
-         {foreach from=$rows item=row}
-            <li><a href="https://maps.google.com/maps?q={$row['map']}" target="_blank"
-                >{$row['address']}</a><br/>
-                {if $row['hours'] == '24'} 
-                   (24/7)&nbsp;
-                {else} 
-                   {$row['hours']}<br/>
-                {/if}
-                {$row['directions']}
-            </li>
-         {/foreach}
-      </ol>
-     
-      <!--
-         county={$county}, juris={$juris}, ward={$ward}, pct={$pct}<br/>
-       -->
+      {$ui->get('pg-info-polling')}
 
    {elseif $hasAddress}
-      {$ui->get('pg-info-drop-none') }
+      {$ui->get('pg-info-polling-nopoll')}
 
    {else}
-      {$ui->get('pg-info-drop-noaddr') }
+      {$ui->get('pg-info-polling-noaddr')}
 
    {/if}
 

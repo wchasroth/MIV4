@@ -19,6 +19,8 @@
 
     {include file="inc-vq-whoeligible.tpl"}
     {include file="inc-vq-student.tpl"}
+    {include file="inc-vq-early.tpl"}
+    {include file="inc-vq-polling.tpl"}
     {include file="inc-vq-disability.tpl"}
     {include file="inc-vq-emergency.tpl"}
     {include file="inc-vq-noid.tpl"}

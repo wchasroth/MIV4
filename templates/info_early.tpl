@@ -17,7 +17,7 @@
 
 <div class="darkBlueText pageText unindentList" style="margin-top: 0.8ex;">
    {if $hasAddress && count($rows) > 0}
-      {$ui->get('pg-info-drop') }
+      {$ui->get('pg-info-early') }
 
       <ol>
          {foreach from=$rows item=row}
@@ -28,7 +28,6 @@
                 {else} 
                    {$row['hours']}<br/>
                 {/if}
-                {$row['directions']}
             </li>
          {/foreach}
       </ol>
@@ -38,10 +37,17 @@
        -->
 
    {elseif $hasAddress}
-      {$ui->get('pg-info-drop-none') }
+      <b>Early Voting Sites</b>
+      <p/>
+      Sorry, we could not find any early-voting sites in your area.
+      <p/>
+      You can also check the Secretary of State‘s website, under
+         "<a href="https://mvic.sos.state.mi.us/Voter/Index#early-voting-search-section" target="_blank"
+               >Search for your polling locations</a>".
+
 
    {else}
-      {$ui->get('pg-info-drop-noaddr') }
+      {$ui->get('pg-info-early-noaddr') }
 
    {/if}
 

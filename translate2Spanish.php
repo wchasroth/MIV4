@@ -21,13 +21,19 @@ $formattedParent = TranslationServiceClient::locationName($projectId, 'global');
 
 $sql = "SELECT id, text FROM v4uitext WHERE id NOT LIKE '%-es'";
 $result = $pdo->run($sql);
+$rows   = $pdo->getRows();
 $count = 0;
-foreach ($result->getRows() as $row) {
+foreach ($rows() as $row) {
    $translated = translateToSpanish($row['text'], $translationServiceClient, $formattedParent);
    echo $row['id'] . ": " . $row['text'] . "\n";
    echo "    $translated\n\n";
+
+   $sqlFields = new SqlFields (['id' => $row['id'] . "-es2", 'text' => $translated]);
+   $result = $pdo->run("INSERT INTO v4uitext " . $sqlFields->getInsertFragment());
+   if ($result->failed())  fwrite (STDERR, "Error: " . $result->getError() . "\n");
+
    ++$count;
-   if ($count > 5)  break;
+   if ($count > 2)  break;
 }
 
 $translationServiceClient->close();

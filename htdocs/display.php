@@ -40,10 +40,7 @@ $voterLog->write($sessionId, 'D', $codes, $address);
 //| modified | datetime       | YES  |     | CURRENT_TIMESTAMP | DEFAULT_GENERATED on update CURRENT_TIMESTAMP |
 //| text     | varchar(10000) | YES  |     | NULL         
 
-$sqlFields = new SqlFields(['id' => $key]);
-$sql = "SELECT text FROM v4uitext WHERE " . $sqlFields->getSelectFragment();
-$result = $pdo->run($sql);
-$text = $result->getSingleValue('text');
+$text = $ui->get($key);
 
 $smarty = new SmartyPage();
 //$smarty->registerPlugin(Smarty::PLUGIN_MODIFIER, "shortDate",   [Plugins::class, "shortDate"]);

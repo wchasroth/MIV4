@@ -1,7 +1,7 @@
-   <div class="accordion" onClick="flipPanel('earlyvote');">Where is my early-voting location?</div>
+   <div class="accordion" onClick="flipPanel('earlyvote');">{$ui->get('inc-vq-early')}</div>
    <div class="panel" id='earlyvote'>
       <p>
-      Find <a href="info_early.php">your early-voting locations</a>.
+      {$ui->get('inc-vq-early-text')}
       </p>
   </div>
 

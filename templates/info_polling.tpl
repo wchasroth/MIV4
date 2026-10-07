@@ -19,6 +19,15 @@
    {if $hasAddress && count($rows) > 0}
       {$ui->get('pg-info-polling')}
 
+      <ol>
+         {foreach from=$rows item=row}
+            <li>{$row['location']}<br/>
+                <a href="https://maps.google.com/maps?q={$row['map']}" target="_blank"
+                   >{$row['address']}</a><br/>
+            </li>
+         {/foreach}
+      </ol>
+
    {elseif $hasAddress}
       {$ui->get('pg-info-polling-nopoll')}
 

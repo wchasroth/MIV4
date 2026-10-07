@@ -4,6 +4,7 @@ declare(strict_types=1);
 use CharlesRothDotNet\Alfred\Str;
 use CharlesRothDotNet\Alfred\EnvFile;
 use CharlesRothDotNet\Alfred\PdoHelper;
+use CharlesRothDotNet\Alfred\SqlFields;
 
 use Google\Cloud\Translate\V3\Client\TranslationServiceClient;
 use Google\Cloud\Translate\V3\TranslateTextRequest;

@@ -15,7 +15,7 @@ $translationServiceClient = new TranslationServiceClient([
 ]);
 
 // 2. Define your project details and strings
-$projectId = 'azure2';
+$projectId = 'azure2-405122';
 // V3 formats the project path as 'projects/{project-id}/locations/global'
 $formattedParent = TranslationServiceClient::locationName($projectId, 'global');
 echo "Block 1\n";

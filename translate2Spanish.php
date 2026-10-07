@@ -21,7 +21,7 @@ $formattedParent = TranslationServiceClient::locationName($projectId, 'global');
 
 $sql = "SELECT id, text FROM v4uitext WHERE id NOT LIKE '%-es'";
 $result = $pdo->run($sql);
-$rows   = $pdo->getRows();
+$rows   = $result->getRows();
 $count = 0;
 foreach ($rows() as $row) {
    $translated = translateToSpanish($row['text'], $translationServiceClient, $formattedParent);

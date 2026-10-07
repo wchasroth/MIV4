@@ -18,6 +18,8 @@ class SpanishTranslator {
    }
 
    public function translate(string $text): string {
+      if (empty($text)) return $text;
+
       $translatedText = "";
       try {
          $request = (new TranslateTextRequest())

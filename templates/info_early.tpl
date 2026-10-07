@@ -37,14 +37,7 @@
        -->
 
    {elseif $hasAddress}
-      <b>Early Voting Sites</b>
-      <p/>
-      Sorry, we could not find any early-voting sites in your area.
-      <p/>
-      You can also check the Secretary of State‘s website, under
-         "<a href="https://mvic.sos.state.mi.us/Voter/Index#early-voting-search-section" target="_blank"
-               >Search for your polling locations</a>".
-
+      {$ui->get('pg-info-early-none') }
 
    {else}
       {$ui->get('pg-info-early-noaddr') }

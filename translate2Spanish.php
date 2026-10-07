@@ -20,10 +20,11 @@ $translationServiceClient = new TranslationServiceClient([
 $projectId = 'azure2-405122';
 $formattedParent = TranslationServiceClient::locationName($projectId, 'global');
 
+$pdo->run("DELETE FROM v4uitext WHERE id LIKE '%-es2'");
+
 $sql = "SELECT id, text FROM v4uitext WHERE id NOT LIKE '%-es'";
 $result = $pdo->run($sql);
 $rows   = $result->getRows();
-$count = 0;
 foreach ($rows as $row) {
    $translated = translateToSpanish($row['text'], $translationServiceClient, $formattedParent);
    echo $row['id'] . ": " . $row['text'] . "\n";
@@ -32,9 +33,6 @@ foreach ($rows as $row) {
    $sqlFields = new SqlFields (['id' => $row['id'] . "-es2", 'text' => $translated]);
    $result = $pdo->run("INSERT INTO v4uitext " . $sqlFields->getInsertFragment());
    if ($result->failed())  fwrite (STDERR, "Error: " . $result->getError() . "\n");
-
-   ++$count;
-   if ($count > 2)  break;
 }
 
 $translationServiceClient->close();

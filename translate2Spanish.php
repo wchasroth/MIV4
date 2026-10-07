@@ -2,52 +2,55 @@
 declare(strict_types=1);
 
 use CharlesRothDotNet\Alfred\Str;
+use CharlesRothDotNet\Alfred\EnvFile;
+use CharlesRothDotNet\Alfred\PdoHelper;
+
 use Google\Cloud\Translate\V3\Client\TranslationServiceClient;
 use Google\Cloud\Translate\V3\TranslateTextRequest;
 
 require 'vendor/autoload.php';
 
-// 1. Initialize the client. 
-// It automatically picks up credentials if you set the GOOGLE_APPLICATION_CREDENTIALS env variable,
-// or you can pass them directly in the 'credentials' config option:
+$env     = new EnvFile("_env");
+$pdo     = PdoHelper::makePdo($env);
+
 $translationServiceClient = new TranslationServiceClient([
     'credentials' => 'azure2-405122-da5c46dc0f97.json'
 ]);
-
-// 2. Define your project details and strings
 $projectId = 'azure2-405122';
-// V3 formats the project path as 'projects/{project-id}/locations/global'
 $formattedParent = TranslationServiceClient::locationName($projectId, 'global');
-echo "Block 1\n";
 
-$contents = [
-    'Hello, how are you?',
-    'Good morning!',
-    'Thank you for your help.'
-];
-
-try {
-    // 3. Construct the request object
-    $request = (new TranslateTextRequest())
-        ->setParent($formattedParent)
-        ->setTargetLanguageCode('es')
-        ->setSourceLanguageCode('en') // Optional, but recommended
-        ->setContents($contents);
-    echo "Block 2\n";
-
-    // 4. Call the API
-    $response = $translationServiceClient->translateText($request);
-    echo "Block 3\n";
-
-    // 5. Output the results
-    foreach ($response->getTranslations() as $index => $translation) {
-        echo "Original: " . $contents[$index] . "\n";
-        echo "Translated: " . $translation->getTranslatedText() . "\n\n";
-    }
-
-} catch (Exception $e) {
-    echo 'Error: ' . $e->getMessage();
-} finally {
-    $translationServiceClient->close();
+$sql = "SELECT id, text FROM v4uitext WHERE id NOT LIKE '%-es'";
+$result = $pdo->run($sql);
+$count = 0;
+foreach ($result->getRows() as $row) {
+   $translated = translateToSpanish($row['text'], $translationServiceClient, $formattedParent);
+   echo $row['id'] . ": " . $row['text'] . "\n";
+   echo "    $translated\n\n";
+   ++$count;
+   if ($count > 5)  break;
 }
 
+$translationServiceClient->close();
+
+function translateToSpanish(string $text, TranslationServiceClient $client, $formattedParent): string {
+   $translatedText = "";
+   try {
+      $request = (new TranslateTextRequest())
+         ->setParent($formattedParent)
+         ->setTargetLanguageCode('es')
+         ->setSourceLanguageCode('en')
+         ->setContents([$text]);
+
+      $response = $client->translateText($request);
+
+      foreach ($response->getTranslations() as $index => $translation) {
+         $translatedText .= $translation->getTranslatedText();
+      }
+      usleep(100000); // Sleep for 0.1 seconds between batches
+
+   } catch (Exception $e) {
+      echo 'Error: ' . $e->getMessage();
+   }
+
+   return $translatedText;
+}

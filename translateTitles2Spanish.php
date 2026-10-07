@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 use CharlesRothDotNet\Alfred\EnvFile;
 use CharlesRothDotNet\Alfred\PdoHelper;
-use CharlesRothDotNet\Alfred\SqlFields;
+use CharlesRothDotNet\Alfred\Str;
 
 use CharlesRothDotNet\MIV4\SpanishTranslator;
 

@@ -6,7 +6,6 @@
 
    <script               src="share.js"></script>
    <script               src="parseHouseStreet.js"></script>
-   <script type="module" src="address-search04.js"></script>
 </head>
 
 <body>

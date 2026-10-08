@@ -33,8 +33,11 @@ class VoterLog {
          'ip_method'  => $ipAddress->getMethod(),
          'hash_addr'  => $this->getHash($fullAddress)
       ]);
-      $result = $this->pdo->runSF("INSERT INTO v4voter_log", "", $sqlFields, true);
-      if ($result->failed()) $this->logger->log("VoterLog: " . $result->getError());
+#     $result = $this->pdo->runSF("INSERT INTO v4voter_log", "", $sqlFields, true);
+      $sql = "INSERT INTO v4voter_log " . $sqlFields->getInsertFragment();
+      $result = $this->pdo->run($sql);
+      $this->logger->log("VoterLog: " . $sql);
+      if ($result->failed()) $this->logger->log("Error: " . $result->getError());
    }
 
    private function getReferer() {

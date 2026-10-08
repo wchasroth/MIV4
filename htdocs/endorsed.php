@@ -43,45 +43,44 @@ $voterLog = new VoterLog($pdo, $logger, $env->get('addressHashSalt'));
 $voterLog->write($sessionId, 'B', $codes, $_COOKIE['miAddress'] ?? '');
 
 $sql = [];
-$sql[] = select('district') . from() . whereOrgIn('us', 'us-sen') . " OR (s.org='us-hou' AND s.district='{$codes['congress']}') " . endorsed();
-$sql[] = select('district') . from() . whereOrgIn('mi', 'mi-ag', 'mi-boe', 'mi-sos', 'mi-prop')
+$sql[] = select('district', $lang) . from() . whereOrgIn('us', 'us-sen') . " OR (s.org='us-hou' AND s.district='{$codes['congress']}') " . endorsed();
+$sql[] = select('district', $lang) . from() . whereOrgIn('mi', 'mi-ag', 'mi-boe', 'mi-sos', 'mi-prop')
        . "  OR (s.org='mi-sen' AND s.district='{$codes['senate']}') "
        . "  OR (s.org='mi-hou' AND s.district='{$codes['house']}') "  . endorsed();
-$sql[] = select('subdist')  . from() . whereOrgIn('cnty')     . "AND district={$codes['county_code']} "  . endorsed();
-$sql[] = select('subdist')  . from() . whereOrgIn('cnty-com') . "AND district={$codes['county_code']} "
+$sql[] = select('subdist', $lang)  . from() . whereOrgIn('cnty')     . "AND district={$codes['county_code']} "  . endorsed();
+$sql[] = select('subdist', $lang)  . from() . whereOrgIn('cnty-com') . "AND district={$codes['county_code']} "
                                      . " AND (subdist={$codes['commissioner']} OR subdist=0) "  . endorsed();
 
-$sql[] = select('subdist')  . from() . whereOrgIn('city',    'town')     . " AND district='{$codes['juris_code']}' "  . endorsed();
-$sql[] = select('subdist')  . from() . whereOrgIn('city-cou','town-cou') . " AND district='{$codes['juris_code']}' AND (subdist=$ward OR subdist=0) "  . endorsed();
-$sql[] = select('subdist')  . from() . whereOrgIn('vil','vil-cou')       . " AND district='{$codes['village_code']}' "  . endorsed();
+$sql[] = select('subdist', $lang)  . from() . whereOrgIn('city',    'town')     . " AND district='{$codes['juris_code']}' "  . endorsed();
+$sql[] = select('subdist', $lang)  . from() . whereOrgIn('city-cou','town-cou') . " AND district='{$codes['juris_code']}' AND (subdist=$ward OR subdist=0) "  . endorsed();
+$sql[] = select('subdist', $lang)  . from() . whereOrgIn('vil','vil-cou')       . " AND district='{$codes['village_code']}' "  . endorsed();
 
-$sql[] = select('subdist')  . from() . whereOrgIn('schl-cou') . " AND district='{$codes['sd_code']}' "  . endorsed();
+$sql[] = select('subdist', $lang)  . from() . whereOrgIn('schl-cou') . " AND district='{$codes['sd_code']}' "  . endorsed();
 
-$sql[] = select('subdist')  . from() . whereOrgIn('crt-sup')  . endorsed();
-$sql[] = select('district') . from()
+$sql[] = select('subdist', $lang)  . from() . whereOrgIn('crt-sup')  . endorsed();
+$sql[] = select('district', $lang) . from()
        .  " LEFT JOIN v4courts AS c  ON (c.shortname = s.district AND c.type = s.org) "
        .  whereOrgIn('crt-a', 'crt-c', 'crt-m') . " AND c.county_id = {$codes['county_code']} "  . endorsed();
 
-$sql[] = select('district', 'c.name') . from()
+$sql[] = select('district', $lang, 'c.name') . from()
    .  " LEFT JOIN s4commcolleges AS c  ON (s.district = c.id) "
    .  " LEFT JOIN v4commcolleges_county AS y ON (y.id = c.id) "
    .  whereOrgIn('comcol-cou') . " AND y.county_id = {$codes['county_code']} "  . endorsed();
 
-$sql[] = select('subdist') . from()
+$sql[] = select('subdist', $lang) . from()
        .  " LEFT JOIN v4courts AS c  ON (c.shortname = s.district AND c.type = s.org) "
        .  whereOrgIn('crt-p') . " AND c.county_id = {$codes['county_code']} "  . endorsed();
 
-$sql[] = select('s.district')  . from()
+$sql[] = select('s.district', $lang)  . from()
        .  " LEFT JOIN s4district_courts AS d  ON (d.org = s.org AND d.district = s.district) "
        .  whereOrgIn('crt-d') . " AND d.county_id = {$codes['county_code']} AND d.juris_id = {$codes['juris_code']} "  . endorsed();
-$sql[] = select('district') . from() . whereOrgIn('mi-msu', 'mi-wsu', 'mi-um')  . endorsed();
+$sql[] = select('district', $lang) . from() . whereOrgIn('mi-msu', 'mi-wsu', 'mi-um')  . endorsed();
 
 $query = Str::join($sql, " UNION ALL ") . " ORDER BY ballot_order, subdist, name";
 //$logger->log("Endorsed: $query");
 
 $result = $pdo->run($query);
 $rows = $result->getRows();
-//removeDuplicateTitles($rows);
 $rowCount = $result->getRowCount();
 for ($i=0;   $i<$rowCount;  $i++) {
    $name = $rows[$i]['name'] ?? '';
@@ -106,10 +105,12 @@ $smarty->assign('ui',     $ui);
 $smarty->display('endorsed.tpl');
 
 
-function select(string $dist, string $optField=''): string {
+function select(string $dist, $lang, string $optField=''): string {
    return  "SELECT s.id, s.org, s.office, s.district, s.subdist, $dist AS dist, "
       .    (! empty ($optField) ? " $optField AS optField, " : " '' AS optField, ")
-      . "       i.name, t.ballot_order, t.miv_title, i.id AS iid ";
+      . "       i.name, t.ballot_order, i.id AS iid, "
+      .    ($lang === 'es' ? 't.miv_title_es AS miv_title' : 't.miv_title')
+      ;
 }
 
 function from (): string {

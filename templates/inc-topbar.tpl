@@ -32,9 +32,9 @@
          <tr valign='top'>
             <td>
                <div style="width: 37px; height: 37px;  background-image: url('IMG/blue-circle-dark.png'); position: relative;">
-                  <div style="position: relative; left: 8px; top: 10px; font-size: 16px; color: white;"
-                     {if $lang == 'es'} onClick="setLanguage('');"   title="Use English">EN</div>
-                     {else }            onClick="setLanguage('es');" title="Utiliza el español">ES</div>
+                  <div style="position: relative; left: 5px; top: 10px; font-size: 16px; color: white;"
+                     {if $lang == 'es'} onClick="setLanguage('');"   title="Use English">Eng</div>
+                     {else }            onClick="setLanguage('es');" title="Utiliza el español">Esp</div>
                      {/if}
                </div>
             </td>

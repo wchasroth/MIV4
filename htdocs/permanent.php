@@ -22,7 +22,7 @@ $logger = new DumbFileLogger($env->get('logFile'));
 $pdo    = PdoHelper::makePdo($env);
 
 $lang      = trim($_COOKIE['lang']           ?? "");
-$ui        = new Uitext($pdo, $logger, $lang, 'btm%', 'ham%', 'top%');
+$ui        = new Uitext($pdo, $logger, $lang, 'pg-perm%', 'btm%', 'ham%', 'top%');
 $editor    = ! empty(trim($_COOKIE['editor'] ?? ""));
 $codes     = MiCodesDecoder::decode($_COOKIE['miCodes'] ?? "{}");
 $sessionId = trim($_COOKIE['sessionid'] ?? "");

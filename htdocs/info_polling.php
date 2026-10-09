@@ -38,7 +38,7 @@ $sql = "SELECT v.location, v.address, '' AS map "
      . "   AND p.ward      = $ward "
      . "   AND p.pct       = $pct ";
 $result = $pdo->run($sql);
-if ($result-failed()) $logger->log("polling err: " . $result->getError());
+if ($result->failed()) $logger->log("polling err: " . $result->getError());
 $rows   = $result->getRows();
 
 for ($i=0;   $i<count($rows);   $i++) {

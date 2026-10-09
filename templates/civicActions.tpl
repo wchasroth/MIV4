@@ -28,6 +28,9 @@
       <li><a href="county.php">County Parties</a>: Find your county's Democratic parties &amp; clubs,
            get their newsletters, and learn about events and opportunities to volunteer.
 
+      <li>Become an election observer with <a href="https://meop.org" target="_blank">MEOP.org</a>,
+          and help ensure our elections happen properly.
+
       <li><a href="https://midems.controlshift.app/local?filter%5Blocation%5D={$zipcode}&page=1"
                    onClick="return externalLink(this);" target="_blank"
           >Other Democratic events</a> in your area.</li>

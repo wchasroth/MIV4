@@ -24,8 +24,8 @@ $referrerName = $_SERVER['HTTP_REFERER'] ?? 'unknown';
 $http_origin  = $_SERVER['HTTP_ORIGIN']  ?? '';
 
 //---Not the most secure, but this will filter out obvious/naive attacks.
-$logger = new DumbFileLogger($env->get('logFile'));
 if (! empty($http_origin)  ||  ! Str::contains($referrerName, $env->get('domain'))) {
+   $logger = new DumbFileLogger($env->get('logFile'));
    $logger->log("http_origin=$http_origin, referrer=$referrerName");
    exit(1);
 }
@@ -35,7 +35,6 @@ $street  = HttpGet::value("street");
 $street  = Str::replaceAll($street, "-", " ");
 $max     = HttpGet::number("max", MAX_ROWS);
 $log     = HttpGet::number("log", 0);
-$logger->log("Address max: $max");
 
 if ($number == 0  &&  empty($street)) {
    header('Content-Type: application/json; charset=utf-8');

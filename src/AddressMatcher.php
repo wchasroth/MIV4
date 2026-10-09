@@ -11,14 +11,14 @@ class AddressMatcher {
    private StreetUtils $su;
    private int    $time0;
    private string $orderBy = 'name';
-   private int    $maxRows = 50;
+   private int    $maxRows;
 
    public function __construct(AlfredPDO $pdo, StreetUtils $su, string $orderBy, int $maxRows) {
       $this->pdo = $pdo;
       $this->su = $su;
       $this->time0   = hrtime(true);
       $this->orderBy = $orderBy;
-      $this->maxRows = max($maxRows, 50);
+      $this->maxRows = min($maxRows, 20);
    }
 
    public function match(int $number, ParsedAddress $address): array {

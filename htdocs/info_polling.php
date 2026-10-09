@@ -40,9 +40,8 @@ $sql = "SELECT v.location, v.address, '' AS map "
      . "   AND p.juris_id  = $juris "
      . "   AND p.ward      = $ward "
      . "   AND p.pct       = $pct ";
-$logger->log("polling: $sql");
 $result = $pdo->run($sql);
-$logger->log("polling err: " . $result->getError());
+if ($result->failed()) $logger->log("polling err: " . $result->getError());
 $rows   = $result->getRows();
 
 for ($i=0;   $i<count($rows);   $i++) {

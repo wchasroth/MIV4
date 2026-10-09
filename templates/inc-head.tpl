@@ -13,7 +13,7 @@
    <link rel="stylesheet" href="mivoter05.css">
 
    {if $lang == 'es'}
-      <script type="module" src="address-search04-es.js"></script>
+      <script type="module" src="address-search05-es.js"></script>
    {else}
-      <script type="module" src="address-search04.js"></script>
+      <script type="module" src="address-search05.js"></script>
    {/if}

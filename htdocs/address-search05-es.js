@@ -162,7 +162,7 @@ class AddressSearch extends HTMLElement {
 
         const hostname = window.location.hostname || "";
         const apiEndPoint = "address.php";
-        const fetchUrl = `${apiEndPoint}?street=${encodeURIComponent(street)}&num=${house}&max=5`;
+        const fetchUrl = `${apiEndPoint}?street=${encodeURIComponent(street)}&num=${house}&max=10`;
 
         const useAbort = !this.constructor.WAIT_FOR_FETCH;
 

@@ -41,9 +41,8 @@ $sql = "SELECT e.location, e.address, e.hours, '' AS map "
      . "   AND p.juris_id  = $juris "
      . "   AND p.ward      = $ward "
      . "   AND p.pct       = $pct ";
-$logger->log("Early: $sql");
 $result = $pdo->run($sql);
-$logger->log("Early err: " . $result->getError());
+if ($result->failed()) $logger->log("Early err: " . $result->getError());
 $earlies = $result->getRows();
 
 $rows = [];

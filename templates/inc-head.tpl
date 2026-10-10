@@ -10,10 +10,10 @@
    
    <title>MIvoter.org</title>
    
-   <link rel="stylesheet" href="mivoter05.css">
-
    {if $lang == 'es'}
+      <link rel="stylesheet" href="mivoter05-es.css">
       <script type="module" src="address-search05-es.js"></script>
    {else}
+      <link rel="stylesheet" href="mivoter05.css">
       <script type="module" src="address-search05.js"></script>
    {/if}

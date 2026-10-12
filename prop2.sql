@@ -44,6 +44,7 @@ SELECT s.id, y.name, s.office, c.name, c.endorsed, c.reviewed
   LEFT JOIN v4candidates AS c ON (c.seat_id  = s.id)
  WHERE s.office LIKE '%prop%'
    AND c.name LIKE '2%'
+   AND c.endorsed = 1
  ORDER BY y.name
 
 

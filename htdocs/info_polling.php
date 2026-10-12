@@ -19,8 +19,8 @@ $env     = new EnvFile("_env");
 $pdo     = PdoHelper::makePdo($env);
 $codes   = MiCodesDecoder::decode($_COOKIE['miCodes'] ?? "{}");
 $sessionId = trim($_COOKIE['sessionid'] ?? "");
-$logger = new DumbFileLogger($env->get('logFile'));
-$lang    = trim($_COOKIE['lang']           ?? "");
+$logger  = new DumbFileLogger($env->get('logFile'));
+$lang    = Uitext::safeLanguage($_COOKIE['lang'] ?? "");
 $ui      = new Uitext($pdo, $logger, $lang, 'pg-info-poll%', 'btm%', 'ham%', 'top%');
 
 $county  = intval($codes['county_code'] ?? '');

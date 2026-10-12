@@ -27,7 +27,7 @@ $env    = new EnvFile("_env");
 $logger = new DumbFileLogger($env->get('logFile'));
 $pdo    = PdoHelper::makePdo($env);
 
-$lang      = trim($_COOKIE['lang']           ?? "");
+$lang      = Uitext::safeLanguage($_COOKIE['lang'] ?? "");
 $ui        = new Uitext($pdo, $logger, $lang, 'pg-endorsed%', 'btm%', 'ham%', 'top%');
 $numFormatter = new NumberFormatter( ($lang === 'es' ? "es_ES" : "en_US"), NumberFormatter::ORDINAL);
 

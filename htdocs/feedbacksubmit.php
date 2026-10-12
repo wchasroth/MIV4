@@ -20,7 +20,7 @@ $env              = new EnvFile("_env");
 $logger           = new DumbFileLogger($env->get('logFile'));
 $pdo              = PdoHelper::makePdo($env);
 $editor    = ! empty(trim($_COOKIE['editor'] ?? ""));
-$lang      = trim($_COOKIE['lang']           ?? "");
+$lang      = Uitext::safeLanguage($_COOKIE['lang'] ?? "");
 $ui        = new Uitext($pdo, $logger, $lang, 'pg-feed%', 'btm%', 'ham%', 'top%');
 
 $name  = $_POST['name']     ?? "";

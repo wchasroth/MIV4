@@ -20,7 +20,7 @@ if ($address === "") {
    exit();
 }
 $editor    = ! empty(trim($_COOKIE['editor'] ?? ""));
-$lang      = trim($_COOKIE['lang']           ?? "");
+$lang      = Uitext::safeLanguage($_COOKIE['lang'] ?? "");
 
 $smarty = new SmartyPage();
 $smarty->assign('address', $address);

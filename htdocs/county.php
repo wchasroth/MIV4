@@ -24,10 +24,9 @@ $env              = new EnvFile("_env");
 $logger           = new DumbFileLogger($env->get('logFile'));
 $pdo              = PdoHelper::makePdo($env);
 
-$editor    = ! empty(trim($_COOKIE['editor'] ?? ""));
-$lang      = trim($_COOKIE['lang']           ?? "");
-$codes     = MiCodesDecoder::decode($_COOKIE['miCodes'] ?? "{}");
-$lang    = trim($_COOKIE['lang']           ?? "");
+$editor  = ! empty(trim($_COOKIE['editor'] ?? ""));
+$codes   = MiCodesDecoder::decode($_COOKIE['miCodes'] ?? "{}");
+$lang    = Uitext::safeLanguage($_COOKIE['lang'] ?? "");
 $ui      = new Uitext($pdo, $logger, $lang, 'pg-county%', 'btm%', 'ham%', 'top%');
 
 $myCounty  = $codes['county_code'];

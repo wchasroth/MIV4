@@ -21,7 +21,7 @@ $env    = new EnvFile("_env");
 $logger = new DumbFileLogger($env->get('logFile'));
 $pdo    = PdoHelper::makePdo($env);
 
-$lang      = trim($_COOKIE['lang']           ?? "");
+$lang      = Uitext::safeLanguage($_COOKIE['lang'] ?? "");
 $ui        = new Uitext($pdo, $logger, $lang, 'pg-perm%', 'btm%', 'ham%', 'top%');
 $editor    = ! empty(trim($_COOKIE['editor'] ?? ""));
 $codes     = MiCodesDecoder::decode($_COOKIE['miCodes'] ?? "{}");

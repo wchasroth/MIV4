@@ -19,7 +19,7 @@ $logger  = new DumbFileLogger($env->get('logFile'));
 $pdo     = PdoHelper::makePdo($env);
 $codes   = MiCodesDecoder::decode($_COOKIE['miCodes'] ?? "{}");
 $sessionId = trim($_COOKIE['sessionid'] ?? "");
-$lang    = trim($_COOKIE['lang']           ?? "");
+$lang    = Uitext::safeLanguage($_COOKIE['lang'] ?? "");
 $ui      = new Uitext($pdo, $logger, $lang, 'pg-concon', 'btm%', 'ham%', 'top%', 'button%');
 
 date_default_timezone_set('America/New_York');

@@ -23,7 +23,7 @@ $address = trim($_COOKIE['miAddress'] ?? "");
 $env     = new EnvFile("_env");
 $pdo     = PdoHelper::makePdo($env);
 
-$lang    = trim($_COOKIE['lang']           ?? "");
+$lang    = Uitext::safeLanguage($_COOKIE['lang'] ?? "");
 $editor  = ! empty(trim($_COOKIE['editor'] ?? ""));
 $codes   = MiCodesDecoder::decode($_COOKIE['miCodes'] ?? "{}");
 $sessionId = trim($_COOKIE['sessionid'] ?? "");

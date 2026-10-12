@@ -12,6 +12,11 @@ class Uitext {
    private array  $key2text = [];
    private string $lang;
 
+   public static function safeLanguage(string $lang): string {
+      $lang = trim($lang);
+      return ($lang === "es" ? "es" : "");
+   }
+
    function __construct(AlfredPDO $pdo, ?DumbFileLogger $logger, string $lang, string ... $keys) {
       $lang  = (!empty($lang) ? "-$lang" : "");
       $likes = [];

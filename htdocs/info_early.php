@@ -30,7 +30,7 @@ $ward    = intdiv($wardpct, 1000);
 $pct     = $wardpct % 1000;
 
 date_default_timezone_set('America/New_York');
-$voterLog = new VoterLog($pdo, $logger, $env->get('addressHashSalt'));
+$voterLog = new VoterLog($pdo, $logger, $env->get('addressHashSalt'), $lang);
 $voterLog->write($sessionId, 'D', $codes, $_COOKIE['miAddress'] ?? '');
 
 $sql = "SELECT e.location, e.address, e.hours, '' AS map "

@@ -29,7 +29,7 @@ $ui        = new Uitext($pdo, $logger, $lang, 'pg-info%', 'btm%', 'ham%', 'top%'
 $editor    = ! empty(trim($_COOKIE['editor'] ?? ""));
 
 date_default_timezone_set('America/New_York');
-$voterLog = new VoterLog($pdo, $logger, $env->get('addressHashSalt'));
+$voterLog = new VoterLog($pdo, $logger, $env->get('addressHashSalt'), $lang);
 $voterLog->write($sessionId, 'I', $codes, $_COOKIE['miAddress'] ?? '');
 
 $smarty = new SmartyPage();

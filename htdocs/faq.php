@@ -23,7 +23,7 @@ $ui        = new Uitext($pdo, $logger, $lang, 'pg-faq%', 'btm%', 'ham%', 'top%')
 
 $address = trim($_COOKIE['miAddress'] ?? "");
 date_default_timezone_set('America/New_York');
-$voterLog = new VoterLog($pdo, $logger, $env->get('addressHashSalt'));
+$voterLog = new VoterLog($pdo, $logger, $env->get('addressHashSalt'), $lang);
 $voterLog->write($sessionId, 'F', $codes, $address);
 
 

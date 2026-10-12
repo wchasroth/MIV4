@@ -24,7 +24,7 @@ $codes   = MiCodesDecoder::decode($_COOKIE['miCodes'] ?? "{}");
 $sessionId = trim($_COOKIE['sessionid'] ?? "");
 
 date_default_timezone_set('America/New_York');
-$voterLog = new VoterLog($pdo, $logger, $env->get('addressHashSalt'));
+$voterLog = new VoterLog($pdo, $logger, $env->get('addressHashSalt'), $lang);
 $voterLog->write($sessionId, 'X', $codes, $_COOKIE['miAddress'] ?? '');
 
 $smarty = new SmartyPage();

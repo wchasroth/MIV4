@@ -32,7 +32,7 @@ $ui      = new Uitext($pdo, $logger, $lang, 'pg-info-reg%', 'inc-vq-%', 'btm%', 
 $sessionId = trim($_COOKIE['sessionid'] ?? "");
 
 date_default_timezone_set('America/New_York');
-$voterLog = new VoterLog($pdo, $logger, $env->get('addressHashSalt'));
+$voterLog = new VoterLog($pdo, $logger, $env->get('addressHashSalt'), $lang);
 $voterLog->write($sessionId, 'I', $codes, $_COOKIE['miAddress'] ?? '');
 
 $clerkJurisdiction = Clerk::getJurisdictionName($pdo, intval($codes['juris_code'] ?? '0'));

@@ -30,7 +30,7 @@ $sessionId = trim($_COOKIE['sessionid'] ?? "");
 
 $zipcode   = $codes['zipcode'] ?? '';
 
-$voterLog = new VoterLog($pdo, $logger, $env->get('addressHashSalt'));
+$voterLog = new VoterLog($pdo, $logger, $env->get('addressHashSalt'), $lang);
 $voterLog->write($sessionId, 'H', $codes, $address);
 
 if ($address !== "") {

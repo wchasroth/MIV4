@@ -13,11 +13,13 @@ class VoterLog {
    private AlfredPDO      $pdo;
    private DumbFileLogger $logger;
    private string         $addressHashSalt;
+   private string         $lang;
 
-   function __construct(AlfredPDO $pdo, DumbFileLogger $logger, string $addressHashSalt) {
+   function __construct(AlfredPDO $pdo, DumbFileLogger $logger, string $addressHashSalt, string $lang='') {
       $this->pdo             = $pdo;
       $this->logger          = $logger;
       $this->addressHashSalt = $addressHashSalt;
+      $this->lang            = $lang;
    }
 
    public function write(string $sessionId, string $pageCode, array $miCodes, string $fullAddress): void {
@@ -31,7 +33,8 @@ class VoterLog {
          'referer'    => $this->getReferer(),
          'ip'         => $ipAddress->getIp(),
          'ip_method'  => $ipAddress->getMethod(),
-         'hash_addr'  => $this->getHash($fullAddress)
+         'hash_addr'  => $this->getHash($fullAddress),
+         'language'   => ($this->lang === 'es' ? 'S' : 'E')
       ]);
       $sql = "INSERT INTO v4voter_log " . $sqlFields->getInsertFragment();
       $result = $this->pdo->run($sql);

@@ -39,7 +39,7 @@ $sessionId = trim($_COOKIE['sessionid'] ?? "");
 $show      = print_r($codes, true);
 $ward      = getWard($codes['wardpct']);
 date_default_timezone_set('America/New_York');
-$voterLog = new VoterLog($pdo, $logger, $env->get('addressHashSalt'));
+$voterLog = new VoterLog($pdo, $logger, $env->get('addressHashSalt'), $lang);
 $voterLog->write($sessionId, 'B', $codes, $_COOKIE['miAddress'] ?? '');
 
 $sql = [];

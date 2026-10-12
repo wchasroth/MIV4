@@ -32,7 +32,7 @@ $editor    = ! empty(trim($_COOKIE['editor'] ?? ""));
 $ui      = new Uitext($pdo, $logger, $lang, 'pg-protest%', 'btm%', 'ham%', 'top%');
 
 date_default_timezone_set('America/New_York');
-$voterLog = new VoterLog($pdo, $logger, $env->get('addressHashSalt'));
+$voterLog = new VoterLog($pdo, $logger, $env->get('addressHashSalt'), $lang);
 $voterLog->write($sessionId, 'P', $codes, $address);
 
 $myCounty = $codes['county_code'];

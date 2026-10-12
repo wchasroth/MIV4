@@ -4,7 +4,6 @@ Create account
      "Create a new AWS account"
          root user email=wchasroth@gmail.com
          account name=mivoter.org
-         pw=Lookfar4awsVoter!
   
      Chose free plan (6 months)
      Enter credit card

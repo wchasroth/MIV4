@@ -47,6 +47,8 @@
                 <span {if $editor} title='btm-mivoter1' {/if} >{$ui->get('btm-mivoter1')}</span>
                 (<a href="https://washtenawdems.org" target="_blank" class="whiteLink">washtenawdems.org</a>)&nbsp;
                 <span {if $editor} title='btm-mivoter2' {/if} >{$ui->get('btm-mivoter2')}</span>
+                   <a href="https://www.silvercreektranslations.com" target="_blank" class="whiteLink"
+                     >silvercreektranslations.com</a>
               </td>
               <td><a href="https://www.washtenawdems.org" target="_blank"><img src="IMG/wcdp-merged2.png" width="100"/></a></td>
               </tr>

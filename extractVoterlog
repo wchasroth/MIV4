@@ -5,4 +5,4 @@ host=`hostname`
 filename="/tmp/$host-$now"
 php extractVoterlog.php >$filename
 result=`curl -X POST -F "file=@$filename" https://voterlog.mivoter.org 2>/dev/null`
-echo "$now $result" >>extract.log
+echo "$now $result" >>$HOME/extract.log

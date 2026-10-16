@@ -2,5 +2,7 @@
 
 now=`date +"%Y-%m-%d_%H"`
 host=`hostname`
-filename="$host-$now"
+filename="/tmp/$host-$now"
 php extractVoterlog.php >$filename
+result=`curl -X POST -F "file=@$filename" https://voterlog.mivoter.org 2>/dev/null`
+echo "$now $result" >>extract.log

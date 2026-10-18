@@ -57,7 +57,12 @@ $sql[] = select('subdist', $lang)  . from() . whereOrgIn('vil','vil-cou')       
 
 $sql[] = select('subdist', $lang)  . from() . whereOrgIn('schl-cou') . " AND district='{$codes['sd_code']}' "  . endorsed();
 
+$sql[] = select('subdist', $lang)  . from()
+       . " LEFT JOIN s4libraries as z  ON (z.id = s.district) "
+       . whereOrgIn('lib') . " AND z.school = {$codes['sd_code']}" . endorsed(); // TODO: add OR's for county or juris-level library districts
+
 $sql[] = select('subdist', $lang)  . from() . whereOrgIn('crt-sup')  . endorsed();
+
 $sql[] = select('district', $lang) . from()
        .  " LEFT JOIN v4courts AS c  ON (c.shortname = s.district AND c.type = s.org) "
        .  whereOrgIn('crt-a', 'crt-c', 'crt-m') . " AND c.county_id = {$codes['county_code']} "  . endorsed();
@@ -77,7 +82,7 @@ $sql[] = select('s.district', $lang)  . from()
 $sql[] = select('district', $lang) . from() . whereOrgIn('mi-msu', 'mi-wsu', 'mi-um')  . endorsed();
 
 $query = Str::join($sql, " UNION ALL ") . " ORDER BY ballot_order, subdist, name";
-//$logger->log("Endorsed: $query");
+#$logger->log("Endorsed: $query");
 
 $result = $pdo->run($query);
 $rows = $result->getRows();

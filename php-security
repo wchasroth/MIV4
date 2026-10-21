@@ -1,0 +1,25 @@
+2026-10-21 PHP security patch
+
+See https://www.huntress.com/blog/php2shell-leaked-critical-php-vulnerabilities
+
+
+Affects PHP 8.2.34, patches in 8.2.35 and 8.2.36 (?)
+
+10/21 13:20 -- 8.2.35 still not available for almalinux 8
+
+====Mitigation strategy============
+
+Add to /etc/php.ini
+   ; Mitigate PHP2Shell vulnerabilities by disabling upload progress tracking
+   session.upload_progress.enabled = Off
+   session.upload_progress.cleanup = Off
+
+Run
+   systemctl restart php-fpm
+   systemctl restart httpd
+
+Check:
+   php -r "var_dump(ini_get('session.upload_progress.enabled'));"
+
+   should produce:
+      string(0) ""

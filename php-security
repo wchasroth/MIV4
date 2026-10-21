@@ -1,6 +1,8 @@
 2026-10-21 PHP security patch
 
-See https://www.huntress.com/blog/php2shell-leaked-critical-php-vulnerabilities
+See 
+   https://almalinux.org/blog/2026-10-21-php2shell-cve-2026-109618-cve-2026-109619/
+   https://www.huntress.com/blog/php2shell-leaked-critical-php-vulnerabilities
 
 
 Affects PHP 8.2.34, patches in 8.2.35 and 8.2.36 (?)
@@ -13,6 +15,11 @@ Add to /etc/php.ini
    ; Mitigate PHP2Shell vulnerabilities by disabling upload progress tracking
    session.upload_progress.enabled = Off
    session.upload_progress.cleanup = Off
+   memory_limit = -1
+   upload_max_filesize = 30M
+
+Add to /etc/php-fpm.d/www.conf
+   php_admin_value[memory_limit] = -1
 
 Run
    systemctl restart php-fpm
@@ -23,3 +30,7 @@ Check:
 
    should produce:
       string(0) ""
+
+   Make sure we're not using mod_php:
+      httpd -M | grep php
+

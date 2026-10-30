@@ -20,6 +20,9 @@
 
 
 <p>&nbsp;</p>
+<!--
+miCodes={$miCodes}
+-->
 
 {include file="inc-trailer.tpl"}
 

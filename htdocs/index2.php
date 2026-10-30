@@ -38,6 +38,7 @@ $smarty->assign ('zipcode',    $zipcode);
 $smarty->assign('lang',   $lang);
 $smarty->assign('editor',   $editor);
 $smarty->assign('ui',   $ui);
+$smarty->assign('miCodes', $_COOKIE['miCodes'] ?? "");
 
 if ($address === "") {
    $smarty->assign('hasAddress', false);
